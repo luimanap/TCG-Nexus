@@ -4,7 +4,24 @@
             "outputFile": "com.example.tcg_nexus.app-mergeDebugResources-50:/values-fa/values-fa.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\93df8d9948672a1ac9de4361877b3f83\\transformed\\material3-1.0.0\\res\\values-fa\\values-fa.xml",
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\9ed2ead0f400ca6bb94013d64d6a16d0\\transformed\\core-1.12.0\\res\\values-fa\\values-fa.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,154,256,355,455,556,662,779",
+                        "endColumns": "98,101,98,99,100,105,116,100",
+                        "endOffsets": "149,251,350,450,551,657,774,875"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,26",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,204,306,405,505,606,712,2227",
+                        "endColumns": "98,101,98,99,100,105,116,100",
+                        "endOffsets": "199,301,400,500,601,707,824,2323"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\93df8d9948672a1ac9de4361877b3f83\\transformed\\material3-1.0.0\\res\\values-fa\\values-fa.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\c1fb9ef8ad5a2e2e652064bbb3b9bd08\\transformed\\ui-release\\res\\values-fa\\values-fa.xml",
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\c1fb9ef8ad5a2e2e652064bbb3b9bd08\\transformed\\ui-release\\res\\values-fa\\values-fa.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -35,23 +52,6 @@
                         "startOffsets": "829,916,1071,1165,1339,1504,1586,1689,1774,1857,1924,1990,2071,2153,2328,2403,2470",
                         "endColumns": "86,78,93,97,85,81,102,84,82,66,65,80,81,73,74,66,116",
                         "endOffsets": "911,990,1160,1258,1420,1581,1684,1769,1852,1919,1985,2066,2148,2222,2398,2465,2582"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\9ed2ead0f400ca6bb94013d64d6a16d0\\transformed\\core-1.12.0\\res\\values-fa\\values-fa.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,154,256,355,455,556,662,779",
-                        "endColumns": "98,101,98,99,100,105,116,100",
-                        "endOffsets": "149,251,350,450,551,657,774,875"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,26",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,204,306,405,505,606,712,2227",
-                        "endColumns": "98,101,98,99,100,105,116,100",
-                        "endOffsets": "199,301,400,500,601,707,824,2323"
                     }
                 }
             ]

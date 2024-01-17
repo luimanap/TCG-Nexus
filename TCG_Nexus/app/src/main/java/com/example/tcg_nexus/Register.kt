@@ -39,7 +39,6 @@ fun RegisterScreen(navController: NavController) {
         Modifier
             .fillMaxSize()
             .background(color = Color(204, 204, 204, 90))
-            .clip(RoundedCornerShape(40.dp))
     ) {
 
         //Logo Image
