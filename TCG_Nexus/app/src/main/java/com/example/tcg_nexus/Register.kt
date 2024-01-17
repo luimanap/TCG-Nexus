@@ -49,58 +49,23 @@ fun MyRegisterScreen(navController: NavController) {
         MyLogo(150)
 
         //Name Input
-        //MyTextField("Nombre", nameinput){nameinput = it}
-        TextField(value = nameinput, onValueChange = { nameinput = it }, label = {
-            Text(text = "Nombre")
-        }, modifier = Modifier
-            .fillMaxWidth()
-            .padding(start = 30.dp, end = 30.dp)
-            .background(Color.White)
-        )
+        MyTextField(data = nameinput, label = "Nombre", onvaluechange = { nameinput = it })
         Spacer(Modifier.size(16.dp))
 
         //Last Name Input
-        TextField(value = lastnameinput, onValueChange = { lastnameinput = it }, label = {
-            Text(text = "Apellidos")
-        }, modifier = Modifier
-            .fillMaxWidth()
-            .padding(start = 30.dp, end = 30.dp)
-            .align(Alignment.CenterHorizontally)
-            .background(Color.White)
-        )
+        MyTextField(data = lastnameinput, label = "Apellidos", onvaluechange = { lastnameinput = it })
         Spacer(Modifier.size(16.dp))
 
         //Email Input
-        TextField(value = emailinput, onValueChange = { emailinput = it }, label = {
-            Text(text = "Correo Electrónico")
-        }, modifier = Modifier
-            .fillMaxWidth()
-            .padding(start = 30.dp, end = 30.dp)
-            .align(Alignment.CenterHorizontally)
-            .background(Color.White)
-        )
+        MyTextField(data = emailinput, label = "Correo Electrónico", onvaluechange = { emailinput = it })
         Spacer(Modifier.size(16.dp))
 
         //Password Input
-        TextField(value = passinput, onValueChange = { passinput = it }, label = {
-            Text(text = "Contraseña")
-        }, modifier = Modifier
-            .fillMaxWidth()
-            .padding(start = 30.dp, end = 30.dp)
-            .align(Alignment.CenterHorizontally)
-            .background(Color.White)
-        )
+        MyPasswordField(data = passinput, label = "Contraseña", onvaluechange = { passinput = it })
         Spacer(Modifier.size(16.dp))
 
         //Confirm Password Input
-        TextField(value = confpassinput, onValueChange = { confpassinput = it }, label = {
-            Text(text = "Confirmar Contraseña")
-        }, modifier = Modifier
-            .fillMaxWidth()
-            .padding(start = 30.dp, end = 30.dp)
-            .align(Alignment.CenterHorizontally)
-            .background(Color.White)
-        )
+        MyPasswordField(data = confpassinput, label = "Confirmar Contraseña", onvaluechange = { confpassinput = it })
         Spacer(Modifier.size(15.dp))
 
         //Checkboxes
@@ -120,19 +85,6 @@ fun MyRegisterScreen(navController: NavController) {
         MyButton(text = "Iniciar Sesion", onclick = { navController.popBackStack() }, containercolor = Color(255, 178, 92))
     }
 }
-
-/*@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun MyTextField(text: String, value: String, valuechange: () -> Unit) {
-    TextField(value = value, onValueChange = valuechange, label = {
-        Text(text = text)
-    }, modifier = Modifier
-        .fillMaxWidth()
-        .padding(start = 30.dp, end = 30.dp)
-        .background(Color.White)
-    )
-}*/
-
 @Composable
 fun MyTextCheckBox(text: String) {
     var state by rememberSaveable { mutableStateOf(false) }
