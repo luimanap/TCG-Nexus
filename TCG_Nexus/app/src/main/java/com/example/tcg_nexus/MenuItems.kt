@@ -8,6 +8,6 @@ sealed class MenuItems(
     object Home: MenuItems(R.drawable.home, "Home", "home")
     object Collection: MenuItems(R.drawable.albums, "Collection", "collection")
     object Decks: MenuItems(R.drawable.cards, "Decks", "decks")
-    object Games: MenuItems(R.drawable.dice_icon, "Games", "games")
+    object Play: MenuItems(R.drawable.dice_icon, "Play", "play")
     object Profile: MenuItems(R.drawable.personcirclesharp, "Profile", "profile")
 }

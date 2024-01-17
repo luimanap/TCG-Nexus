@@ -31,24 +31,24 @@ fun Home(){
 @Composable
 fun Collection(){
     Column {
-        Text("Home")
+        Text("Collection")
     }
 }
 @Composable
 fun Decks(){
     Column {
-        Text("Home")
+        Text("Decks")
     }
 }
 @Composable
-fun Games(){
+fun Play(){
     Column {
-        Text("Home")
+        Text("Play")
     }
 }
 @Composable
 fun Profile(){
     Column {
-        Text("Home")
+        Text("Profile")
     }
 }
