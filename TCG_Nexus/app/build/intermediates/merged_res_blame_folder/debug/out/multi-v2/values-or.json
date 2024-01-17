@@ -4,24 +4,7 @@
             "outputFile": "com.example.tcg_nexus.app-mergeDebugResources-50:/values-or/values-or.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\93df8d9948672a1ac9de4361877b3f83\\transformed\\material3-1.0.0\\res\\values-or\\values-or.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,141,212",
-                        "endColumns": "85,70,83",
-                        "endOffsets": "136,207,291"
-                    },
-                    "to": {
-                        "startLines": "11,14,16",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "1024,1302,1459",
-                        "endColumns": "85,70,83",
-                        "endOffsets": "1105,1368,1538"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\9ed2ead0f400ca6bb94013d64d6a16d0\\transformed\\core-1.12.0\\res\\values-or\\values-or.xml",
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\9ed2ead0f400ca6bb94013d64d6a16d0\\transformed\\core-1.12.0\\res\\values-or\\values-or.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -38,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\c1fb9ef8ad5a2e2e652064bbb3b9bd08\\transformed\\ui-release\\res\\values-or\\values-or.xml",
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\c1fb9ef8ad5a2e2e652064bbb3b9bd08\\transformed\\ui-release\\res\\values-or\\values-or.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -52,6 +35,23 @@
                         "startOffsets": "840,937,1110,1202,1373,1543,1620,1718,1806,1893,1963,2033,2111,2193,2364,2447,2514",
                         "endColumns": "96,86,91,99,85,76,97,87,86,69,69,77,81,69,82,66,118",
                         "endOffsets": "932,1019,1197,1297,1454,1615,1713,1801,1888,1958,2028,2106,2188,2258,2442,2509,2628"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\93df8d9948672a1ac9de4361877b3f83\\transformed\\material3-1.0.0\\res\\values-or\\values-or.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,141,212",
+                        "endColumns": "85,70,83",
+                        "endOffsets": "136,207,291"
+                    },
+                    "to": {
+                        "startLines": "11,14,16",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "1024,1302,1459",
+                        "endColumns": "85,70,83",
+                        "endOffsets": "1105,1368,1538"
                     }
                 }
             ]

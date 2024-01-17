@@ -4,24 +4,24 @@
             "outputFile": "com.example.tcg_nexus.app-mergeDebugResources-50:/values-af/values-af.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\9ed2ead0f400ca6bb94013d64d6a16d0\\transformed\\core-1.12.0\\res\\values-af\\values-af.xml",
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\93df8d9948672a1ac9de4361877b3f83\\transformed\\material3-1.0.0\\res\\values-af\\values-af.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,153,255,353,451,558,667,787",
-                        "endColumns": "97,101,97,97,106,108,119,100",
-                        "endOffsets": "148,250,348,446,553,662,782,883"
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,131,204",
+                        "endColumns": "75,72,75",
+                        "endOffsets": "126,199,275"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,26",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,203,305,403,501,608,717,2231",
-                        "endColumns": "97,101,97,97,106,108,119,100",
-                        "endOffsets": "198,300,398,496,603,712,832,2327"
+                        "startLines": "11,14,16",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "1020,1294,1453",
+                        "endColumns": "75,72,75",
+                        "endOffsets": "1091,1362,1524"
                     }
                 },
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\c1fb9ef8ad5a2e2e652064bbb3b9bd08\\transformed\\ui-release\\res\\values-af\\values-af.xml",
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\c1fb9ef8ad5a2e2e652064bbb3b9bd08\\transformed\\ui-release\\res\\values-af\\values-af.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,20 +38,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\93df8d9948672a1ac9de4361877b3f83\\transformed\\material3-1.0.0\\res\\values-af\\values-af.xml",
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\9ed2ead0f400ca6bb94013d64d6a16d0\\transformed\\core-1.12.0\\res\\values-af\\values-af.xml",
                     "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,131,204",
-                        "endColumns": "75,72,75",
-                        "endOffsets": "126,199,275"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,153,255,353,451,558,667,787",
+                        "endColumns": "97,101,97,97,106,108,119,100",
+                        "endOffsets": "148,250,348,446,553,662,782,883"
                     },
                     "to": {
-                        "startLines": "11,14,16",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "1020,1294,1453",
-                        "endColumns": "75,72,75",
-                        "endOffsets": "1091,1362,1524"
+                        "startLines": "2,3,4,5,6,7,8,26",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,203,305,403,501,608,717,2231",
+                        "endColumns": "97,101,97,97,106,108,119,100",
+                        "endOffsets": "198,300,398,496,603,712,832,2327"
                     }
                 }
             ]

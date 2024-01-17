@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    NavHost(navController = navController, startDestination = "login"){
+                    NavHost(navController = navController, startDestination = "home-screen"){
                         composable("login"){LoginScreen(navController = navController)}
                         composable("register"){ RegisterScreen(navController = navController)}
                         composable("home-screen"){ HomeScreen(navController = navController)}
@@ -40,9 +40,3 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
-
-
-
-
-

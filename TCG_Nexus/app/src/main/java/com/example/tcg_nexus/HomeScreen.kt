@@ -3,6 +3,7 @@ package com.example.tcg_nexus
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -67,9 +68,10 @@ fun HomeScreen(navController: NavController) {
                 .constrainAs(navi) {
                     bottom.linkTo(parent.bottom)
                     start.linkTo(parent.start)
-                    top.linkTo(parent.top, margin = 50.dp)
+                    top.linkTo(info.bottom, margin = 50.dp)
                 }) {
-
+                Row {
+                }
             }
         }
     }

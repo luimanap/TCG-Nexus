@@ -1,10 +1,14 @@
 package com.example.tcg_nexus
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Card
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
@@ -18,8 +22,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
@@ -34,15 +40,23 @@ fun Games(navController: NavController) {
     var players by rememberSaveable {
         mutableStateOf("")
     }
-    NavHost(navController = navController, startDestination = "login") {
+    /*NavHost(navController = navController, startDestination = "login") {
         composable("2p") { LoginScreen(navController = navController) }
         composable("3p") { RegisterScreen(navController = navController) }
         composable("4p") { HomeScreen(navController = navController) }
         composable("5p") { Games(navController = navController) }
         composable("6p") { Games(navController = navController) }
+    }*/
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(color = Color(204, 204, 204, 90)),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+
+        SelectPlayers()
     }
 
-    SelectPlayers()
 
 }
 
@@ -100,7 +114,7 @@ fun SelectPlayers() {
             colors = TextFieldDefaults.outlinedTextFieldColors(
                 disabledBorderColor = Color.Black, disabledTextColor = Color.Black
             ),
-            label = { Text(text = "Jugadores") })
+            label = { Text(text = "") })
         DropdownMenu(
             expanded = isexpanded,
             onDismissRequest = { isexpanded = false },
