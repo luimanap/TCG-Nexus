@@ -28,7 +28,7 @@ import androidx.navigation.NavController
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyRegisterScreen(navController: NavController) {
+fun RegisterScreen(navController: NavController) {
     var nameinput by rememberSaveable { mutableStateOf("") }
     var lastnameinput by rememberSaveable { mutableStateOf("") }
     var emailinput by rememberSaveable { mutableStateOf("") }

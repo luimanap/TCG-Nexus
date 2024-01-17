@@ -26,7 +26,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.navigation.NavController
 
 @Composable
-fun MyHomeScreen(navController: NavController) {
+fun HomeScreen(navController: NavController) {
     var totalcards by rememberSaveable { mutableStateOf(0) }
     var estimatedCost by rememberSaveable { mutableStateOf(0) }
     val estimatedcostString by rememberSaveable { mutableStateOf("${estimatedCost} €") }

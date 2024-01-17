@@ -31,7 +31,7 @@ import androidx.navigation.NavController
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyLoginScreen(navController: NavController) {
+fun LoginScreen(navController: NavController) {
     var userinput by rememberSaveable { mutableStateOf("") }
     var passinput by rememberSaveable { mutableStateOf("") }
     BackgroundImage()

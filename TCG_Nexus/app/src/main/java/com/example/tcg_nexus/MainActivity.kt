@@ -30,11 +30,11 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     NavHost(navController = navController, startDestination = "login"){
-                        composable("login"){ MyLoginScreen(navController = navController)}
-                        composable("register"){ MyRegisterScreen(navController = navController)}
-                        composable("home-screen"){ MyHomeScreen(navController = navController)}
+                        composable("login"){LoginScreen(navController = navController)}
+                        composable("register"){ RegisterScreen(navController = navController)}
+                        composable("home-screen"){ HomeScreen(navController = navController)}
+                        composable("games"){ Games(navController = navController)}
                     }
-
                 }
             }
         }
