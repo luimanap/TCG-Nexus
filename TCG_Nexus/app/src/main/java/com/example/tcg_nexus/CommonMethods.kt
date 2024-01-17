@@ -7,9 +7,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
@@ -17,6 +21,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -96,4 +102,38 @@ fun MyCanvasSeparator(){
             center = Offset(centerX, startY)
         )
     }
+}
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun MyTextField(data: String, label: String, onvaluechange: (String) -> Unit) {
+    TextField(
+        value = data,
+        onValueChange = onvaluechange,
+        label = {
+            Text(text = label)
+        },
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(start = 30.dp, end = 30.dp),
+        shape = RoundedCornerShape(45.dp),
+        singleLine = true,
+    )
+}
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun MyPasswordField(data: String, label: String, onvaluechange: (String) -> Unit) {
+    TextField(
+        value = data,
+        onValueChange = onvaluechange,
+        label = {
+            Text(text = label)
+        },
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(start = 30.dp, end = 30.dp),
+        shape = RoundedCornerShape(45.dp),
+        singleLine = true,
+        visualTransformation = PasswordVisualTransformation(),
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
+    )
 }

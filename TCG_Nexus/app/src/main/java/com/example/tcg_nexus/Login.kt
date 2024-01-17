@@ -91,38 +91,3 @@ fun MyLoginScreen(navController: NavController) {
         )
     }
 }
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun MyTextField(data: String, label: String, onvaluechange: (String) -> Unit) {
-    TextField(
-        value = data,
-        onValueChange = onvaluechange,
-        label = {
-            Text(text = label)
-        },
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(start = 30.dp, end = 30.dp),
-        shape = RoundedCornerShape(45.dp),
-        singleLine = true,
-    )
-}
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun MyPasswordField(data: String, label: String, onvaluechange: (String) -> Unit) {
-    TextField(
-        value = data,
-        onValueChange = onvaluechange,
-        label = {
-            Text(text = label)
-        },
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(start = 30.dp, end = 30.dp),
-        shape = RoundedCornerShape(45.dp),
-        singleLine = true,
-        visualTransformation = PasswordVisualTransformation(),
-        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
-    )
-}
