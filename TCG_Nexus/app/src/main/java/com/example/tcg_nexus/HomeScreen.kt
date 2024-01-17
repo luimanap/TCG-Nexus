@@ -67,7 +67,6 @@ fun HomeScreen(navController: NavHostController) {
                         contentcolor = Color.Black
                     )
                 }
-
             }
             Box(modifier = Modifier
                 .background(Color.White)
@@ -77,14 +76,14 @@ fun HomeScreen(navController: NavHostController) {
                     top.linkTo(parent.top, margin = 50.dp)
                 }) {
 
-                Scaffold(bottomBar = {
+                /*Scaffold(bottomBar = {
                     BottomAppBar {
                         Text("Bottom bar")
                     }
                 }) {innerPadding ->
                     Column(modifier = Modifier.padding(innerPadding), verticalArrangement = Arrangement.spacedBy(16.dp)){}
 
-                }
+                }*/
 
             }
         }
