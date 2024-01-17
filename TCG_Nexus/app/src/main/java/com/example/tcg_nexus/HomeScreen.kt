@@ -39,18 +39,26 @@ fun MyHomeScreen(navController: NavController) {
         ConstraintLayout(modifier = Modifier.fillMaxSize()) {
             val (info, navi) = createRefs()
             val barrier = createGuidelineFromBottom(0.08f)
-            Box(modifier = Modifier
-                .fillMaxSize(75f).zIndex(-2f)) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize(75f)
+                    .zIndex(-2f)
+            ) {
                 Column {
                     Spacer(modifier = Modifier.size(64.dp))
                     MyCard(
-                        "Cartas en la colección",
-                        totalcards.toString(),
-                        Color(92, 115, 255),
-                        Color.White
+                        text = "Cartas en la colección",
+                        number = totalcards.toString(),
+                        containercolor = Color(92, 115, 255),
+                        contentcolor = Color.White
                     )
                     Spacer(modifier = Modifier.size(16.dp))
-                    MyCard("Valor estimado", estimatedcostString, Color.White, Color.Black)
+                    MyCard(
+                        text = "Valor estimado",
+                        number = estimatedcostString,
+                        containercolor = Color.White,
+                        contentcolor = Color.Black
+                    )
                 }
 
             }
