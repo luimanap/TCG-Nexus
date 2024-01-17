@@ -31,7 +31,7 @@ import androidx.navigation.NavController
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyLoginScreen(navController: NavController) {
+fun LoginScreen(navController: NavController) {
     var userinput by rememberSaveable { mutableStateOf("") }
     var passinput by rememberSaveable { mutableStateOf("") }
     BackgroundImage()
@@ -74,7 +74,7 @@ fun MyLoginScreen(navController: NavController) {
         //Login button
         MyButton(
             text = "Iniciar Sesión",
-            onclick = { navController.navigate("home-screen") },
+            onclick = { navController.navigate("home") },
             containercolor = Color(92, 115, 255)
         )
         Spacer(Modifier.size(8.dp))

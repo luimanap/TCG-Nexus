@@ -28,7 +28,7 @@ import androidx.navigation.NavController
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyRegisterScreen(navController: NavController) {
+fun RegisterScreen(navController: NavController) {
     var nameinput by rememberSaveable { mutableStateOf("") }
     var lastnameinput by rememberSaveable { mutableStateOf("") }
     var emailinput by rememberSaveable { mutableStateOf("") }
@@ -72,7 +72,7 @@ fun MyRegisterScreen(navController: NavController) {
         MyTextCheckBox("Me gustaría recibir ofertas y promociones exclusivas")
 
         //Register button
-        MyButton(text = "Crear Cuenta", onclick = {navController.navigate("home-screen")},containercolor = Color(92, 115, 255))
+        MyButton(text = "Crear Cuenta", onclick = {navController.navigate("home")},containercolor = Color(92, 115, 255))
 
         //Separator
         Spacer(Modifier.size(8.dp))
