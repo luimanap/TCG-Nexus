@@ -1,54 +1,54 @@
-com.example.tcg_nexus.app-core-ktx-1.12.0-0 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\0408fcbd51ce8b101ee2d96b88859696\transformed\core-ktx-1.12.0\res
-com.example.tcg_nexus.app-animation-core-release-1 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\051ee87a938575ea0d97d0ba7d8b6e98\transformed\animation-core-release\res
-com.example.tcg_nexus.app-startup-runtime-1.1.1-2 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\057da21c4e57f9ee45ba85e91a43c8ff\transformed\startup-runtime-1.1.1\res
-com.example.tcg_nexus.app-foundation-release-3 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\05a5026393360ceaa9a572555f4525ba\transformed\foundation-release\res
-com.example.tcg_nexus.app-coil-base-2.0.0-rc01-4 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\09371d5a1fb162eeefc401132b1676a4\transformed\coil-base-2.0.0-rc01\res
-com.example.tcg_nexus.app-material-ripple-1.4.0-5 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\09c7c49d41ada307b2a72b7835c58aad\transformed\material-ripple-1.4.0\res
-com.example.tcg_nexus.app-material-1.4.0-6 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\10a7f3de0f33a38d5fa6dc6663e74c26\transformed\material-1.4.0\res
-com.example.tcg_nexus.app-profileinstaller-1.3.0-7 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\10be844beeb86ac1581fb648772e924f\transformed\profileinstaller-1.3.0\res
-com.example.tcg_nexus.app-navigation-common-2.7.6-8 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\19cd2fba57a6ff1358a2ccbccf96ad78\transformed\navigation-common-2.7.6\res
-com.example.tcg_nexus.app-lifecycle-viewmodel-savedstate-2.7.0-9 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\1e56ace680937cb0097791739c227462\transformed\lifecycle-viewmodel-savedstate-2.7.0\res
-com.example.tcg_nexus.app-ui-geometry-release-10 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\2997fb9b4ac431e2a9526bfacec64829\transformed\ui-geometry-release\res
-com.example.tcg_nexus.app-runtime-release-11 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\40542f61d9871e699ac7eaa7b451fe34\transformed\runtime-release\res
-com.example.tcg_nexus.app-emoji2-1.4.0-12 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\40e539d961e345bd305acac941d300da\transformed\emoji2-1.4.0\res
-com.example.tcg_nexus.app-savedstate-1.2.1-13 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\520903bce3f04c77242540ec885f2aee\transformed\savedstate-1.2.1\res
-com.example.tcg_nexus.app-lifecycle-viewmodel-compose-2.7.0-14 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\571eb89842449db8ddbff1c7cc30339d\transformed\lifecycle-viewmodel-compose-2.7.0\res
-com.example.tcg_nexus.app-navigation-runtime-2.7.6-15 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\5f65e3872949889e76f6019eb3ec733c\transformed\navigation-runtime-2.7.6\res
-com.example.tcg_nexus.app-core-runtime-2.2.0-16 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6eb300561f84b40f11b28f604dd5271e\transformed\core-runtime-2.2.0\res
-com.example.tcg_nexus.app-runtime-saveable-release-17 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\74bb06487aeee5b86db4b5b83c64928c\transformed\runtime-saveable-release\res
-com.example.tcg_nexus.app-activity-compose-1.8.2-18 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\7f9e898e5fdf88ce5e457714578e9b4d\transformed\activity-compose-1.8.2\res
-com.example.tcg_nexus.app-ui-unit-release-19 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\832545ad74ae73a31a725693ec5aa838\transformed\ui-unit-release\res
-com.example.tcg_nexus.app-activity-ktx-1.8.2-20 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\8382d8d4d9a64657926a5ece82fe1b91\transformed\activity-ktx-1.8.2\res
-com.example.tcg_nexus.app-ui-tooling-release-21 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\8b37d7e06f067c0bca4534fdba946475\transformed\ui-tooling-release\res
-com.example.tcg_nexus.app-lifecycle-viewmodel-ktx-2.7.0-22 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\8eb87eb56c5696ac8e45c49e383ed8f5\transformed\lifecycle-viewmodel-ktx-2.7.0\res
-com.example.tcg_nexus.app-material3-1.0.0-23 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\93df8d9948672a1ac9de4361877b3f83\transformed\material3-1.0.0\res
-com.example.tcg_nexus.app-core-1.12.0-24 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9ed2ead0f400ca6bb94013d64d6a16d0\transformed\core-1.12.0\res
-com.example.tcg_nexus.app-annotation-experimental-1.3.0-25 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\a704240098bfda94b83b91669aea5c05\transformed\annotation-experimental-1.3.0\res
-com.example.tcg_nexus.app-activity-1.8.2-26 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\ab329e8c98472db2be64c92fb0ecff8f\transformed\activity-1.8.2\res
-com.example.tcg_nexus.app-navigation-compose-2.7.6-27 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\b343a35a668dd759b94d6d16a94a4e79\transformed\navigation-compose-2.7.6\res
-com.example.tcg_nexus.app-lifecycle-runtime-2.7.0-28 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\b53128f3bbf00e4f634cab11c306c742\transformed\lifecycle-runtime-2.7.0\res
-com.example.tcg_nexus.app-ui-util-release-29 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\be09b9b447870d1bb62a639760ec7100\transformed\ui-util-release\res
-com.example.tcg_nexus.app-ui-test-manifest-1.5.1-30 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\be30760768dda4515ac2f6c8211a75a6\transformed\ui-test-manifest-1.5.1\res
-com.example.tcg_nexus.app-ui-graphics-release-31 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\bf165f1b04236418620eb638a14deac9\transformed\ui-graphics-release\res
-com.example.tcg_nexus.app-animation-release-32 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\bfefa9a8dc4c27d2da2c385117a7ac76\transformed\animation-release\res
-com.example.tcg_nexus.app-navigation-common-ktx-2.7.6-33 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\c0194c2272c574f6cba7b54f57e9f6a0\transformed\navigation-common-ktx-2.7.6\res
-com.example.tcg_nexus.app-ui-release-34 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\c1fb9ef8ad5a2e2e652064bbb3b9bd08\transformed\ui-release\res
-com.example.tcg_nexus.app-ui-text-release-35 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\cc39f9f4b7b8ecd20f5927bc8fc462a3\transformed\ui-text-release\res
-com.example.tcg_nexus.app-material-icons-core-1.4.0-36 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\d5a08bc02679043aa2355938dc383f15\transformed\material-icons-core-1.4.0\res
-com.example.tcg_nexus.app-navigation-runtime-ktx-2.7.6-37 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\d79e83e2d39d27f1a776d45d5e349423\transformed\navigation-runtime-ktx-2.7.6\res
-com.example.tcg_nexus.app-ui-tooling-preview-release-38 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\de3c2db2cc490ea70f1bfd0c57e23c22\transformed\ui-tooling-preview-release\res
-com.example.tcg_nexus.app-lifecycle-viewmodel-2.7.0-39 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\def5b9e460d217ad99d47a66eab339dc\transformed\lifecycle-viewmodel-2.7.0\res
-com.example.tcg_nexus.app-savedstate-ktx-1.2.1-40 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\df1e4963f7a26c0d7661c5024639cc44\transformed\savedstate-ktx-1.2.1\res
-com.example.tcg_nexus.app-lifecycle-runtime-ktx-2.7.0-41 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\e48fde0691e7569edbd500cec2c1c73a\transformed\lifecycle-runtime-ktx-2.7.0\res
-com.example.tcg_nexus.app-customview-poolingcontainer-1.0.0-42 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\ea995ebbb1592c2d39053cebe0470c70\transformed\customview-poolingcontainer-1.0.0\res
-com.example.tcg_nexus.app-foundation-layout-release-43 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\eb731b63a4de960202e191f9faa59401\transformed\foundation-layout-release\res
-com.example.tcg_nexus.app-lifecycle-process-2.7.0-44 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\ecd081cd4290efda51e850c4cc583153\transformed\lifecycle-process-2.7.0\res
-com.example.tcg_nexus.app-ui-tooling-data-release-45 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\ed523504600fdea7590d0c37adcf7b7d\transformed\ui-tooling-data-release\res
-com.example.tcg_nexus.app-appcompat-resources-1.4.1-46 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\edb3758edc9d3a00435c329f8db43222\transformed\appcompat-resources-1.4.1\res
-com.example.tcg_nexus.app-lifecycle-livedata-core-2.7.0-47 C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\f8078e24cf9902b0d1b23aa1d8afddb5\transformed\lifecycle-livedata-core-2.7.0\res
-com.example.tcg_nexus.app-resValues-48 C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\build\generated\res\resValues\debug
-com.example.tcg_nexus.app-packageDebugResources-49 C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
-com.example.tcg_nexus.app-packageDebugResources-50 C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
-com.example.tcg_nexus.app-merged_res-51 C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\build\intermediates\merged_res\debug
-com.example.tcg_nexus.app-debug-52 C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\debug\res
-com.example.tcg_nexus.app-main-53 C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\res
+com.example.tcg_nexus.app-core-ktx-1.12.0-0 C:\Users\luisv\.gradle\caches\transforms-3\0408fcbd51ce8b101ee2d96b88859696\transformed\core-ktx-1.12.0\res
+com.example.tcg_nexus.app-animation-core-release-1 C:\Users\luisv\.gradle\caches\transforms-3\051ee87a938575ea0d97d0ba7d8b6e98\transformed\animation-core-release\res
+com.example.tcg_nexus.app-startup-runtime-1.1.1-2 C:\Users\luisv\.gradle\caches\transforms-3\057da21c4e57f9ee45ba85e91a43c8ff\transformed\startup-runtime-1.1.1\res
+com.example.tcg_nexus.app-foundation-release-3 C:\Users\luisv\.gradle\caches\transforms-3\05a5026393360ceaa9a572555f4525ba\transformed\foundation-release\res
+com.example.tcg_nexus.app-coil-base-2.0.0-rc01-4 C:\Users\luisv\.gradle\caches\transforms-3\09371d5a1fb162eeefc401132b1676a4\transformed\coil-base-2.0.0-rc01\res
+com.example.tcg_nexus.app-material-ripple-1.4.0-5 C:\Users\luisv\.gradle\caches\transforms-3\09c7c49d41ada307b2a72b7835c58aad\transformed\material-ripple-1.4.0\res
+com.example.tcg_nexus.app-material-1.4.0-6 C:\Users\luisv\.gradle\caches\transforms-3\10a7f3de0f33a38d5fa6dc6663e74c26\transformed\material-1.4.0\res
+com.example.tcg_nexus.app-profileinstaller-1.3.0-7 C:\Users\luisv\.gradle\caches\transforms-3\10be844beeb86ac1581fb648772e924f\transformed\profileinstaller-1.3.0\res
+com.example.tcg_nexus.app-navigation-common-2.7.6-8 C:\Users\luisv\.gradle\caches\transforms-3\19cd2fba57a6ff1358a2ccbccf96ad78\transformed\navigation-common-2.7.6\res
+com.example.tcg_nexus.app-lifecycle-viewmodel-savedstate-2.7.0-9 C:\Users\luisv\.gradle\caches\transforms-3\1e56ace680937cb0097791739c227462\transformed\lifecycle-viewmodel-savedstate-2.7.0\res
+com.example.tcg_nexus.app-ui-geometry-release-10 C:\Users\luisv\.gradle\caches\transforms-3\2997fb9b4ac431e2a9526bfacec64829\transformed\ui-geometry-release\res
+com.example.tcg_nexus.app-runtime-release-11 C:\Users\luisv\.gradle\caches\transforms-3\40542f61d9871e699ac7eaa7b451fe34\transformed\runtime-release\res
+com.example.tcg_nexus.app-emoji2-1.4.0-12 C:\Users\luisv\.gradle\caches\transforms-3\40e539d961e345bd305acac941d300da\transformed\emoji2-1.4.0\res
+com.example.tcg_nexus.app-savedstate-1.2.1-13 C:\Users\luisv\.gradle\caches\transforms-3\520903bce3f04c77242540ec885f2aee\transformed\savedstate-1.2.1\res
+com.example.tcg_nexus.app-lifecycle-viewmodel-compose-2.7.0-14 C:\Users\luisv\.gradle\caches\transforms-3\571eb89842449db8ddbff1c7cc30339d\transformed\lifecycle-viewmodel-compose-2.7.0\res
+com.example.tcg_nexus.app-navigation-runtime-2.7.6-15 C:\Users\luisv\.gradle\caches\transforms-3\5f65e3872949889e76f6019eb3ec733c\transformed\navigation-runtime-2.7.6\res
+com.example.tcg_nexus.app-core-runtime-2.2.0-16 C:\Users\luisv\.gradle\caches\transforms-3\6eb300561f84b40f11b28f604dd5271e\transformed\core-runtime-2.2.0\res
+com.example.tcg_nexus.app-runtime-saveable-release-17 C:\Users\luisv\.gradle\caches\transforms-3\74bb06487aeee5b86db4b5b83c64928c\transformed\runtime-saveable-release\res
+com.example.tcg_nexus.app-activity-compose-1.8.2-18 C:\Users\luisv\.gradle\caches\transforms-3\7f9e898e5fdf88ce5e457714578e9b4d\transformed\activity-compose-1.8.2\res
+com.example.tcg_nexus.app-ui-unit-release-19 C:\Users\luisv\.gradle\caches\transforms-3\832545ad74ae73a31a725693ec5aa838\transformed\ui-unit-release\res
+com.example.tcg_nexus.app-activity-ktx-1.8.2-20 C:\Users\luisv\.gradle\caches\transforms-3\8382d8d4d9a64657926a5ece82fe1b91\transformed\activity-ktx-1.8.2\res
+com.example.tcg_nexus.app-ui-tooling-release-21 C:\Users\luisv\.gradle\caches\transforms-3\8b37d7e06f067c0bca4534fdba946475\transformed\ui-tooling-release\res
+com.example.tcg_nexus.app-lifecycle-viewmodel-ktx-2.7.0-22 C:\Users\luisv\.gradle\caches\transforms-3\8eb87eb56c5696ac8e45c49e383ed8f5\transformed\lifecycle-viewmodel-ktx-2.7.0\res
+com.example.tcg_nexus.app-material3-1.0.0-23 C:\Users\luisv\.gradle\caches\transforms-3\93df8d9948672a1ac9de4361877b3f83\transformed\material3-1.0.0\res
+com.example.tcg_nexus.app-core-1.12.0-24 C:\Users\luisv\.gradle\caches\transforms-3\9ed2ead0f400ca6bb94013d64d6a16d0\transformed\core-1.12.0\res
+com.example.tcg_nexus.app-annotation-experimental-1.3.0-25 C:\Users\luisv\.gradle\caches\transforms-3\a704240098bfda94b83b91669aea5c05\transformed\annotation-experimental-1.3.0\res
+com.example.tcg_nexus.app-activity-1.8.2-26 C:\Users\luisv\.gradle\caches\transforms-3\ab329e8c98472db2be64c92fb0ecff8f\transformed\activity-1.8.2\res
+com.example.tcg_nexus.app-navigation-compose-2.7.6-27 C:\Users\luisv\.gradle\caches\transforms-3\b343a35a668dd759b94d6d16a94a4e79\transformed\navigation-compose-2.7.6\res
+com.example.tcg_nexus.app-lifecycle-runtime-2.7.0-28 C:\Users\luisv\.gradle\caches\transforms-3\b53128f3bbf00e4f634cab11c306c742\transformed\lifecycle-runtime-2.7.0\res
+com.example.tcg_nexus.app-ui-util-release-29 C:\Users\luisv\.gradle\caches\transforms-3\be09b9b447870d1bb62a639760ec7100\transformed\ui-util-release\res
+com.example.tcg_nexus.app-ui-test-manifest-1.5.1-30 C:\Users\luisv\.gradle\caches\transforms-3\be30760768dda4515ac2f6c8211a75a6\transformed\ui-test-manifest-1.5.1\res
+com.example.tcg_nexus.app-ui-graphics-release-31 C:\Users\luisv\.gradle\caches\transforms-3\bf165f1b04236418620eb638a14deac9\transformed\ui-graphics-release\res
+com.example.tcg_nexus.app-animation-release-32 C:\Users\luisv\.gradle\caches\transforms-3\bfefa9a8dc4c27d2da2c385117a7ac76\transformed\animation-release\res
+com.example.tcg_nexus.app-navigation-common-ktx-2.7.6-33 C:\Users\luisv\.gradle\caches\transforms-3\c0194c2272c574f6cba7b54f57e9f6a0\transformed\navigation-common-ktx-2.7.6\res
+com.example.tcg_nexus.app-ui-release-34 C:\Users\luisv\.gradle\caches\transforms-3\c1fb9ef8ad5a2e2e652064bbb3b9bd08\transformed\ui-release\res
+com.example.tcg_nexus.app-ui-text-release-35 C:\Users\luisv\.gradle\caches\transforms-3\cc39f9f4b7b8ecd20f5927bc8fc462a3\transformed\ui-text-release\res
+com.example.tcg_nexus.app-material-icons-core-1.4.0-36 C:\Users\luisv\.gradle\caches\transforms-3\d5a08bc02679043aa2355938dc383f15\transformed\material-icons-core-1.4.0\res
+com.example.tcg_nexus.app-navigation-runtime-ktx-2.7.6-37 C:\Users\luisv\.gradle\caches\transforms-3\d79e83e2d39d27f1a776d45d5e349423\transformed\navigation-runtime-ktx-2.7.6\res
+com.example.tcg_nexus.app-ui-tooling-preview-release-38 C:\Users\luisv\.gradle\caches\transforms-3\de3c2db2cc490ea70f1bfd0c57e23c22\transformed\ui-tooling-preview-release\res
+com.example.tcg_nexus.app-lifecycle-viewmodel-2.7.0-39 C:\Users\luisv\.gradle\caches\transforms-3\def5b9e460d217ad99d47a66eab339dc\transformed\lifecycle-viewmodel-2.7.0\res
+com.example.tcg_nexus.app-savedstate-ktx-1.2.1-40 C:\Users\luisv\.gradle\caches\transforms-3\df1e4963f7a26c0d7661c5024639cc44\transformed\savedstate-ktx-1.2.1\res
+com.example.tcg_nexus.app-lifecycle-runtime-ktx-2.7.0-41 C:\Users\luisv\.gradle\caches\transforms-3\e48fde0691e7569edbd500cec2c1c73a\transformed\lifecycle-runtime-ktx-2.7.0\res
+com.example.tcg_nexus.app-customview-poolingcontainer-1.0.0-42 C:\Users\luisv\.gradle\caches\transforms-3\ea995ebbb1592c2d39053cebe0470c70\transformed\customview-poolingcontainer-1.0.0\res
+com.example.tcg_nexus.app-foundation-layout-release-43 C:\Users\luisv\.gradle\caches\transforms-3\eb731b63a4de960202e191f9faa59401\transformed\foundation-layout-release\res
+com.example.tcg_nexus.app-lifecycle-process-2.7.0-44 C:\Users\luisv\.gradle\caches\transforms-3\ecd081cd4290efda51e850c4cc583153\transformed\lifecycle-process-2.7.0\res
+com.example.tcg_nexus.app-ui-tooling-data-release-45 C:\Users\luisv\.gradle\caches\transforms-3\ed523504600fdea7590d0c37adcf7b7d\transformed\ui-tooling-data-release\res
+com.example.tcg_nexus.app-appcompat-resources-1.4.1-46 C:\Users\luisv\.gradle\caches\transforms-3\edb3758edc9d3a00435c329f8db43222\transformed\appcompat-resources-1.4.1\res
+com.example.tcg_nexus.app-lifecycle-livedata-core-2.7.0-47 C:\Users\luisv\.gradle\caches\transforms-3\f8078e24cf9902b0d1b23aa1d8afddb5\transformed\lifecycle-livedata-core-2.7.0\res
+com.example.tcg_nexus.app-resValues-48 C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\build\generated\res\resValues\debug
+com.example.tcg_nexus.app-packageDebugResources-49 C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.tcg_nexus.app-packageDebugResources-50 C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.tcg_nexus.app-merged_res-51 C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\build\intermediates\merged_res\debug
+com.example.tcg_nexus.app-debug-52 C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\debug\res
+com.example.tcg_nexus.app-main-53 C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\res
