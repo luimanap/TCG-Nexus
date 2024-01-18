@@ -135,9 +135,8 @@ fun SelectStartLife(game: Game) {
                     .clickable { isexpanded = true }
                     .fillMaxWidth(),
                 colors = TextFieldDefaults.outlinedTextFieldColors(
-                    disabledBorderColor = Color.Black, disabledTextColor = Color.Black
-                ),
-                label = { Text(text = "Vidas:") })
+                    disabledBorderColor = Color.White, disabledTextColor = Color.White
+                ))
             DropdownMenu(
                 expanded = isexpanded,
                 onDismissRequest = { isexpanded = false },
@@ -159,97 +158,8 @@ fun SelectStartLife(game: Game) {
     }
 }
 
-@Composable
-fun LifePanel(text: String, rotation: String, backcolor: Color) {
-    var rotate: Float = 0f
-    if (rotation == "left") {
-        rotate = 90f
-    } else if (rotation == "right") {
-        rotate = -90f
-    }
-    Card (
-        Modifier
-            .fillMaxSize()
-            .padding(8.dp), colors = CardDefaults.cardColors(
-                containerColor = backcolor
-            )){
-        Text(
-            text = text,
-            modifier = Modifier
-                .rotate(rotate)
-                .align(Alignment.CenterHorizontally),
-            style = TextStyle(fontSize = 100.sp, textAlign = TextAlign.Center)
-        )
-    }
-}
 
-@Composable
-fun Fourplayers(navController: NavController, life: Int) {
-    var p1lives: Int by rememberSaveable { mutableIntStateOf(life) }
-    var p2lives: Int by rememberSaveable { mutableIntStateOf(life) }
-    var p3lives: Int by rememberSaveable { mutableIntStateOf(life) }
-    var p4lives: Int by rememberSaveable { mutableIntStateOf(life) }
 
-    BackgroundImage()
-    ConstraintLayout (Modifier.fillMaxSize()){
-        var (p1,p2,p3,p4) = createRefs()
-        Box(modifier = Modifier
-            .fillMaxSize(0.5f)
-            .constrainAs(p1) {
-                start.linkTo(parent.start)
-                top.linkTo(parent.top)
-            }){
-            LifePanel(text = "$p1lives", rotation = "left", backcolor = Color.Blue)
-        }
-        Box(modifier = Modifier
-            .fillMaxSize(0.5f)
-            .constrainAs(p2) {
-                start.linkTo(p1.end)
-            }){
-            LifePanel(text = "$p2lives", rotation = "right", backcolor = Color.Red)
-        }
-        Box(modifier = Modifier
-            .fillMaxSize(0.5f)
-            .constrainAs(p3) {
-                top.linkTo(p1.bottom)
-
-            }){
-            LifePanel(text = "$p3lives", rotation = "left", backcolor = Color.Green)
-        }
-        Box(modifier = Modifier
-            .fillMaxSize(0.5f)
-            .constrainAs(p4) {
-                top.linkTo(p2.bottom)
-                start.linkTo(p3.end)
-
-            }){
-            LifePanel(text = "$p4lives", rotation = "right", backcolor = Color.Yellow)
-        }
-    }
-    /*Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(color = Color(204, 204, 204, 90)),
-    ) {
-        Spacer(modifier = Modifier.size(8.dp))
-        Row {
-            Spacer(modifier = Modifier.size(4.dp))
-            LifePanel(text = "${p1lives}", rotation = "left")
-            Spacer(modifier = Modifier.size(8.dp))
-            LifePanel(text = "${p2lives}", rotation = "right")
-            Spacer(modifier = Modifier.size(4.dp))
-        }
-        Spacer(modifier = Modifier.size(8.dp))
-        Row {
-            Spacer(modifier = Modifier.size(4.dp))
-            LifePanel(text = "${p3lives}", rotation = "left")
-            Spacer(modifier = Modifier.size(8.dp))
-            LifePanel(text = "${p4lives}", rotation = "right")
-            Spacer(modifier = Modifier.size(4.dp))
-        }
-        Spacer(modifier = Modifier.size(8.dp))
-    }*/
-}
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -271,9 +181,8 @@ fun SelectPlayers(game: Game) {
                     .clickable { isexpanded = true }
                     .fillMaxWidth(),
                 colors = TextFieldDefaults.outlinedTextFieldColors(
-                    disabledBorderColor = Color.Black, disabledTextColor = Color.Black
-                ),
-                label = { Text(text = "") })
+                    disabledBorderColor = Color.White, disabledTextColor = Color.White
+                ))
             DropdownMenu(
                 expanded = isexpanded,
                 onDismissRequest = { isexpanded = false },

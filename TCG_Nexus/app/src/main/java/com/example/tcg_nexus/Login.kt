@@ -27,6 +27,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.zIndex
 import androidx.navigation.NavController
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -39,7 +40,7 @@ fun LoginScreen(navController: NavController) {
         Modifier
             .fillMaxSize()
             .background(color = Color(210, 210, 210, 125))
-            .clip(RoundedCornerShape(40.dp))
+            .clip(RoundedCornerShape(40.dp)).zIndex(150f)
     ) {
 
         //Logo Image

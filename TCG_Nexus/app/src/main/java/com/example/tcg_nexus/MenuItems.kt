@@ -128,6 +128,36 @@ fun BottomBarNaviContent(
                 composable("4p60") {
                     Fourplayers(navController = navController, 60)
                 }
+                composable("3p30") {
+                    Threeplayers(navController = navController, 30)
+                }
+                composable("3p20") {
+                    Threeplayers(navController = navController, 20)
+                }
+                composable("3p40") {
+                    Threeplayers(navController = navController, 40)
+                }
+                composable("3p50") {
+                    Threeplayers(navController = navController, 50)
+                }
+                composable("3p60") {
+                    Threeplayers(navController = navController, 60)
+                }
+                composable("2p30") {
+                    Twoplayers(navController = navController, 30)
+                }
+                composable("2p20") {
+                    Twoplayers(navController = navController, 20)
+                }
+                composable("2p40") {
+                    Twoplayers(navController = navController, 40)
+                }
+                composable("2p50") {
+                    Twoplayers(navController = navController, 50)
+                }
+                composable("2p60") {
+                    Twoplayers(navController = navController, 60)
+                }
                 composable(MyAppRoute.PROFILE) {
 
                 }

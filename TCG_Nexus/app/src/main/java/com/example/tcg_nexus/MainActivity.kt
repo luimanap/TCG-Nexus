@@ -2,6 +2,8 @@
 
 package com.example.tcg_nexus
 
+import android.app.Activity
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -15,6 +17,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.tcg_nexus.ui.theme.TCGNexus_Theme
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.platform.LocalContext
 
 
 class MainActivity : ComponentActivity() {
@@ -23,6 +26,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             TCGNexus_Theme (darkTheme = false){
+
+                val activity = LocalContext.current as Activity
+                activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+
                 val navController = rememberNavController()
                 val navigateAction = remember(navController){
                     NaviActions(navController)
