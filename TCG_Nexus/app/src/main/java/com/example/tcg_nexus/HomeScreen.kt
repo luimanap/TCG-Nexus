@@ -38,11 +38,11 @@ fun HomeScreen(navController: NavHostController) {
     var estimatedCost by rememberSaveable { mutableStateOf(0) }
     val estimatedcostString by rememberSaveable { mutableStateOf("${estimatedCost} €") }
 
-    BackgroundImage()
+    //BackgroundImage()
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Color(210, 210, 210, 90))
+            .background(color = Color(210, 210, 210))
     ) {
         Box(
             modifier = Modifier
@@ -72,7 +72,9 @@ fun HomeScreen(navController: NavHostController) {
                 .fillMaxWidth()
         )
 
-        {}
+        {
+
+        }
     }
 }
 

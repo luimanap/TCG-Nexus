@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            TCGNexus_Theme {
+            TCGNexus_Theme (darkTheme = false){
                 val navController = rememberNavController()
                 val navigateAction = remember(navController){
                     NaviActions(navController)
@@ -35,7 +35,6 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     BottomBarNaviContent(navController = navController, selectedDestination = selectedDestination, navigateTo = navigateAction::navigateTo)
-
                 }
             }
         }

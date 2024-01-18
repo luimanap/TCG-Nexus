@@ -8,5 +8,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">TCG Nexus</string>
+    <string name="collection">Collection</string>
+    <string name="decks">Decks</string>
+    <string name="home">Home</string>
+    <string name="play">Play</string>
+    <string name="profile">Profile</string>
     <style name="Theme.Pruebas_App_TFG" parent="android:Theme.Material.Light.NoActionBar"/>
 </resources>

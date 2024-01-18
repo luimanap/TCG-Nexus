@@ -25,7 +25,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -51,7 +50,8 @@ fun BackgroundImage() {
 @Composable
 fun MyLogo(height: Int) {
     Image(
-        painterResource(id = R.drawable.logotcgnexus), "Logo",
+        painterResource(id = R.drawable.logotcgnexus),
+        "Logo",
         Modifier
             .fillMaxWidth()
             .height(height.dp)
@@ -151,65 +151,3 @@ fun MyPasswordField(data: String, label: String, onvaluechange: (String) -> Unit
     )
 }
 
-@Composable
-fun BottomBarNaviContent(
-    modifier: Modifier = Modifier,
-    navController: NavHostController,
-    selectedDestination: String,
-    navigateTo: (MenuItems) -> Unit
-) {
-    Row(modifier = Modifier.fillMaxSize()) {
-        Column(modifier = Modifier.fillMaxSize()) {
-            NavHost(
-                modifier = Modifier.weight(1f),
-                navController = navController,
-                startDestination = "login"
-            ) {
-                composable("login") {
-                    LoginScreen(navController = navController)
-                }
-                composable("register") {
-                    RegisterScreen(navController = navController)
-                }
-                composable(MyAppRoute.HOME) {
-                    HomeScreen(navController = navController)
-                }
-                composable(MyAppRoute.COLLECTION) {
-
-                }
-                composable(MyAppRoute.DECKS) {
-
-                }
-                composable(MyAppRoute.PLAY) {
-                    PlayScreen(navController = navController)
-                }
-                composable(MyAppRoute.PROFILE) {
-
-                }
-            }
-            BottomBarNavigation(selectedDestination = selectedDestination, navigateTo = navigateTo)
-        }
-    }
-}
-
-@Composable
-fun BottomBarNavigation(selectedDestination: String, navigateTo: (MenuItems) -> Unit) {
-    NavigationBar(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(60.dp)
-    ) {
-        TOP_LEVEL_DESTINATIONS.forEach { destinations ->
-            NavigationBarItem(
-                selected = selectedDestination == destinations.path,
-                onClick = { navigateTo(destinations) },
-                icon = {
-                    Icon(
-                        painter = painterResource(id = destinations.icon),
-                        contentDescription = stringResource(id = destinations.textId),
-                        modifier = Modifier.size(24.dp)
-                    )
-                })
-        }
-    }
-}
