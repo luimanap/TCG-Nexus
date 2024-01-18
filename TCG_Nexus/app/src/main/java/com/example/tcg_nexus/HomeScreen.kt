@@ -18,6 +18,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -28,67 +29,53 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.currentBackStackEntryAsState
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(navController: NavHostController) {
-
-
     var totalcards by rememberSaveable { mutableStateOf(0) }
     var estimatedCost by rememberSaveable { mutableStateOf(0) }
     val estimatedcostString by rememberSaveable { mutableStateOf("${estimatedCost} €") }
+
     BackgroundImage()
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(color = Color(210, 210, 210, 90))
     ) {
-        ConstraintLayout(modifier = Modifier.fillMaxSize()) {
-            val (info, navi) = createRefs()
-            val barrier = createGuidelineFromBottom(0.08f)
-            Box(
-                modifier = Modifier
-                    .fillMaxSize(75f)
-                    .zIndex(-2f)
-            ) {
-                Column {
-                    Spacer(modifier = Modifier.size(64.dp))
-                    MyCard(
-                        text = "Cartas en la colección",
-                        number = totalcards.toString(),
-                        containercolor = Color(92, 115, 255),
-                        contentcolor = Color.White
-                    )
-                    Spacer(modifier = Modifier.size(16.dp))
-                    MyCard(
-                        text = "Valor estimado",
-                        number = estimatedcostString,
-                        containercolor = Color.White,
-                        contentcolor = Color.Black
-                    )
-                }
-            }
-            Box(modifier = Modifier
-                .background(Color.White)
-                .constrainAs(navi) {
-                    bottom.linkTo(parent.bottom)
-                    start.linkTo(parent.start)
-                    top.linkTo(parent.top, margin = 50.dp)
-                }) {
-
-                /*Scaffold(bottomBar = {
-                    BottomAppBar {
-                        Text("Bottom bar")
-                    }
-                }) {innerPadding ->
-                    Column(modifier = Modifier.padding(innerPadding), verticalArrangement = Arrangement.spacedBy(16.dp)){}
-
-                }*/
-
+        Box(
+            modifier = Modifier
+                .fillMaxSize(75f)
+                .zIndex(-2f)
+        ) {
+            Column {
+                Spacer(modifier = Modifier.size(64.dp))
+                MyCard(
+                    text = "Cartas en la colección",
+                    number = totalcards.toString(),
+                    containercolor = Color(92, 115, 255),
+                    contentcolor = Color.White
+                )
+                Spacer(modifier = Modifier.size(16.dp))
+                MyCard(
+                    text = "Valor estimado",
+                    number = estimatedcostString,
+                    containercolor = Color.White,
+                    contentcolor = Color.Black
+                )
             }
         }
+        Box(
+            modifier = Modifier
+                .background(Color.White)
+                .fillMaxWidth()
+        )
+
+        {}
     }
 }
+
 
 @Composable
 fun MyCard(text: String, number: String, containercolor: Color, contentcolor: Color) {

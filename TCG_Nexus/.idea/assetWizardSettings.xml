@@ -14,8 +14,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="personcirclesharp" />
-                            <entry key="sourceFile" value="C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\res\drawable\PersonCircleSharp.svg" />
+                            <entry key="outputName" value="playingcards" />
+                            <entry key="sourceFile" value="C:\Users\luisv\Downloads\playing_cards_FILL1_wght400_GRAD0_opsz24.svg" />
                           </map>
                         </option>
                       </PersistentState>

@@ -30,8 +30,11 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.zIndex
 import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -114,9 +117,11 @@ fun SelectPlayers(navController: NavController) {
     var defaultvalue by rememberSaveable { mutableStateOf("") }
     var isexpanded by rememberSaveable { mutableStateOf(false) }
 
-    val elements = listOf<String>("2 Players", "3 Players", "4 Players", "5 Players")
-    Column {
-        Column(Modifier.padding(20.dp)) {
+    val elements = listOf<String>("2 Players", "3 Players", "4 Players", "5 Players", "6 Players")
+    Column(Modifier.padding(40.dp)) {
+        Spacer(modifier = Modifier.size(250.dp))
+        Text(text = "¿Cuantas personas van a jugar?")
+        Column {
             OutlinedTextField(value = defaultvalue,
                 onValueChange = { defaultvalue = it },
                 enabled = false,
@@ -131,25 +136,27 @@ fun SelectPlayers(navController: NavController) {
             DropdownMenu(
                 expanded = isexpanded,
                 onDismissRequest = { isexpanded = false },
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .padding(start = 40.dp, end = 40.dp)
+                    .fillMaxWidth()
             ) {
                 for (i in elements) {
                     DropdownMenuItem(text = { Text(text = i) },
                         onClick = { isexpanded = false; defaultvalue = i })
                 }
             }
-            Spacer(modifier = Modifier.size(24.dp))
-            MyButton(text = "A Jugar!!", onclick = {
-                when (defaultvalue) {
-                    //"2 Players" ->,
-                    //"3 Players" ->,
-                    "4 Players" -> {
-                        navController.navigate("4p")
-                    }
-                    //"5 Players" ->,
-                    //"6 Players" ->
-                }
-            }, containercolor = Color(92, 115, 255))
         }
+        Spacer(modifier = Modifier.size(24.dp))
+        MyButton(text = "A Jugar!!", onclick = {
+            when (defaultvalue) {
+                //"2 Players" ->,
+                //"3 Players" ->,
+                "4 Players" -> {
+                    navController.navigate("4p")
+                }
+                //"5 Players" ->,
+                //"6 Players" ->
+            }
+        }, containercolor = Color(92, 115, 255))
     }
 }

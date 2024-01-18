@@ -3,15 +3,21 @@ package com.example.tcg_nexus
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
@@ -19,11 +25,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 
 @Composable
 fun BackgroundImage() {
@@ -48,7 +59,7 @@ fun MyLogo(height: Int) {
 }
 
 @Composable
-fun MyButton(text: String, onclick: () -> Unit, containercolor : Color) {
+fun MyButton(text: String, onclick: () -> Unit, containercolor: Color) {
     Button(
         onClick = onclick,
         enabled = true,
@@ -65,7 +76,7 @@ fun MyButton(text: String, onclick: () -> Unit, containercolor : Color) {
 }
 
 @Composable
-fun MyCanvasSeparator(){
+fun MyCanvasSeparator() {
     Canvas(
         modifier = Modifier
             .fillMaxWidth()
@@ -90,7 +101,7 @@ fun MyCanvasSeparator(){
         drawLine(
             color = lineColor,
             start = Offset(centerX + centerX / 10, startY),
-            end = Offset(centerX + halfLineWidth , startY),
+            end = Offset(centerX + halfLineWidth, startY),
             strokeWidth = strokeWidth
         )
 
@@ -103,6 +114,7 @@ fun MyCanvasSeparator(){
         )
     }
 }
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyTextField(data: String, label: String, onvaluechange: (String) -> Unit) {
@@ -119,6 +131,7 @@ fun MyTextField(data: String, label: String, onvaluechange: (String) -> Unit) {
         singleLine = true,
     )
 }
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyPasswordField(data: String, label: String, onvaluechange: (String) -> Unit) {
@@ -136,4 +149,67 @@ fun MyPasswordField(data: String, label: String, onvaluechange: (String) -> Unit
         visualTransformation = PasswordVisualTransformation(),
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
     )
+}
+
+@Composable
+fun BottomBarNaviContent(
+    modifier: Modifier = Modifier,
+    navController: NavHostController,
+    selectedDestination: String,
+    navigateTo: (MenuItems) -> Unit
+) {
+    Row(modifier = Modifier.fillMaxSize()) {
+        Column(modifier = Modifier.fillMaxSize()) {
+            NavHost(
+                modifier = Modifier.weight(1f),
+                navController = navController,
+                startDestination = "login"
+            ) {
+                composable("login") {
+                    LoginScreen(navController = navController)
+                }
+                composable("register") {
+                    RegisterScreen(navController = navController)
+                }
+                composable(MyAppRoute.HOME) {
+                    HomeScreen(navController = navController)
+                }
+                composable(MyAppRoute.COLLECTION) {
+
+                }
+                composable(MyAppRoute.DECKS) {
+
+                }
+                composable(MyAppRoute.PLAY) {
+                    PlayScreen(navController = navController)
+                }
+                composable(MyAppRoute.PROFILE) {
+
+                }
+            }
+            BottomBarNavigation(selectedDestination = selectedDestination, navigateTo = navigateTo)
+        }
+    }
+}
+
+@Composable
+fun BottomBarNavigation(selectedDestination: String, navigateTo: (MenuItems) -> Unit) {
+    NavigationBar(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(60.dp)
+    ) {
+        TOP_LEVEL_DESTINATIONS.forEach { destinations ->
+            NavigationBarItem(
+                selected = selectedDestination == destinations.path,
+                onClick = { navigateTo(destinations) },
+                icon = {
+                    Icon(
+                        painter = painterResource(id = destinations.icon),
+                        contentDescription = stringResource(id = destinations.textId),
+                        modifier = Modifier.size(24.dp)
+                    )
+                })
+        }
+    }
 }
