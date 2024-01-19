@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -25,6 +26,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -34,7 +36,7 @@ import androidx.navigation.NavController
 
 @Composable
 fun LifePanel(
-    text: String,
+    plinitlife: String,
     rotation: String,
     backcolor: Color,
     player: Int,
@@ -61,69 +63,118 @@ fun LifePanel(
             containerColor = backcolor
         ),
     ) {
-
         when (players) {
+            //2 players layout
             2 -> {
                 Row {
-                    Box(modifier = Modifier.fillMaxHeight().fillMaxWidth(0.33f).background(Color.Transparent).clickable {
-                        when(player){
-                            1 -> {
-                                Toast.makeText(context,"Life +",Toast.LENGTH_SHORT).show()
-                                //p1life += 1
-                            }
-                            2 -> {
-                                Toast.makeText(context,"Life -",Toast.LENGTH_SHORT).show()
-                                //p2life -= 1
-                            }
-                        }
-                    })
-                    Column (horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth(0.5f)){
+                    //Life change button
+                    Box(
+                        modifier = Modifier
+                            .fillMaxHeight()
+                            .fillMaxWidth(0.33f)
+                            .background(Color.Transparent)
+                            .clickable {
+                                when (player) {
+                                    //Player 1 life++
+                                    1 -> {
+                                        Toast
+                                            .makeText(context, "Life +", Toast.LENGTH_SHORT)
+                                            .show()
+                                        //p1life += 1
+                                    }
+                                    //Player 2 life--
+                                    2 -> {
+                                        Toast
+                                            .makeText(context, "Life -", Toast.LENGTH_SHORT)
+                                            .show()
+                                        //p2life -= 1
+                                    }
+                                }
+                            })
+                    //Life display
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        modifier = Modifier.fillMaxWidth(0.5f)
+                    ) {
                         when (player) {
+                            //Player 1 in 2 Players
                             1 -> {
-                                Spacer(modifier = Modifier.fillMaxSize(0.3f))
+                                Spacer(modifier = Modifier.fillMaxSize(0.25f))
                                 Text(
-                                    text = text,
+                                    text = plinitlife,
                                     modifier = Modifier.rotate(rotate),
-                                    style = TextStyle(fontSize = 100.sp, textAlign = TextAlign.Center)
+                                    style = TextStyle(
+                                        fontSize = 100.sp,
+                                        textAlign = TextAlign.Center
+                                    )
                                 )
                                 Spacer(modifier = Modifier.size(80.dp))
                                 Text(
                                     text = "P$player",
                                     modifier = Modifier.rotate(rotate),
-                                    style = TextStyle(fontSize = 30.sp, textAlign = TextAlign.Center)
+                                    style = TextStyle(
+                                        fontSize = 30.sp,
+                                        textAlign = TextAlign.Center
+                                    )
                                 )
                             }
-
+                            //Player 2 in 2 Players
                             2 -> {
                                 Spacer(modifier = Modifier.fillMaxSize(0.1f))
                                 Text(
                                     text = "P$player",
                                     modifier = Modifier
                                         .rotate(rotate),
-                                    style = TextStyle(fontSize = 30.sp, textAlign = TextAlign.Center)
+                                    style = TextStyle(
+                                        fontSize = 30.sp,
+                                        textAlign = TextAlign.Center
+                                    )
                                 )
                                 Spacer(modifier = Modifier.fillMaxSize(0.2f))
                                 Text(
-                                    text = text,
+                                    text = plinitlife,
                                     modifier = Modifier
                                         .rotate(rotate),
-                                    style = TextStyle(fontSize = 100.sp, textAlign = TextAlign.Center)
+                                    style = TextStyle(
+                                        fontSize = 100.sp,
+                                        textAlign = TextAlign.Center
+                                    )
                                 )
                             }
                         }
                     }
-                    Box(modifier = Modifier.fillMaxHeight().fillMaxWidth().background(Color.Transparent).clickable {
-                        Toast.makeText(context,"Life action",Toast.LENGTH_SHORT).show()
-                    })
+                    //Life change button
+                    Box(
+                        modifier = Modifier
+                            .fillMaxHeight()
+                            .fillMaxWidth()
+                            .background(Color.Transparent)
+                            .clickable {
+                                when (player) {
+                                    //Player 1 life--
+                                    1 -> {
+                                        Toast
+                                            .makeText(context, "Life -", Toast.LENGTH_SHORT)
+                                            .show()
+                                        //p1life -= 1
+                                    }
+                                    //Player 2 life++
+                                    2 -> {
+                                        Toast
+                                            .makeText(context, "Life +", Toast.LENGTH_SHORT)
+                                            .show()
+                                        //p2life += 1
+                                    }
+                                }
+                            }
+                    )
                 }
-
-
             }
-
+            //3 players layout
             3 -> {
 
             }
-
+            //4 players layout
             4 -> {
                 Column {
                     Box(modifier = Modifier
@@ -140,35 +191,52 @@ fun LifePanel(
                         modifier = Modifier.fillMaxHeight(0.4f)
                     ) {
                         when (player) {
+                            //Players 1 and 3 in 4 Players
                             1, 3 -> {
                                 Spacer(modifier = Modifier.fillMaxWidth(0.2f))
+                                //Life
                                 Text(
-                                    text = text,
+                                    text = plinitlife,
                                     modifier = Modifier
                                         .rotate(rotate),
-                                    style = TextStyle(fontSize = 90.sp, textAlign = TextAlign.Center)
+                                    style = TextStyle(
+                                        fontSize = 90.sp,
+                                        textAlign = TextAlign.Center
+                                    )
                                 )
+                                //Player id (P1,P2...)
                                 Text(
                                     text = "P$player",
                                     modifier = Modifier
                                         .rotate(rotate),
-                                    style = TextStyle(fontSize = 30.sp, textAlign = TextAlign.Center)
+                                    style = TextStyle(
+                                        fontSize = 30.sp,
+                                        textAlign = TextAlign.Center
+                                    )
                                 )
                             }
-
+                            //Players 2 and 4 in 4 Players
                             2, 4 -> {
                                 Spacer(modifier = Modifier.fillMaxWidth(0.1f))
+                                //Life//Player id (P1,P2...)
                                 Text(
                                     text = "P$player",
                                     modifier = Modifier
                                         .rotate(rotate),
-                                    style = TextStyle(fontSize = 30.sp, textAlign = TextAlign.Center)
+                                    style = TextStyle(
+                                        fontSize = 30.sp,
+                                        textAlign = TextAlign.Center
+                                    )
                                 )
+                                //Life
                                 Text(
-                                    text = text,
+                                    text = plinitlife,
                                     modifier = Modifier
                                         .rotate(rotate),
-                                    style = TextStyle(fontSize = 90.sp, textAlign = TextAlign.Center)
+                                    style = TextStyle(
+                                        fontSize = 90.sp,
+                                        textAlign = TextAlign.Center
+                                    )
                                 )
                             }
                         }
@@ -211,7 +279,7 @@ fun Fourplayers(navController: NavController, life: Int) {
                 top.linkTo(parent.top)
             }) {
             LifePanel(
-                text = "$p1lives",
+                plinitlife = "$p1lives",
                 rotation = "left",
                 backcolor = Color(150, 150, 255),
                 player = 1,
@@ -226,7 +294,7 @@ fun Fourplayers(navController: NavController, life: Int) {
                 start.linkTo(p1.end)
             }) {
             LifePanel(
-                text = "$p2lives",
+                plinitlife = "$p2lives",
                 rotation = "right",
                 backcolor = Color(255, 150, 150),
                 player = 2,
@@ -242,7 +310,7 @@ fun Fourplayers(navController: NavController, life: Int) {
 
             }) {
             LifePanel(
-                text = "$p3lives",
+                plinitlife = "$p3lives",
                 rotation = "left",
                 backcolor = Color(150, 255, 150),
                 player = 3,
@@ -259,7 +327,7 @@ fun Fourplayers(navController: NavController, life: Int) {
 
             }) {
             LifePanel(
-                text = "$p4lives",
+                plinitlife = "$p4lives",
                 rotation = "right",
                 backcolor = Color(255, 255, 150),
                 player = 4,
@@ -288,7 +356,7 @@ fun Threeplayers(navController: NavController, life: Int) {
                 top.linkTo(parent.top)
             }) {
             LifePanel(
-                text = "$p1lives",
+                plinitlife = "$p1lives",
                 rotation = "left",
                 backcolor = Color(150, 150, 255),
                 player = 1,
@@ -303,7 +371,7 @@ fun Threeplayers(navController: NavController, life: Int) {
                 start.linkTo(p1.end)
             }) {
             LifePanel(
-                text = "$p2lives",
+                plinitlife = "$p2lives",
                 rotation = "right",
                 backcolor = Color(255, 150, 150),
                 player = 2,
@@ -321,7 +389,7 @@ fun Threeplayers(navController: NavController, life: Int) {
                 start.linkTo(p1.start)
             }) {
             LifePanel(
-                text = "$p3lives",
+                plinitlife = "$p3lives",
                 rotation = "",
                 backcolor = Color(150, 255, 150),
                 player = 3,
@@ -339,16 +407,19 @@ fun Twoplayers(navController: NavController, life: Int) {
     var p2lives: Int by rememberSaveable { mutableIntStateOf(life) }
     BackgroundImage()
     ConstraintLayout(Modifier.fillMaxSize()) {
-        var (p1, p2) = createRefs()
+        var (p1, p2, tools) = createRefs()
+
+        //Player 1 in 2 player mode
         Box(modifier = Modifier
-            .fillMaxHeight(0.5f)
+            .fillMaxHeight(0.45f)
             .fillMaxWidth()
             .constrainAs(p1) {
                 start.linkTo(parent.start)
                 top.linkTo(parent.top)
             }) {
+
             LifePanel(
-                text = "$p1lives",
+                plinitlife = "$p1lives",
                 rotation = "topdown",
                 backcolor = Color(150, 150, 255),
                 player = 1,
@@ -357,16 +428,51 @@ fun Twoplayers(navController: NavController, life: Int) {
                 p2life = p2lives
             )
         }
+        //Tool palette
+        Box(
+            modifier = Modifier
+                .fillMaxHeight(0.1f)
+                .fillMaxWidth()
+                .constrainAs(tools) {
+                    top.linkTo(p1.bottom)
+                }
+        ) {
+            Card(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(start = 8.dp, end = 8.dp)
+            ) {
+                Row(
+                    modifier = Modifier.fillMaxSize(),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Spacer(modifier = Modifier.fillMaxWidth(0.33f))
+                    Box {
+
+                        Icon(
+                            painter = painterResource(id = R.drawable.dice_icon),
+                            contentDescription = "Roll",
+                            tint = Color.Black,
+                            modifier = Modifier.fillMaxSize(0.5f)
+                        )
+
+                        //Image(painter = painterResource(id = R.drawable.dice_icon), contentDescription = "Roll", modifier = Modifier.size(48.dp))
+                    }
+                    Spacer(modifier = Modifier.fillMaxWidth())
+                }
+            }
+        }
+        //Player 2 in 2 player mode
         Box(modifier = Modifier
-            .fillMaxHeight(0.5f)
+            .fillMaxHeight(0.45f)
             .fillMaxWidth()
             .constrainAs(p2) {
-                top.linkTo(p1.bottom)
+                top.linkTo(tools.bottom)
                 end.linkTo(parent.end)
                 start.linkTo(parent.start)
             }) {
             LifePanel(
-                text = "$p2lives",
+                plinitlife = "$p2lives",
                 rotation = "default",
                 backcolor = Color(255, 150, 150),
                 player = 2,
