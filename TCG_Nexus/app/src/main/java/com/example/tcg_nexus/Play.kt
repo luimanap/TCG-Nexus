@@ -38,7 +38,7 @@ import androidx.navigation.NavController
 
 data class Game(
     var numplayers: MutableState<Int>,
-    var life: MutableState<Int>
+    var life: MutableState<Int>,
 )
 
 
@@ -55,10 +55,10 @@ fun PlayScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Color(104, 104, 104, 90)),
+            .background(color = Color(25, 25, 25, 90)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Spacer(modifier = Modifier.size(100.dp))
+        Spacer(modifier = Modifier.size(130.dp))
         SelectPlayers(game)
         SelectStartLife(game)
         Spacer(modifier = Modifier.size(8.dp))
@@ -86,14 +86,13 @@ fun StartButton(navController: NavController, life: Int, players: Int) {
                 60 -> navController.navigate("3p60")
             }
 
-            4 -> {
-                when (life) {
-                    20 -> navController.navigate("4p20")
-                    30 -> navController.navigate("4p30")
-                    40 -> navController.navigate("4p40")
-                    50 -> navController.navigate("4p50")
-                    60 -> navController.navigate("4p60")
-                }
+            4 -> when (life) {
+                20 -> navController.navigate("4p20")
+                30 -> navController.navigate("4p30")
+                40 -> navController.navigate("4p40")
+                50 -> navController.navigate("4p50")
+                60 -> navController.navigate("4p60")
+
             }
 
             5 -> when (life) {
@@ -125,7 +124,13 @@ fun SelectStartLife(game: Game) {
     val elements = listOf<String>("20", "30", "40", "50", "60")
     Column(Modifier.padding(40.dp)) {
         // Spacer(modifier = Modifier.size(250.dp))
-        Text(text = "Vidas:")
+        Text(
+            text = "Vidas:", style = TextStyle(
+                color = Color.White,
+                fontSize = 16.sp
+            ),
+            modifier = Modifier.padding(4.dp)
+        )
         Column {
             OutlinedTextField(value = lifevalue,
                 onValueChange = { lifevalue = it },
@@ -159,9 +164,6 @@ fun SelectStartLife(game: Game) {
 }
 
 
-
-
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SelectPlayers(game: Game) {
@@ -171,7 +173,13 @@ fun SelectPlayers(game: Game) {
         listOf<String>("2 Players", "3 Players", "4 Players", "5 Players", "6 Players")
 
     Column(Modifier.padding(40.dp)) {
-        Text(text = "Jugadores:")
+        Text(
+            text = "Jugadores:", style = TextStyle(
+                color = Color.White,
+                fontSize = 16.sp
+            ),
+            modifier = Modifier.padding(4.dp)
+        )
         Column {
             OutlinedTextField(value = playersvalue,
                 onValueChange = { playersvalue = it },

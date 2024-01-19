@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemColors
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -19,6 +20,12 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 
+data class MenuItems(
+    val icon: Int,
+    val textId: Int,
+    val path: String,
+    val label: String
+)
 
 class NaviActions(private val navController: NavHostController){
     fun navigateTo(destination: MenuItems){
@@ -30,13 +37,6 @@ class NaviActions(private val navController: NavHostController){
         }
     }
 }
-
-data class MenuItems(
-    val icon: Int,
-    val textId: Int,
-    val path: String,
-    val label: String
-)
 
 val TOP_LEVEL_DESTINATIONS = listOf(
     MenuItems(
@@ -185,7 +185,8 @@ fun BottomBarNavigation(selectedDestination: String, navigateTo: (MenuItems) -> 
                         contentDescription = stringResource(id = destinations.textId),
                         modifier = Modifier.size(24.dp)
                     )
-                })
+                }
+            )
         }
     }
 }

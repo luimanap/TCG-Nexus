@@ -3,6 +3,7 @@ package com.example.tcg_nexus
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -17,6 +18,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -34,6 +36,15 @@ import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.navigation.NavController
 
+data class PlayerLives(
+    var p1life: MutableState<Int>,
+    var p2life: MutableState<Int>,
+    var p3life: MutableState<Int>,
+    var p4life: MutableState<Int>,
+    var p5life: MutableState<Int>,
+    var p6life: MutableState<Int>,
+)
+
 @Composable
 fun LifePanel(
     plinitlife: String,
@@ -41,9 +52,28 @@ fun LifePanel(
     backcolor: Color,
     player: Int,
     players: Int,
-    p1life: Int,
-    p2life: Int
 ) {
+    val plinitlifeint = plinitlife.trim().toInt()
+    val lives: PlayerLives = PlayerLives(
+        p1life = rememberSaveable {
+            mutableIntStateOf(plinitlifeint)
+        },
+        p2life = rememberSaveable {
+            mutableIntStateOf(plinitlifeint)
+        },
+        p3life = rememberSaveable {
+            mutableIntStateOf(plinitlifeint)
+        },
+        p4life = rememberSaveable {
+            mutableIntStateOf(plinitlifeint)
+        },
+        p5life = rememberSaveable {
+            mutableIntStateOf(plinitlifeint)
+        },
+        p6life = rememberSaveable {
+            mutableIntStateOf(plinitlifeint)
+        },
+    )
     val context = LocalContext.current
 
     var rotate: Float = 0f
@@ -76,19 +106,9 @@ fun LifePanel(
                             .clickable {
                                 when (player) {
                                     //Player 1 life++
-                                    1 -> {
-                                        Toast
-                                            .makeText(context, "Life +", Toast.LENGTH_SHORT)
-                                            .show()
-                                        //p1life += 1
-                                    }
+                                    1 -> lives.p1life.value += 1
                                     //Player 2 life--
-                                    2 -> {
-                                        Toast
-                                            .makeText(context, "Life -", Toast.LENGTH_SHORT)
-                                            .show()
-                                        //p2life -= 1
-                                    }
+                                    2 -> lives.p2life.value -= 1
                                 }
                             })
                     //Life display
@@ -101,7 +121,7 @@ fun LifePanel(
                             1 -> {
                                 Spacer(modifier = Modifier.fillMaxSize(0.25f))
                                 Text(
-                                    text = plinitlife,
+                                    text = lives.p1life.value.toString(),
                                     modifier = Modifier.rotate(rotate),
                                     style = TextStyle(
                                         fontSize = 100.sp,
@@ -132,7 +152,7 @@ fun LifePanel(
                                 )
                                 Spacer(modifier = Modifier.fillMaxSize(0.2f))
                                 Text(
-                                    text = plinitlife,
+                                    text = lives.p2life.value.toString(),
                                     modifier = Modifier
                                         .rotate(rotate),
                                     style = TextStyle(
@@ -152,19 +172,9 @@ fun LifePanel(
                             .clickable {
                                 when (player) {
                                     //Player 1 life--
-                                    1 -> {
-                                        Toast
-                                            .makeText(context, "Life -", Toast.LENGTH_SHORT)
-                                            .show()
-                                        //p1life -= 1
-                                    }
+                                    1 -> lives.p1life.value -= 1
                                     //Player 2 life++
-                                    2 -> {
-                                        Toast
-                                            .makeText(context, "Life +", Toast.LENGTH_SHORT)
-                                            .show()
-                                        //p2life += 1
-                                    }
+                                    2 -> lives.p2life.value += 1
                                 }
                             }
                     )
@@ -172,7 +182,100 @@ fun LifePanel(
             }
             //3 players layout
             3 -> {
+                when(player){
+                    //Player 1 in 3 player mode
+                    1 -> Column (modifier = Modifier.fillMaxSize()){
+                        Box(modifier = Modifier.fillMaxHeight(0.4f).fillMaxWidth().background(Color.Transparent).clickable {
+                            lives.p1life.value -= 1
+                        })
+                        Row(modifier = Modifier.fillMaxHeight(0.4f).fillMaxWidth(), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
+                            //Player life
+                            Text(
+                                text = lives.p1life.value.toString(),
+                                modifier = Modifier
+                                    .rotate(rotate),
+                                style = TextStyle(
+                                    fontSize = 90.sp,
+                                    textAlign = TextAlign.Center
+                                )
+                            )
+                            //Player id (P1,P2...)
+                            Text(
+                                text = "P$player",
+                                modifier = Modifier
+                                    .rotate(rotate),
+                                style = TextStyle(
+                                    fontSize = 30.sp,
+                                    textAlign = TextAlign.Center
+                                )
+                            )
 
+                        }
+                        Box(modifier = Modifier.fillMaxHeight().fillMaxWidth().background(Color.Transparent).clickable {
+                            lives.p1life.value += 1
+                        })
+                    }
+                    2 -> Column (modifier = Modifier.fillMaxSize()){
+                        Box(modifier = Modifier.fillMaxHeight(0.4f).fillMaxWidth().background(Color.Transparent).clickable {
+                            lives.p2life.value += 1
+                        })
+                        Row(modifier = Modifier.fillMaxHeight(0.4f).fillMaxWidth(), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
+                            //Player id (P1,P2...)
+                            Text(
+                                text = "P$player",
+                                modifier = Modifier
+                                    .rotate(rotate),
+                                style = TextStyle(
+                                    fontSize = 30.sp,
+                                    textAlign = TextAlign.Center
+                                )
+                            )
+                            //Player life
+                            Text(
+                                text = lives.p2life.value.toString(),
+                                modifier = Modifier
+                                    .rotate(rotate),
+                                style = TextStyle(
+                                    fontSize = 90.sp,
+                                    textAlign = TextAlign.Center
+                                )
+                            )
+                        }
+                        Box(modifier = Modifier.fillMaxHeight().fillMaxWidth().background(Color.Transparent).clickable {
+                            lives.p2life.value -= 1
+                        })
+                    }
+                    3-> Row {
+                        Box(modifier = Modifier.fillMaxHeight().fillMaxWidth(0.4f).background(Color.Transparent).clickable {
+                            lives.p3life.value += 1
+                        })
+                        Column {
+                            //Player id (P1,P2...)
+                            Text(
+                                text = "P$player",
+                                modifier = Modifier
+                                    .rotate(rotate),
+                                style = TextStyle(
+                                    fontSize = 30.sp,
+                                    textAlign = TextAlign.Center
+                                )
+                            )
+                            //Player life
+                            Text(
+                                text = lives.p3life.value.toString(),
+                                modifier = Modifier
+                                    .rotate(rotate),
+                                style = TextStyle(
+                                    fontSize = 90.sp,
+                                    textAlign = TextAlign.Center
+                                )
+                            )
+                        }
+                        Box(modifier = Modifier.fillMaxHeight().fillMaxWidth().background(Color.Transparent).clickable {
+                            lives.p3life.value -= 1
+                        })
+                    }
+                }
             }
             //4 players layout
             4 -> {
@@ -182,21 +285,28 @@ fun LifePanel(
                         .fillMaxWidth()
                         .background(Color.Transparent)
                         .clickable {
-                            Toast
-                                .makeText(context, "Life action", Toast.LENGTH_SHORT)
-                                .show()
+                            when (player) {
+                                1 -> lives.p1life.value -= 1
+                                2 -> lives.p2life.value += 1
+                                3 -> lives.p3life.value -= 1
+                                4 -> lives.p4life.value += 1
+                            }
                         })
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         modifier = Modifier.fillMaxHeight(0.4f)
                     ) {
                         when (player) {
-                            //Players 1 and 3 in 4 Players
+                            //Player 1 and 3 in 4 Players
                             1, 3 -> {
                                 Spacer(modifier = Modifier.fillMaxWidth(0.2f))
                                 //Life
                                 Text(
-                                    text = plinitlife,
+                                    text = if (player == 1) {
+                                        lives.p1life.value.toString()
+                                    } else {
+                                        lives.p3life.value.toString()
+                                    },
                                     modifier = Modifier
                                         .rotate(rotate),
                                     style = TextStyle(
@@ -230,7 +340,11 @@ fun LifePanel(
                                 )
                                 //Life
                                 Text(
-                                    text = plinitlife,
+                                    text = if (player == 2) {
+                                        lives.p2life.value.toString()
+                                    } else {
+                                        lives.p4life.value.toString()
+                                    },
                                     modifier = Modifier
                                         .rotate(rotate),
                                     style = TextStyle(
@@ -246,29 +360,23 @@ fun LifePanel(
                         .fillMaxWidth()
                         .background(Color.Transparent)
                         .clickable {
-                            Toast
-                                .makeText(context, "Life action", Toast.LENGTH_SHORT)
-                                .show()
+                            when (player) {
+                                1 -> lives.p1life.value += 1
+                                2 -> lives.p2life.value -= 1
+                                3 -> lives.p3life.value += 1
+                                4 -> lives.p4life.value -= 1
+                            }
                         })
                 }
-
-
             }
             //5 ->
             //6 ->
         }
-
-
     }
 }
 
 @Composable
 fun Fourplayers(navController: NavController, life: Int) {
-    var p1lives: Int by rememberSaveable { mutableIntStateOf(life) }
-    var p2lives: Int by rememberSaveable { mutableIntStateOf(life) }
-    var p3lives: Int by rememberSaveable { mutableIntStateOf(life) }
-    var p4lives: Int by rememberSaveable { mutableIntStateOf(life) }
-
     BackgroundImage()
     ConstraintLayout(Modifier.fillMaxSize()) {
         var (p1, p2, p3, p4) = createRefs()
@@ -279,13 +387,11 @@ fun Fourplayers(navController: NavController, life: Int) {
                 top.linkTo(parent.top)
             }) {
             LifePanel(
-                plinitlife = "$p1lives",
+                plinitlife = "$life",
                 rotation = "left",
                 backcolor = Color(150, 150, 255),
                 player = 1,
-                players = 4,
-                p1life = p1lives,
-                p2life = p2lives
+                players = 4
             )
         }
         Box(modifier = Modifier
@@ -294,13 +400,11 @@ fun Fourplayers(navController: NavController, life: Int) {
                 start.linkTo(p1.end)
             }) {
             LifePanel(
-                plinitlife = "$p2lives",
+                plinitlife = "$life",
                 rotation = "right",
                 backcolor = Color(255, 150, 150),
                 player = 2,
-                players = 4,
-                p1life = p1lives,
-                p2life = p2lives
+                players = 4
             )
         }
         Box(modifier = Modifier
@@ -310,13 +414,11 @@ fun Fourplayers(navController: NavController, life: Int) {
 
             }) {
             LifePanel(
-                plinitlife = "$p3lives",
+                plinitlife = "$life",
                 rotation = "left",
                 backcolor = Color(150, 255, 150),
                 player = 3,
-                players = 4,
-                p1life = p1lives,
-                p2life = p2lives
+                players = 4
             )
         }
         Box(modifier = Modifier
@@ -327,13 +429,11 @@ fun Fourplayers(navController: NavController, life: Int) {
 
             }) {
             LifePanel(
-                plinitlife = "$p4lives",
+                plinitlife = "$life",
                 rotation = "right",
                 backcolor = Color(255, 255, 150),
                 player = 4,
-                players = 4,
-                p1life = p1lives,
-                p2life = p2lives
+                players = 4
             )
         }
     }
@@ -342,10 +442,6 @@ fun Fourplayers(navController: NavController, life: Int) {
 
 @Composable
 fun Threeplayers(navController: NavController, life: Int) {
-    var p1lives: Int by rememberSaveable { mutableIntStateOf(life) }
-    var p2lives: Int by rememberSaveable { mutableIntStateOf(life) }
-    var p3lives: Int by rememberSaveable { mutableIntStateOf(life) }
-
     BackgroundImage()
     ConstraintLayout(Modifier.fillMaxSize()) {
         var (p1, p2, p3) = createRefs()
@@ -356,13 +452,11 @@ fun Threeplayers(navController: NavController, life: Int) {
                 top.linkTo(parent.top)
             }) {
             LifePanel(
-                plinitlife = "$p1lives",
+                plinitlife = "$life",
                 rotation = "left",
                 backcolor = Color(150, 150, 255),
                 player = 1,
-                players = 3,
-                p1life = p1lives,
-                p2life = p2lives
+                players = 3
             )
         }
         Box(modifier = Modifier
@@ -371,13 +465,11 @@ fun Threeplayers(navController: NavController, life: Int) {
                 start.linkTo(p1.end)
             }) {
             LifePanel(
-                plinitlife = "$p2lives",
+                plinitlife = "$life",
                 rotation = "right",
                 backcolor = Color(255, 150, 150),
                 player = 2,
-                players = 3,
-                p1life = p1lives,
-                p2life = p2lives
+                players = 3
             )
         }
         Box(modifier = Modifier
@@ -389,13 +481,11 @@ fun Threeplayers(navController: NavController, life: Int) {
                 start.linkTo(p1.start)
             }) {
             LifePanel(
-                plinitlife = "$p3lives",
+                plinitlife = "$life",
                 rotation = "",
                 backcolor = Color(150, 255, 150),
                 player = 3,
-                players = 3,
-                p1life = p1lives,
-                p2life = p2lives
+                players = 3
             )
         }
     }
@@ -403,8 +493,6 @@ fun Threeplayers(navController: NavController, life: Int) {
 
 @Composable
 fun Twoplayers(navController: NavController, life: Int) {
-    var p1lives: Int by rememberSaveable { mutableIntStateOf(life) }
-    var p2lives: Int by rememberSaveable { mutableIntStateOf(life) }
     BackgroundImage()
     ConstraintLayout(Modifier.fillMaxSize()) {
         var (p1, p2, tools) = createRefs()
@@ -419,13 +507,11 @@ fun Twoplayers(navController: NavController, life: Int) {
             }) {
 
             LifePanel(
-                plinitlife = "$p1lives",
+                plinitlife = "$life",
                 rotation = "topdown",
                 backcolor = Color(150, 150, 255),
                 player = 1,
-                players = 2,
-                p1life = p1lives,
-                p2life = p2lives
+                players = 2
             )
         }
         //Tool palette
@@ -472,13 +558,11 @@ fun Twoplayers(navController: NavController, life: Int) {
                 start.linkTo(parent.start)
             }) {
             LifePanel(
-                plinitlife = "$p2lives",
+                plinitlife = "$life",
                 rotation = "default",
                 backcolor = Color(255, 150, 150),
                 player = 2,
-                players = 2,
-                p1life = p1lives,
-                p2life = p2lives
+                players = 2
             )
         }
     }

@@ -39,7 +39,7 @@ fun LoginScreen(navController: NavController) {
     Column(
         Modifier
             .fillMaxSize()
-            .background(color = Color(210, 210, 210, 125))
+            .background(color = Color(150, 150, 150, 125))
             .clip(RoundedCornerShape(40.dp)).zIndex(150f)
     ) {
 
