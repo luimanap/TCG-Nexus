@@ -8,12 +8,9 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -23,14 +20,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import androidx.navigation.NavController
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LoginScreen(navController: NavController) {
     var userinput by rememberSaveable { mutableStateOf("") }
@@ -76,7 +70,9 @@ fun LoginScreen(navController: NavController) {
         MyButton(
             text = "Iniciar Sesión",
             onclick = { navController.navigate("home") },
-            containercolor = Color(92, 115, 255)
+            containercolor = Color(92, 115, 255),
+            bordercolor = Color(92, 115, 255),
+            textcolor = Color.White
         )
         Spacer(Modifier.size(8.dp))
 
@@ -88,7 +84,9 @@ fun LoginScreen(navController: NavController) {
         MyButton(
             text = "Crear Cuenta",
             onclick = { navController.navigate("register") },
-            containercolor = Color(41, 188, 117)
+            containercolor = Color(41, 188, 117),
+            bordercolor = Color(41, 188, 117),
+            textcolor = Color.White
         )
     }
 }

@@ -20,7 +20,7 @@ import androidx.navigation.NavController
 
 @Composable
 fun Decks(navController: NavController) {
-    val backcolors = listOf<Color>(
+    val backcolors = listOf(
         Color.Transparent,
         Color.White,
         Color.White,
@@ -41,7 +41,7 @@ fun Decks(navController: NavController) {
         //Collection info
         Row(modifier = Modifier.fillMaxHeight(0.15f)) {
             Spacer(modifier = Modifier.fillMaxWidth(0.05f))
-            MyCard(
+            InfoCard(
                 text = "Mazos creados",
                 number = totalcards.toString(),
                 containercolor = Color(92, 115, 255),
@@ -49,7 +49,7 @@ fun Decks(navController: NavController) {
                 contenttype = "number"
             )
             Spacer(modifier = Modifier.fillMaxWidth(0.1f))
-            MyCard(
+            InfoCard(
                 text = "Colores más usados",
                 number = colorsused,
                 containercolor = Color.White,

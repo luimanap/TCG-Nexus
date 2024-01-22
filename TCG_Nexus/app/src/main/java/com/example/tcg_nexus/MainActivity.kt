@@ -17,7 +17,6 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.tcg_nexus.ui.theme.TCGNexus_Theme
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.platform.LocalContext
 
 

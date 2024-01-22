@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.NavigationBarItemColors
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -82,7 +81,6 @@ object MyAppRoute{
 
 @Composable
 fun BottomBarNaviContent(
-    modifier: Modifier = Modifier,
     navController: NavHostController,
     selectedDestination: String,
     navigateTo: (MenuItems) -> Unit
@@ -109,7 +107,6 @@ fun BottomBarNaviContent(
                 composable(MyAppRoute.PLAY) {
                     PlayScreen(navController = navController)
                 }
-
                 composable("4p30") {
                     Fourplayers(navController = navController, 30)
                 }

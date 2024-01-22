@@ -8,10 +8,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxDefaults
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -20,13 +20,11 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RegisterScreen(navController: NavController) {
     var nameinput by rememberSaveable { mutableStateOf("") }
@@ -39,6 +37,7 @@ fun RegisterScreen(navController: NavController) {
         Modifier
             .fillMaxSize()
             .background(color = Color(204, 204, 204, 90))
+            .verticalScroll(rememberScrollState())
     ) {
 
         //Logo Image
@@ -50,11 +49,17 @@ fun RegisterScreen(navController: NavController) {
         Spacer(Modifier.size(16.dp))
 
         //Last Name Input
-        MyTextField(data = lastnameinput, label = "Apellidos", onvaluechange = { lastnameinput = it })
+        MyTextField(
+            data = lastnameinput,
+            label = "Apellidos",
+            onvaluechange = { lastnameinput = it })
         Spacer(Modifier.size(16.dp))
 
         //Email Input
-        MyTextField(data = emailinput, label = "Correo Electrónico", onvaluechange = { emailinput = it })
+        MyTextField(
+            data = emailinput,
+            label = "Correo Electrónico",
+            onvaluechange = { emailinput = it })
         Spacer(Modifier.size(16.dp))
 
         //Password Input
@@ -62,7 +67,10 @@ fun RegisterScreen(navController: NavController) {
         Spacer(Modifier.size(16.dp))
 
         //Confirm Password Input
-        MyPasswordField(data = confpassinput, label = "Confirmar Contraseña", onvaluechange = { confpassinput = it })
+        MyPasswordField(
+            data = confpassinput,
+            label = "Confirmar Contraseña",
+            onvaluechange = { confpassinput = it })
         Spacer(Modifier.size(15.dp))
 
         //Checkboxes
@@ -71,17 +79,30 @@ fun RegisterScreen(navController: NavController) {
         MyTextCheckBox("Me gustaría recibir ofertas y promociones exclusivas")
 
         //Register button
-        MyButton(text = "Crear Cuenta", onclick = {navController.navigate("home")},containercolor = Color(92, 115, 255))
+        MyButton(
+            text = "Crear Cuenta",
+            onclick = { navController.navigate("home") },
+            containercolor = Color(92, 115, 255),
+            bordercolor = Color(92, 115, 255),
+            textcolor = Color.White
+        )
 
         //Separator
         Spacer(Modifier.size(8.dp))
         MyCanvasSeparator()
         Spacer(Modifier.size(8.dp))
-        
+
         //Login Button
-        MyButton(text = "Iniciar Sesion", onclick = { navController.popBackStack() }, containercolor = Color(255, 178, 92))
+        MyButton(
+            text = "Iniciar Sesion",
+            onclick = { navController.popBackStack() },
+            containercolor = Color(255, 178, 92),
+            bordercolor = Color(255, 178, 92),
+            textcolor = Color.White
+        )
     }
 }
+
 @Composable
 fun MyTextCheckBox(text: String) {
     var state by rememberSaveable { mutableStateOf(false) }

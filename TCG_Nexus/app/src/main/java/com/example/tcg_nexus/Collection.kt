@@ -14,20 +14,18 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Divider
 import androidx.compose.material3.ElevatedCard
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ListItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
@@ -40,10 +38,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Collection(navController: NavController) {
-    val backcolors = listOf<Color>(
+    val backcolors = listOf(
         Color.Transparent,
         Color(230, 230, 230),
         Color(225, 225, 225),
@@ -62,10 +59,11 @@ fun Collection(navController: NavController) {
     ) {
 
         Spacer(modifier = Modifier.fillMaxHeight(0.05f))
+
         //Collection info
         Row(modifier = Modifier.fillMaxHeight(0.15f)) {
             Spacer(modifier = Modifier.fillMaxWidth(0.05f))
-            MyCard(
+            InfoCard(
                 text = "Cartas en posesión",
                 number = totalcards.toString(),
                 containercolor = Color(92, 115, 255),
@@ -73,7 +71,7 @@ fun Collection(navController: NavController) {
                 contenttype = "number"
             )
             Spacer(modifier = Modifier.fillMaxWidth(0.1f))
-            MyCard(
+            InfoCard(
                 text = "Valor estimado",
                 number = estimatedcostString,
                 containercolor = Color.White,
@@ -82,8 +80,12 @@ fun Collection(navController: NavController) {
             )
         }
         Spacer(modifier = Modifier.fillMaxHeight(0.05f))
+        //Search Bar
+        SearchButton()
 
-        var cards = listOf<Card>()
+        var cards = listOf(
+            Card("Black Lotus","{T},Sacrifice Black Lotus: Add three mana of any one color. ", "Mono Artifact" , "","Rare", 3500f)
+        )
         //Card list
         /*LazyColumn{
             items(cards){item ->
@@ -98,6 +100,27 @@ fun Collection(navController: NavController) {
         ) {
             CardItem(
                 cardname = "Black Lotus",
+                type = "Mono Artifact",
+                description = "{T},Sacrifice Black Lotus: Add three mana of any one color. "
+            )
+            CardItem(
+                cardname = "Black Lotus",
+                type = "Mono Artifact",
+                description = "{T},Sacrifice Black Lotus: Add three mana of any one color. "
+            )
+            CardItem(
+                cardname = "Black Lotus",
+                type = "Mono Artifact",
+                description = "{T},Sacrifice Black Lotus: Add three mana of any one color. "
+            )
+            CardItem(
+                cardname = "Black Lotus",
+                type = "Mono Artifact",
+                description = "{T},Sacrifice Black Lotus: Add three mana of any one color. "
+            )
+            CardItem(
+                cardname = "Black Lotus",
+                type = "Mono Artifact",
                 description = "{T},Sacrifice Black Lotus: Add three mana of any one color. "
             )
 
@@ -108,7 +131,26 @@ fun Collection(navController: NavController) {
 }
 
 @Composable
-fun CardItem(cardname: String, description: String) {
+fun SearchButton() {
+    var show by rememberSaveable { mutableStateOf(false) }
+    MyButton(
+        text = "Search...",
+        onclick = { show = true },
+        containercolor = Color.White,
+        bordercolor = Color.Black,
+        textcolor = Color.Black
+    )
+    SearchDialog()
+}
+
+@Composable
+fun SearchDialog() {
+
+}
+
+
+@Composable
+fun CardItem(cardname: String, type: String, description: String) {
     Box(Modifier.clickable {
 
     }) {
@@ -117,26 +159,43 @@ fun CardItem(cardname: String, description: String) {
                 painter = painterResource(id = R.drawable.blacklotus),
                 contentDescription = cardname,
                 modifier = Modifier
-                    .fillMaxWidth(0.4f)
+                    .fillMaxWidth(0.35f)
                     .padding(16.dp)
             )
             Column(modifier = Modifier.fillMaxWidth()) {
                 Text(
                     text = cardname,
                     fontWeight = FontWeight.Bold,
-                    fontSize = 20.sp,
+                    fontSize = 22.sp,
                     modifier = Modifier.padding(16.dp)
                 )
-                Spacer(modifier = Modifier.height(25.dp))
-                Text(text = description, modifier = Modifier.padding(16.dp))
+                Spacer(modifier = Modifier.height(30.dp))
+                Text(
+                    text = type,
+                    modifier = Modifier.padding(start = 16.dp),
+                    fontWeight = FontWeight.SemiBold,
+                )
+                Text(
+                    text = description,
+                    modifier = Modifier.padding(
+                        start = 16.dp,
+                        top = 8.dp,
+                        bottom = 16.dp,
+                        end = 16.dp
+                    )
+                )
             }
         }
+        Divider(
+            modifier = Modifier
+                .fillMaxWidth(0.95f)
+                .align(Alignment.BottomCenter)
+        )
     }
-    Divider(Modifier.fillMaxWidth())
 }
 
 @Composable
-fun MyCard(
+fun InfoCard(
     text: String,
     number: String,
     containercolor: Color,
