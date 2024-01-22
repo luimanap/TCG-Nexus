@@ -44,9 +44,9 @@ fun LoginScreen(navController: NavController) {
     ) {
 
         //Logo Image
-        Spacer(Modifier.size(50.dp))
+        Spacer(Modifier.size(12.dp))
         MyLogo(height = 250)
-        Spacer(Modifier.size(25.dp))
+        Spacer(Modifier.size(12.dp))
 
         //Username Input
         MyTextField(data = userinput, label = "Username", onvaluechange = { userinput = it })
@@ -70,7 +70,7 @@ fun LoginScreen(navController: NavController) {
                 )
             )
         }
-        Spacer(Modifier.size(88.dp))
+        Spacer(Modifier.size(70.dp))
 
         //Login button
         MyButton(

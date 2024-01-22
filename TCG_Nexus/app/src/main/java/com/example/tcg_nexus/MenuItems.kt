@@ -92,11 +92,8 @@ fun BottomBarNaviContent(
             NavHost(
                 modifier = Modifier.weight(1f),
                 navController = navController,
-                startDestination = "login"
+                startDestination = MyAppRoute.HOME
             ) {
-                composable("login") {
-                    LoginScreen(navController = navController)
-                }
                 composable("register") {
                     RegisterScreen(navController = navController)
                 }
@@ -104,10 +101,10 @@ fun BottomBarNaviContent(
                     HomeScreen(navController = navController)
                 }
                 composable(MyAppRoute.COLLECTION) {
-
+                    Collection(navController = navController)
                 }
                 composable(MyAppRoute.DECKS) {
-
+                    Decks(navController = navController)
                 }
                 composable(MyAppRoute.PLAY) {
                     PlayScreen(navController = navController)
@@ -159,7 +156,7 @@ fun BottomBarNaviContent(
                     Twoplayers(navController = navController, 60)
                 }
                 composable(MyAppRoute.PROFILE) {
-
+                    LoginScreen(navController = navController)
                 }
             }
             BottomBarNavigation(selectedDestination = selectedDestination, navigateTo = navigateTo)

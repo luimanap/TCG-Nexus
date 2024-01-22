@@ -43,7 +43,7 @@ fun RegisterScreen(navController: NavController) {
 
         //Logo Image
         Spacer(Modifier.size(5.dp))
-        MyLogo(150)
+        MyLogo(90)
 
         //Name Input
         MyTextField(data = nameinput, label = "Nombre", onvaluechange = { nameinput = it })

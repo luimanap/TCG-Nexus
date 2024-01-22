@@ -34,9 +34,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(navController: NavHostController) {
-    var totalcards by rememberSaveable { mutableStateOf(0) }
-    var estimatedCost by rememberSaveable { mutableStateOf(0) }
-    val estimatedcostString by rememberSaveable { mutableStateOf("${estimatedCost} €") }
+
 
     //BackgroundImage()
     Column(
@@ -44,68 +42,8 @@ fun HomeScreen(navController: NavHostController) {
             .fillMaxSize()
             .background(color = Color(210, 210, 210))
     ) {
-        Box(
-            modifier = Modifier
-                .fillMaxSize(75f)
-                .zIndex(-2f)
-        ) {
-            Column {
-                Spacer(modifier = Modifier.size(64.dp))
-                MyCard(
-                    text = "Cartas en la colección",
-                    number = totalcards.toString(),
-                    containercolor = Color(92, 115, 255),
-                    contentcolor = Color.White
-                )
-                Spacer(modifier = Modifier.size(16.dp))
-                MyCard(
-                    text = "Valor estimado",
-                    number = estimatedcostString,
-                    containercolor = Color.White,
-                    contentcolor = Color.Black
-                )
-            }
-        }
-        Box(
-            modifier = Modifier
-                .background(Color.White)
-                .fillMaxWidth()
-        )
-
-        {
-
-        }
     }
 }
 
 
-@Composable
-fun MyCard(text: String, number: String, containercolor: Color, contentcolor: Color) {
-    ElevatedCard(
-        elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(start = 30.dp, end = 30.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = containercolor,
-            contentColor = contentcolor
-        )
 
-    ) {
-        Column {
-            Text(
-                text = text, modifier = Modifier
-                    .align(Alignment.CenterHorizontally)
-                    .padding(16.dp)
-            )
-            Text(
-                text = number, modifier = Modifier
-                    .align(Alignment.Start)
-                    .padding(16.dp)
-                    .padding(start = 10.dp), fontSize = 50.sp
-            )
-        }
-
-
-    }
-}
