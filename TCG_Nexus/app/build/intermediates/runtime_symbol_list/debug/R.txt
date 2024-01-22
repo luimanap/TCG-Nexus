@@ -76,6 +76,7 @@ int dimen notification_top_pad 0x7f030014
 int dimen notification_top_pad_large_text 0x7f030015
 int drawable abc_vector_test 0x7f040001
 int drawable albums 0x7f040002
+int drawable blacklotus 0x7f04001f
 int drawable cards 0x7f040003
 int drawable dice_icon 0x7f040004
 int drawable dragon_background 0x7f040005

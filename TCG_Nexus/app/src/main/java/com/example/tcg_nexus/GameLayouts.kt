@@ -181,8 +181,7 @@ fun LifePanel(
                 }
             }
             //3 players layout
-            3 -> {
-                when(player){
+            3 -> {when(player){
                     //Player 1 in 3 player mode
                     1 -> Column (modifier = Modifier.fillMaxSize()){
                         Box(modifier = Modifier.fillMaxHeight(0.4f).fillMaxWidth().background(Color.Transparent).clickable {
@@ -377,8 +376,8 @@ fun LifePanel(
 
 @Composable
 fun Fourplayers(navController: NavController, life: Int) {
-    BackgroundImage()
-    ConstraintLayout(Modifier.fillMaxSize()) {
+    //BackgroundImage()
+    ConstraintLayout(Modifier.fillMaxSize().background(Color(40,40,40))) {
         var (p1, p2, p3, p4) = createRefs()
         Box(modifier = Modifier
             .fillMaxSize(0.5f)

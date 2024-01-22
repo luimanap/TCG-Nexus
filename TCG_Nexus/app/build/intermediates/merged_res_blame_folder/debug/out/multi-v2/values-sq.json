@@ -4,7 +4,24 @@
             "outputFile": "com.example.tcg_nexus.app-mergeDebugResources-50:/values-sq/values-sq.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\93df8d9948672a1ac9de4361877b3f83\\transformed\\material3-1.0.0\\res\\values-sq\\values-sq.xml",
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\9ed2ead0f400ca6bb94013d64d6a16d0\\transformed\\core-1.12.0\\res\\values-sq\\values-sq.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,154,256,354,451,559,670,792",
+                        "endColumns": "98,101,97,96,107,110,121,100",
+                        "endOffsets": "149,251,349,446,554,665,787,888"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,26",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,204,306,404,501,609,720,2286",
+                        "endColumns": "98,101,97,96,107,110,121,100",
+                        "endOffsets": "199,301,399,496,604,715,837,2382"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\93df8d9948672a1ac9de4361877b3f83\\transformed\\material3-1.0.0\\res\\values-sq\\values-sq.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\c1fb9ef8ad5a2e2e652064bbb3b9bd08\\transformed\\ui-release\\res\\values-sq\\values-sq.xml",
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\c1fb9ef8ad5a2e2e652064bbb3b9bd08\\transformed\\ui-release\\res\\values-sq\\values-sq.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -35,23 +52,6 @@
                         "startOffsets": "842,937,1096,1195,1370,1543,1624,1717,1809,1899,1968,2035,2122,2213,2387,2464,2530",
                         "endColumns": "94,82,98,101,95,80,92,91,89,68,66,86,90,72,76,65,120",
                         "endOffsets": "932,1015,1190,1292,1461,1619,1712,1804,1894,1963,2030,2117,2208,2281,2459,2525,2646"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\9ed2ead0f400ca6bb94013d64d6a16d0\\transformed\\core-1.12.0\\res\\values-sq\\values-sq.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,154,256,354,451,559,670,792",
-                        "endColumns": "98,101,97,96,107,110,121,100",
-                        "endOffsets": "149,251,349,446,554,665,787,888"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,26",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,204,306,404,501,609,720,2286",
-                        "endColumns": "98,101,97,96,107,110,121,100",
-                        "endOffsets": "199,301,399,496,604,715,837,2382"
                     }
                 }
             ]

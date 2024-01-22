@@ -45,6 +45,12 @@ data class Game(
 
 @Composable
 fun PlayScreen(navController: NavController) {
+    val backcolors = listOf<Color>(
+        Color.Transparent,
+        Color(25, 25, 25, 210),
+        Color(25, 25, 25, 210),
+        Color(25, 25, 25, 255),
+    )
     var game: Game = Game(rememberSaveable {
         mutableIntStateOf(0)
     }, rememberSaveable {
@@ -55,7 +61,7 @@ fun PlayScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Color(25, 25, 25, 90)),
+            .background(brush = createGradientBrush(backcolors)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Spacer(modifier = Modifier.size(130.dp))
@@ -68,7 +74,7 @@ fun PlayScreen(navController: NavController) {
 
 @Composable
 fun StartButton(navController: NavController, life: Int, players: Int) {
-    MyButton(text = "A Jugar!!", onclick = {
+    MyButton(text = "¡A Jugar!", onclick = {
         when (players) {
             2 -> when (life) {
                 20 -> navController.navigate("2p20")
