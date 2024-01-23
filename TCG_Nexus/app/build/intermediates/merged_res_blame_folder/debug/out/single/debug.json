@@ -4,8 +4,8 @@
         "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.0\\com.example.tcg_nexus.app-main-54:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.example.tcg_nexus.app-merged_res-52:/drawable_blacklotus.jpg.flat",
-        "source": "com.example.tcg_nexus.app-main-54:/drawable/blacklotus.jpg"
+        "merged": "com.example.tcg_nexus.app-merged_res-52:/drawable_woodtable.png.flat",
+        "source": "com.example.tcg_nexus.app-main-54:/drawable/woodtable.png"
     },
     {
         "merged": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.0\\com.example.tcg_nexus.app-merged_res-52:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
@@ -58,6 +58,10 @@
     {
         "merged": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.0\\com.example.tcg_nexus.app-merged_res-52:\\drawable_home.xml.flat",
         "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.0\\com.example.tcg_nexus.app-main-54:\\drawable\\home.xml"
+    },
+    {
+        "merged": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.0\\com.example.tcg_nexus.app-merged_res-52:\\drawable_blacklotus.jpg.flat",
+        "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.0\\com.example.tcg_nexus.app-main-54:\\drawable\\blacklotus.jpg"
     },
     {
         "merged": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.0\\com.example.tcg_nexus.app-merged_res-52:\\mipmap-xhdpi_ic_launcher.webp.flat",

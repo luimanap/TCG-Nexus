@@ -376,8 +376,9 @@ fun LifePanel(
 
 @Composable
 fun Fourplayers(navController: NavController, life: Int) {
-    //BackgroundImage()
-    ConstraintLayout(Modifier.fillMaxSize().background(Color(40,40,40))) {
+    GameBackgroundImage()
+    //ConstraintLayout(Modifier.fillMaxSize().background(Color(40,40,40))) {
+    ConstraintLayout(Modifier.fillMaxSize()) {
         var (p1, p2, p3, p4) = createRefs()
         Box(modifier = Modifier
             .fillMaxSize(0.5f)

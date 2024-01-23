@@ -37,6 +37,17 @@ fun BackgroundImage() {
         )
     }
 }
+@Composable
+fun GameBackgroundImage() {
+    Box(modifier = Modifier.fillMaxSize()) {
+        Image(
+            painter = painterResource(id = R.drawable.woodtable),
+            contentDescription = "Background Image",
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.matchParentSize(),
+        )
+    }
+}
 
 @Composable
 fun MyLogo(height: Int) {
