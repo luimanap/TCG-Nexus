@@ -4,7 +4,7 @@
     "type": "MERGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.example.tcg_nexus",
+  "applicationId": "com.pixelperfectsoft.tcg_nexus",
   "variantName": "debug",
   "elements": [
     {

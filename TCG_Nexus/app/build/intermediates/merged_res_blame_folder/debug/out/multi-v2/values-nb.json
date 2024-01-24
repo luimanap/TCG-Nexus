@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.tcg_nexus.app-mergeDebugResources-50:/values-nb/values-nb.xml",
+            "outputFile": "com.pixelperfectsoft.tcg_nexus.app-mergeDebugResources-58:/values-nb/values-nb.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\c1fb9ef8ad5a2e2e652064bbb3b9bd08\\transformed\\ui-release\\res\\values-nb\\values-nb.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,198,279,376,476,564,640,728,817,899,963,1027,1107,1189,1259,1336,1403",
-                        "endColumns": "92,80,96,99,87,75,87,88,81,63,63,79,81,69,76,66,119",
-                        "endOffsets": "193,274,371,471,559,635,723,812,894,958,1022,1102,1184,1254,1331,1398,1518"
-                    },
-                    "to": {
-                        "startLines": "9,10,12,13,15,17,18,19,20,21,22,23,24,25,27,28,29",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "831,924,1080,1177,1353,1514,1590,1678,1767,1849,1913,1977,2057,2139,2310,2387,2454",
-                        "endColumns": "92,80,96,99,87,75,87,88,81,63,63,79,81,69,76,66,119",
-                        "endOffsets": "919,1000,1172,1272,1436,1585,1673,1762,1844,1908,1972,2052,2134,2204,2382,2449,2569"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\93df8d9948672a1ac9de4361877b3f83\\transformed\\material3-1.0.0\\res\\values-nb\\values-nb.xml",
+                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\d019353bdabfe4fb5054becbc7e081b3\\transformed\\material3-1.0.0\\res\\values-nb\\values-nb.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -30,15 +13,83 @@
                         "endOffsets": "125,201,274"
                     },
                     "to": {
-                        "startLines": "11,14,16",
+                        "startLines": "11,33,35",
                         "startColumns": "4,4,4",
-                        "startOffsets": "1005,1277,1441",
+                        "startOffsets": "1005,3601,3765",
                         "endColumns": "74,75,72",
-                        "endOffsets": "1075,1348,1509"
+                        "endOffsets": "1075,3672,3833"
                     }
                 },
                 {
-                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\9ed2ead0f400ca6bb94013d64d6a16d0\\transformed\\core-1.12.0\\res\\values-nb\\values-nb.xml",
+                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\8c04395a1f19fb4682454e6a11eccd3b\\transformed\\play-services-basement-18.1.0\\res\\values-nb\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "195",
+                        "endColumns": "125",
+                        "endOffsets": "320"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "2089",
+                        "endColumns": "129",
+                        "endOffsets": "2214"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\54910e8ab756bf9e6d82e404f09d437d\\transformed\\play-services-base-18.0.1\\res\\values-nb\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,295,450,572,677,829,955,1071,1170,1320,1423,1580,1704,1842,2014,2077,2135",
+                        "endColumns": "101,154,121,104,151,125,115,98,149,102,156,123,137,171,62,57,73",
+                        "endOffsets": "294,449,571,676,828,954,1070,1169,1319,1422,1579,1703,1841,2013,2076,2134,2208"
+                    },
+                    "to": {
+                        "startLines": "12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1080,1186,1345,1471,1580,1736,1866,1986,2219,2373,2480,2641,2769,2911,3087,3154,3216",
+                        "endColumns": "105,158,125,108,155,129,119,102,153,106,160,127,141,175,66,61,77",
+                        "endOffsets": "1181,1340,1466,1575,1731,1861,1981,2084,2368,2475,2636,2764,2906,3082,3149,3211,3289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\fa1cb8cc700a57edb3032df9055ebdfc\\transformed\\browser-1.4.0\\res\\values-nb\\values-nb.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,165,266,378",
+                        "endColumns": "109,100,111,96",
+                        "endOffsets": "160,261,373,470"
+                    },
+                    "to": {
+                        "startLines": "30,36,37,38",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "3294,3838,3939,4051",
+                        "endColumns": "109,100,111,96",
+                        "endOffsets": "3399,3934,4046,4143"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\479ab50df396d8eb29fec8dc53f70a8a\\transformed\\ui-release\\res\\values-nb\\values-nb.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,198,279,376,476,564,640,728,817,899,963,1027,1107,1189,1259,1336,1403",
+                        "endColumns": "92,80,96,99,87,75,87,88,81,63,63,79,81,69,76,66,119",
+                        "endOffsets": "193,274,371,471,559,635,723,812,894,958,1022,1102,1184,1254,1331,1398,1518"
+                    },
+                    "to": {
+                        "startLines": "9,10,31,32,34,39,40,41,42,43,44,45,46,47,49,50,51",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "831,924,3404,3501,3677,4148,4224,4312,4401,4483,4547,4611,4691,4773,4944,5021,5088",
+                        "endColumns": "92,80,96,99,87,75,87,88,81,63,63,79,81,69,76,66,119",
+                        "endOffsets": "919,1000,3496,3596,3760,4219,4307,4396,4478,4542,4606,4686,4768,4838,5016,5083,5203"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\21cd4332a08ba2e575c45b0c1920f818\\transformed\\core-1.12.0\\res\\values-nb\\values-nb.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -47,11 +98,11 @@
                         "endOffsets": "144,246,343,442,550,656,776,877"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,26",
+                        "startLines": "2,3,4,5,6,7,8,48",
                         "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,199,301,398,497,605,711,2209",
+                        "startOffsets": "105,199,301,398,497,605,711,4843",
                         "endColumns": "93,101,96,98,107,105,119,100",
-                        "endOffsets": "194,296,393,492,600,706,826,2305"
+                        "endOffsets": "194,296,393,492,600,706,826,4939"
                     }
                 }
             ]

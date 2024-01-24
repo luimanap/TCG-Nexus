@@ -10,8 +10,14 @@
     <string name="app_name">TCG Nexus</string>
     <string name="collection">Collection</string>
     <string name="decks">Decks</string>
+    <string name="gcm_defaultSenderId" translatable="false">1028128353809</string>
+    <string name="google_api_key" translatable="false">AIzaSyDJamItnNVD219tDxBVMJ8ApPmlldPScas</string>
+    <string name="google_app_id" translatable="false">1:1028128353809:android:e712058f6f9033dd61cbb0</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDJamItnNVD219tDxBVMJ8ApPmlldPScas</string>
+    <string name="google_storage_bucket" translatable="false">tcg-nexus.appspot.com</string>
     <string name="home">Home</string>
     <string name="play">Play</string>
     <string name="profile">Profile</string>
+    <string name="project_id" translatable="false">tcg-nexus</string>
     <style name="Theme.Pruebas_App_TFG" parent="android:Theme.Material.Light.NoActionBar"/>
 </resources>

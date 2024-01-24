@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1028128353809",
+    "project_id": "tcg-nexus",
+    "storage_bucket": "tcg-nexus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028128353809:android:e712058f6f9033dd61cbb0",
+        "android_client_info": {
+          "package_name": "com.pixelperfectsoft.tcg_nexus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJamItnNVD219tDxBVMJ8ApPmlldPScas"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

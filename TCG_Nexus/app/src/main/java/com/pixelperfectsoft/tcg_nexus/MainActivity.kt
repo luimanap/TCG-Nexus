@@ -18,6 +18,9 @@ import androidx.navigation.compose.rememberNavController
 import com.pixelperfectsoft.tcg_nexus.ui.theme.TCGNexus_Theme
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
+import com.pixelperfectsoft.tcg_nexus.navigation.BottomBarNaviContent
+import com.pixelperfectsoft.tcg_nexus.navigation.MyAppRoute
+import com.pixelperfectsoft.tcg_nexus.navigation.NaviActions
 
 
 class MainActivity : ComponentActivity() {
