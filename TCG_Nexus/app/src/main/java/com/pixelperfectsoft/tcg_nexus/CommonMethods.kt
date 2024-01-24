@@ -1,4 +1,4 @@
-package com.example.tcg_nexus
+package com.pixelperfectsoft.tcg_nexus
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Canvas

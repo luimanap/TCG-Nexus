@@ -1,4 +1,4 @@
-package com.example.tcg_nexus.ui.theme
+package com.pixelperfectsoft.tcg_nexus.ui.theme
 
 import android.app.Activity
 import android.os.Build

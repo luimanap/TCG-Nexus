@@ -1,4 +1,4 @@
-package com.example.tcg_nexus
+package com.pixelperfectsoft.tcg_nexus
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize

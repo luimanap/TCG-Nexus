@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.example.tcg_nexus
+package com.pixelperfectsoft.tcg_nexus
 
 import android.app.Activity
 import android.content.pm.ActivityInfo
@@ -15,7 +15,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.tcg_nexus.ui.theme.TCGNexus_Theme
+import com.pixelperfectsoft.tcg_nexus.ui.theme.TCGNexus_Theme
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
 

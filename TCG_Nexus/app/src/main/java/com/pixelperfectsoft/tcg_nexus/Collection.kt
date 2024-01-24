@@ -1,4 +1,4 @@
-package com.example.tcg_nexus
+package com.pixelperfectsoft.tcg_nexus
 
 
 import androidx.compose.foundation.BorderStroke
@@ -15,7 +15,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Divider
@@ -62,9 +61,9 @@ fun Collection(navController: NavController) {
         Color(230, 230, 230),
         Color(225, 225, 225),
         Color(225, 225, 225),
-        Color(225, 225, 225),
+        Color(225, 225, 225)
     )
-    var totalcards by rememberSaveable { mutableIntStateOf(cards.size) }
+    val totalcards by rememberSaveable { mutableIntStateOf(cards.size) }
     var estimatedCost by rememberSaveable { mutableFloatStateOf(0f) }
     for (i in cards){
         estimatedCost += i.get_price()
@@ -107,7 +106,7 @@ fun Collection(navController: NavController) {
 
         /*LazyColumn{
             items(cards){item ->
-                ListItem(headlineText = { /*TODO*/ })
+                ListItem(headlineText = {  })
 
             }
         }*/
@@ -119,7 +118,7 @@ fun Collection(navController: NavController) {
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
         ) {
-            var show = rememberSaveable { mutableStateOf(false) }
+            val show = rememberSaveable { mutableStateOf(false) }
             for (i in cards) {
                 CardItem(cardname = i.get_name(),type = i.get_type(),description = i.get_description(), image = i.get_image(), show = show)
                 if (show.value) {

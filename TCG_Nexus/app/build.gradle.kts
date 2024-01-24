@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.tcg_nexus"
+    namespace = "com.pixelperfectsoft.tcg_nexus"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.tcg_nexus"
+        applicationId = "com.pixelperfectsoft.tcg_nexus"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

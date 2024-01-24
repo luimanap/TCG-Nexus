@@ -1,4 +1,4 @@
-package com.example.tcg_nexus
+package com.pixelperfectsoft.tcg_nexus
 
 import org.junit.Test
 
