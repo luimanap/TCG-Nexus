@@ -24,16 +24,18 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import androidx.navigation.NavController
+import com.google.firebase.auth.FirebaseAuth
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.MyButton
 import com.pixelperfectsoft.tcg_nexus.MyCanvasSeparator
 import com.pixelperfectsoft.tcg_nexus.MyLogo
 import com.pixelperfectsoft.tcg_nexus.MyPasswordField
 import com.pixelperfectsoft.tcg_nexus.MyTextField
+import com.pixelperfectsoft.tcg_nexus.navigation.MyAppRoute
 
 @Composable
 fun LoginScreen(navController: NavController,viewModel: LoginScreenViewModel = androidx.lifecycle.viewmodel.compose.viewModel()) {
-    val showLoginForm by rememberSaveable { mutableStateOf(true) }
+    //val showLoginForm by rememberSaveable { mutableStateOf(true) }
 
     BackgroundImage()
     Column(
@@ -43,11 +45,16 @@ fun LoginScreen(navController: NavController,viewModel: LoginScreenViewModel = a
             .clip(RoundedCornerShape(40.dp))
             .zIndex(150f)
     ) {
-        if(showLoginForm){
+        /*if(showLoginForm){
             LoginForm(navController, viewModel)
-
         }else{
 
+        }*/
+        if(FirebaseAuth.getInstance().currentUser?.email.isNullOrBlank()){
+            LoginForm(navController, viewModel)
+        }
+        else{
+            navController.navigate(MyAppRoute.HOME)
         }
 
     }

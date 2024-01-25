@@ -31,6 +31,7 @@ import com.pixelperfectsoft.tcg_nexus.MyCanvasSeparator
 import com.pixelperfectsoft.tcg_nexus.MyLogo
 import com.pixelperfectsoft.tcg_nexus.MyPasswordField
 import com.pixelperfectsoft.tcg_nexus.MyTextField
+import com.pixelperfectsoft.tcg_nexus.navigation.MyAppRoute
 
 @Composable
 fun RegisterScreen(
@@ -87,7 +88,7 @@ fun RegisterScreen(
             onclick = {
                 if (passinput == confpassinput && termschecked && policychecked) {
                     viewModel.createUserAccount(userinput, emailinput, passinput) {
-                        navController.navigate("home")
+                        navController.navigate(MyAppRoute.HOME)
                     }
                 }
             },

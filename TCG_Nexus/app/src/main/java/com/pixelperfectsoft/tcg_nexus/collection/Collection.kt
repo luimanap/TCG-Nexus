@@ -43,7 +43,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
-import com.pixelperfectsoft.tcg_nexus.Card
+import com.pixelperfectsoft.tcg_nexus.model.Card
 import com.pixelperfectsoft.tcg_nexus.MyButton
 import com.pixelperfectsoft.tcg_nexus.R
 import androidx.compose.ui.window.Dialog as Dialog
