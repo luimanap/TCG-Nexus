@@ -14,12 +14,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.pixelperfectsoft.tcg_nexus.collection.Collection
-import com.pixelperfectsoft.tcg_nexus.decks.Decks
+import com.pixelperfectsoft.tcg_nexus.cards.Collection
+import com.pixelperfectsoft.tcg_nexus.cards.Decks
 import com.pixelperfectsoft.tcg_nexus.play.Fourplayers
 import com.pixelperfectsoft.tcg_nexus.home.HomeScreen
 import com.pixelperfectsoft.tcg_nexus.auth.LoginScreen
@@ -61,6 +62,12 @@ val TOP_LEVEL_DESTINATIONS = listOf(
         label = "Collection"
     ),
     MenuItems(
+        icon = R.drawable.albums,
+        textId = R.string.collection,
+        path = MyAppRoute.ALLCARDS,
+        label = "All Cards"
+    ),
+    MenuItems(
         icon = R.drawable.cards,
         textId = R.string.decks,
         path = MyAppRoute.DECKS,
@@ -82,6 +89,7 @@ val TOP_LEVEL_DESTINATIONS = listOf(
 
 object MyAppRoute{
     const val HOME = "home"
+    const val ALLCARDS = "all_cards"
     const val COLLECTION = "collection"
     const val DECKS = "decks"
     const val PLAY = "play"
@@ -106,6 +114,9 @@ fun BottomBarNaviContent(
                     RegisterScreen(navController = navController)
                 }
                 composable(MyAppRoute.HOME) {
+                    HomeScreen(navController = navController)
+                }
+                composable(MyAppRoute.ALLCARDS) {
                     HomeScreen(navController = navController)
                 }
                 composable(MyAppRoute.COLLECTION) {
@@ -180,7 +191,7 @@ fun BottomBarNavigation(selectedDestination: String, navigateTo: (MenuItems) -> 
     ) {
         TOP_LEVEL_DESTINATIONS.forEach { destinations ->
             NavigationBarItem(
-                label = { Text(text = destinations.label) },
+                label = { Text(text = destinations.label, fontSize = 12.sp) },
                 selected = selectedDestination == destinations.path,
                 onClick = { navigateTo(destinations) },
                 icon = {

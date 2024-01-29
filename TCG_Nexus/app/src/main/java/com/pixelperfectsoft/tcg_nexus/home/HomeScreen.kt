@@ -21,7 +21,7 @@ import androidx.navigation.NavHostController
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.MyLogo
 import com.pixelperfectsoft.tcg_nexus.R
-import com.pixelperfectsoft.tcg_nexus.collection.createGradientBrush
+import com.pixelperfectsoft.tcg_nexus.cards.createGradientBrush
 
 @Composable
 fun HomeScreen(navController: NavHostController) {

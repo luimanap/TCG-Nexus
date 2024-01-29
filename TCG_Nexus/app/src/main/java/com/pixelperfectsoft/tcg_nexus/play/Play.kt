@@ -30,7 +30,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.MyButton
-import com.pixelperfectsoft.tcg_nexus.collection.createGradientBrush
+import com.pixelperfectsoft.tcg_nexus.cards.createGradientBrush
 
 
 data class Game(
