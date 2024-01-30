@@ -48,7 +48,6 @@ fun GameBackgroundImage() {
         )
     }
 }
-
 @Composable
 fun MyLogo(height: Int) {
     Image(

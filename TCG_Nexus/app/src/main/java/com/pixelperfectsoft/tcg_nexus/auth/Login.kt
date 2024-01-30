@@ -51,7 +51,8 @@ fun LoginScreen(navController: NavController,viewModel: LoginScreenViewModel = a
 
         }*/
         if(FirebaseAuth.getInstance().currentUser?.email.isNullOrBlank()){
-            LoginForm(navController, viewModel)
+            navController.navigate(MyAppRoute.PROFILE)
+            //LoginForm(navController, viewModel)
         }
         else{
             navController.navigate(MyAppRoute.PROFILE)
@@ -119,5 +120,4 @@ fun LoginForm(navController: NavController, viewModel: LoginScreenViewModel) {
         bordercolor = Color(41, 188, 117),
         textcolor = Color.White
     )
-
 }
