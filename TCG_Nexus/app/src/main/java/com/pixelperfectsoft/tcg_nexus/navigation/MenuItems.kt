@@ -29,6 +29,7 @@ import com.pixelperfectsoft.tcg_nexus.R
 import com.pixelperfectsoft.tcg_nexus.auth.RegisterScreen
 import com.pixelperfectsoft.tcg_nexus.play.Threeplayers
 import com.pixelperfectsoft.tcg_nexus.play.Twoplayers
+import com.pixelperfectsoft.tcg_nexus.profile.Profile
 
 data class MenuItems(
     val icon: Int,
@@ -82,12 +83,13 @@ val TOP_LEVEL_DESTINATIONS = listOf(
     MenuItems(
         icon = R.drawable.personcirclesharp,
         textId = R.string.profile,
-        path = MyAppRoute.PROFILE,
+        path = MyAppRoute.LOGIN,
         label = "Profile"
     ),
 )
 
 object MyAppRoute{
+    const val LOGIN: String = "login"
     const val HOME = "home"
     const val ALLCARDS = "all_cards"
     const val COLLECTION = "collection"
@@ -173,8 +175,11 @@ fun BottomBarNaviContent(
                 composable("2p60") {
                     Twoplayers(navController = navController, 60)
                 }
-                composable(MyAppRoute.PROFILE) {
+                composable(MyAppRoute.LOGIN) {
                     LoginScreen(navController = navController)
+                }
+                composable(MyAppRoute.PROFILE) {
+                    Profile(navController = navController)
                 }
             }
             BottomBarNavigation(selectedDestination = selectedDestination, navigateTo = navigateTo)

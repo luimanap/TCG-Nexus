@@ -54,7 +54,7 @@ fun LoginScreen(navController: NavController,viewModel: LoginScreenViewModel = a
             LoginForm(navController, viewModel)
         }
         else{
-            navController.navigate(MyAppRoute.HOME)
+            navController.navigate(MyAppRoute.PROFILE)
         }
 
     }
@@ -98,7 +98,7 @@ fun LoginForm(navController: NavController, viewModel: LoginScreenViewModel) {
         text = "Iniciar Sesión",
         onclick = {
             viewModel.signIn(email = userinput, password = passinput){
-                navController.navigate("home")
+                navController.navigate(MyAppRoute.PROFILE)
             }
         },
         containercolor = Color(92, 115, 255),

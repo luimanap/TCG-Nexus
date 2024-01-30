@@ -144,6 +144,7 @@ int drawable ic_call_decline_low 0x7f040023
 int drawable ic_launcher_background 0x7f040024
 int drawable ic_launcher_foreground 0x7f040025
 int drawable logotcgnexus 0x7f040026
+int drawable logout 0x7f040036
 int drawable notification_action_background 0x7f040027
 int drawable notification_bg 0x7f040028
 int drawable notification_bg_low 0x7f040029

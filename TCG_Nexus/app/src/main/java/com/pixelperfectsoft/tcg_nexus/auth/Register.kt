@@ -88,7 +88,7 @@ fun RegisterScreen(
             onclick = {
                 if (passinput == confpassinput && termschecked && policychecked) {
                     viewModel.createUserAccount(userinput, emailinput, passinput) {
-                        navController.navigate(MyAppRoute.HOME)
+                        navController.navigate(MyAppRoute.PROFILE)
                     }
                 }
             },
