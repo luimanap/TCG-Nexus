@@ -34,12 +34,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.google.firebase.auth.FirebaseAuth
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.R
+import com.pixelperfectsoft.tcg_nexus.auth.LoginScreenViewModel
 import com.pixelperfectsoft.tcg_nexus.cards.createGradientBrush
+import com.pixelperfectsoft.tcg_nexus.navigation.MyAppRoute
 
 @Composable
-fun Profile(navController: NavHostController) {
+fun Profile(navController: NavHostController, viewModel: LoginScreenViewModel = androidx.lifecycle.viewmodel.compose.viewModel()) {
     val backcolors = listOf(
         Color.Transparent,
         Color(230, 230, 230),
@@ -65,8 +68,8 @@ fun Profile(navController: NavHostController) {
             Box(modifier = Modifier
                 .size(50.dp)
                 .clickable {
-
-
+                    FirebaseAuth.getInstance().signOut()
+                    navController.navigate(MyAppRoute.LOGIN)
                 }) {
                 Icon(
                     painter = painterResource(id = R.drawable.logout),

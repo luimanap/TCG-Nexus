@@ -1,6 +1,7 @@
 package com.pixelperfectsoft.tcg_nexus.auth
 
 import android.util.Log
+import androidx.compose.runtime.Composable
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -16,7 +17,7 @@ class LoginScreenViewModel : ViewModel() {
     private val auth: FirebaseAuth = Firebase.auth
     private val _loading = MutableLiveData(false)
 
-    fun signIn(email: String, password: String, profile: () -> Unit) = viewModelScope.launch {
+    fun signIn(email: String, password: String, profile: () -> Unit /*, error: () -> Unit*/) = viewModelScope.launch {
         try {
             auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
@@ -24,6 +25,7 @@ class LoginScreenViewModel : ViewModel() {
                     profile()
                 } else {
                     Log.d("login", "signIn: ${task.result}")
+                    //error()
                 }
             }
         } catch (e: Exception) {

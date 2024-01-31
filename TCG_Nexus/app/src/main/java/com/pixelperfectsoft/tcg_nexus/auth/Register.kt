@@ -1,6 +1,7 @@
 package com.pixelperfectsoft.tcg_nexus.auth
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -22,7 +23,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
@@ -31,6 +34,7 @@ import com.pixelperfectsoft.tcg_nexus.MyCanvasSeparator
 import com.pixelperfectsoft.tcg_nexus.MyLogo
 import com.pixelperfectsoft.tcg_nexus.MyPasswordField
 import com.pixelperfectsoft.tcg_nexus.MyTextField
+import com.pixelperfectsoft.tcg_nexus.cards.createGradientBrush
 import com.pixelperfectsoft.tcg_nexus.navigation.MyAppRoute
 
 @Composable
@@ -38,6 +42,15 @@ fun RegisterScreen(
     navController: NavController,
     viewModel: LoginScreenViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
 ) {
+    var termschecked by rememberSaveable {mutableStateOf(false)}
+    var policychecked by rememberSaveable {mutableStateOf(false)}
+    val backcolors = listOf(
+        Color.Transparent,
+        Color(230, 230, 230),
+        Color(225, 225, 225),
+        Color(225, 225, 225),
+        Color(225, 225, 225)
+    )
     var userinput by rememberSaveable { mutableStateOf("") }
     var emailinput by rememberSaveable { mutableStateOf("") }
     var passinput by rememberSaveable { mutableStateOf("") }
@@ -46,13 +59,15 @@ fun RegisterScreen(
     Column(
         Modifier
             .fillMaxSize()
-            .background(color = Color(204, 204, 204, 90))
-            .verticalScroll(rememberScrollState())
+            .background(createGradientBrush(backcolors))
+            .verticalScroll(rememberScrollState()),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        //Logo Image
-        Spacer(Modifier.size(5.dp))
-        MyLogo(90)
+
+        Spacer(Modifier.size(125.dp))
+        Text(text = "CREAR CUENTA", style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 20.sp))
+        Spacer(Modifier.size(25.dp))
 
         //Name Input
         MyTextField(data = userinput, label = "Usuario", onvaluechange = { userinput = it })
@@ -67,6 +82,7 @@ fun RegisterScreen(
         Spacer(Modifier.size(16.dp))
 
         //Password Input
+
         MyPasswordField(data = passinput, label = "Contraseña", onvaluechange = { passinput = it })
         Spacer(Modifier.size(16.dp))
 
@@ -78,9 +94,14 @@ fun RegisterScreen(
         Spacer(Modifier.size(15.dp))
 
         //Checkboxes
-        val termschecked = MyTextCheckBox("Acepto los términos y condiciones")
-        val policychecked = MyTextCheckBox("Acepto la política de privacidad")
-        MyTextCheckBox("Me gustaría recibir ofertas y promociones exclusivas")
+        Box(){
+            Column {
+                termschecked = MyTextCheckBox("Acepto los términos y condiciones")
+                policychecked = MyTextCheckBox("Acepto la política de privacidad")
+                MyTextCheckBox("Me gustaría recibir ofertas y promociones exclusivas")
+            }
+        }
+
 
         //Register button
         MyButton(

@@ -158,8 +158,10 @@ int drawable notification_template_icon_bg 0x7f040031
 int drawable notification_template_icon_low_bg 0x7f040032
 int drawable notification_tile_bg 0x7f040033
 int drawable notify_panel_notification_icon_bg 0x7f040034
-int drawable personcirclesharp 0x7f040035
-int drawable woodtable 0x7f040036
+int drawable passwordeye 0x7f040035
+int drawable passwordeyeopen 0x7f040036
+int drawable personcirclesharp 0x7f040037
+int drawable woodtable 0x7f040038
 int id accessibility_action_clickable_span 0x7f050000
 int id accessibility_custom_action_0 0x7f050001
 int id accessibility_custom_action_1 0x7f050002

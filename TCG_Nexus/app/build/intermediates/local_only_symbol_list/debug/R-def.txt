@@ -17,6 +17,8 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable logotcgnexus
 drawable logout
+drawable passwordeye
+drawable passwordeyeopen
 drawable personcirclesharp
 drawable woodtable
 mipmap ic_launcher

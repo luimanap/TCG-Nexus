@@ -8,14 +8,22 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
@@ -24,6 +32,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -37,6 +46,7 @@ fun BackgroundImage() {
         )
     }
 }
+
 @Composable
 fun GameBackgroundImage() {
     Box(modifier = Modifier.fillMaxSize()) {
@@ -48,6 +58,7 @@ fun GameBackgroundImage() {
         )
     }
 }
+
 @Composable
 fun MyLogo(height: Int) {
     Image(
@@ -60,7 +71,13 @@ fun MyLogo(height: Int) {
 }
 
 @Composable
-fun MyButton(text: String, onclick: () -> Unit, containercolor: Color, bordercolor : Color, textcolor : Color) {
+fun MyButton(
+    text: String,
+    onclick: () -> Unit,
+    containercolor: Color,
+    bordercolor: Color,
+    textcolor: Color
+) {
     OutlinedButton(
         onClick = onclick,
         enabled = true,
@@ -131,12 +148,25 @@ fun MyTextField(data: String, label: String, onvaluechange: (String) -> Unit) {
             .padding(start = 30.dp, end = 30.dp),
         shape = RoundedCornerShape(45.dp),
         singleLine = true,
+        colors = TextFieldDefaults.textFieldColors(
+            containerColor = Color.Transparent,
+            cursorColor = Color.Black,
+            textColor = Color.Black,
+            focusedLabelColor = Color.Black,
+            focusedIndicatorColor = Color.Black
+        )
     )
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyPasswordField(data: String, label: String, onvaluechange: (String) -> Unit) {
+    var passwordVisibility by rememberSaveable { mutableStateOf(false) }
+    val icon = if (!passwordVisibility) {
+        painterResource(id = R.drawable.passwordeye)
+    } else {
+        painterResource(id = R.drawable.passwordeyeopen)
+    }
     TextField(
         value = data,
         onValueChange = onvaluechange,
@@ -148,8 +178,28 @@ fun MyPasswordField(data: String, label: String, onvaluechange: (String) -> Unit
             .padding(start = 30.dp, end = 30.dp),
         shape = RoundedCornerShape(45.dp),
         singleLine = true,
-        visualTransformation = PasswordVisualTransformation(),
-        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password)
+        visualTransformation = if (passwordVisibility) {
+            VisualTransformation.None
+        } else {
+            PasswordVisualTransformation()
+        },
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+        colors = TextFieldDefaults.textFieldColors(
+            containerColor = Color.Transparent,
+            cursorColor = Color.Black,
+            textColor = Color.Black,
+            focusedLabelColor = Color.Black,
+            focusedIndicatorColor = Color.Black
+        ),
+        trailingIcon = {
+            IconButton(onClick = { passwordVisibility = !passwordVisibility }) {
+                Icon(
+                    painter = icon,
+                    contentDescription = "show_password",
+                    modifier = Modifier.size(25.dp)
+                )
+            }
+        }
     )
 }
 
