@@ -136,34 +136,50 @@ fun Collection(navController: NavController) {
 
 @Composable
 fun SearchButton() {
-    var show by rememberSaveable { mutableStateOf(false) }
+    var show = rememberSaveable { mutableStateOf(false) }
     MyButton(
         text = "Search...",
-        onclick = { show = true },
+        onclick = { show.value = true },
         containercolor = Color.White,
         bordercolor = Color.Black,
         textcolor = Color.Black
     )
-    SearchDialog()
+    SearchDialog(show)
 }
 
 @Composable
-fun SearchDialog() {
+fun SearchDialog(show: MutableState<Boolean>) {
+    if(show.value){
+        Dialog(onDismissRequest = {show.value = false}) {
+
+        }
+    }
 
 }
 
 @Composable
 fun CardDialog(show: MutableState<Boolean>, card: Card) {
     Dialog(onDismissRequest = { show.value = false }) {
-        Row (Modifier.background(Color.White).padding(16.dp), verticalAlignment = Alignment.CenterVertically){
+        Row (
+            Modifier
+                .background(Color.White)
+                .padding(16.dp)
+            ,
+            verticalAlignment = Alignment.CenterVertically){
             Column(Modifier.fillMaxWidth(0.5f)) {
-                Text(text = card.get_name())
+                Text(text = card.get_name(), fontWeight = FontWeight.Bold)
+                Spacer(modifier = Modifier.height(16.dp))
                 Text(text = card.get_type())
+                Spacer(modifier = Modifier.height(8.dp))
                 Text(text = card.get_description())
+                Spacer(modifier = Modifier.height(8.dp))
                 Text(text = card.get_rarity())
+                Spacer(modifier = Modifier.height(8.dp))
                 Text(text = card.get_price().toString()+"€")
             }
-            Image(painter = painterResource(id = card.get_image()), contentDescription = card.get_name(), modifier = Modifier.fillMaxWidth().fillMaxHeight(0.4f))
+            Image(painter = painterResource(id = card.get_image()), contentDescription = card.get_name(), modifier = Modifier
+                .fillMaxWidth()
+                .fillMaxHeight(0.4f))
         }
     }
 }
@@ -180,11 +196,11 @@ fun CardItem(
         show.value = true
     },
         border = BorderStroke(0.dp,Color.Transparent),
-        modifier = Modifier.clip(shape = RectangleShape),
         colors = ButtonDefaults.buttonColors(
             contentColor = Color.Black,
             containerColor = Color.Transparent
-        )
+        ),
+        shape = RectangleShape
     ) {
         Row {
             Image(

@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -43,9 +44,10 @@ data class Game(
 fun PlayScreen(navController: NavController) {
     val backcolors = listOf(
         Color.Transparent,
-        Color(25, 25, 25, 210),
-        Color(25, 25, 25, 210),
-        Color(25, 25, 25, 255),
+        Color(230, 230, 230),
+        Color(225, 225, 225),
+        Color(225, 225, 225),
+        Color(225, 225, 225)
     )
     val game = Game(rememberSaveable {
         mutableIntStateOf(0)
@@ -60,10 +62,10 @@ fun PlayScreen(navController: NavController) {
             .background(brush = createGradientBrush(backcolors)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Spacer(modifier = Modifier.size(130.dp))
+        Spacer(modifier = Modifier.size(250.dp))
         SelectPlayers(game)
         SelectStartLife(game)
-        Spacer(modifier = Modifier.size(8.dp))
+        Spacer(modifier = Modifier.size(64.dp))
         StartButton(navController, game.life.value, game.numplayers.value)
     }
 }
@@ -126,11 +128,11 @@ fun SelectStartLife(game: Game) {
     var isexpanded by rememberSaveable { mutableStateOf(false) }
 
     val elements = listOf("20", "30", "40", "50", "60")
-    Column(Modifier.padding(40.dp)) {
+    Column(Modifier.padding(horizontal = 40.dp, vertical = 10.dp)) {
         // Spacer(modifier = Modifier.size(250.dp))
         Text(
             text = "Vidas:", style = TextStyle(
-                color = Color.White,
+                color = Color.Black,
                 fontSize = 16.sp
             ),
             modifier = Modifier.padding(4.dp)
@@ -144,17 +146,17 @@ fun SelectStartLife(game: Game) {
                     .clickable { isexpanded = true }
                     .fillMaxWidth(),
                 colors = TextFieldDefaults.outlinedTextFieldColors(
-                    disabledBorderColor = Color.White, disabledTextColor = Color.White
+                    disabledBorderColor = Color.Black, disabledTextColor = Color.Black
                 ))
             DropdownMenu(
                 expanded = isexpanded,
                 onDismissRequest = { isexpanded = false },
                 modifier = Modifier
-                    .padding(start = 40.dp, end = 40.dp)
                     .fillMaxWidth()
             ) {
                 for (i in elements) {
                     DropdownMenuItem(
+                        modifier = Modifier.padding(horizontal = 40.dp),
                         text = { Text(text = i) },
                         onClick = {
                             isexpanded = false; lifevalue = i
@@ -176,10 +178,12 @@ fun SelectPlayers(game: Game) {
     val elements =
         listOf("2 Players", "3 Players", "4 Players", "5 Players", "6 Players")
 
-    Column(Modifier.padding(40.dp)) {
+    Column(Modifier.padding(horizontal = 40.dp, vertical = 10.dp)) {
+
+
         Text(
             text = "Jugadores:", style = TextStyle(
-                color = Color.White,
+                color = Color.Black,
                 fontSize = 16.sp
             ),
             modifier = Modifier.padding(4.dp)
@@ -193,17 +197,17 @@ fun SelectPlayers(game: Game) {
                     .clickable { isexpanded = true }
                     .fillMaxWidth(),
                 colors = TextFieldDefaults.outlinedTextFieldColors(
-                    disabledBorderColor = Color.White, disabledTextColor = Color.White
+                    disabledBorderColor = Color.Black, disabledTextColor = Color.Black
                 ))
             DropdownMenu(
                 expanded = isexpanded,
                 onDismissRequest = { isexpanded = false },
                 modifier = Modifier
-                    .padding(start = 40.dp, end = 40.dp)
                     .fillMaxWidth()
             ) {
                 for (i in elements) {
                     DropdownMenuItem(text = { Text(text = i) },
+                        modifier = Modifier.padding(horizontal = 40.dp),
                         onClick = {
                             isexpanded = false
                             playersvalue = i

@@ -91,11 +91,11 @@ fun LoginForm(navController: NavController, viewModel: LoginScreenViewModel) {
     Spacer(Modifier.size(25.dp))
 
     //Username Input
-    MyTextField(data = userinput, label = "Username", onvaluechange = { userinput = it })
+    MyTextField(data = userinput, label = "Correo Electrónico", onvaluechange = { userinput = it })
     Spacer(Modifier.size(16.dp))
 
     //Password Input
-    MyPasswordField(data = passinput, label = "Password", onvaluechange = { passinput = it })
+    MyPasswordField(data = passinput, label = "Contraseña", onvaluechange = { passinput = it })
     Spacer(Modifier.size(8.dp))
 
     //Forgotten password button

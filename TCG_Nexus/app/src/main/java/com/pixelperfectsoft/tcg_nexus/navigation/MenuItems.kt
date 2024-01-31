@@ -54,37 +54,37 @@ val TOP_LEVEL_DESTINATIONS = listOf(
         icon = R.drawable.home,
         textId = R.string.home,
         path = MyAppRoute.HOME,
-        label = "Home"
+        label = "Inicio"
     ),
     MenuItems(
         icon = R.drawable.albums,
         textId = R.string.collection,
         path = MyAppRoute.COLLECTION,
-        label = "Collection"
+        label = "Colección"
     ),
     MenuItems(
         icon = R.drawable.albums,
         textId = R.string.collection,
         path = MyAppRoute.ALLCARDS,
-        label = "All Cards"
+        label = "Buscar"
     ),
     MenuItems(
         icon = R.drawable.cards,
         textId = R.string.decks,
         path = MyAppRoute.DECKS,
-        label = "Decks"
+        label = "Mazos"
     ),
     MenuItems(
         icon = R.drawable.dice_icon,
         textId = R.string.play,
         path = MyAppRoute.PLAY,
-        label = "Play"
+        label = "Jugar"
     ),
     MenuItems(
         icon = R.drawable.personcirclesharp,
         textId = R.string.profile,
         path = MyAppRoute.LOGIN,
-        label = "Profile"
+        label = "Perfil"
     ),
 )
 

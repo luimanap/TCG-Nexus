@@ -66,10 +66,10 @@ fun Profile(navController: NavHostController, viewModel: LoginScreenViewModel = 
             horizontalArrangement = Arrangement.End
         ) {
             Box(modifier = Modifier
-                .size(50.dp)
+                .size(25.dp)
                 .clickable {
-                    FirebaseAuth.getInstance().signOut()
                     navController.navigate(MyAppRoute.LOGIN)
+                    FirebaseAuth.getInstance().signOut()
                 }) {
                 Icon(
                     painter = painterResource(id = R.drawable.logout),
@@ -82,11 +82,12 @@ fun Profile(navController: NavHostController, viewModel: LoginScreenViewModel = 
         }
         //Spacer(modifier = Modifier.fillMaxHeight(0.1f))
         Box(
-            Modifier
+            modifier = Modifier
                 .clip(CircleShape)
                 .border(1.dp, SolidColor(Color.Black), CircleShape)
                 .background(Color.Transparent)
-                .size(160.dp)
+                .size(160.dp),
+            contentAlignment = Alignment.Center
         ) {
             Image(
                 painter = painterResource(id = R.drawable.personcirclesharp),
