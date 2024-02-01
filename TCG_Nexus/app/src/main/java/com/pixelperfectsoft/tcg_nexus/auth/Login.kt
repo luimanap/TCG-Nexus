@@ -11,9 +11,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -38,10 +36,10 @@ import com.google.firebase.auth.FirebaseAuth
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.MyButton
 import com.pixelperfectsoft.tcg_nexus.MyCanvasSeparator
-import com.pixelperfectsoft.tcg_nexus.MyLogo
 import com.pixelperfectsoft.tcg_nexus.MyPasswordField
 import com.pixelperfectsoft.tcg_nexus.MyTextField
 import com.pixelperfectsoft.tcg_nexus.cards.createGradientBrush
+import com.pixelperfectsoft.tcg_nexus.model.LoginScreenViewModel
 import com.pixelperfectsoft.tcg_nexus.navigation.MyAppRoute
 
 @Composable

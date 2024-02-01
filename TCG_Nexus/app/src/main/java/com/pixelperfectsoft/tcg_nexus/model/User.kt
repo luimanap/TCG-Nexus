@@ -1,11 +1,11 @@
 package com.pixelperfectsoft.tcg_nexus.model
 
 data class User(
-    val id: String?,
-    val userId: String,
-    val email: String,
-    val displayName: String,
-    val avatarUrl : String?,
+    val id: String? = "",
+    val userId: String = "",
+    val email: String = "",
+    val displayName: String = "",
+    val avatarUrl : String? = "",
 ){
     fun toMap(): MutableMap<String,Any>{
         return mutableMapOf(

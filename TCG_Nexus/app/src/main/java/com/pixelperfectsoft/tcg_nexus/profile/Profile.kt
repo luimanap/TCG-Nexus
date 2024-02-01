@@ -1,6 +1,6 @@
 package com.pixelperfectsoft.tcg_nexus.profile
 
-import androidx.compose.foundation.BorderStroke
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -15,7 +15,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
@@ -26,23 +25,38 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FirebaseFirestoreException
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.R
-import com.pixelperfectsoft.tcg_nexus.auth.LoginScreenViewModel
+import com.pixelperfectsoft.tcg_nexus.model.LoginScreenViewModel
 import com.pixelperfectsoft.tcg_nexus.cards.createGradientBrush
+import com.pixelperfectsoft.tcg_nexus.model.User
+import com.pixelperfectsoft.tcg_nexus.model.UserDataViewModel
+import com.pixelperfectsoft.tcg_nexus.model.getUserDataFromFirestore
 import com.pixelperfectsoft.tcg_nexus.navigation.MyAppRoute
+import kotlinx.coroutines.tasks.await
+import androidx.lifecycle.viewmodel.compose.viewModel
+import coil.compose.rememberAsyncImagePainter
+
+
+
+
 
 @Composable
-fun Profile(navController: NavHostController, viewModel: LoginScreenViewModel = androidx.lifecycle.viewmodel.compose.viewModel()) {
+fun Profile(
+    navController: NavHostController,
+    dataViewModel: UserDataViewModel = viewModel()
+) {
+    val currentuser = dataViewModel.data.value
+    //val currentuser = getUserDataFromFirestore()
     val backcolors = listOf(
         Color.Transparent,
         Color(230, 230, 230),
@@ -69,7 +83,9 @@ fun Profile(navController: NavHostController, viewModel: LoginScreenViewModel = 
                 .size(25.dp)
                 .clickable {
                     navController.navigate(MyAppRoute.LOGIN)
-                    FirebaseAuth.getInstance().signOut()
+                    FirebaseAuth
+                        .getInstance()
+                        .signOut()
                 }) {
                 Icon(
                     painter = painterResource(id = R.drawable.logout),
@@ -90,21 +106,24 @@ fun Profile(navController: NavHostController, viewModel: LoginScreenViewModel = 
             contentAlignment = Alignment.Center
         ) {
             Image(
-                painter = painterResource(id = R.drawable.personcirclesharp),
+                //painter = painterResource(id = R.drawable.personcirclesharp),
+                painter = rememberAsyncImagePainter(model = currentuser.avatarUrl),
                 contentDescription = "Profile picture",
                 modifier = Modifier.fillMaxSize()
             )
         }
-        UserInfo()
+        UserInfo(currentuser)
 
     }
 }
 
 @Composable
-fun UserInfo() {
+fun UserInfo(user: User) {
     Spacer(modifier = Modifier.fillMaxHeight(0.01f))
     Text(
-        text = "Username", style = TextStyle(
+        //text = "Username",
+        text = user.displayName,
+        style = TextStyle(
             fontSize = 20.sp,
             fontWeight = FontWeight.SemiBold
         )
