@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.launch
@@ -15,23 +16,27 @@ class LoginScreenViewModel : ViewModel() {
     private val auth: FirebaseAuth = Firebase.auth
     private val _loading = MutableLiveData(false)
 
-    fun signIn(email: String, password: String, profile: () -> Unit /*, error: () -> Unit*/) = viewModelScope.launch {
-        try {
-            auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
-                if (task.isSuccessful) {
+    fun signIn(email: String, password: String, profile: () -> Unit, onError: () -> Unit) =
+        viewModelScope.launch {
+            try {
+                auth.signInWithEmailAndPassword(email, password).addOnSuccessListener {
                     Log.d("login", "signIn: successful")
                     profile()
-                } else {
-                    Log.d("login", "signIn: ${task.result}")
-                    //error()
+                }.addOnFailureListener {
+                    //Log.d("login", "signIn: ${task.result}")
+                    onError()
                 }
+            } catch (e: FirebaseAuthInvalidCredentialsException) {
+                Log.d("login", "signIn: ${e.message}")
             }
-        } catch (e: Exception) {
-            Log.d("login", "signIn: ${e.message}")
         }
-    }
 
-    fun createUserAccount(displayname: String, email: String, password: String, profile: () -> Unit) {
+    fun createUserAccount(
+        displayname: String,
+        email: String,
+        password: String,
+        profile: () -> Unit
+    ) {
         if (_loading.value == false) {
             _loading.value = true
             auth.createUserWithEmailAndPassword(email.trim(), password.trim())

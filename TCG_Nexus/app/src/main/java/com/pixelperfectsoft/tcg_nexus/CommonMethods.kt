@@ -20,6 +20,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -161,6 +162,7 @@ fun MyTextField(data: String, label: String, onvaluechange: (String) -> Unit) {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyPasswordField(data: String, label: String, onvaluechange: (String) -> Unit) {
+    var error by rememberSaveable { mutableStateOf(false) }
     var passwordVisibility by rememberSaveable { mutableStateOf(false) }
     val icon = if (!passwordVisibility) {
         painterResource(id = R.drawable.passwordeye)
@@ -189,7 +191,8 @@ fun MyPasswordField(data: String, label: String, onvaluechange: (String) -> Unit
             cursorColor = Color.Black,
             textColor = Color.Black,
             focusedLabelColor = Color.Black,
-            focusedIndicatorColor = Color.Black
+            focusedIndicatorColor = Color.Black,
+            errorIndicatorColor = Color.Red
         ),
         trailingIcon = {
             IconButton(onClick = { passwordVisibility = !passwordVisibility }) {
