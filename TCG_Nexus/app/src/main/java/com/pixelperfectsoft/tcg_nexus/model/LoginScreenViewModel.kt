@@ -23,7 +23,6 @@ class LoginScreenViewModel : ViewModel() {
                     Log.d("login", "signIn: successful")
                     profile()
                 }.addOnFailureListener {
-                    //Log.d("login", "signIn: ${task.result}")
                     onError()
                 }
             } catch (e: FirebaseAuthInvalidCredentialsException) {

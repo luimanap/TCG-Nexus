@@ -50,6 +50,7 @@ fun RegisterScreen(
         Color(225, 225, 225),
         Color(225, 225, 225)
     )
+    var error by rememberSaveable { mutableStateOf(false) }
     var userinput by rememberSaveable { mutableStateOf("") }
     var emailinput by rememberSaveable { mutableStateOf("") }
     var passinput by rememberSaveable { mutableStateOf("") }
@@ -69,7 +70,7 @@ fun RegisterScreen(
         Spacer(Modifier.size(25.dp))
 
         //Name Input
-        MyTextField(data = userinput, label = "Usuario", onvaluechange = { userinput = it })
+        MyTextField(data = userinput, label = "Usuario", onvaluechange = { userinput = it },supporting_text = "", iserror = error)
         Spacer(Modifier.size(16.dp))
 
 
@@ -77,19 +78,20 @@ fun RegisterScreen(
         MyTextField(
             data = emailinput,
             label = "Correo Electrónico",
-            onvaluechange = { emailinput = it })
+            onvaluechange = { emailinput = it },supporting_text = "", iserror = error)
         Spacer(Modifier.size(16.dp))
 
         //Password Input
 
-        MyPasswordField(data = passinput, label = "Contraseña", onvaluechange = { passinput = it })
+        MyPasswordField(data = passinput, label = "Contraseña", onvaluechange = { passinput = it }, supporting_text = "", iserror = error)
         Spacer(Modifier.size(16.dp))
 
         //Confirm Password Input
         MyPasswordField(
             data = confpassinput,
             label = "Confirmar Contraseña",
-            onvaluechange = { confpassinput = it })
+            onvaluechange = { confpassinput = it },
+            supporting_text = "", iserror = error)
         Spacer(Modifier.size(15.dp))
 
         //Checkboxes

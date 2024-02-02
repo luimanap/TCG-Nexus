@@ -12,20 +12,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExtendedFloatingActionButton
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Snackbar
-import androidx.compose.material3.SnackbarData
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -62,7 +55,7 @@ import kotlinx.coroutines.launch
 @Composable
 fun LoginScreen(
     navController: NavController,
-    viewModel: LoginScreenViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
+    viewModel: LoginScreenViewModel = androidx.lifecycle.viewmodel.compose.viewModel(),
 ) {
     val backcolors = listOf(
         Color.Transparent,
@@ -99,12 +92,10 @@ fun LoginScreen(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LoginForm(navController: NavController, viewModel: LoginScreenViewModel) {
-    val snackbarHostState = remember { SnackbarHostState() }
-    val scope = rememberCoroutineScope()
     var error by rememberSaveable { mutableStateOf(false) }
-
     var userinput by rememberSaveable { mutableStateOf("") }
     var passinput by rememberSaveable { mutableStateOf("") }
+
     //Login header
     Spacer(Modifier.size(225.dp))
     Text(text = "INICIAR SESION", style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 20.sp))
@@ -114,14 +105,19 @@ fun LoginForm(navController: NavController, viewModel: LoginScreenViewModel) {
     MyTextField(
         data = userinput,
         label = "Correo Electrónico",
-        onvaluechange = { userinput = it; error = false })
+        onvaluechange = { userinput = it; error = false },
+        supporting_text = "Correo electronico incorrecto o mal formateado",
+        iserror = error
+    )
     Spacer(Modifier.size(16.dp))
 
     //Password Input
     MyPasswordField(
         data = passinput,
         label = "Contraseña",
-        onvaluechange = { passinput = it; error = false })
+        onvaluechange = { passinput = it; error = false },
+        supporting_text = "Contraseña incorrecta",
+        iserror = error)
     Spacer(Modifier.size(8.dp))
 
     //Forgotten password button
@@ -129,45 +125,26 @@ fun LoginForm(navController: NavController, viewModel: LoginScreenViewModel) {
     Spacer(modifier = Modifier.size(100.dp))
 
     //Login button
+    MyButton(
+        text = "Iniciar Sesión",
+        onclick = {
+            if (userinput != "" && passinput != "") {
+                viewModel.signIn(email = userinput, password = passinput, profile = {
+                    navController.navigate(MyAppRoute.PROFILE)
+                }, onError = {
+                    error = true
+                })
+            } else {
+                error = true
+            }
 
-    Scaffold(
-        snackbarHost = { SnackbarHost(hostState = snackbarHostState) }
-    ) { padding ->
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding)
-                .background(Color.Transparent),
-            contentAlignment = Alignment.Center
-        ) {
-            MyButton(
-                text = "Iniciar Sesión",
-                onclick = {
-                    if(userinput!= "" && passinput != ""){
-                        viewModel.signIn(email = userinput, password = passinput, profile = {
-                            navController.navigate(MyAppRoute.PROFILE)
-                        }, onError = {
-                            scope.launch {
-                                snackbarHostState.showSnackbar(
-                                    message = "Correo y/o contraseña incorrectos"
-                                )
-                            }
-                        })
-                    }else{
-                        scope.launch {
-                            snackbarHostState.showSnackbar(
-                                message = "Inputs vacios"
-                            )
-                        }
-                    }
+        },
+        containercolor = Color(92, 115, 255),
+        bordercolor = Color(92, 115, 255),
+        textcolor = Color.White
+    )
 
-                },
-                containercolor = Color(92, 115, 255),
-                bordercolor = Color(92, 115, 255),
-                textcolor = Color.White
-            )
-        }
-    }
+
     Spacer(Modifier.size(8.dp))
 
     //Separator between buttons
@@ -182,48 +159,6 @@ fun LoginForm(navController: NavController, viewModel: LoginScreenViewModel) {
         bordercolor = Color(41, 188, 117),
         textcolor = Color.White
     )
-    /*if (error) {
-        ErrorSnackbar()
-    }*/
-
-
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun ErrorSnackbar() {
-    val snackbarHostState = remember { SnackbarHostState() }
-    val scope = rememberCoroutineScope()
-    Scaffold(
-        snackbarHost = { SnackbarHost(hostState = snackbarHostState) }
-    ) { padding ->
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(padding),
-            contentAlignment = Alignment.Center
-        ) {
-            Button(onClick = {
-                scope.launch {
-                    snackbarHostState.showSnackbar(
-                        message = "Correo y/o contraseña incorrectos"
-                    )
-                }
-            }) {
-                Text(text = "Show Snackbar")
-            }
-        }
-    }
-}
-
-@Composable
-fun ErrorDialog(text: String) {
-    var show by rememberSaveable { mutableStateOf(false) }
-    AlertDialog(onDismissRequest = { /*TODO*/ }, confirmButton = { /*TODO*/ }, text = {
-        Text(
-            text = text
-        )
-    })
 }
 
 @Composable

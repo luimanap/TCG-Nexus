@@ -20,7 +20,6 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -77,7 +76,7 @@ fun MyButton(
     onclick: () -> Unit,
     containercolor: Color,
     bordercolor: Color,
-    textcolor: Color
+    textcolor: Color,
 ) {
     OutlinedButton(
         onClick = onclick,
@@ -137,7 +136,13 @@ fun MyCanvasSeparator() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyTextField(data: String, label: String, onvaluechange: (String) -> Unit) {
+fun MyTextField(
+    iserror: Boolean,
+    supporting_text: String,
+    data: String,
+    label: String,
+    onvaluechange: (String) -> Unit,
+) {
     TextField(
         value = data,
         onValueChange = onvaluechange,
@@ -154,15 +159,28 @@ fun MyTextField(data: String, label: String, onvaluechange: (String) -> Unit) {
             cursorColor = Color.Black,
             textColor = Color.Black,
             focusedLabelColor = Color.Black,
-            focusedIndicatorColor = Color.Black
-        )
+            focusedIndicatorColor = Color.Black,
+            focusedSupportingTextColor = Color.Red,
+            unfocusedSupportingTextColor = Color.Red
+        ),
+        supportingText = {
+            if (iserror) {
+                Text(text = supporting_text)
+            }
+
+        }
     )
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyPasswordField(data: String, label: String, onvaluechange: (String) -> Unit) {
-    var error by rememberSaveable { mutableStateOf(false) }
+fun MyPasswordField(
+    supporting_text: String,
+    data: String,
+    label: String,
+    onvaluechange: (String) -> Unit,
+    iserror: Boolean,
+) {
     var passwordVisibility by rememberSaveable { mutableStateOf(false) }
     val icon = if (!passwordVisibility) {
         painterResource(id = R.drawable.passwordeye)
@@ -192,7 +210,8 @@ fun MyPasswordField(data: String, label: String, onvaluechange: (String) -> Unit
             textColor = Color.Black,
             focusedLabelColor = Color.Black,
             focusedIndicatorColor = Color.Black,
-            errorIndicatorColor = Color.Red
+            focusedSupportingTextColor = Color.Red,
+            unfocusedSupportingTextColor = Color.Red
         ),
         trailingIcon = {
             IconButton(onClick = { passwordVisibility = !passwordVisibility }) {
@@ -201,6 +220,11 @@ fun MyPasswordField(data: String, label: String, onvaluechange: (String) -> Unit
                     contentDescription = "show_password",
                     modifier = Modifier.size(25.dp)
                 )
+            }
+        },
+        supportingText = {
+            if (iserror) {
+                Text(text = supporting_text)
             }
         }
     )
