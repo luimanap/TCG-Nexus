@@ -101,22 +101,21 @@ fun MyCanvasSeparator() {
             .fillMaxWidth()
             .height(20.dp)
     ) {
+        val strokeWidth = 0.6.dp.toPx() //Anchura de la linea convertida a pixeles
+        val startY = size.height / 2   //Obtenemos la mitad del eje Y en relacion a la pantalla
+        val centerX = size.width / 2    //Obtenemos la mitad del eje X en relacion a la pantalla
+        val halfLineWidth = size.width / 3 //Dividimos el eje X en 3 partes
+        val lineColor = Color.Black   //Color de la linea
 
-        val strokeWidth = 0.6.dp.toPx() // Line Width
-        val startY = size.height / 2   //Half of Y axis (Vertical center)
-        val centerX = size.width / 2    // Half of X axis (Horizontal center
-        val halfLineWidth = size.width / 3
-        val lineColor = Color.Black     //Line color
-
-        //Draw left line
+        //Dibujamos la linea de la izquierda
         drawLine(
             color = lineColor,
-            start = Offset(centerX - halfLineWidth, startY),
-            end = Offset(halfLineWidth + centerX / 4, startY),
+            start = Offset(centerX - halfLineWidth, startY), //Calculamos la posicion inicial de dibujado de la linea
+            end = Offset(halfLineWidth + centerX / 4, startY), //Calculamos la posicion final de dibujado de la linea
             strokeWidth = strokeWidth
         )
 
-        //Draw right line
+        //Dibujamos la linea de la derecha
         drawLine(
             color = lineColor,
             start = Offset(centerX + centerX / 10, startY),
@@ -124,12 +123,12 @@ fun MyCanvasSeparator() {
             strokeWidth = strokeWidth
         )
 
-        // Draw circle in center
+        // Dibujamos el circulo de entra las dos lineas
         drawCircle(
             color = lineColor,
-            style = Stroke(width = strokeWidth),
-            radius = strokeWidth * 5,
-            center = Offset(centerX, startY)
+            style = Stroke(width = strokeWidth), //Indicamos que la anchura de la linea es el valor de la variable strokeWidth
+            radius = strokeWidth * 5, //Calculamos el radio del circulo
+            center = Offset(centerX, startY) //Calculamos el centro del circulo
         )
     }
 }
@@ -182,7 +181,7 @@ fun MyPasswordField(
     iserror: Boolean,
 ) {
     var passwordVisibility by rememberSaveable { mutableStateOf(false) }
-    val icon = if (!passwordVisibility) {
+    val icon = if (!passwordVisibility) { //Variable para indicar que icono se muestra para cada estado de passwordVisibility.
         painterResource(id = R.drawable.passwordeye)
     } else {
         painterResource(id = R.drawable.passwordeyeopen)
@@ -198,12 +197,12 @@ fun MyPasswordField(
             .padding(start = 30.dp, end = 30.dp),
         shape = RoundedCornerShape(45.dp),
         singleLine = true,
-        visualTransformation = if (passwordVisibility) {
+        visualTransformation = if (passwordVisibility) { //Si el boolean passwordVisibility esta en true, los caracteres van a poder ser legibles, pero si no, se va a aplicar una transformacion a los mismos
             VisualTransformation.None
         } else {
             PasswordVisualTransformation()
         },
-        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password), //Ponemos el teclado en modo contraseña, sin ajustes como el autocompletado
         colors = TextFieldDefaults.textFieldColors(
             containerColor = Color.Transparent,
             cursorColor = Color.Black,
@@ -213,7 +212,7 @@ fun MyPasswordField(
             focusedSupportingTextColor = Color.Red,
             unfocusedSupportingTextColor = Color.Red
         ),
-        trailingIcon = {
+        trailingIcon = { //Boton para mostrar u ocultar los caracteres de la contraseña
             IconButton(onClick = { passwordVisibility = !passwordVisibility }) {
                 Icon(
                     painter = icon,
@@ -222,7 +221,7 @@ fun MyPasswordField(
                 )
             }
         },
-        supportingText = {
+        supportingText = { //Mensaje de error debajo del input. Si el boolean is error esta en true, se va a mostrar
             if (iserror) {
                 Text(text = supporting_text)
             }

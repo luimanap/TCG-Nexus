@@ -11,31 +11,47 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 
 
-
-class UserDataViewModel : ViewModel(){
+class UserDataViewModel : ViewModel() {
     val data = mutableStateOf(User())
 
-    private fun get_data(){
+    init { //Iniciamos la corrutina de obtener los datos
+        get_data()
+    }
+
+    private fun get_data() {
         viewModelScope.launch {
             data.value = getUserDataFromFirestore()
         }
     }
 }
+
 suspend fun getUserDataFromFirestore(): User {
-    val auth = FirebaseAuth.getInstance()
-    val currentuser = auth.currentUser //Current logged user
-    val db = FirebaseFirestore.getInstance()
+    val auth =
+        FirebaseAuth.getInstance() //Obtenemos la instancia del sistema de autenticacion de Firebase
+    val currentuser = auth.currentUser //Obtenemos el usuario actualmente logueado
+    val db =
+        FirebaseFirestore.getInstance()   //Obtenemos la instasncia del sistema de BDD de Firebase
     var user = User()
 
     try {
-        db.collection("users").get().await().map {
-            val result = it.toObject(User::class.java)
-            if (currentuser != null) {
-                if(result.userId == currentuser.uid){
-                    user = result
+        db.collection("users").get().await()
+            .map {//Obtenemos la coleccion perteneciente a usuarios y esperamos a que se obtenga algo desde esa coleccion con await
+                val result = it.toObject(User::class.java)
+                if (currentuser != null) {
+                    if (currentuser.uid == result.user_id) {
+                        Log.d("get-user", "User found -> $user")
+                        user = result
+                    } else {
+                        Log.d("get-user", "User id mismatch")
+                        Log.d("get-user", "Id founded -> ${result.user_id}")
+                        Log.d("get-user", "User founded $result")
+                        Log.d("get-user", "Id to found -> ${currentuser.uid}")
+                    }
+                }
+                else{
+                    Log.d("get-user", "Current User is null")
                 }
             }
-        }
     } catch (e: FirebaseFirestoreException) {
         Log.d("UserInfo", "UserInfo : Error retrieving user data: $e")
     }

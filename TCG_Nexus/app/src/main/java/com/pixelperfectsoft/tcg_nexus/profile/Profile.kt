@@ -19,6 +19,10 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -47,6 +51,7 @@ fun Profile(
     dataViewModel: UserDataViewModel = viewModel()
 ) {
     val currentuser = dataViewModel.data.value
+    //val currentuser by remember { mutableStateOf(dataViewModel.data.value) }
     //val currentuser = getUserDataFromFirestore()
     val backcolors = listOf(
         Color.Transparent,
@@ -96,12 +101,12 @@ fun Profile(
                 .size(160.dp),
             contentAlignment = Alignment.Center
         ) {
-            /*Image(
+            Image(
                 //painter = painterResource(id = R.drawable.personcirclesharp),
-                painter = rememberAsyncImagePainter(model = currentuser.avatarUrl),
+                painter = rememberAsyncImagePainter(model = currentuser.avatar_url),
                 contentDescription = "Profile picture",
                 modifier = Modifier.fillMaxSize()
-            )*/
+            )
         }
         UserInfo(currentuser)
 
@@ -113,7 +118,7 @@ fun UserInfo(user: User) {
     Spacer(modifier = Modifier.fillMaxHeight(0.01f))
     Text(
         //text = "Username",
-        text = user.displayName,
+        text = user.display_name,
         style = TextStyle(
             fontSize = 20.sp,
             fontWeight = FontWeight.SemiBold
@@ -132,6 +137,11 @@ fun UserInfo(user: User) {
                     fontSize = 30.sp
                 )
             )
+            Text(
+                text = user.cards.toString(), style = TextStyle(
+                    fontSize = 30.sp
+                )
+            )
         }
         Spacer(modifier = Modifier.fillMaxWidth(0.1f))
         Card(
@@ -141,6 +151,11 @@ fun UserInfo(user: User) {
         ) {
             Text(
                 text = "Decks", style = TextStyle(
+                    fontSize = 30.sp
+                )
+            )
+            Text(
+                text = user.decks.toString(), style = TextStyle(
                     fontSize = 30.sp
                 )
             )

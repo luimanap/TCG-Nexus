@@ -60,11 +60,13 @@ class LoginScreenViewModel : ViewModel() {
         //user["display_name"]= displayname.toString()
 
         val user = User(
-            userId = userId.toString(),
-            displayName = displayname.toString(),
-            avatarUrl = "",
+            avatar_url = "",
+            display_name = displayname.toString(),
             email = email,
-            id = null
+            user_id = userId.toString(),
+            id = null,
+            cards = 0,
+            decks = 0,
         ).toMap()
 
         FirebaseFirestore.getInstance().collection("users").add(user).addOnSuccessListener {

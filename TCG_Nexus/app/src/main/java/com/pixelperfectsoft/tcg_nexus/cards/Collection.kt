@@ -42,6 +42,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import coil.compose.rememberAsyncImagePainter
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.model.Card
 import com.pixelperfectsoft.tcg_nexus.MyButton
@@ -50,15 +51,16 @@ import androidx.compose.ui.window.Dialog as Dialog
 
 @Composable
 fun Collection(navController: NavController) {
-    var cards = listOf(
-        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = R.drawable.blacklotus),
-        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = R.drawable.blacklotus),
-        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = R.drawable.blacklotus),
-        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = R.drawable.blacklotus),
-        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = R.drawable.blacklotus),
-        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = R.drawable.blacklotus),
-        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = R.drawable.blacklotus),
-        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = R.drawable.blacklotus)
+    val blacklotusimg = "https://cards.scryfall.io/normal/front/0/9/0948e6dc-8af7-45d3-91de-a2aebee83e82.jpg?1559591784"
+    val cards = listOf(
+        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = blacklotusimg),
+        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = blacklotusimg),
+        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = blacklotusimg),
+        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = blacklotusimg),
+        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = blacklotusimg),
+        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = blacklotusimg),
+        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = blacklotusimg),
+        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = blacklotusimg)
     )
     val backcolors = listOf(
         Color.Transparent,
@@ -124,7 +126,7 @@ fun Collection(navController: NavController) {
         ) {
             val show = rememberSaveable { mutableStateOf(false) }
             for (i in cards) {
-                CardItem(cardname = i.get_name(),type = i.get_type(),description = i.get_description(), image = i.get_image(), show = show)
+                CardItem(card = i, show = show)
                 if (show.value) {
                     CardDialog(show, i)
                 }
@@ -136,7 +138,7 @@ fun Collection(navController: NavController) {
 
 @Composable
 fun SearchButton() {
-    var show = rememberSaveable { mutableStateOf(false) }
+    val show = rememberSaveable { mutableStateOf(false) }
     MyButton(
         text = "Search...",
         onclick = { show.value = true },
@@ -177,7 +179,7 @@ fun CardDialog(show: MutableState<Boolean>, card: Card) {
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(text = card.get_price().toString()+"€")
             }
-            Image(painter = painterResource(id = card.get_image()), contentDescription = card.get_name(), modifier = Modifier
+            Image(painter = rememberAsyncImagePainter(model = card.get_image().trim()), contentDescription = card.get_name(), modifier = Modifier
                 .fillMaxWidth()
                 .fillMaxHeight(0.4f))
         }
@@ -186,11 +188,8 @@ fun CardDialog(show: MutableState<Boolean>, card: Card) {
 
 @Composable
 fun CardItem(
-    cardname: String,
-    type: String,
-    description: String,
+    card: Card,
     show: MutableState<Boolean>,
-    image: Int
 ) {
     OutlinedButton(onClick = {
         show.value = true
@@ -204,27 +203,27 @@ fun CardItem(
     ) {
         Row {
             Image(
-                painter = painterResource(id = image),
-                contentDescription = cardname,
+                painter = rememberAsyncImagePainter(model = card.get_image()),
+                contentDescription = card.get_name(),
                 modifier = Modifier
                     .fillMaxWidth(0.35f)
                     .padding(16.dp)
             )
             Column(modifier = Modifier.fillMaxWidth()) {
                 Text(
-                    text = cardname,
+                    text = card.get_name(),
                     fontWeight = FontWeight.Bold,
                     fontSize = 22.sp,
                     modifier = Modifier.padding(16.dp)
                 )
                 Spacer(modifier = Modifier.height(30.dp))
                 Text(
-                    text = type,
+                    text = card.get_type(),
                     modifier = Modifier.padding(start = 16.dp),
                     fontWeight = FontWeight.SemiBold,
                 )
                 Text(
-                    text = description,
+                    text = card.get_description(),
                     modifier = Modifier.padding(
                         start = 16.dp,
                         top = 8.dp,

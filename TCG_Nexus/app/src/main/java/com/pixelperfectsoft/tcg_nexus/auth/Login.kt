@@ -1,9 +1,7 @@
 package com.pixelperfectsoft.tcg_nexus.auth
 
-import android.annotation.SuppressLint
 import android.widget.Toast
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -12,18 +10,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.SnackbarHost
-import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -50,7 +40,6 @@ import com.pixelperfectsoft.tcg_nexus.MyTextField
 import com.pixelperfectsoft.tcg_nexus.cards.createGradientBrush
 import com.pixelperfectsoft.tcg_nexus.model.LoginScreenViewModel
 import com.pixelperfectsoft.tcg_nexus.navigation.MyAppRoute
-import kotlinx.coroutines.launch
 
 @Composable
 fun LoginScreen(
@@ -73,13 +62,8 @@ fun LoginScreen(
             .zIndex(150f),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        /*if(showLoginForm){
-            LoginForm(navController, viewModel)
-        }else{
 
-        }*/
         if (FirebaseAuth.getInstance().currentUser?.email.isNullOrBlank()) {
-            //navController.navigate(MyAppRoute.PROFILE)
             LoginForm(navController, viewModel)
         } else {
             navController.navigate(MyAppRoute.PROFILE)
@@ -88,8 +72,6 @@ fun LoginScreen(
     }
 }
 
-@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LoginForm(navController: NavController, viewModel: LoginScreenViewModel) {
     var error by rememberSaveable { mutableStateOf(false) }
@@ -101,41 +83,41 @@ fun LoginForm(navController: NavController, viewModel: LoginScreenViewModel) {
     Text(text = "INICIAR SESION", style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 20.sp))
     Spacer(Modifier.size(25.dp))
 
-    //Username Input
+    //Input de correo electronico
     MyTextField(
         data = userinput,
         label = "Correo Electrónico",
-        onvaluechange = { userinput = it; error = false },
+        onvaluechange = { userinput = it; error = false }, //Siempre que escribamos algo el boolean error se va a poner en false
         supporting_text = "Correo electronico incorrecto o mal formateado",
         iserror = error
     )
     Spacer(Modifier.size(16.dp))
 
-    //Password Input
+    //Input de contraseña
     MyPasswordField(
         data = passinput,
         label = "Contraseña",
-        onvaluechange = { passinput = it; error = false },
+        onvaluechange = { passinput = it; error = false }, //Siempre que escribamos algo el boolean error se va a poner en false
         supporting_text = "Contraseña incorrecta",
         iserror = error)
     Spacer(Modifier.size(8.dp))
 
-    //Forgotten password button
+    //Boton de contraseña olvidada
     ForgottenPasswordButton()
     Spacer(modifier = Modifier.size(100.dp))
 
-    //Login button
+    //Boton de login
     MyButton(
         text = "Iniciar Sesión",
         onclick = {
-            if (userinput != "" && passinput != "") {
+            if (userinput != "" && passinput != "") { //Si correo y contraseña no estan vacios
                 viewModel.signIn(email = userinput, password = passinput, profile = {
-                    navController.navigate(MyAppRoute.PROFILE)
+                    navController.navigate(MyAppRoute.PROFILE) //Si el inicio de sesion es correcto navegamos a la ventana del perfil
                 }, onError = {
-                    error = true
+                    error = true //Si el inicio de sesion es incorrecto ponemos el boolean error en true
                 })
             } else {
-                error = true
+                error = true //Si correo y contraseña estan vacios ponemos el boolean error en true
             }
 
         },
@@ -147,11 +129,11 @@ fun LoginForm(navController: NavController, viewModel: LoginScreenViewModel) {
 
     Spacer(Modifier.size(8.dp))
 
-    //Separator between buttons
+    //Separador "-----o-----"
     MyCanvasSeparator()
 
     Spacer(Modifier.size(8.dp))
-    //Register Button
+    //Boton de crear cuenta
     MyButton(
         text = "Crear Cuenta",
         onclick = { navController.navigate("register") },
