@@ -4,41 +4,24 @@
             "outputFile": "com.pixelperfectsoft.tcg_nexus.app-mergeDebugResources-58:/values-gu/values-gu.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\479ab50df396d8eb29fec8dc53f70a8a\\transformed\\ui-release\\res\\values-gu\\values-gu.xml",
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\fa1cb8cc700a57edb3032df9055ebdfc\\transformed\\browser-1.4.0\\res\\values-gu\\values-gu.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,197,279,372,471,558,644,745,832,918,986,1055,1138,1221,1296,1372,1438",
-                        "endColumns": "91,81,92,98,86,85,100,86,85,67,68,82,82,74,75,65,115",
-                        "endOffsets": "192,274,367,466,553,639,740,827,913,981,1050,1133,1216,1291,1367,1433,1549"
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,156,257,366",
+                        "endColumns": "100,100,108,100",
+                        "endOffsets": "151,252,361,462"
                     },
                     "to": {
-                        "startLines": "9,10,31,32,34,39,40,41,42,43,44,45,46,47,49,50,51",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "823,915,3353,3446,3622,4098,4184,4285,4372,4458,4526,4595,4678,4761,4937,5013,5079",
-                        "endColumns": "91,81,92,98,86,85,100,86,85,67,68,82,82,74,75,65,115",
-                        "endOffsets": "910,992,3441,3540,3704,4179,4280,4367,4453,4521,4590,4673,4756,4831,5008,5074,5190"
+                        "startLines": "30,36,37,38",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "3252,3787,3888,3997",
+                        "endColumns": "100,100,108,100",
+                        "endOffsets": "3348,3883,3992,4093"
                     }
                 },
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\21cd4332a08ba2e575c45b0c1920f818\\transformed\\core-1.12.0\\res\\values-gu\\values-gu.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,149,252,349,451,553,651,773",
-                        "endColumns": "93,102,96,101,101,97,121,100",
-                        "endOffsets": "144,247,344,446,548,646,768,869"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,48",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,199,302,399,501,603,701,4836",
-                        "endColumns": "93,102,96,101,101,97,121,100",
-                        "endOffsets": "194,297,394,496,598,696,818,4932"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\d019353bdabfe4fb5054becbc7e081b3\\transformed\\material3-1.0.0\\res\\values-gu\\values-gu.xml",
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\d019353bdabfe4fb5054becbc7e081b3\\transformed\\material3-1.0.0\\res\\values-gu\\values-gu.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -55,24 +38,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\d143305733e5e592ae0fd2c8ac1e67d4\\transformed\\play-services-base-18.1.0\\res\\values-gu\\values.xml",
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\479ab50df396d8eb29fec8dc53f70a8a\\transformed\\ui-release\\res\\values-gu\\values-gu.xml",
                     "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "193,297,459,580,688,822,940,1047,1143,1287,1391,1551,1672,1811,1957,2014,2076",
-                        "endColumns": "103,161,120,107,133,117,106,95,143,103,159,120,138,145,56,61,77",
-                        "endOffsets": "296,458,579,687,821,939,1046,1142,1286,1390,1550,1671,1810,1956,2013,2075,2153"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,197,279,372,471,558,644,745,832,918,986,1055,1138,1221,1296,1372,1438",
+                        "endColumns": "91,81,92,98,86,85,100,86,85,67,68,82,82,74,75,65,115",
+                        "endOffsets": "192,274,367,466,553,639,740,827,913,981,1050,1133,1216,1291,1367,1433,1549"
                     },
                     "to": {
-                        "startLines": "12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29",
+                        "startLines": "9,10,31,32,34,39,40,41,42,43,44,45,46,47,49,50,51",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1076,1184,1350,1475,1587,1725,1847,1958,2205,2353,2461,2625,2750,2893,3043,3104,3170",
-                        "endColumns": "107,165,124,111,137,121,110,99,147,107,163,124,142,149,60,65,81",
-                        "endOffsets": "1179,1345,1470,1582,1720,1842,1953,2053,2348,2456,2620,2745,2888,3038,3099,3165,3247"
+                        "startOffsets": "823,915,3353,3446,3622,4098,4184,4285,4372,4458,4526,4595,4678,4761,4937,5013,5079",
+                        "endColumns": "91,81,92,98,86,85,100,86,85,67,68,82,82,74,75,65,115",
+                        "endOffsets": "910,992,3441,3540,3704,4179,4280,4367,4453,4521,4590,4673,4756,4831,5008,5074,5190"
                     }
                 },
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\8c04395a1f19fb4682454e6a11eccd3b\\transformed\\play-services-basement-18.1.0\\res\\values-gu\\values.xml",
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\8c04395a1f19fb4682454e6a11eccd3b\\transformed\\play-services-basement-18.1.0\\res\\values-gu\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -89,20 +72,37 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\fa1cb8cc700a57edb3032df9055ebdfc\\transformed\\browser-1.4.0\\res\\values-gu\\values-gu.xml",
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\21cd4332a08ba2e575c45b0c1920f818\\transformed\\core-1.12.0\\res\\values-gu\\values-gu.xml",
                     "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,156,257,366",
-                        "endColumns": "100,100,108,100",
-                        "endOffsets": "151,252,361,462"
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,149,252,349,451,553,651,773",
+                        "endColumns": "93,102,96,101,101,97,121,100",
+                        "endOffsets": "144,247,344,446,548,646,768,869"
                     },
                     "to": {
-                        "startLines": "30,36,37,38",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "3252,3787,3888,3997",
-                        "endColumns": "100,100,108,100",
-                        "endOffsets": "3348,3883,3992,4093"
+                        "startLines": "2,3,4,5,6,7,8,48",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,199,302,399,501,603,701,4836",
+                        "endColumns": "93,102,96,101,101,97,121,100",
+                        "endOffsets": "194,297,394,496,598,696,818,4932"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\d143305733e5e592ae0fd2c8ac1e67d4\\transformed\\play-services-base-18.1.0\\res\\values-gu\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,297,459,580,688,822,940,1047,1143,1287,1391,1551,1672,1811,1957,2014,2076",
+                        "endColumns": "103,161,120,107,133,117,106,95,143,103,159,120,138,145,56,61,77",
+                        "endOffsets": "296,458,579,687,821,939,1046,1142,1286,1390,1550,1671,1810,1956,2013,2075,2153"
+                    },
+                    "to": {
+                        "startLines": "12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1076,1184,1350,1475,1587,1725,1847,1958,2205,2353,2461,2625,2750,2893,3043,3104,3170",
+                        "endColumns": "107,165,124,111,137,121,110,99,147,107,163,124,142,149,60,65,81",
+                        "endOffsets": "1179,1345,1470,1582,1720,1842,1953,2053,2348,2456,2620,2745,2888,3038,3099,3165,3247"
                     }
                 }
             ]

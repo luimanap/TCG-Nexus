@@ -4,41 +4,7 @@
             "outputFile": "com.pixelperfectsoft.tcg_nexus.app-mergeDebugResources-58:/values-af/values-af.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\fa1cb8cc700a57edb3032df9055ebdfc\\transformed\\browser-1.4.0\\res\\values-af\\values-af.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,160,262,375",
-                        "endColumns": "104,101,112,99",
-                        "endOffsets": "155,257,370,470"
-                    },
-                    "to": {
-                        "startLines": "30,36,37,38",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "3292,3830,3932,4045",
-                        "endColumns": "104,101,112,99",
-                        "endOffsets": "3392,3927,4040,4140"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\479ab50df396d8eb29fec8dc53f70a8a\\transformed\\ui-release\\res\\values-af\\values-af.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,201,288,385,486,572,648,739,829,915,979,1044,1122,1203,1274,1355,1425",
-                        "endColumns": "95,86,96,100,85,75,90,89,85,63,64,77,80,70,80,69,119",
-                        "endOffsets": "196,283,380,481,567,643,734,824,910,974,1039,1117,1198,1269,1350,1420,1540"
-                    },
-                    "to": {
-                        "startLines": "9,10,31,32,34,39,40,41,42,43,44,45,46,47,49,50,51",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "837,933,3397,3494,3668,4145,4221,4312,4402,4488,4552,4617,4695,4776,4948,5029,5099",
-                        "endColumns": "95,86,96,100,85,75,90,89,85,63,64,77,80,70,80,69,119",
-                        "endOffsets": "928,1015,3489,3590,3749,4216,4307,4397,4483,4547,4612,4690,4771,4842,5024,5094,5214"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\21cd4332a08ba2e575c45b0c1920f818\\transformed\\core-1.12.0\\res\\values-af\\values-af.xml",
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\21cd4332a08ba2e575c45b0c1920f818\\transformed\\core-1.12.0\\res\\values-af\\values-af.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -55,7 +21,58 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\8c04395a1f19fb4682454e6a11eccd3b\\transformed\\play-services-basement-18.1.0\\res\\values-af\\values.xml",
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\479ab50df396d8eb29fec8dc53f70a8a\\transformed\\ui-release\\res\\values-af\\values-af.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,201,288,385,486,572,648,739,829,915,979,1044,1122,1203,1274,1355,1425",
+                        "endColumns": "95,86,96,100,85,75,90,89,85,63,64,77,80,70,80,69,119",
+                        "endOffsets": "196,283,380,481,567,643,734,824,910,974,1039,1117,1198,1269,1350,1420,1540"
+                    },
+                    "to": {
+                        "startLines": "9,10,31,32,34,39,40,41,42,43,44,45,46,47,49,50,51",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "837,933,3397,3494,3668,4145,4221,4312,4402,4488,4552,4617,4695,4776,4948,5029,5099",
+                        "endColumns": "95,86,96,100,85,75,90,89,85,63,64,77,80,70,80,69,119",
+                        "endOffsets": "928,1015,3489,3590,3749,4216,4307,4397,4483,4547,4612,4690,4771,4842,5024,5094,5214"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\d019353bdabfe4fb5054becbc7e081b3\\transformed\\material3-1.0.0\\res\\values-af\\values-af.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,131,204",
+                        "endColumns": "75,72,75",
+                        "endOffsets": "126,199,275"
+                    },
+                    "to": {
+                        "startLines": "11,33,35",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "1020,3595,3754",
+                        "endColumns": "75,72,75",
+                        "endOffsets": "1091,3663,3825"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\fa1cb8cc700a57edb3032df9055ebdfc\\transformed\\browser-1.4.0\\res\\values-af\\values-af.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,160,262,375",
+                        "endColumns": "104,101,112,99",
+                        "endOffsets": "155,257,370,470"
+                    },
+                    "to": {
+                        "startLines": "30,36,37,38",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "3292,3830,3932,4045",
+                        "endColumns": "104,101,112,99",
+                        "endOffsets": "3392,3927,4040,4140"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\8c04395a1f19fb4682454e6a11eccd3b\\transformed\\play-services-basement-18.1.0\\res\\values-af\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -72,7 +89,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\d143305733e5e592ae0fd2c8ac1e67d4\\transformed\\play-services-base-18.1.0\\res\\values-af\\values.xml",
+                    "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\caches\\transforms-3\\d143305733e5e592ae0fd2c8ac1e67d4\\transformed\\play-services-base-18.1.0\\res\\values-af\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -86,23 +103,6 @@
                         "startOffsets": "1096,1203,1359,1485,1595,1745,1867,1988,2233,2399,2507,2664,2791,2930,3084,3150,3213",
                         "endColumns": "106,155,125,109,149,121,120,101,165,107,156,126,138,153,65,62,78",
                         "endOffsets": "1198,1354,1480,1590,1740,1862,1983,2085,2394,2502,2659,2786,2925,3079,3145,3208,3287"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\d019353bdabfe4fb5054becbc7e081b3\\transformed\\material3-1.0.0\\res\\values-af\\values-af.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,131,204",
-                        "endColumns": "75,72,75",
-                        "endOffsets": "126,199,275"
-                    },
-                    "to": {
-                        "startLines": "11,33,35",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "1020,3595,3754",
-                        "endColumns": "75,72,75",
-                        "endOffsets": "1091,3663,3825"
                     }
                 }
             ]

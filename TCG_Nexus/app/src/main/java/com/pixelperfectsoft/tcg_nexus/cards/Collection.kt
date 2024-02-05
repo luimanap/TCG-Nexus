@@ -1,6 +1,5 @@
 package com.pixelperfectsoft.tcg_nexus.cards
 
-
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -13,6 +12,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ButtonDefaults
@@ -31,13 +32,11 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.TileMode
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -46,21 +45,77 @@ import coil.compose.rememberAsyncImagePainter
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.model.Card
 import com.pixelperfectsoft.tcg_nexus.MyButton
-import com.pixelperfectsoft.tcg_nexus.R
 import androidx.compose.ui.window.Dialog as Dialog
 
 @Composable
 fun Collection(navController: NavController) {
-    val blacklotusimg = "https://cards.scryfall.io/normal/front/0/9/0948e6dc-8af7-45d3-91de-a2aebee83e82.jpg?1559591784"
+    val blacklotusimg =
+        "https://cards.scryfall.io/normal/front/0/9/0948e6dc-8af7-45d3-91de-a2aebee83e82.jpg?1559591784"
     val cards = listOf(
-        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = blacklotusimg),
-        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = blacklotusimg),
-        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = blacklotusimg),
-        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = blacklotusimg),
-        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = blacklotusimg),
-        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = blacklotusimg),
-        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = blacklotusimg),
-        Card(name = "Black Lotus", description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ", type = "Mono Artifact", rarity = "Rare", price = 3500f, image = blacklotusimg)
+        Card(
+            name = "Black Lotus",
+            description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
+            type = "Mono Artifact",
+            rarity = "Rare",
+            price = 3500f,
+            image = blacklotusimg
+        ),
+        Card(
+            name = "Black Lotus",
+            description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
+            type = "Mono Artifact",
+            rarity = "Rare",
+            price = 3500f,
+            image = blacklotusimg
+        ),
+        Card(
+            name = "Black Lotus",
+            description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
+            type = "Mono Artifact",
+            rarity = "Rare",
+            price = 3500f,
+            image = blacklotusimg
+        ),
+        Card(
+            name = "Black Lotus",
+            description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
+            type = "Mono Artifact",
+            rarity = "Rare",
+            price = 3500f,
+            image = blacklotusimg
+        ),
+        Card(
+            name = "Black Lotus",
+            description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
+            type = "Mono Artifact",
+            rarity = "Rare",
+            price = 3500f,
+            image = blacklotusimg
+        ),
+        Card(
+            name = "Black Lotus",
+            description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
+            type = "Mono Artifact",
+            rarity = "Rare",
+            price = 3500f,
+            image = blacklotusimg
+        ),
+        Card(
+            name = "Black Lotus",
+            description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
+            type = "Mono Artifact",
+            rarity = "Rare",
+            price = 3500f,
+            image = blacklotusimg
+        ),
+        Card(
+            name = "Black Lotus",
+            description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
+            type = "Mono Artifact",
+            rarity = "Rare",
+            price = 3500f,
+            image = blacklotusimg
+        )
     )
     val backcolors = listOf(
         Color.Transparent,
@@ -71,7 +126,7 @@ fun Collection(navController: NavController) {
     )
     val totalcards by rememberSaveable { mutableIntStateOf(cards.size) }
     var estimatedCost by rememberSaveable { mutableFloatStateOf(0f) }
-    for (i in cards){
+    for (i in cards) {
         estimatedCost += i.get_price()
     }
     val estimatedcostString by rememberSaveable { mutableStateOf("$estimatedCost €") }
@@ -108,18 +163,20 @@ fun Collection(navController: NavController) {
         //Search Bar
         SearchButton()
 
-
-
-        /*LazyColumn{
-            items(cards){item ->
-                ListItem(headlineText = {  })
-
+        //Lista de cartas
+        val show = rememberSaveable { mutableStateOf(false) }
+        LazyColumn(Modifier.fillMaxSize()) {
+            items(cards) {
+                CardItem(card = it, show = show)
+                if (show.value) {
+                    CardDialog(show = show, card = it)
+                }
             }
-        }*/
+        }
 
 
         //Card list
-        Column(
+        /*Column(
             Modifier
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
@@ -131,8 +188,7 @@ fun Collection(navController: NavController) {
                     CardDialog(show, i)
                 }
             }
-
-        }
+        }*/
     }
 }
 
@@ -140,7 +196,7 @@ fun Collection(navController: NavController) {
 fun SearchButton() {
     val show = rememberSaveable { mutableStateOf(false) }
     MyButton(
-        text = "Search...",
+        text = "Search",
         onclick = { show.value = true },
         containercolor = Color.White,
         bordercolor = Color.Black,
@@ -151,8 +207,8 @@ fun SearchButton() {
 
 @Composable
 fun SearchDialog(show: MutableState<Boolean>) {
-    if(show.value){
-        Dialog(onDismissRequest = {show.value = false}) {
+    if (show.value) {
+        Dialog(onDismissRequest = { show.value = false }) {
 
         }
     }
@@ -162,12 +218,12 @@ fun SearchDialog(show: MutableState<Boolean>) {
 @Composable
 fun CardDialog(show: MutableState<Boolean>, card: Card) {
     Dialog(onDismissRequest = { show.value = false }) {
-        Row (
+        Row(
             Modifier
                 .background(Color.White)
-                .padding(16.dp)
-            ,
-            verticalAlignment = Alignment.CenterVertically){
+                .padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
             Column(Modifier.fillMaxWidth(0.5f)) {
                 Text(text = card.get_name(), fontWeight = FontWeight.Bold)
                 Spacer(modifier = Modifier.height(16.dp))
@@ -177,11 +233,15 @@ fun CardDialog(show: MutableState<Boolean>, card: Card) {
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(text = card.get_rarity())
                 Spacer(modifier = Modifier.height(8.dp))
-                Text(text = card.get_price().toString()+"€")
+                Text(text = card.get_price().toString() + "€")
             }
-            Image(painter = rememberAsyncImagePainter(model = card.get_image().trim()), contentDescription = card.get_name(), modifier = Modifier
-                .fillMaxWidth()
-                .fillMaxHeight(0.4f))
+            Image(
+                painter = rememberAsyncImagePainter(model = card.get_image().trim()),
+                contentDescription = card.get_name(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .fillMaxHeight(0.4f)
+            )
         }
     }
 }
@@ -191,10 +251,11 @@ fun CardItem(
     card: Card,
     show: MutableState<Boolean>,
 ) {
-    OutlinedButton(onClick = {
-        show.value = true
-    },
-        border = BorderStroke(0.dp,Color.Transparent),
+    OutlinedButton(
+        onClick = {
+            show.value = true
+        },
+        border = BorderStroke(0.dp, Color.Transparent),
         colors = ButtonDefaults.buttonColors(
             contentColor = Color.Black,
             containerColor = Color.Transparent
@@ -203,10 +264,10 @@ fun CardItem(
     ) {
         Row {
             Image(
-                painter = rememberAsyncImagePainter(model = card.get_image()),
+                painter = rememberAsyncImagePainter(model = card.get_image().trim()),
                 contentDescription = card.get_name(),
                 modifier = Modifier
-                    .fillMaxWidth(0.35f)
+                    .fillMaxWidth(0.4f)
                     .padding(16.dp)
             )
             Column(modifier = Modifier.fillMaxWidth()) {
@@ -233,7 +294,6 @@ fun CardItem(
                 )
             }
         }
-        Divider(modifier = Modifier.fillMaxWidth(0.95f))
     }
 }
 
