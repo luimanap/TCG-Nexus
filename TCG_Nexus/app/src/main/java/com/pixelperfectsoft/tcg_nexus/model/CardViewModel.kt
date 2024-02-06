@@ -7,6 +7,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.database
 
 class CardViewModel : ViewModel(){
     val response : MutableState<DataState> = mutableStateOf(DataState.Empty)
@@ -16,10 +17,11 @@ class CardViewModel : ViewModel(){
 
     private fun retrieveData() {
         val db = FirebaseDatabase.getInstance()
-
         val tempList = mutableListOf<Card>()
+        db.setPersistenceEnabled(true)
+        db.getReference("cards").keepSynced(true)
         response.value = DataState.Loading
-        db.getReference("Cards").addListenerForSingleValueEvent(object : ValueEventListener{
+        db.getReference("cards").addListenerForSingleValueEvent(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 for(DataSnap in snapshot.children){
                     val cardItem = DataSnap.getValue(Card::class.java)
@@ -29,12 +31,9 @@ class CardViewModel : ViewModel(){
                 }
                 response.value = DataState.Success(tempList)
             }
-
             override fun onCancelled(error: DatabaseError) {
                 response.value = DataState.Failure(error.message)
-
             }
-
         })
     }
 }

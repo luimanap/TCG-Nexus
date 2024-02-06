@@ -40,11 +40,12 @@ import com.pixelperfectsoft.tcg_nexus.MyTextField
 import com.pixelperfectsoft.tcg_nexus.cards.createGradientBrush
 import com.pixelperfectsoft.tcg_nexus.model.LoginScreenViewModel
 import com.pixelperfectsoft.tcg_nexus.navigation.MyAppRoute
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
 fun LoginScreen(
     navController: NavController,
-    viewModel: LoginScreenViewModel = androidx.lifecycle.viewmodel.compose.viewModel(),
+    viewModel: LoginScreenViewModel = viewModel(),
 ) {
     val backcolors = listOf(
         Color.Transparent,

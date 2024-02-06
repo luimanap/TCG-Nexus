@@ -1,8 +1,10 @@
 package com.pixelperfectsoft.tcg_nexus.cards
 
+import android.util.Log
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -11,14 +13,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Divider
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
@@ -40,83 +41,87 @@ import androidx.compose.ui.graphics.TileMode
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
 import coil.compose.rememberAsyncImagePainter
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.model.Card
 import com.pixelperfectsoft.tcg_nexus.MyButton
+import com.pixelperfectsoft.tcg_nexus.model.CardViewModel
+import com.pixelperfectsoft.tcg_nexus.model.DataState
 import androidx.compose.ui.window.Dialog as Dialog
+import androidx.lifecycle.viewmodel.compose.viewModel
+import coil.compose.rememberImagePainter
 
 @Composable
-fun Collection(navController: NavController) {
-    val blacklotusimg =
-        "https://cards.scryfall.io/normal/front/0/9/0948e6dc-8af7-45d3-91de-a2aebee83e82.jpg?1559591784"
-    val cards = listOf(
-        Card(
-            name = "Black Lotus",
-            description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
-            type = "Mono Artifact",
-            rarity = "Rare",
-            price = 3500f,
-            image = blacklotusimg
-        ),
-        Card(
-            name = "Black Lotus",
-            description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
-            type = "Mono Artifact",
-            rarity = "Rare",
-            price = 3500f,
-            image = blacklotusimg
-        ),
-        Card(
-            name = "Black Lotus",
-            description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
-            type = "Mono Artifact",
-            rarity = "Rare",
-            price = 3500f,
-            image = blacklotusimg
-        ),
-        Card(
-            name = "Black Lotus",
-            description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
-            type = "Mono Artifact",
-            rarity = "Rare",
-            price = 3500f,
-            image = blacklotusimg
-        ),
-        Card(
-            name = "Black Lotus",
-            description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
-            type = "Mono Artifact",
-            rarity = "Rare",
-            price = 3500f,
-            image = blacklotusimg
-        ),
-        Card(
-            name = "Black Lotus",
-            description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
-            type = "Mono Artifact",
-            rarity = "Rare",
-            price = 3500f,
-            image = blacklotusimg
-        ),
-        Card(
-            name = "Black Lotus",
-            description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
-            type = "Mono Artifact",
-            rarity = "Rare",
-            price = 3500f,
-            image = blacklotusimg
-        ),
-        Card(
-            name = "Black Lotus",
-            description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
-            type = "Mono Artifact",
-            rarity = "Rare",
-            price = 3500f,
-            image = blacklotusimg
-        )
+fun Collection(navController: NavController, viewModel: CardViewModel = viewModel()) {
+    //val blacklotusimg = "https://cards.scryfall.io/normal/front/0/9/0948e6dc-8af7-45d3-91de-a2aebee83e82.jpg?1559591784"
+    //val cards = listOf(
+    /*Card(
+        name = "Black Lotus",
+        description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
+        type = "Mono Artifact",
+        rarity = "Rare",
+        price = 3500f,
+        image = blacklotusimg
+    ),
+    Card(
+        name = "Black Lotus",
+        description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
+        type = "Mono Artifact",
+        rarity = "Rare",
+        price = 3500f,
+        image = blacklotusimg
+    ),
+    Card(
+        name = "Black Lotus",
+        description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
+        type = "Mono Artifact",
+        rarity = "Rare",
+        price = 3500f,
+        image = blacklotusimg
+    ),
+    Card(
+        name = "Black Lotus",
+        description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
+        type = "Mono Artifact",
+        rarity = "Rare",
+        price = 3500f,
+        image = blacklotusimg
+    ),
+    Card(
+        name = "Black Lotus",
+        description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
+        type = "Mono Artifact",
+        rarity = "Rare",
+        price = 3500f,
+        image = blacklotusimg
+    ),
+    Card(
+        name = "Black Lotus",
+        description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
+        type = "Mono Artifact",
+        rarity = "Rare",
+        price = 3500f,
+        image = blacklotusimg
+    ),
+    Card(
+        name = "Black Lotus",
+        description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
+        type = "Mono Artifact",
+        rarity = "Rare",
+        price = 3500f,
+        image = blacklotusimg
+    ),
+    Card(
+        name = "Black Lotus",
+        description = "{T},Sacrifice Black Lotus: Add three mana of any one color. ",
+        type = "Mono Artifact",
+        rarity = "Rare",
+        price = 3500f,
+        image = blacklotusimg
     )
+    )*/
     val backcolors = listOf(
         Color.Transparent,
         Color(230, 230, 230),
@@ -124,11 +129,11 @@ fun Collection(navController: NavController) {
         Color(225, 225, 225),
         Color(225, 225, 225)
     )
-    val totalcards by rememberSaveable { mutableIntStateOf(cards.size) }
+    val totalcards by rememberSaveable { mutableIntStateOf(0) }
     var estimatedCost by rememberSaveable { mutableFloatStateOf(0f) }
-    for (i in cards) {
+    /*for (i in cards) {
         estimatedCost += i.get_price()
-    }
+    }*/
     val estimatedcostString by rememberSaveable { mutableStateOf("$estimatedCost €") }
     BackgroundImage()
     Column(
@@ -160,35 +165,26 @@ fun Collection(navController: NavController) {
             )
         }
         Spacer(modifier = Modifier.fillMaxHeight(0.05f))
-        //Search Bar
+
+        //Barra de busqueda
         SearchButton()
 
         //Lista de cartas
-        val show = rememberSaveable { mutableStateOf(false) }
-        LazyColumn(Modifier.fillMaxSize()) {
-            items(cards) {
-                CardItem(card = it, show = show)
-                if (show.value) {
-                    CardDialog(show = show, card = it)
-                }
-            }
+        SetData(viewModel = viewModel)
+
+    }
+}
+
+@Composable
+fun ShowLazyList(cards: List<Card>) {
+    val show =
+        rememberSaveable { mutableStateOf(false) } //Variable booleana de estado para mostrar u ocultar el dialogo de informacion de cada carta
+    LazyColumn(Modifier.fillMaxSize()) {//Columna que solo renderiza los elementos visibles
+        items(cards) {
+            Log.d("Cards", "Loading card ${it.name}")
+            CardItem(card = it, show = show)
+
         }
-
-
-        //Card list
-        /*Column(
-            Modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-        ) {
-            val show = rememberSaveable { mutableStateOf(false) }
-            for (i in cards) {
-                CardItem(card = i, show = show)
-                if (show.value) {
-                    CardDialog(show, i)
-                }
-            }
-        }*/
     }
 }
 
@@ -225,19 +221,19 @@ fun CardDialog(show: MutableState<Boolean>, card: Card) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Column(Modifier.fillMaxWidth(0.5f)) {
-                Text(text = card.get_name(), fontWeight = FontWeight.Bold)
+                Text(text = card.name.toString(), fontWeight = FontWeight.Bold)
                 Spacer(modifier = Modifier.height(16.dp))
-                Text(text = card.get_type())
+                Text(text = card.type_line.toString())
                 Spacer(modifier = Modifier.height(8.dp))
-                Text(text = card.get_description())
+                Text(text = card.oracle_text.toString())
                 Spacer(modifier = Modifier.height(8.dp))
-                Text(text = card.get_rarity())
+                Text(text = card.rarity.toString())
                 Spacer(modifier = Modifier.height(8.dp))
-                Text(text = card.get_price().toString() + "€")
+                Text(text = "${card.prices_eur} €")
             }
             Image(
-                painter = rememberAsyncImagePainter(model = card.get_image().trim()),
-                contentDescription = card.get_name(),
+                painter = rememberAsyncImagePainter(card.image_uris_normal.toString().trim()),
+                contentDescription = card.name.toString(),
                 modifier = Modifier
                     .fillMaxWidth()
                     .fillMaxHeight(0.4f)
@@ -264,27 +260,27 @@ fun CardItem(
     ) {
         Row {
             Image(
-                painter = rememberAsyncImagePainter(model = card.get_image().trim()),
-                contentDescription = card.get_name(),
+                painter = rememberAsyncImagePainter(card.image_uris_normal.toString().trim()),
+                contentDescription = card.name.toString(),
                 modifier = Modifier
                     .fillMaxWidth(0.4f)
                     .padding(16.dp)
             )
             Column(modifier = Modifier.fillMaxWidth()) {
                 Text(
-                    text = card.get_name(),
+                    text = card.name.toString(),
                     fontWeight = FontWeight.Bold,
                     fontSize = 22.sp,
                     modifier = Modifier.padding(16.dp)
                 )
                 Spacer(modifier = Modifier.height(30.dp))
                 Text(
-                    text = card.get_type(),
+                    text = card.type_line.toString(),
                     modifier = Modifier.padding(start = 16.dp),
                     fontWeight = FontWeight.SemiBold,
                 )
                 Text(
-                    text = card.get_description(),
+                    text = card.oracle_text.toString(),
                     modifier = Modifier.padding(
                         start = 16.dp,
                         top = 8.dp,
@@ -295,6 +291,9 @@ fun CardItem(
             }
         }
     }
+    if (show.value) {
+        CardDialog(show = show, card = card)
+    }
 }
 
 @Composable
@@ -303,7 +302,7 @@ fun InfoCard(
     number: String,
     containercolor: Color,
     contentcolor: Color,
-    contenttype: String,
+    contenttype: String
 ) {
     ElevatedCard(
         elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
@@ -345,10 +344,7 @@ fun InfoCard(
     }
 }
 
-fun createGradientBrush(
-    colors: List<Color>,
-    isVertical: Boolean = true,
-): Brush {
+fun createGradientBrush(colors: List<Color>, isVertical: Boolean = true): Brush {
     val endOffset = if (isVertical) {
         Offset(0f, Float.POSITIVE_INFINITY)
     } else {
@@ -360,4 +356,41 @@ fun createGradientBrush(
         end = endOffset,
         tileMode = TileMode.Clamp
     )
+}
+
+@Composable
+fun SetData(viewModel: CardViewModel) {
+    when (val result = viewModel.response.value) {
+        is DataState.Loading -> {
+            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    CircularProgressIndicator()
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Text(text = "Loading card list...")
+                }
+            }
+        }
+
+        is DataState.Success -> {
+            ShowLazyList(cards = result.data)
+        }
+
+        is DataState.Failure -> {
+            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                Text(text = result.message)
+            }
+        }
+
+        is DataState.Empty -> {
+            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                Text(text = "Database Empty")
+            }
+        }
+
+        else -> {
+            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                Text(text = "Error Loading Cards")
+            }
+        }
+    }
 }
