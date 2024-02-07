@@ -18,13 +18,12 @@ class CardViewModel : ViewModel(){
     private fun retrieveData() {
         val db = FirebaseDatabase.getInstance()
         val tempList = mutableListOf<Card>()
-        db.setPersistenceEnabled(true)
         db.getReference("cards").keepSynced(true)
         response.value = DataState.Loading
         db.getReference("cards").addListenerForSingleValueEvent(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
-                for(DataSnap in snapshot.children){
-                    val cardItem = DataSnap.getValue(Card::class.java)
+                for(i in snapshot.children){
+                    val cardItem = i.getValue(Card::class.java)
                     if(cardItem!=null){
                         tempList.add(cardItem)
                     }

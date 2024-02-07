@@ -109,6 +109,18 @@ MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\LEN
 		INJECTED from C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:4:5-67
+MERGED from [com.google.firebase:firebase-database:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-database:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.10.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\8b91c6ecd6b0b77bb78020e2e9d850ab\transformed\firebase-firestore-24.10.1\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.10.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\8b91c6ecd6b0b77bb78020e2e9d850ab\transformed\firebase-firestore-24.10.1\AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\c171879f95046a145b3bd321fe5af983\transformed\recaptcha-18.4.0\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\c171879f95046a145b3bd321fe5af983\transformed\recaptcha-18.4.0\AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:4:22-64
 application
 ADDED from C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:5:5-26:19
 INJECTED from C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:5:5-26:19
@@ -404,16 +416,6 @@ MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\LENOVO X280 i5 M2\.gradle\cac
 MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\0bfe7f120ff844ed6aea24346d84b7e1\transformed\grpc-android-1.57.2\AndroidManifest.xml:7:5-79
 	android:name
 		ADDED from [com.google.firebase:firebase-database:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:22:22-76
-uses-permission#android.permission.INTERNET
-ADDED from [com.google.firebase:firebase-database:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-firestore:24.10.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\8b91c6ecd6b0b77bb78020e2e9d850ab\transformed\firebase-firestore-24.10.1\AndroidManifest.xml:11:5-67
-MERGED from [com.google.firebase:firebase-firestore:24.10.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\8b91c6ecd6b0b77bb78020e2e9d850ab\transformed\firebase-firestore-24.10.1\AndroidManifest.xml:11:5-67
-MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\c171879f95046a145b3bd321fe5af983\transformed\recaptcha-18.4.0\AndroidManifest.xml:7:5-67
-MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\c171879f95046a145b3bd321fe5af983\transformed\recaptcha-18.4.0\AndroidManifest.xml:7:5-67
-	android:name
-		ADDED from [com.google.firebase:firebase-database:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:23:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-database:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:26:9-35:19
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:66:9-72:19

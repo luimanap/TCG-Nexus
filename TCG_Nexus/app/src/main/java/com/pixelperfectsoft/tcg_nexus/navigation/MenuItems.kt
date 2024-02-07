@@ -1,4 +1,6 @@
 package com.pixelperfectsoft.tcg_nexus.navigation
+
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,6 +13,8 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -35,13 +39,13 @@ data class MenuItems(
     val icon: Int,
     val textId: Int,
     val path: String,
-    val label: String
+    val label: String,
 )
 
-class NaviActions(private val navController: NavHostController){
-    fun navigateTo(destination: MenuItems){
-        navController.navigate(destination.path){
-            popUpTo(navController.graph.findStartDestination().id){
+class NaviActions(private val navController: NavHostController) {
+    fun navigateTo(destination: MenuItems) {
+        navController.navigate(destination.path) {
+            popUpTo(navController.graph.findStartDestination().id) {
                 saveState = true
             }
             launchSingleTop = true
@@ -88,7 +92,7 @@ val TOP_LEVEL_DESTINATIONS = listOf(
     ),
 )
 
-object MyAppRoute{
+object MyAppRoute {
     const val LOGIN: String = "login"
     const val HOME = "home"
     const val ALLCARDS = "all_cards"
@@ -103,9 +107,10 @@ object MyAppRoute{
 fun BottomBarNaviContent(
     navController: NavHostController,
     selectedDestination: String,
-    navigateTo: (MenuItems) -> Unit
+    navigateTo: (MenuItems) -> Unit,
 ) {
-    Row(modifier = Modifier.fillMaxSize()) {
+    Row(modifier = Modifier
+        .fillMaxSize()) {
         Column(modifier = Modifier.fillMaxSize()) {
             NavHost(
                 modifier = Modifier.weight(1f),
