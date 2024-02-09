@@ -1,4 +1,4 @@
-#Tue Feb 06 21:36:36 CET 2024
+#Fri Feb 09 18:03:47 CET 2024
 base.0=C\:\\Users\\LENOVO X280 i5 M2\\Documents\\GitHub\\TCG_Nexus_\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\LENOVO X280 i5 M2\\Documents\\GitHub\\TCG_Nexus_\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=C\:\\Users\\LENOVO X280 i5 M2\\Documents\\GitHub\\TCG_Nexus_\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex

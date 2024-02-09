@@ -1,6 +1,5 @@
 package com.pixelperfectsoft.tcg_nexus.navigation
 
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -12,9 +11,9 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -23,14 +22,14 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.pixelperfectsoft.tcg_nexus.R
+import com.pixelperfectsoft.tcg_nexus.auth.LoginScreen
+import com.pixelperfectsoft.tcg_nexus.auth.RegisterScreen
 import com.pixelperfectsoft.tcg_nexus.cards.Collection
 import com.pixelperfectsoft.tcg_nexus.cards.Decks
-import com.pixelperfectsoft.tcg_nexus.play.Fourplayers
 import com.pixelperfectsoft.tcg_nexus.home.HomeScreen
-import com.pixelperfectsoft.tcg_nexus.auth.LoginScreen
+import com.pixelperfectsoft.tcg_nexus.play.Fourplayers
 import com.pixelperfectsoft.tcg_nexus.play.PlayScreen
-import com.pixelperfectsoft.tcg_nexus.R
-import com.pixelperfectsoft.tcg_nexus.auth.RegisterScreen
 import com.pixelperfectsoft.tcg_nexus.play.Threeplayers
 import com.pixelperfectsoft.tcg_nexus.play.Twoplayers
 import com.pixelperfectsoft.tcg_nexus.profile.Profile
@@ -53,44 +52,65 @@ class NaviActions(private val navController: NavHostController) {
     }
 }
 
-val TOP_LEVEL_DESTINATIONS = listOf(
-    MenuItems(
-        icon = R.drawable.home,
-        textId = R.string.home,
-        path = MyAppRoute.HOME,
-        label = "Inicio"
-    ),
-    MenuItems(
-        icon = R.drawable.albums,
-        textId = R.string.collection,
-        path = MyAppRoute.COLLECTION,
-        label = "Colección"
-    ),
-    MenuItems(
-        icon = R.drawable.albums,
-        textId = R.string.collection,
-        path = MyAppRoute.ALLCARDS,
-        label = "Buscar"
-    ),
-    MenuItems(
-        icon = R.drawable.cards,
-        textId = R.string.decks,
-        path = MyAppRoute.DECKS,
-        label = "Mazos"
-    ),
-    MenuItems(
-        icon = R.drawable.dice_icon,
-        textId = R.string.play,
-        path = MyAppRoute.PLAY,
-        label = "Jugar"
-    ),
-    MenuItems(
-        icon = R.drawable.personcirclesharp,
-        textId = R.string.profile,
-        path = MyAppRoute.LOGIN,
-        label = "Perfil"
-    ),
-)
+val AUTH_MENU_ITEMS =
+    listOf(
+        MenuItems(
+            icon = R.drawable.home,
+            textId = R.string.home,
+            path = MyAppRoute.HOME,
+            label = "Inicio"
+        ), MenuItems(
+            icon = R.drawable.albums,
+            textId = R.string.collection,
+            path = MyAppRoute.COLLECTION,
+            label = "Colección"
+        ), MenuItems(
+            icon = R.drawable.albums,
+            textId = R.string.collection,
+            path = MyAppRoute.ALLCARDS,
+            label = "Buscar"
+        ), MenuItems(
+            icon = R.drawable.cards,
+            textId = R.string.decks,
+            path = MyAppRoute.DECKS,
+            label = "Mazos"
+        ), MenuItems(
+            icon = R.drawable.dice_icon,
+            textId = R.string.play,
+            path = MyAppRoute.PLAY,
+            label = "Jugar"
+        ), MenuItems(
+            icon = R.drawable.personcirclesharp,
+            textId = R.string.profile,
+            path = MyAppRoute.LOGIN,
+            label = "Perfil"
+        )
+    )
+val GUEST_MENU_ITEMS =
+    listOf(
+        MenuItems(
+            icon = R.drawable.home,
+            textId = R.string.home,
+            path = MyAppRoute.HOME,
+            label = "Inicio"
+        ), MenuItems(
+            icon = R.drawable.albums,
+            textId = R.string.collection,
+            path = MyAppRoute.ALLCARDS,
+            label = "Buscar"
+        ), MenuItems(
+            icon = R.drawable.dice_icon,
+            textId = R.string.play,
+            path = MyAppRoute.PLAY,
+            label = "Jugar"
+        ), MenuItems(
+            icon = R.drawable.personcirclesharp,
+            textId = R.string.profile,
+            path = MyAppRoute.LOGIN,
+            label = "Perfil"
+        )
+    )
+
 
 object MyAppRoute {
     const val LOGIN: String = "login"
@@ -109,8 +129,10 @@ fun BottomBarNaviContent(
     selectedDestination: String,
     navigateTo: (MenuItems) -> Unit,
 ) {
-    Row(modifier = Modifier
-        .fillMaxSize()) {
+    Row(
+        modifier = Modifier
+            .fillMaxSize()
+    ) {
         Column(modifier = Modifier.fillMaxSize()) {
             NavHost(
                 modifier = Modifier.weight(1f),
@@ -194,24 +216,44 @@ fun BottomBarNaviContent(
 
 @Composable
 fun BottomBarNavigation(selectedDestination: String, navigateTo: (MenuItems) -> Unit) {
+    val isAuth = remember { mutableStateOf(true) }
     NavigationBar(
         modifier = Modifier
             .fillMaxWidth()
             .height(70.dp)
     ) {
-        TOP_LEVEL_DESTINATIONS.forEach { destinations ->
-            NavigationBarItem(
-                label = { Text(text = destinations.label, fontSize = 12.sp) },
-                selected = selectedDestination == destinations.path,
-                onClick = { navigateTo(destinations) },
-                icon = {
-                    Icon(
-                        painter = painterResource(id = destinations.icon),
-                        contentDescription = stringResource(id = destinations.textId),
-                        modifier = Modifier.size(24.dp)
-                    )
-                }
-            )
+        if (isAuth.value) {
+            AUTH_MENU_ITEMS.forEach { destinations ->
+                NavigationBarItem(
+                    label = { Text(text = destinations.label, fontSize = 12.sp) },
+                    selected = selectedDestination == destinations.path,
+                    onClick = { navigateTo(destinations) },
+                    icon = {
+                        Icon(
+                            painter = painterResource(id = destinations.icon),
+                            contentDescription = stringResource(id = destinations.textId),
+                            modifier = Modifier.size(24.dp)
+                        )
+                    }
+                )
+            }
+        } else {
+            GUEST_MENU_ITEMS.forEach { destinations ->
+                NavigationBarItem(
+                    label = { Text(text = destinations.label, fontSize = 12.sp) },
+                    selected = selectedDestination == destinations.path,
+                    onClick = { navigateTo(destinations) },
+                    icon = {
+                        Icon(
+                            painter = painterResource(id = destinations.icon),
+                            contentDescription = stringResource(id = destinations.textId),
+                            modifier = Modifier.size(24.dp)
+                        )
+                    }
+                )
+            }
+
         }
+
     }
 }

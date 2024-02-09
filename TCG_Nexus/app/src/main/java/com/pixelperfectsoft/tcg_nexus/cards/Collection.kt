@@ -1,7 +1,6 @@
 package com.pixelperfectsoft.tcg_nexus.cards
 
 import android.util.Log
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -15,13 +14,12 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.material3.ButtonDefaults
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ElevatedCard
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableIntState
@@ -30,19 +28,18 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.TileMode
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.zIndex
 import androidx.navigation.NavController
 import coil.compose.rememberAsyncImagePainter
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
@@ -52,7 +49,7 @@ import com.pixelperfectsoft.tcg_nexus.model.CardViewModel
 import com.pixelperfectsoft.tcg_nexus.model.DataState
 import androidx.compose.ui.window.Dialog as Dialog
 import androidx.lifecycle.viewmodel.compose.viewModel
-import coil.compose.rememberImagePainter
+import coil.compose.AsyncImage
 
 @Composable
 fun Collection(navController: NavController, viewModel: CardViewModel = viewModel()) {
@@ -107,14 +104,20 @@ fun Collection(navController: NavController, viewModel: CardViewModel = viewMode
 
 @Composable
 fun ShowLazyList(cards: List<Card>) {
+    val currentSelectedItem = remember{mutableStateOf(cards[0])}
     val show = rememberSaveable { mutableStateOf(false) } //Variable booleana de estado para mostrar u ocultar el dialogo de informacion de cada carta
-
-    LazyColumn(Modifier.fillMaxSize()) {//Columna que solo renderiza los elementos visibles
+    LazyVerticalGrid(columns = GridCells.Fixed(2), content = {
+        items(cards){
+            Log.d("Cards", "Loading card ${it.name}")
+            CardItem(card = it, show = show, currentSelectedItem = currentSelectedItem)
+        }
+    } )
+    /*LazyColumn(Modifier.fillMaxSize()) {//Columna que solo renderiza los elementos visibles
         items(cards) {
             Log.d("Cards", "Loading card ${it.name}")
             CardItem(card = it, show = show)
         }
-    }
+    }*/
 }
 
 @Composable
@@ -151,11 +154,9 @@ fun CardDialog(show: MutableState<Boolean>, card: Card) {
         ) {
             Column(Modifier.fillMaxWidth()) {
                 Spacer(modifier = Modifier.height(16.dp))
-                CardImage(
-                    card = card, modifier = Modifier
-                        .fillMaxWidth()
-                        .fillMaxHeight(0.4f)
-                )
+                CardImage(card = card, modifier = Modifier
+                    .fillMaxWidth()
+                    .fillMaxHeight(0.4f))
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(text = card.name.toString(), fontWeight = FontWeight.Bold)
                 Spacer(modifier = Modifier.height(16.dp))
@@ -200,61 +201,43 @@ fun CardDialog(show: MutableState<Boolean>, card: Card) {
 fun CardItem(
     card: Card,
     show: MutableState<Boolean>,
+    currentSelectedItem: MutableState<Card>,
 ) {
-    Box(modifier = Modifier.background(Color.Transparent).clickable {show.value = true  })
-    /*OutlinedButton(
-        onClick = {
-            show.value = true
-        },
-        border = BorderStroke(0.dp, Color.Transparent),
-        colors = ButtonDefaults.buttonColors(
-            contentColor = Color.Black,
-            containerColor = Color.Transparent
-        ),
-        shape = RectangleShape
-    )*/ {
-        Row {
+    Box(modifier = Modifier
+        .background(Color.Transparent)
+        .clickable { currentSelectedItem.value = card; show.value = true }){
+        Column {
             Box(modifier = Modifier
-                .fillMaxWidth(0.4f)
                 .fillMaxHeight()
                 .padding(16.dp)
                 .background(Color.Green)){
-                Image(
-                    painter = rememberAsyncImagePainter(model = card.image_uris_normal),
-                    //painter = rememberAsyncImagePainter(model = "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg"),
+                AsyncImage(
+                    model = card.image_uris_normal.toString().replace("normal","large"),
                     contentDescription = card.name.toString(),
-                    modifier = Modifier.fillMaxSize()
                 )
                 //CardImage(card = card, modifier = Modifier.fillMaxSize())
             }
+
             Column(modifier = Modifier
-                .fillMaxWidth()) {
+                .fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
                 Text(
                     text = card.name.toString(),
                     fontWeight = FontWeight.Bold,
                     fontSize = 22.sp,
-                    modifier = Modifier.padding(16.dp)
+                    //modifier = Modifier.padding(start = 16.dp)
                 )
-                Spacer(modifier = Modifier.height(30.dp))
-                Text(
+                //Spacer(modifier = Modifier.height(30.dp))
+                /*Text(
                     text = card.type_line.toString(),
                     modifier = Modifier.padding(start = 16.dp),
                     fontWeight = FontWeight.SemiBold,
-                )
-                Text(
-                    text = card.oracle_text.toString(),
-                    modifier = Modifier.padding(
-                        start = 16.dp,
-                        top = 8.dp,
-                        bottom = 16.dp,
-                        end = 16.dp
-                    )
-                )
+                )*/
+                Spacer(modifier = Modifier.height(30.dp))
             }
         }
     }
     if (show.value) {
-        CardDialog(show = show, card = card)
+        CardDialog(show = show, card = currentSelectedItem.value)
     }
 }
 
