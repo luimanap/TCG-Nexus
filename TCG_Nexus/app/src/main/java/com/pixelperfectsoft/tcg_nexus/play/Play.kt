@@ -44,10 +44,10 @@ data class Game(
 fun PlayScreen(navController: NavController) {
     val backcolors = listOf(
         Color.Transparent,
-        Color(230, 230, 230),
-        Color(225, 225, 225),
-        Color(225, 225, 225),
-        Color(225, 225, 225)
+        Color.White,
+        Color.White,
+        Color.White,
+        Color.White,
     )
     val game = Game(rememberSaveable {
         mutableIntStateOf(0)

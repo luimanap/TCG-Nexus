@@ -17,9 +17,11 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.material3.Button
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ElevatedCard
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableIntState
@@ -55,10 +57,10 @@ import coil.compose.AsyncImage
 fun Collection(navController: NavController, viewModel: CardViewModel = viewModel()) {
     val backcolors = listOf(
         Color.Transparent,
-        Color(230, 230, 230),
-        Color(225, 225, 225),
-        Color(225, 225, 225),
-        Color(225, 225, 225)
+        Color.White,
+        Color.White,
+        Color.White,
+        Color.White,
     )
     val totalcards = rememberSaveable { mutableIntStateOf(0) }
     val estimatedCost = rememberSaveable { mutableFloatStateOf(0f) }
@@ -78,7 +80,7 @@ fun Collection(navController: NavController, viewModel: CardViewModel = viewMode
             InfoCard(
                 text = "Cartas en posesión",
                 number = totalcards.value.toString(),
-                containercolor = Color(92, 115, 255),
+                containercolor = MaterialTheme.colorScheme.primary,
                 contentcolor = Color.White,
                 contenttype = "number"
             )
@@ -110,6 +112,11 @@ fun ShowLazyList(cards: List<Card>) {
         items(cards){
             Log.d("Cards", "Loading card ${it.name}")
             CardItem(card = it, show = show, currentSelectedItem = currentSelectedItem)
+        }
+        item { 
+            Button(onClick = { }) {
+                Text(text = "+")
+            }
         }
     } )
     /*LazyColumn(Modifier.fillMaxSize()) {//Columna que solo renderiza los elementos visibles

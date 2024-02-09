@@ -21,8 +21,7 @@ class CardViewModel : ViewModel(){
         db.getReference("cards").keepSynced(true)
         response.value = DataState.Loading
         db.getReference("cards")
-            .orderByChild("id")
-            .limitToFirst(20)
+            .limitToFirst(30)
             .addListenerForSingleValueEvent(object : ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 for(i in snapshot.children){

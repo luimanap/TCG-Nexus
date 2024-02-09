@@ -28,6 +28,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -55,10 +56,10 @@ fun Profile(
     //val currentuser = getUserDataFromFirestore()
     val backcolors = listOf(
         Color.Transparent,
-        Color(230, 230, 230),
-        Color(225, 225, 225),
-        Color(225, 225, 225),
-        Color(225, 225, 225)
+        Color.White,
+        Color.White,
+        Color.White,
+        Color.White,
     )
     BackgroundImage()
 
@@ -96,7 +97,7 @@ fun Profile(
         Box(
             modifier = Modifier
                 .clip(CircleShape)
-                .border(1.dp, SolidColor(Color.Black), CircleShape)
+                //.border(1.dp, SolidColor(Color.Black), CircleShape)
                 .background(Color.Transparent)
                 .size(160.dp),
             contentAlignment = Alignment.Center
@@ -105,7 +106,8 @@ fun Profile(
                 //painter = painterResource(id = R.drawable.personcirclesharp),
                 painter = rememberAsyncImagePainter(model = currentuser.avatar_url),
                 contentDescription = "Profile picture",
-                modifier = Modifier.fillMaxSize()
+                modifier = Modifier.fillMaxSize(),
+                contentScale = ContentScale.Crop
             )
         }
         UserInfo(currentuser)

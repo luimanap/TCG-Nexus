@@ -1,5 +1,6 @@
 package com.pixelperfectsoft.tcg_nexus.navigation
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -7,13 +8,16 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -22,6 +26,7 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.google.firebase.auth.FirebaseAuth
 import com.pixelperfectsoft.tcg_nexus.R
 import com.pixelperfectsoft.tcg_nexus.auth.LoginScreen
 import com.pixelperfectsoft.tcg_nexus.auth.RegisterScreen
@@ -62,13 +67,13 @@ val AUTH_MENU_ITEMS =
         ), MenuItems(
             icon = R.drawable.albums,
             textId = R.string.collection,
-            path = MyAppRoute.COLLECTION,
-            label = "Colección"
+            path = MyAppRoute.ALLCARDS,
+            label = "Buscar"
         ), MenuItems(
             icon = R.drawable.albums,
             textId = R.string.collection,
-            path = MyAppRoute.ALLCARDS,
-            label = "Buscar"
+            path = MyAppRoute.COLLECTION,
+            label = "Colección"
         ), MenuItems(
             icon = R.drawable.cards,
             textId = R.string.decks,
@@ -107,7 +112,7 @@ val GUEST_MENU_ITEMS =
             icon = R.drawable.personcirclesharp,
             textId = R.string.profile,
             path = MyAppRoute.LOGIN,
-            label = "Perfil"
+            label = "Login"
         )
     )
 
@@ -216,13 +221,15 @@ fun BottomBarNaviContent(
 
 @Composable
 fun BottomBarNavigation(selectedDestination: String, navigateTo: (MenuItems) -> Unit) {
-    val isAuth = remember { mutableStateOf(true) }
+    val user = FirebaseAuth.getInstance().currentUser
     NavigationBar(
         modifier = Modifier
             .fillMaxWidth()
-            .height(70.dp)
+            .height(70.dp),
+        containerColor = Color.White
     ) {
-        if (isAuth.value) {
+
+        if (user != null) {
             AUTH_MENU_ITEMS.forEach { destinations ->
                 NavigationBarItem(
                     label = { Text(text = destinations.label, fontSize = 12.sp) },
@@ -234,7 +241,10 @@ fun BottomBarNavigation(selectedDestination: String, navigateTo: (MenuItems) -> 
                             contentDescription = stringResource(id = destinations.textId),
                             modifier = Modifier.size(24.dp)
                         )
-                    }
+                    }, colors = NavigationBarItemDefaults.colors(
+                        selectedIconColor = MaterialTheme.colorScheme.primary,
+                        indicatorColor = Color.White
+                    )
                 )
             }
         } else {
@@ -249,7 +259,10 @@ fun BottomBarNavigation(selectedDestination: String, navigateTo: (MenuItems) -> 
                             contentDescription = stringResource(id = destinations.textId),
                             modifier = Modifier.size(24.dp)
                         )
-                    }
+                    }, colors = NavigationBarItemDefaults.colors(
+                        selectedIconColor = Color(92, 115, 255),
+                        indicatorColor = Color.White
+                    )
                 )
             }
 
