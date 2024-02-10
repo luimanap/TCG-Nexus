@@ -18,35 +18,35 @@ import androidx.navigation.compose.rememberNavController
 import com.pixelperfectsoft.tcg_nexus.ui.theme.TCGNexus_Theme
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
-import com.pixelperfectsoft.tcg_nexus.navigation.BottomBarNaviContent
-import com.pixelperfectsoft.tcg_nexus.navigation.MyAppRoute
+import com.pixelperfectsoft.tcg_nexus.navigation.BottomBarNaviContainer
+import com.pixelperfectsoft.tcg_nexus.navigation.MyScreenRoutes
 import com.pixelperfectsoft.tcg_nexus.navigation.NaviActions
 
 
 class MainActivity : ComponentActivity() {
-var logged = false
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            TCGNexus_Theme (darkTheme = false){
+            TCGNexus_Theme(darkTheme = false) {
 
                 val activity = LocalContext.current as Activity
                 activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
                 val navController = rememberNavController()
-                val navigateAction = remember(navController){
-                    NaviActions(navController)
-                }
+                val navigateAction = remember(navController) { NaviActions(navController) }
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
-                val selectedDestination = navBackStackEntry?.destination?.route ?: MyAppRoute.HOME
+                val selectedDestination = navBackStackEntry?.destination?.route
+                    ?: MyScreenRoutes.HOME //Destino inicial de navegación
 
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    BottomBarNaviContent(navController = navController, selectedDestination = selectedDestination, navigateTo = navigateAction::navigateTo)
+                    BottomBarNaviContainer(
+                        navController = navController,
+                        selectedDestination = selectedDestination,
+                        navigateTo = navigateAction::navigateTo
+                    )
                 }
             }
         }

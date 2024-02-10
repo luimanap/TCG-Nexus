@@ -18,8 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.navigation.NavController
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
-import com.pixelperfectsoft.tcg_nexus.cards.InfoCard
-import com.pixelperfectsoft.tcg_nexus.cards.createGradientBrush
+import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 
 @Composable
 fun Decks(navController: NavController) {

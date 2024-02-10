@@ -2,7 +2,6 @@ package com.pixelperfectsoft.tcg_nexus.profile
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -19,15 +18,10 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -38,13 +32,12 @@ import androidx.navigation.NavHostController
 import com.google.firebase.auth.FirebaseAuth
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.R
-import com.pixelperfectsoft.tcg_nexus.cards.createGradientBrush
 import com.pixelperfectsoft.tcg_nexus.model.User
 import com.pixelperfectsoft.tcg_nexus.model.UserDataViewModel
-import com.pixelperfectsoft.tcg_nexus.navigation.MyAppRoute
+import com.pixelperfectsoft.tcg_nexus.navigation.MyScreenRoutes
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.rememberAsyncImagePainter
-import com.pixelperfectsoft.tcg_nexus.model.getUserDataFromFirestore
+import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 
 @Composable
 fun Profile(
@@ -79,7 +72,7 @@ fun Profile(
             Box(modifier = Modifier
                 .size(25.dp)
                 .clickable {
-                    navController.navigate(MyAppRoute.LOGIN)
+                    navController.navigate(MyScreenRoutes.LOGIN)
                     FirebaseAuth
                         .getInstance()
                         .signOut()

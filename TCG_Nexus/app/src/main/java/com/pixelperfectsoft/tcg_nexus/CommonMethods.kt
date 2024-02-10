@@ -156,7 +156,8 @@ fun MyTextField(
         colors = TextFieldDefaults.textFieldColors(
             containerColor = Color.Transparent,
             cursorColor = Color.Black,
-            textColor = Color.Black,
+            focusedTextColor = Color.Black,
+            unfocusedTextColor = Color.Black,
             focusedLabelColor = Color.Black,
             focusedIndicatorColor = Color.Black,
             focusedSupportingTextColor = Color.Red,
@@ -206,7 +207,8 @@ fun MyPasswordField(
         colors = TextFieldDefaults.textFieldColors(
             containerColor = Color.Transparent,
             cursorColor = Color.Black,
-            textColor = Color.Black,
+            focusedTextColor = Color.Black,
+            unfocusedTextColor = Color.Black,
             focusedLabelColor = Color.Black,
             focusedIndicatorColor = Color.Black,
             focusedSupportingTextColor = Color.Red,

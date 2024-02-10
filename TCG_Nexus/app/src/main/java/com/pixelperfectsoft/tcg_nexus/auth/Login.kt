@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -37,10 +38,10 @@ import com.pixelperfectsoft.tcg_nexus.MyButton
 import com.pixelperfectsoft.tcg_nexus.MyCanvasSeparator
 import com.pixelperfectsoft.tcg_nexus.MyPasswordField
 import com.pixelperfectsoft.tcg_nexus.MyTextField
-import com.pixelperfectsoft.tcg_nexus.cards.createGradientBrush
 import com.pixelperfectsoft.tcg_nexus.model.LoginScreenViewModel
-import com.pixelperfectsoft.tcg_nexus.navigation.MyAppRoute
+import com.pixelperfectsoft.tcg_nexus.navigation.MyScreenRoutes
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 
 @Composable
 fun LoginScreen(
@@ -49,10 +50,10 @@ fun LoginScreen(
 ) {
     val backcolors = listOf(
         Color.Transparent,
-        Color(230, 230, 230),
-        Color(225, 225, 225),
-        Color(225, 225, 225),
-        Color(225, 225, 225)
+        Color.White,
+        Color.White,
+        Color.White,
+        Color.White,
     )
     BackgroundImage()
     Column(
@@ -67,7 +68,7 @@ fun LoginScreen(
         if (FirebaseAuth.getInstance().currentUser?.email.isNullOrBlank()) {
             LoginForm(navController, viewModel)
         } else {
-            navController.navigate(MyAppRoute.PROFILE)
+            navController.navigate(MyScreenRoutes.PROFILE)
         }
 
     }
@@ -112,8 +113,8 @@ fun LoginForm(navController: NavController, viewModel: LoginScreenViewModel) {
         text = "Iniciar Sesión",
         onclick = {
             if (userinput != "" && passinput != "") { //Si correo y contraseña no estan vacios
-                viewModel.signIn(email = userinput, password = passinput, profile = {
-                    navController.navigate(MyAppRoute.PROFILE) //Si el inicio de sesion es correcto navegamos a la ventana del perfil
+                viewModel.signIn(email = userinput.trim(), password = passinput, profile = {
+                    navController.navigate(MyScreenRoutes.PROFILE) //Si el inicio de sesion es correcto navegamos a la ventana del perfil
                 }, onError = {
                     error = true //Si el inicio de sesion es incorrecto ponemos el boolean error en true
                 })
@@ -122,8 +123,8 @@ fun LoginForm(navController: NavController, viewModel: LoginScreenViewModel) {
             }
 
         },
-        containercolor = Color(92, 115, 255),
-        bordercolor = Color(92, 115, 255),
+        containercolor = MaterialTheme.colorScheme.primary,
+        bordercolor = MaterialTheme.colorScheme.primary,
         textcolor = Color.White
     )
 

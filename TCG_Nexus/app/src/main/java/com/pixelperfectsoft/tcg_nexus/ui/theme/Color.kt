@@ -1,6 +1,9 @@
 package com.pixelperfectsoft.tcg_nexus.ui.theme
 
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.TileMode
 
 val Purple80 = Color(0xFFD0BCFF)
 val PurpleGrey80 = Color(0xFFCCC2DC)
@@ -11,3 +14,17 @@ val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
 val PrimaryBlue = Color(92, 115, 255)
+
+fun createGradientBrush(colors: List<Color>, isVertical: Boolean = true): Brush {
+    val endOffset = if (isVertical) {
+        Offset(0f, Float.POSITIVE_INFINITY)
+    } else {
+        Offset(Float.POSITIVE_INFINITY, 0f)
+    }
+    return Brush.linearGradient(
+        colors = colors,
+        start = Offset.Zero,
+        end = endOffset,
+        tileMode = TileMode.Clamp
+    )
+}
