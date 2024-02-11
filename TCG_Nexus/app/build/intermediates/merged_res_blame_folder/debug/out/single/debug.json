@@ -52,6 +52,10 @@
         "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-main-62:\\xml\\backup_rules.xml"
     },
     {
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_home.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/home.xml"
+    },
+    {
         "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-merged_res-60:\\drawable_passwordeye.xml.flat",
         "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-main-62:\\drawable\\passwordeye.xml"
     },
@@ -98,10 +102,6 @@
     {
         "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-merged_res-60:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-main-62:\\mipmap-xxhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_dice_icon.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/dice_icon.xml"
     },
     {
         "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-merged_res-60:\\drawable_cards.xml.flat",

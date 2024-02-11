@@ -17,7 +17,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.Icon
@@ -93,52 +95,54 @@ fun CardDialog(show: MutableState<Boolean>, card: Card) {
                     .fillMaxHeight(0.6f)
                     .fillMaxWidth())
                 Spacer(modifier = Modifier.height(32.dp))
+                Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+                    Text(text = card.name.toString(), fontWeight = FontWeight.Bold)
+                    Spacer(modifier = Modifier.height(16.dp))
+                    Row {
+                        Text(text = card.type_line.toString().replace("�", "-"))
+                        Spacer(modifier = Modifier.fillMaxWidth(0.7f))
+                        Text(text = card.rarity.toString().uppercase(Locale.ROOT), textAlign = TextAlign.End)
+                    }
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(text = card.oracle_text.toString().replace("�", "-"))
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
+                        if (card.prices_eur != "") {
+                            Text(text = "${card.prices_eur.toString().toDouble() / 100} EUR")
+                        } else {
+                            Text(text = "??? EUR")
+                        }
+                        Spacer(modifier = Modifier.width(8.dp))
+                        if (card.prices_eur_foil != "") {
+                            Text(
+                                text = "Foil -> ${
+                                    card.prices_eur_foil.toString().toDouble() / 100
+                                } EUR"
+                            )
+                        } else {
+                            Text(text = "Foil -> ??? EUR")
+                        }
+                    }
+                    Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
+                        if (card.prices_eur != "") {
+                            Text(text = "${card.prices_usd.toString().toDouble() / 100} USD")
+                        } else {
+                            Text(text = "??? USD")
+                        }
+                        Spacer(modifier = Modifier.width(8.dp))
+                        if (card.prices_usd_foil != "") {
+                            Text(
+                                text = "Foil -> ${
+                                    card.prices_usd_foil.toString().toDouble() / 100
+                                } USD"
+                            )
+                            Log.d("price", "${card.prices_usd_foil.toString().toDouble()}")
+                        } else {
+                            Text(text = "Foil -> ??? USD")
+                        }
+                    }
+                }
 
-                Text(text = card.name.toString(), fontWeight = FontWeight.Bold)
-                Spacer(modifier = Modifier.height(16.dp))
-                Row {
-                    Text(text = card.type_line.toString())
-                    Spacer(modifier = Modifier.fillMaxWidth(0.7f))
-                    Text(text = card.rarity.toString().uppercase(Locale.ROOT), textAlign = TextAlign.End)
-                }
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(text = card.oracle_text.toString())
-                Spacer(modifier = Modifier.height(8.dp))
-                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
-                    if (card.prices_eur != "") {
-                        Text(text = "${card.prices_eur.toString().toDouble() / 100} EUR")
-                    } else {
-                        Text(text = "??? EUR")
-                    }
-                    Spacer(modifier = Modifier.width(8.dp))
-                    if (card.prices_eur_foil != "") {
-                        Text(
-                            text = "Foil -> ${
-                                card.prices_eur_foil.toString().toDouble() / 100
-                            } EUR"
-                        )
-                    } else {
-                        Text(text = "Foil -> ??? EUR")
-                    }
-                }
-                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
-                    if (card.prices_eur != "") {
-                        Text(text = "${card.prices_usd.toString().toDouble() / 100} USD")
-                    } else {
-                        Text(text = "??? USD")
-                    }
-                    Spacer(modifier = Modifier.width(8.dp))
-                    if (card.prices_usd_foil != "") {
-                        Text(
-                            text = "Foil -> ${
-                                card.prices_usd_foil.toString().toDouble() / 100
-                            } USD"
-                        )
-                        Log.d("price", "${card.prices_usd_foil.toString().toDouble()}")
-                    } else {
-                        Text(text = "Foil -> ??? USD")
-                    }
-                }
             }
         }
 

@@ -1,9 +1,7 @@
 package com.pixelperfectsoft.tcg_nexus.cards
 
 import android.util.Log
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -20,14 +18,12 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.material3.Button
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableIntState
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
@@ -36,24 +32,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.TileMode
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import coil.compose.rememberAsyncImagePainter
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.model.Card
-import com.pixelperfectsoft.tcg_nexus.MyButton
 import com.pixelperfectsoft.tcg_nexus.model.CardViewModel
 import com.pixelperfectsoft.tcg_nexus.model.DataState
-import androidx.compose.ui.window.Dialog as Dialog
 import androidx.lifecycle.viewmodel.compose.viewModel
-import coil.compose.AsyncImage
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 
 @Composable
@@ -104,6 +91,9 @@ fun Collection(navController: NavController, viewModel: CardViewModel = viewMode
         //Lista de cartas
         SetData(viewModel = viewModel, totalcards)
 
+        //Boton de añadir carta
+
+
     }
 }
 
@@ -111,7 +101,7 @@ fun Collection(navController: NavController, viewModel: CardViewModel = viewMode
 fun ShowLazyList(cards: List<Card>) {
     val currentSelectedItem = remember{mutableStateOf(cards[0])}
     val show = rememberSaveable { mutableStateOf(false) } //Variable booleana de estado para mostrar u ocultar el dialogo de informacion de cada carta
-    LazyVerticalGrid(horizontalArrangement = Arrangement.Center, columns = GridCells.Fixed(2), content = {
+    LazyVerticalGrid(modifier = Modifier.fillMaxHeight(0.8f), horizontalArrangement = Arrangement.Center, columns = GridCells.Fixed(2), content = {
         items(cards){
             Log.d("Cards", "Loading card ${it.name}")
             CardItem(card = it, show = show, currentSelectedItem = currentSelectedItem)
@@ -192,6 +182,7 @@ fun SetData(viewModel: CardViewModel, totalcards: MutableIntState) {
         is DataState.Success -> {
             totalcards.intValue = result.data.size
             ShowLazyList(cards = result.data)
+            AddButton(onclick = {})
         }
 
         is DataState.Failure -> {
