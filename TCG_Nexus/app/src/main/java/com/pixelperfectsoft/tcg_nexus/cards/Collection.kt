@@ -99,21 +99,25 @@ fun Collection(navController: NavController, viewModel: CardViewModel = viewMode
 
 @Composable
 fun ShowLazyList(cards: List<Card>) {
-    val currentSelectedItem = remember{mutableStateOf(cards[0])}
-    val show = rememberSaveable { mutableStateOf(false) } //Variable booleana de estado para mostrar u ocultar el dialogo de informacion de cada carta
-    LazyVerticalGrid(modifier = Modifier.fillMaxHeight(0.8f), horizontalArrangement = Arrangement.Center, columns = GridCells.Fixed(2), content = {
-        items(cards){
-            Log.d("Cards", "Loading card ${it.name}")
-            CardItem(card = it, show = show, currentSelectedItem = currentSelectedItem)
-        }
-        item { 
-            Button(onClick = { }) {
-                Text(text = "+")
+    val currentSelectedItem = remember { mutableStateOf(cards[0]) }
+    val show =
+        rememberSaveable { mutableStateOf(false) } //Variable booleana de estado para mostrar u ocultar el dialogo de informacion de cada carta
+    LazyVerticalGrid(
+        modifier = Modifier.fillMaxHeight(0.8f),
+        horizontalArrangement = Arrangement.Center,
+        columns = GridCells.Fixed(2),
+        content = {
+            items(cards) {
+                Log.d("Cards", "Loading card ${it.name}")
+                CardItem(card = it, show = show, currentSelectedItem = currentSelectedItem)
             }
-        }
-    } )
+            item {
+                Button(onClick = { }) {
+                    Text(text = "+")
+                }
+            }
+        })
 }
-
 
 
 @Composable
@@ -165,7 +169,6 @@ fun InfoCard(
 }
 
 
-
 @Composable
 fun SetData(viewModel: CardViewModel, totalcards: MutableIntState) {
     when (val result = viewModel.response.value) {
@@ -179,10 +182,11 @@ fun SetData(viewModel: CardViewModel, totalcards: MutableIntState) {
                 }
             }
         }
+
         is DataState.Success -> {
             totalcards.intValue = result.data.size
             ShowLazyList(cards = result.data)
-            AddButton(onclick = {})
+            AddButton()
         }
 
         is DataState.Failure -> {
@@ -194,11 +198,6 @@ fun SetData(viewModel: CardViewModel, totalcards: MutableIntState) {
         is DataState.Empty -> {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Text(text = "Database Empty")
-            }
-        }
-        else -> {
-            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                Text(text = "Error Loading Cards")
             }
         }
     }

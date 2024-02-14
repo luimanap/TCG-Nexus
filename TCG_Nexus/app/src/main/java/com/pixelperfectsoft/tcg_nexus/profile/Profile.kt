@@ -28,12 +28,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -81,7 +83,7 @@ fun Profile(
 
 @Composable
 fun AvatarImage(currentuser: User) {
-    var show = remember{ mutableStateOf(false) }
+    val show = remember { mutableStateOf(false) }
     Box(
         modifier = Modifier
             .clip(CircleShape)
@@ -98,8 +100,9 @@ fun AvatarImage(currentuser: User) {
             contentScale = ContentScale.Crop
         )
     }
-    if (show.value){
+    if (show.value) {
         Dialog(onDismissRequest = { show.value = false }) {
+            val avatarImages = mutableListOf<String>()
             Surface(
                 modifier = Modifier
                     .fillMaxHeight(0.5f)
@@ -107,13 +110,14 @@ fun AvatarImage(currentuser: User) {
                 shape = RoundedCornerShape(16.dp),
                 color = Color.White
             ) {
-                LazyVerticalGrid(horizontalArrangement = Arrangement.Center, columns = GridCells.Fixed(4), content = {
-                    item{
+                LazyVerticalGrid(
+                    horizontalArrangement = Arrangement.Center,
+                    columns = GridCells.Fixed(4),
+                    content = {
+                        items(avatarImages) {
 
-                    }
-
-                } )
-
+                        }
+                    })
             }
         }
     }
@@ -157,23 +161,13 @@ fun UserInfo(user: User) {
         )
     )
     Spacer(modifier = Modifier.fillMaxHeight(0.2f))
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .fillMaxHeight()
-    ) {
+    Row(modifier = Modifier
+        .fillMaxWidth()
+        .fillMaxHeight()) {
         Spacer(modifier = Modifier.fillMaxWidth(0.1f))
         Card(modifier = Modifier.fillMaxSize(0.4f)) {
-            Text(
-                text = "Cards", style = TextStyle(
-                    fontSize = 30.sp
-                )
-            )
-            Text(
-                text = user.cards.toString(), style = TextStyle(
-                    fontSize = 30.sp
-                )
-            )
+            Text(text = "Cards", style = TextStyle(fontSize = 30.sp))
+            Text(text = user.cards.toString(), style = TextStyle(fontSize = 30.sp))
         }
         Spacer(modifier = Modifier.fillMaxWidth(0.1f))
         Card(
@@ -181,16 +175,8 @@ fun UserInfo(user: User) {
                 .fillMaxWidth(0.8f)
                 .fillMaxHeight(0.4f)
         ) {
-            Text(
-                text = "Decks", style = TextStyle(
-                    fontSize = 30.sp
-                )
-            )
-            Text(
-                text = user.decks.toString(), style = TextStyle(
-                    fontSize = 30.sp
-                )
-            )
+            Text(text = "Decks", style = TextStyle(fontSize = 30.sp))
+            Text(text = user.decks.toString(), style = TextStyle(fontSize = 30.sp))
         }
         Spacer(modifier = Modifier.fillMaxWidth())
     }

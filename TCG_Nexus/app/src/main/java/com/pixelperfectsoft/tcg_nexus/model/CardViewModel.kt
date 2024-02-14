@@ -21,7 +21,7 @@ class CardViewModel : ViewModel(){
         db.getReference("cards").keepSynced(true) //Obtenemos la referencia "cards" y le decimos que guarde los datos que recibe la consulta en la caché
         response.value = DataState.Loading //Cambiamos el valor del estado a Loading
         db.getReference("cards")
-            .limitToFirst(9999)//Limitamos la consulta a las primeras 9999 cartas
+            .limitToFirst(100)//Limitamos la consulta a las primeras 9999 cartas
             .addListenerForSingleValueEvent(object : ValueEventListener{ //Nos creamos un listener para cada valor individual
             override fun onDataChange(snapshot: DataSnapshot) {
                 for(i in snapshot.children){

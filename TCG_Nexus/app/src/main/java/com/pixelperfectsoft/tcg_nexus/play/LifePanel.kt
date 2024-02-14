@@ -43,8 +43,8 @@ fun LifePanel(
         p2life = rememberSaveable { mutableIntStateOf(plinitlifeint) },
         p3life = rememberSaveable { mutableIntStateOf(plinitlifeint) },
         p4life = rememberSaveable { mutableIntStateOf(plinitlifeint) },
-        p5life = rememberSaveable { mutableIntStateOf(plinitlifeint) },
-        p6life = rememberSaveable { mutableIntStateOf(plinitlifeint) },
+        //p5life = rememberSaveable { mutableIntStateOf(plinitlifeint) },
+        //p6life = rememberSaveable { mutableIntStateOf(plinitlifeint) },
     )
     var rotate = 0f
     if (rotation == "left") {

@@ -12,6 +12,7 @@ import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
@@ -99,7 +100,7 @@ fun StartButton(navController: NavController, life: Int, players: Int) {
 
                 }
 
-                5 -> when (life) {
+                /*5 -> when (life) {
                     20 -> navController.navigate("5p20")
                     30 -> navController.navigate("5p30")
                     40 -> navController.navigate("5p40")
@@ -113,7 +114,7 @@ fun StartButton(navController: NavController, life: Int, players: Int) {
                     40 -> navController.navigate("6p40")
                     50 -> navController.navigate("6p50")
                     60 -> navController.navigate("6p60")
-                }
+                }*/
             }
         }, containercolor = Color(92, 115, 255), bordercolor = Color(92, 115, 255),
         textcolor = Color.White
@@ -144,7 +145,7 @@ fun SelectStartLife(game: Game) {
                 modifier = Modifier
                     .clickable { isexpanded = true }
                     .fillMaxWidth(),
-                colors = TextFieldDefaults.outlinedTextFieldColors(
+                colors = OutlinedTextFieldDefaults.colors(
                     disabledBorderColor = Color.Black, disabledTextColor = Color.Black
                 ))
             DropdownMenu(
@@ -175,11 +176,9 @@ fun SelectPlayers(game: Game) {
     var playersvalue by rememberSaveable { mutableStateOf("") }
     var isexpanded by rememberSaveable { mutableStateOf(false) }
     val elements =
-        listOf("2 Players", "3 Players", "4 Players", "5 Players", "6 Players")
+        listOf("2 Players", "3 Players", "4 Players"/*, "5 Players", "6 Players"*/)
 
     Column(Modifier.padding(horizontal = 40.dp, vertical = 10.dp)) {
-
-
         Text(
             text = "Jugadores:", style = TextStyle(
                 color = Color.Black,
@@ -195,7 +194,7 @@ fun SelectPlayers(game: Game) {
                 modifier = Modifier
                     .clickable { isexpanded = true }
                     .fillMaxWidth(),
-                colors = TextFieldDefaults.outlinedTextFieldColors(
+                colors = OutlinedTextFieldDefaults.colors(
                     disabledBorderColor = Color.Black, disabledTextColor = Color.Black
                 ))
             DropdownMenu(
