@@ -16,12 +16,22 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.Button
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.FloatingActionButtonDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.getValue
@@ -29,6 +39,7 @@ import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -41,7 +52,11 @@ import com.pixelperfectsoft.tcg_nexus.model.Card
 import com.pixelperfectsoft.tcg_nexus.model.CardViewModel
 import com.pixelperfectsoft.tcg_nexus.model.DataState
 import androidx.lifecycle.viewmodel.compose.viewModel
+import coil.compose.rememberAsyncImagePainter
+import coil.compose.rememberImagePainter
+import com.pixelperfectsoft.tcg_nexus.R
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
+import kotlinx.coroutines.launch
 
 @Composable
 fun Collection(navController: NavController, viewModel: CardViewModel = viewModel()) {
@@ -97,26 +112,73 @@ fun Collection(navController: NavController, viewModel: CardViewModel = viewMode
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ShowLazyList(cards: List<Card>) {
+    val sheetState = rememberModalBottomSheetState()
+    val scope = rememberCoroutineScope()
     val currentSelectedItem = remember { mutableStateOf(cards[0]) }
     val show =
         rememberSaveable { mutableStateOf(false) } //Variable booleana de estado para mostrar u ocultar el dialogo de informacion de cada carta
-    LazyVerticalGrid(
-        modifier = Modifier.fillMaxHeight(0.8f),
-        horizontalArrangement = Arrangement.Center,
-        columns = GridCells.Fixed(2),
-        content = {
-            items(cards) {
-                Log.d("Cards", "Loading card ${it.name}")
-                CardItem(card = it, show = show, currentSelectedItem = currentSelectedItem)
-            }
-            item {
-                Button(onClick = { }) {
-                    Text(text = "+")
+    val addshow =
+        rememberSaveable { mutableStateOf(false) } //Variable booleana de estado para mostrar u ocultar el dialogo de añadir cartas a la coleccion
+    val filtershow = rememberSaveable {mutableStateOf(false) } //Variable booleana de estado para mostrar u ocultar el dialogo de filtrar u ordenar la lista
+    Box(contentAlignment = Alignment.BottomEnd, modifier = Modifier.fillMaxSize()) {
+        LazyVerticalGrid(
+            modifier = Modifier.fillMaxHeight(),
+            horizontalArrangement = Arrangement.Center,
+            columns = GridCells.Fixed(2),
+            content = {
+                items(cards) {
+                    Log.d("Cards", "Loading card ${it.name}")
+                    CardItem(card = it, show = show, currentSelectedItem = currentSelectedItem)
                 }
+                item {
+                    Button(onClick = { }) {
+                        Text(text = "+")
+                    }
+                }
+            })
+        Column(horizontalAlignment = Alignment.End) {
+            SmallFloatingActionButton(
+                containerColor = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(horizontal = 16.dp),
+                onClick = { addshow.value = true },
+                shape = CircleShape,
+                content = {
+                    Icon(
+                        painter = rememberAsyncImagePainter(model = R.drawable.materialsymbolsfilteralt), contentDescription = ""
+                    )
+                },
+                elevation = FloatingActionButtonDefaults.elevation(defaultElevation = 8.dp)
+            )
+            FloatingActionButton(
+                containerColor = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
+                onClick = { addshow.value = true },
+                shape = CircleShape,
+                content = { Icon(imageVector = Icons.Default.Add, contentDescription = "") },
+                elevation = FloatingActionButtonDefaults.elevation(defaultElevation = 8.dp)
+            )
+        }
+    }
+    if (addshow.value) {
+        ModalBottomSheet(
+            onDismissRequest = { addshow.value = false },
+            sheetState = sheetState
+        ) {
+            Button(onClick = {
+                scope.launch { sheetState.hide() }.invokeOnCompletion {
+                    if (!sheetState.isVisible) {
+                        addshow.value = false
+                    }
+                }
+            }) {
+
             }
-        })
+        }
+    }
+
 }
 
 
@@ -186,7 +248,8 @@ fun SetData(viewModel: CardViewModel, totalcards: MutableIntState) {
         is DataState.Success -> {
             totalcards.intValue = result.data.size
             ShowLazyList(cards = result.data)
-            AddButton()
+
+            //
         }
 
         is DataState.Failure -> {

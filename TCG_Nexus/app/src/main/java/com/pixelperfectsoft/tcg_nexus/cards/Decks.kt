@@ -83,11 +83,8 @@ fun Decks(navController: NavController) {
         ) {
 
         }
-
         AddButton()
-
     }
-
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -96,35 +93,36 @@ fun AddButton() {
     val show = rememberSaveable { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState()
     val scope = rememberCoroutineScope()
-    Scaffold(floatingActionButton = {
-        FloatingActionButton(
-            onClick = { show.value = true},
-            shape = CircleShape,
-            content = {
-                Icon(
-                    imageVector = Icons.Default.Add,
-                    contentDescription = "Create deck"
+    Scaffold(
+        floatingActionButton = {
+            FloatingActionButton(
+                onClick = { show.value = true },
+                shape = CircleShape,
+                content = {
+                    Icon(
+                        imageVector = Icons.Default.Add,
+                        contentDescription = "Create deck"
+                    )
+                },
+                elevation = FloatingActionButtonDefaults.elevation(
+                    defaultElevation = 8.dp
                 )
-            },
-            elevation = FloatingActionButtonDefaults.elevation(
-                defaultElevation = 8.dp
-            ),
-
             )
-    }, containerColor = Color.Transparent) { contentPadding ->
-        if (show.value) {
-            ModalBottomSheet(
-                onDismissRequest = { show.value = false },
-                sheetState = sheetState
-            ) {
-                Button(onClick = {
-                    scope.launch { sheetState.hide() }.invokeOnCompletion {
-                        if (!sheetState.isVisible) {
-                            show.value = false
-                        }
+        },
+        containerColor = Color.Transparent
+    ) { it -> }
+    if (show.value) {
+        ModalBottomSheet(
+            onDismissRequest = { show.value = false },
+            sheetState = sheetState
+        ) {
+            Button(onClick = {
+                scope.launch { sheetState.hide() }.invokeOnCompletion {
+                    if (!sheetState.isVisible) {
+                        show.value = false
                     }
-                }) {}
-
+                }
+            }) {
 
             }
         }

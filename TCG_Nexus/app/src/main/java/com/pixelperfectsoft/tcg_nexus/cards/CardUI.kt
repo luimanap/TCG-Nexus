@@ -10,22 +10,16 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.requiredWidth
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Close
+import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.ModalBottomSheet
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -37,7 +31,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -85,67 +79,74 @@ fun CardDialog(show: MutableState<Boolean>, card: Card) {
             },
             sheetState = sheetState,
             content = {
-                Column(Modifier.padding(8.dp)) {
+                Column(
+                    Modifier.padding(horizontal = 16.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(text = card.name.toString(), fontWeight = FontWeight.Bold)
+                    Spacer(modifier = Modifier.height(8.dp))
+                    HorizontalDivider(thickness = 1.5.dp)
+                    Spacer(modifier = Modifier.height(16.dp))
                     CardImage(
                         card = card, modifier = Modifier
                             .fillMaxHeight(0.4f)
                             .fillMaxWidth()
                     )
+
                     Spacer(modifier = Modifier.height(32.dp))
-                    Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
-                        Text(text = card.name.toString(), fontWeight = FontWeight.Bold)
-                        Spacer(modifier = Modifier.height(16.dp))
-                        Row {
-                            Text(text = card.type_line.toString().replace("�", "-"))
-                            Spacer(modifier = Modifier.fillMaxWidth(0.7f))
+                    Row {
+                        Text(text = card.type_line.toString().replace("�", "-"))
+                        Spacer(modifier = Modifier.fillMaxWidth(0.7f))
+                        Text(
+                            text = card.rarity.toString().uppercase(Locale.ROOT),
+                            textAlign = TextAlign.End
+                        )
+                    }
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = card.oracle_text.toString().replace("�", "-"),
+                        textAlign = TextAlign.Justify
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.Center
+                    ) {
+                        if (card.prices_eur != "") {
+                            Text(text = "${card.prices_eur.toString().toDouble() / 100} EUR")
+                        } else {
+                            Text(text = "??? EUR")
+                        }
+                        Spacer(modifier = Modifier.width(8.dp))
+                        if (card.prices_eur_foil != "") {
                             Text(
-                                text = card.rarity.toString().uppercase(Locale.ROOT),
-                                textAlign = TextAlign.End
+                                text = "Foil -> ${
+                                    card.prices_eur_foil.toString().toDouble() / 100
+                                } EUR"
                             )
+                        } else {
+                            Text(text = "Foil -> ??? EUR")
                         }
-                        Spacer(modifier = Modifier.height(8.dp))
-                        Text(text = card.oracle_text.toString().replace("�", "-"))
-                        Spacer(modifier = Modifier.height(8.dp))
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.Center
-                        ) {
-                            if (card.prices_eur != "") {
-                                Text(text = "${card.prices_eur.toString().toDouble() / 100} EUR")
-                            } else {
-                                Text(text = "??? EUR")
-                            }
-                            Spacer(modifier = Modifier.width(8.dp))
-                            if (card.prices_eur_foil != "") {
-                                Text(
-                                    text = "Foil -> ${
-                                        card.prices_eur_foil.toString().toDouble() / 100
-                                    } EUR"
-                                )
-                            } else {
-                                Text(text = "Foil -> ??? EUR")
-                            }
+                    }
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.Center
+                    ) {
+                        if (card.prices_eur != "") {
+                            Text(text = "${card.prices_usd.toString().toDouble() / 100} USD")
+                        } else {
+                            Text(text = "??? USD")
                         }
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.Center
-                        ) {
-                            if (card.prices_eur != "") {
-                                Text(text = "${card.prices_usd.toString().toDouble() / 100} USD")
-                            } else {
-                                Text(text = "??? USD")
-                            }
-                            Spacer(modifier = Modifier.width(8.dp))
-                            if (card.prices_usd_foil != "") {
-                                Text(
-                                    text = "Foil -> ${
-                                        card.prices_usd_foil.toString().toDouble() / 100
-                                    } USD"
-                                )
-                                Log.d("price", "${card.prices_usd_foil.toString().toDouble()}")
-                            } else {
-                                Text(text = "Foil -> ??? USD")
-                            }
+                        Spacer(modifier = Modifier.width(8.dp))
+                        if (card.prices_usd_foil != "") {
+                            Text(
+                                text = "Foil -> ${
+                                    card.prices_usd_foil.toString().toDouble() / 100
+                                } USD"
+                            )
+                            Log.d("price", "${card.prices_usd_foil.toString().toDouble()}")
+                        } else {
+                            Text(text = "Foil -> ??? USD")
                         }
                     }
                 }
