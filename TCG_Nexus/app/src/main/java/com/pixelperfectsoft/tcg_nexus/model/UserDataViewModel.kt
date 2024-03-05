@@ -12,15 +12,15 @@ import kotlinx.coroutines.tasks.await
 
 
 class UserDataViewModel : ViewModel() {
-    val data = mutableStateOf(User())
+    val user = mutableStateOf(User())
 
     init { //Iniciamos la corrutina de obtener los datos
-        get_data()
+        get_User()
     }
 
-    private fun get_data() {
+    private fun get_User() {
         viewModelScope.launch {
-            data.value = getUserDataFromFirestore()
+            user.value = getUserDataFromFirestore()
         }
     }
 }

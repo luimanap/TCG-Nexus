@@ -12,12 +12,16 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.MyLogo
@@ -39,33 +43,41 @@ fun HomeScreen(navController: NavHostController) {
     )
     BackgroundImage()
     Column(
-        Modifier
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier
             .fillMaxSize()
             .background(createGradientBrush(colors = colors))
     ) {
         Spacer(Modifier.fillMaxHeight(0.05f))
         MyLogo(height = 250)
+        Spacer(modifier = Modifier.fillMaxHeight(0.2f))
+        Text(text = "INICIO", fontSize = 40.sp)
+        Spacer(modifier = Modifier.fillMaxHeight(0.1f))
+        Text(text = "ULTIMAS NOTICIAS")
         Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier
                 .fillMaxSize()
-                .verticalScroll(rememberScrollState())
+                .verticalScroll(rememberScrollState()).padding(horizontal = 4.dp)
         ) {
-            Text(text = "ULTIMAS NOTICIAS")
             NewsPanel(
                 image = R.drawable.ic_launcher_background,
                 title = "Ravnica: Murders at Karlov Manor Spoilers — January 17 | Big Blood Artist and Small Creature Doubler",
                 link = "https://www.mtggoldfish.com/articles/ravnica-murders-at-karlov-manor-spoilers-january-17-big-blood-artist-and-small-creature-doubler"
             )
+            HorizontalDivider(modifier = Modifier.padding(horizontal = 18.dp))
             NewsPanel(
                 image = R.drawable.ic_launcher_background,
                 title = "Ravnica: Murders at Karlov Manor Spoilers — January 17 | Big Blood Artist and Small Creature Doubler",
                 link = "https://www.mtggoldfish.com/articles/ravnica-murders-at-karlov-manor-spoilers-january-17-big-blood-artist-and-small-creature-doubler"
             )
+            HorizontalDivider(modifier = Modifier.padding(horizontal = 18.dp))
             NewsPanel(
                 image = R.drawable.ic_launcher_background,
                 title = "Ravnica: Murders at Karlov Manor Spoilers — January 17 | Big Blood Artist and Small Creature Doubler",
                 link = "https://www.mtggoldfish.com/articles/ravnica-murders-at-karlov-manor-spoilers-january-17-big-blood-artist-and-small-creature-doubler"
             )
+            HorizontalDivider(modifier = Modifier.padding(horizontal = 18.dp))
             NewsPanel(
                 image = R.drawable.ic_launcher_background,
                 title = "Ravnica: Murders at Karlov Manor Spoilers — January 17 | Big Blood Artist and Small Creature Doubler",
@@ -77,8 +89,9 @@ fun HomeScreen(navController: NavHostController) {
 
 @Composable
 fun NewsPanel(image: Int, title: String, link: String) {
+    val uriHandler = LocalUriHandler.current
     Row(modifier = Modifier.clickable {
-
+        uriHandler.openUri(link)
     }) {
         Box(Modifier.padding(16.dp)) {
             Image(painter = painterResource(id = image), contentDescription = title)
@@ -88,4 +101,3 @@ fun NewsPanel(image: Int, title: String, link: String) {
         }
     }
 }
-

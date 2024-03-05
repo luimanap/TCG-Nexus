@@ -4,14 +4,19 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -24,6 +29,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
@@ -34,6 +40,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 
 @Composable
@@ -111,8 +118,14 @@ fun MyCanvasSeparator() {
         //Dibujamos la linea de la izquierda
         drawLine(
             color = lineColor,
-            start = Offset(centerX - halfLineWidth, startY), //Calculamos la posicion inicial de dibujado de la linea
-            end = Offset(halfLineWidth + centerX / 4, startY), //Calculamos la posicion final de dibujado de la linea
+            start = Offset(
+                centerX - halfLineWidth,
+                startY
+            ), //Calculamos la posicion inicial de dibujado de la linea
+            end = Offset(
+                halfLineWidth + centerX / 4,
+                startY
+            ), //Calculamos la posicion final de dibujado de la linea
             strokeWidth = strokeWidth
         )
 
@@ -183,11 +196,12 @@ fun MyPasswordField(
     iserror: Boolean,
 ) {
     var passwordVisibility by rememberSaveable { mutableStateOf(false) }
-    val icon = if (!passwordVisibility) { //Variable para indicar que icono se muestra para cada estado de passwordVisibility.
-        painterResource(id = R.drawable.passwordeye)
-    } else {
-        painterResource(id = R.drawable.passwordeyeopen)
-    }
+    val icon =
+        if (!passwordVisibility) { //Variable para indicar que icono se muestra para cada estado de passwordVisibility.
+            painterResource(id = R.drawable.passwordeye)
+        } else {
+            painterResource(id = R.drawable.passwordeyeopen)
+        }
     TextField(
         value = data,
         onValueChange = onvaluechange,
@@ -232,3 +246,50 @@ fun MyPasswordField(
     )
 }
 
+@Composable
+fun InfoCard(
+    text: String,
+    number: String,
+    containercolor: Color,
+    contentcolor: Color,
+    contenttype: String,
+) {
+    ElevatedCard(
+        elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
+        modifier = Modifier
+            .fillMaxHeight()
+            .width(160.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = containercolor,
+            contentColor = contentcolor
+        )
+
+    ) {
+        Column {
+            if (contenttype == "number") {
+                Text(
+                    text = text, modifier = Modifier
+                        .align(Alignment.CenterHorizontally)
+                        .padding(16.dp)
+                )
+                Text(
+                    text = number, modifier = Modifier
+                        .align(Alignment.Start)
+                        .padding(8.dp)
+                        .padding(start = 10.dp), fontSize = 30.sp
+                )
+            } else if (contenttype == "text") {
+                Text(
+                    text = text, modifier = Modifier
+                        .align(Alignment.CenterHorizontally)
+                        .padding(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 8.dp)
+                )
+                Text(
+                    text = number, modifier = Modifier
+                        .align(Alignment.Start)
+                        .padding(start = 16.dp), fontSize = 30.sp
+                )
+            }
+        }
+    }
+}

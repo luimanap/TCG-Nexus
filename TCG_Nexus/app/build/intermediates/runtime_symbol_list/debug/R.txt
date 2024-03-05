@@ -144,6 +144,7 @@ int drawable ic_launcher_background 0x7f040023
 int drawable ic_launcher_foreground 0x7f040024
 int drawable logotcgnexus 0x7f040025
 int drawable logout 0x7f040026
+int drawable materialsymbolsfilteralt 0x7f040039
 int drawable notification_action_background 0x7f040027
 int drawable notification_bg 0x7f040028
 int drawable notification_bg_low 0x7f040029
@@ -230,6 +231,7 @@ int id fill 0x7f050040
 int id fill_horizontal 0x7f050041
 int id fill_vertical 0x7f050042
 int id forever 0x7f050043
+int id glide_custom_view_target_tag 0x7f050076
 int id hide_ime_id 0x7f050044
 int id hide_in_inspector_tag 0x7f050045
 int id icon 0x7f050046

@@ -189,7 +189,6 @@ fun LifePanel(
                                     textAlign = TextAlign.Center
                                 )
                             )
-
                         }
                         Box(
                             modifier = Modifier
@@ -200,7 +199,7 @@ fun LifePanel(
                                     lives.p1life.value += 1
                                 })
                     }
-
+                    //Jugador 2
                     2 -> Column(modifier = Modifier.fillMaxSize()) {
                         Box(
                             modifier = Modifier
@@ -246,8 +245,8 @@ fun LifePanel(
                                     lives.p2life.value -= 1
                                 })
                     }
-
-                    3 -> Row {
+                    //Jugador 3
+                    3 -> Row(verticalAlignment = Alignment.CenterVertically) {
                         Box(
                             modifier = Modifier
                                 .fillMaxHeight()
@@ -256,25 +255,28 @@ fun LifePanel(
                                 .clickable {
                                     lives.p3life.value += 1
                                 })
-                        Column {
+                        Column(
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.Center
+                        ) {
                             Text(
                                 text = "P$player",
                                 modifier = Modifier
                                     .rotate(rotate),
                                 style = TextStyle(
-                                    fontSize = 30.sp,
-                                    textAlign = TextAlign.Center
+                                    fontSize = 30.sp
                                 )
                             )
                             Text(
                                 text = lives.p3life.value.toString(),
                                 modifier = Modifier
-                                    .rotate(rotate),
+                                    .rotate(rotate)
+                                    .padding(top = 90.dp),
                                 style = TextStyle(
-                                    fontSize = 90.sp,
-                                    textAlign = TextAlign.Center
+                                    fontSize = 90.sp
                                 )
                             )
+                            Spacer(modifier = Modifier.fillMaxHeight(0.6f))
                         }
                         Box(
                             modifier = Modifier
@@ -287,9 +289,10 @@ fun LifePanel(
                     }
                 }
             }
-            //4 players layout
+            //Layout para 4 jugadores
             4 -> {
                 Column {
+                    //Sumamos vida para los jugadores 2 y 4 y restamos para los jugadores 1 y 3
                     Box(modifier = Modifier
                         .fillMaxHeight(0.4f)
                         .fillMaxWidth()
@@ -307,10 +310,10 @@ fun LifePanel(
                         modifier = Modifier.fillMaxHeight(0.4f)
                     ) {
                         when (player) {
-                            //Player 1 and 3 in 4 Players
+                            //Jugadores 1 y 3
                             1, 3 -> {
                                 Spacer(modifier = Modifier.fillMaxWidth(0.2f))
-                                //Life
+                                //Vida
                                 Text(
                                     text = if (player == 1) {
                                         lives.p1life.value.toString()
@@ -324,7 +327,7 @@ fun LifePanel(
                                         textAlign = TextAlign.Center
                                     )
                                 )
-                                //Player id (P1,P2...)
+                                //Numero de jugador
                                 Text(
                                     text = "P$player",
                                     modifier = Modifier
@@ -335,10 +338,10 @@ fun LifePanel(
                                     )
                                 )
                             }
-                            //Players 2 and 4 in 4 Players
+                            //Jugadores 2 y 4
                             2, 4 -> {
                                 Spacer(modifier = Modifier.fillMaxWidth(0.1f))
-                                //Life//Player id (P1,P2...)
+                                //Numero de jugador
                                 Text(
                                     text = "P$player",
                                     modifier = Modifier
@@ -348,7 +351,7 @@ fun LifePanel(
                                         textAlign = TextAlign.Center
                                     )
                                 )
-                                //Life
+                                //Vida
                                 Text(
                                     text = if (player == 2) {
                                         lives.p2life.value.toString()
@@ -365,6 +368,7 @@ fun LifePanel(
                             }
                         }
                     }
+                    //Sumamos vida para los jugadores 1 y 3 y restamos para los jugadores 2 y 4
                     Box(modifier = Modifier
                         .fillMaxHeight()
                         .fillMaxWidth()
@@ -379,6 +383,7 @@ fun LifePanel(
                         })
                 }
             }
+            //Jugadores 5 y 6. Futuro añadido para partidas de mas jugadores
             //5 ->
             //6 ->
         }

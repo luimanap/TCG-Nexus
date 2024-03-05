@@ -19,23 +19,23 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -50,19 +50,24 @@ import com.pixelperfectsoft.tcg_nexus.model.User
 import com.pixelperfectsoft.tcg_nexus.model.UserDataViewModel
 import com.pixelperfectsoft.tcg_nexus.navigation.MyScreenRoutes
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
 import coil.compose.AsyncImage
-import com.pixelperfectsoft.tcg_nexus.cards.CardItem
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.firestore
+import com.pixelperfectsoft.tcg_nexus.MyButton
+import com.pixelperfectsoft.tcg_nexus.model.StorageConfig
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
+import kotlinx.coroutines.tasks.await
 
 @Composable
 fun Profile(
     navController: NavHostController,
-    dataViewModel: UserDataViewModel = viewModel()
-) {
-    val currentuser = dataViewModel.data.value
+    dataViewModel: UserDataViewModel = viewModel(),
+
+    ) {
+    val currentuser = dataViewModel.user.value
     val backcolors = listOf(
         Color.Transparent,
-        Color.White,
         Color.White,
         Color.White,
         Color.White,
@@ -76,19 +81,37 @@ fun Profile(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         LogOutButton(navController)
-        AvatarImage(currentuser)
+        AvatarImage(currentuser = currentuser, navController = navController)
         UserInfo(currentuser)
+        EditProfile(currentuser)
     }
 }
 
 @Composable
-fun AvatarImage(currentuser: User) {
+fun EditProfile(currentuser: User) {
+    var show by rememberSaveable {
+        mutableStateOf(false)
+    }
+    Spacer(modifier = Modifier.fillMaxHeight(0.2f))
+    MyButton(
+        text = "Edit profile",
+        onclick = { show = true },
+        containercolor = MaterialTheme.colorScheme.primary,
+        bordercolor = MaterialTheme.colorScheme.primary,
+        textcolor = Color.White
+    )
+
+}
+
+@Composable
+fun AvatarImage(navController: NavController, currentuser: User, avatarImagesViewModel: StorageConfig = viewModel()) {
     val show = remember { mutableStateOf(false) }
+    Spacer(modifier = Modifier.fillMaxHeight(0.1f))
     Box(
         modifier = Modifier
             .clip(CircleShape)
             .background(Color.Transparent)
-            .size(160.dp)
+            .size(200.dp)
             .clickable {
                 show.value = true
             },
@@ -102,7 +125,7 @@ fun AvatarImage(currentuser: User) {
     }
     if (show.value) {
         Dialog(onDismissRequest = { show.value = false }) {
-            val avatarImages = mutableListOf<String>()
+            val avatarImages = avatarImagesViewModel.images.value
             Surface(
                 modifier = Modifier
                     .fillMaxHeight(0.5f)
@@ -111,16 +134,45 @@ fun AvatarImage(currentuser: User) {
                 color = Color.White
             ) {
                 LazyVerticalGrid(
-                    horizontalArrangement = Arrangement.Center,
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(16.dp),
+                    //horizontalArrangement = Arrangement.Center,
                     columns = GridCells.Fixed(4),
                     content = {
-                        items(avatarImages) {
-
+                        items(avatarImages) { image ->
+                            AsyncImage(
+                                model = image,
+                                contentDescription = "",
+                                contentScale = ContentScale.FillWidth,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable {
+                                        Log.d("avatar", "New profile -> $image")
+                                        changeAvatar(image, currentuser)
+                                        show.value = false
+                                        navController.navigate(MyScreenRoutes.LOGIN)
+                                    })
                         }
                     })
             }
         }
     }
+}
+
+fun changeAvatar(image: String, currentUser: User) {
+    Log.d("avatar_update", "Updating ${currentUser.user_id}")
+    FirebaseFirestore.getInstance().collection("users").whereEqualTo("user_id", currentUser.user_id).get()
+        .addOnSuccessListener {
+            for (doc in it.documents) {
+                FirebaseFirestore.getInstance().collection("users").document(doc.id)
+                    .update("avatar_url", image).addOnSuccessListener {
+                        Log.d("avatar_update", "Avatar successfully updated!")
+                    }.addOnFailureListener { e ->
+                        Log.d("avatar_update", "Error updating avatar $e")
+                    }
+            }
+        }
 }
 
 @Composable
@@ -151,7 +203,7 @@ fun LogOutButton(navController: NavHostController) {
 
 @Composable
 fun UserInfo(user: User) {
-    Spacer(modifier = Modifier.fillMaxHeight(0.01f))
+    Spacer(modifier = Modifier.fillMaxHeight(0.1f))
     Text(
         //text = "Username",
         text = user.display_name,
@@ -160,26 +212,4 @@ fun UserInfo(user: User) {
             fontWeight = FontWeight.SemiBold
         )
     )
-    Spacer(modifier = Modifier.fillMaxHeight(0.2f))
-    Row(modifier = Modifier
-        .fillMaxWidth()
-        .fillMaxHeight()) {
-        Spacer(modifier = Modifier.fillMaxWidth(0.1f))
-        Card(modifier = Modifier.fillMaxSize(0.4f)) {
-            Text(text = "Cards", style = TextStyle(fontSize = 30.sp))
-            Text(text = user.cards.toString(), style = TextStyle(fontSize = 30.sp))
-        }
-        Spacer(modifier = Modifier.fillMaxWidth(0.1f))
-        Card(
-            modifier = Modifier
-                .fillMaxWidth(0.8f)
-                .fillMaxHeight(0.4f)
-        ) {
-            Text(text = "Decks", style = TextStyle(fontSize = 30.sp))
-            Text(text = user.decks.toString(), style = TextStyle(fontSize = 30.sp))
-        }
-        Spacer(modifier = Modifier.fillMaxWidth())
-    }
-
-
 }

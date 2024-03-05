@@ -145,6 +145,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable logotcgnexus
 drawable logout
+drawable materialsymbolsfilteralt
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -231,6 +232,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id forever
+id glide_custom_view_target_tag
 id hide_ime_id
 id hide_in_inspector_tag
 id icon

@@ -30,6 +30,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
+import com.pixelperfectsoft.tcg_nexus.InfoCard
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 import kotlinx.coroutines.launch
 
@@ -86,6 +87,7 @@ fun Decks(navController: NavController) {
         AddButton()
     }
 }
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

@@ -36,6 +36,7 @@ class LoginScreenViewModel : ViewModel() {
         password: String,
         profile: () -> Unit
     ) {
+        var usercol = CollectionViewModel()
         if (_loading.value == false) {
             _loading.value = true
             auth.createUserWithEmailAndPassword(email.trim(), password.trim())
@@ -43,6 +44,7 @@ class LoginScreenViewModel : ViewModel() {
                     if (task.isSuccessful) {
                         Log.d("createuser", "createUser: User created successfully")
                         createUser(displayname, email)
+                        usercol.createCollection()
                         profile()
                     } else {
                         Log.d("createuser", "createuser : ${task.result}")
@@ -63,10 +65,7 @@ class LoginScreenViewModel : ViewModel() {
             avatar_url = "",
             display_name = displayname.toString(),
             email = email,
-            user_id = userId.toString(),
-            id = null,
-            cards = 0,
-            decks = 0,
+            user_id = userId.toString()
         ).toMap()
 
         FirebaseFirestore.getInstance().collection("users").add(user).addOnSuccessListener {
@@ -74,5 +73,6 @@ class LoginScreenViewModel : ViewModel() {
         }.addOnFailureListener {
             Log.d("users", "createUser: Unspected error creating user $it")
         }
+
     }
 }

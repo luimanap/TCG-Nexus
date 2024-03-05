@@ -1,6 +1,7 @@
 package com.pixelperfectsoft.tcg_nexus.cards
 
 import android.util.Log
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -16,10 +17,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
 import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.ModalBottomSheetDefaults
+import androidx.compose.material3.ModalBottomSheetProperties
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -31,6 +36,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.modifier.modifierLocalConsumer
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -59,6 +67,7 @@ fun FilterButton() {
 
 @Composable
 fun FilterDialog(show: MutableState<Boolean>) {
+    val context = LocalContext.current
     if (show.value) {
         Dialog(onDismissRequest = { show.value = false }) {
 
@@ -69,10 +78,12 @@ fun FilterDialog(show: MutableState<Boolean>) {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CardDialog(show: MutableState<Boolean>, card: Card) {
-    val sheetState = rememberModalBottomSheetState()
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val scope = rememberCoroutineScope()
+    val uriHandler = LocalUriHandler.current
     if (show.value) {
         ModalBottomSheet(
+
             onDismissRequest = {
                 scope.launch { sheetState.hide() }
                 show.value = false
@@ -84,30 +95,43 @@ fun CardDialog(show: MutableState<Boolean>, card: Card) {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Text(text = card.name.toString(), fontWeight = FontWeight.Bold)
-                    Spacer(modifier = Modifier.height(8.dp))
-                    HorizontalDivider(thickness = 1.5.dp)
-                    Spacer(modifier = Modifier.height(16.dp))
+                    HorizontalDivider(
+                        thickness = 1.5.dp,
+                        modifier = Modifier.padding(top = 8.dp, bottom = 16.dp)
+                    )
                     CardImage(
                         card = card, modifier = Modifier
                             .fillMaxHeight(0.4f)
                             .fillMaxWidth()
                     )
+                    HorizontalDivider(
+                        thickness = 1.5.dp,
+                        modifier = Modifier.padding(top = 16.dp, bottom = 16.dp)
+                    )
 
-                    Spacer(modifier = Modifier.height(32.dp))
-                    Row {
-                        Text(text = card.type_line.toString().replace("�", "-"))
-                        Spacer(modifier = Modifier.fillMaxWidth(0.7f))
-                        Text(
-                            text = card.rarity.toString().uppercase(Locale.ROOT),
-                            textAlign = TextAlign.End
-                        )
+                    Row(modifier = Modifier.fillMaxWidth()) {
+
+                        //Spacer(modifier = Modifier.fillMaxWidth(0.7f))
+
                     }
+                    Text(text = "─ ${card.type_line.toString().replace("�", "-")} ─")
+                    Spacer(modifier = Modifier.fillMaxHeight(0.05f))
+                    Text(
+                        text = "─ ${card.rarity.toString().uppercase(Locale.ROOT)} ─",
+                        textAlign = TextAlign.End
+                    )
                     Spacer(modifier = Modifier.height(8.dp))
                     Text(
                         text = card.oracle_text.toString().replace("�", "-"),
                         textAlign = TextAlign.Justify
                     )
+                    HorizontalDivider(
+                        thickness = 1.5.dp,
+                        modifier = Modifier.padding(top = 8.dp, bottom = 8.dp)
+                    )
+                    Text(text = "Estimated prices: ")
                     Spacer(modifier = Modifier.height(8.dp))
+
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.Center
@@ -148,6 +172,26 @@ fun CardDialog(show: MutableState<Boolean>, card: Card) {
                         } else {
                             Text(text = "Foil -> ??? USD")
                         }
+                    }
+                    HorizontalDivider(
+                        thickness = 1.5.dp,
+                        modifier = Modifier.padding(top = 8.dp, bottom = 8.dp)
+                    )
+                    Column {
+                        MyButton(
+                            text = "Add to collection",
+                            onclick = { /*TODO*/ },
+                            containercolor = MaterialTheme.colorScheme.primary,
+                            bordercolor = MaterialTheme.colorScheme.primary,
+                            textcolor = Color.White
+                        )
+                        MyButton(
+                            text = "View in Cardmarket",
+                            onclick = { uriHandler.openUri(card.purchase_uris_cardmarket.toString()) },
+                            containercolor = MaterialTheme.colorScheme.primary,
+                            bordercolor = MaterialTheme.colorScheme.primary,
+                            textcolor = Color.White
+                        )
                     }
                 }
             }

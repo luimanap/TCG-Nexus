@@ -7,13 +7,18 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.database.database
 
 class CardViewModel : ViewModel(){
     val response : MutableState<DataState> = mutableStateOf(DataState.Empty)
-    init{
-        retrieveData()
+    var loaded = false
+
+    init {
+        if (!loaded){
+            retrieveData()
+            loaded = true
+        }
     }
+
 
     private fun retrieveData() {
         val db = FirebaseDatabase.getInstance() //Obtenemos la instancia de la BDD
@@ -21,6 +26,7 @@ class CardViewModel : ViewModel(){
         db.getReference("cards").keepSynced(true) //Obtenemos la referencia "cards" y le decimos que guarde los datos que recibe la consulta en la caché
         response.value = DataState.Loading //Cambiamos el valor del estado a Loading
         db.getReference("cards")
+
             .limitToFirst(100)//Limitamos la consulta a las primeras 9999 cartas
             .addListenerForSingleValueEvent(object : ValueEventListener{ //Nos creamos un listener para cada valor individual
             override fun onDataChange(snapshot: DataSnapshot) {

@@ -27,6 +27,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.pixelperfectsoft.tcg_nexus.R
 import com.pixelperfectsoft.tcg_nexus.auth.LoginScreen
 import com.pixelperfectsoft.tcg_nexus.auth.RegisterScreen
+import com.pixelperfectsoft.tcg_nexus.cards.AllCards
 import com.pixelperfectsoft.tcg_nexus.cards.Collection
 import com.pixelperfectsoft.tcg_nexus.cards.Decks
 import com.pixelperfectsoft.tcg_nexus.home.HomeScreen
@@ -164,7 +165,7 @@ fun BottomBarNaviContainer(
                     HomeScreen(navController = navController)
                 }
                 composable(MyScreenRoutes.SEARCH) {
-                    HomeScreen(navController = navController)
+                    AllCards(navController = navController)
                 }
                 composable(MyScreenRoutes.COLLECTION) {
                     Collection(navController = navController)
