@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.pixelperfectsoft.tcg_nexus.app-mergeDebugResources-58:/values-ta/values-ta.xml",
+            "outputFile": "com.pixelperfectsoft.tcg_nexus.app-mergeDebugResources-59:/values-ta/values-ta.xml",
             "map": [
                 {
                     "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\e46492df797ba14a603873ec1822351b\\transformed\\foundation-release\\res\\values-ta\\values-ta.xml",

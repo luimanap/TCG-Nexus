@@ -257,7 +257,7 @@ fun InfoCard(
     ElevatedCard(
         elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
         modifier = Modifier
-            .fillMaxHeight()
+            .fillMaxWidth(0.9f)
             .width(160.dp),
         colors = CardDefaults.cardColors(
             containerColor = containercolor,

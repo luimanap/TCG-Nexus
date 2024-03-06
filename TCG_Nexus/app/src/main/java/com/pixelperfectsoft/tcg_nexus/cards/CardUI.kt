@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -209,30 +210,35 @@ fun CardItem(
     Box(modifier = Modifier
         .background(Color.Transparent)
         .clickable { currentSelectedItem.value = card; show.value = true }) {
-        Column {
-            Box(
-                modifier = Modifier
-                    .fillMaxHeight()
-                    .padding(16.dp)
-                    .background(Color.Green)
-            ) {
+        Column(
+            modifier = Modifier
+                .fillMaxHeight()
+                .padding(8.dp)
+                //.background(Color.Green)
+            , horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Box {
                 AsyncImage(
-                    model = card.image_uris_normal.toString().replace("normal", "large"),
-                    contentDescription = card.name.toString()
+                    model = card.image_uris_normal.toString().replace("normal", "small"),
+                    contentDescription = card.name.toString(),
+                    modifier = Modifier.fillMaxSize(),
+                    contentScale = ContentScale.Crop
                 )
             }
+            Text(
+                text = card.name.toString(),
+                fontWeight = FontWeight.Medium,
+                fontSize = 12.sp
+            )
 
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 25.dp),
+                    //.padding(horizontal = 25.dp)
+                ,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(
-                    text = card.name.toString(),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 20.sp
-                )
+
                 //Spacer(modifier = Modifier.height(30.dp))
                 /*Text(
                     text = card.type_line.toString(),
@@ -250,7 +256,7 @@ fun CardItem(
 @Composable
 fun CardImage(card: Card, modifier: Modifier) {
     Image(
-        painter = rememberAsyncImagePainter(model = card.image_uris_normal),
+        painter = rememberAsyncImagePainter(model = card.image_uris_normal.toString().replace("normal","large")),
         contentDescription = card.name.toString(),
         modifier = modifier,
         contentScale = ContentScale.Fit

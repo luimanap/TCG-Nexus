@@ -1,8 +1,7 @@
 package com.pixelperfectsoft.tcg_nexus.model
 
+
 import android.content.Context
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.ViewModel
@@ -15,7 +14,7 @@ import com.google.firebase.storage.storage
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 
-class StorageConfig(private val context: Context) : ViewModel(){
+class StorageConfig: ViewModel() {
     var images = mutableStateOf(listOf<String>())
     private val storage = Firebase.storage
     private val storageRef = storage.reference
@@ -24,24 +23,22 @@ class StorageConfig(private val context: Context) : ViewModel(){
         get_images()
     }
 
-    private fun get_images(){
-        viewModelScope.launch{
-
+    private fun get_images() {
+        viewModelScope.launch {
             images.value = getAvatarImages()
         }
     }
 
-    fun getStorageRef(): StorageReference{
+    fun getStorageRef(): StorageReference {
         return storageRef.child("profile_pics")
     }
 
-    suspend fun getAvatarImages():List<String>{
-
+    suspend fun getAvatarImages(): List<String> {
         val imageUrls = mutableListOf<String>()
         val listResult: ListResult = getStorageRef().listAll().await()
-        for (i in listResult.items){
+        for (i in listResult.items) {
             val url = i.downloadUrl.await().toString()
-            Glide.with(context).load(url).preload()
+            //Glide.with(this.context).load(url).preload()
             imageUrls.add(url)
         }
         return imageUrls

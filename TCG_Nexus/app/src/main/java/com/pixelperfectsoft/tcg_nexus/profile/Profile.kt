@@ -104,7 +104,11 @@ fun EditProfile(currentuser: User) {
 }
 
 @Composable
-fun AvatarImage(navController: NavController, currentuser: User, avatarImagesViewModel: StorageConfig = viewModel()) {
+fun AvatarImage(
+    navController: NavController,
+    currentuser: User,
+    avatarImagesViewModel: StorageConfig = viewModel()
+) {
     val show = remember { mutableStateOf(false) }
     Spacer(modifier = Modifier.fillMaxHeight(0.1f))
     Box(
@@ -148,6 +152,15 @@ fun AvatarImage(navController: NavController, currentuser: User, avatarImagesVie
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .clickable {
+                                        /*
+                                        * Al hacer clic en la imagen que deseamos:
+                                        * 1. Mostramos por consola la ruta de la imagen para facilitar
+                                        *    la depuracion
+                                        * 2. Cambiamos la imagen en Firebase
+                                        * 3. Cerramos el dialogo
+                                        * 4. Navegamos a la pantalla de login, que comprueba si
+                                        *    estamos logueados, lo que recarga la pagina en su defecto
+                                        */
                                         Log.d("avatar", "New profile -> $image")
                                         changeAvatar(image, currentuser)
                                         show.value = false
@@ -161,12 +174,27 @@ fun AvatarImage(navController: NavController, currentuser: User, avatarImagesVie
 }
 
 fun changeAvatar(image: String, currentUser: User) {
+    /*
+     * Cambiando el avatar del usuario:
+     * 1. Mostramos el usuario que se tiene que actualizar en Firebase por consola
+     * 2. Obtenemos los documentos de la coleccion "users" que tengan el mismo "user_id"
+     *    que el usuario actualmente logueado
+     * 3. Por cada uno que encuentra obtenemos el documento y actualizamos el campo "avatar_id"
+     *    por la ruta de la imagen que pasamos como parametro al metodo
+     * 4. Mostramos los logs de actualizado correctamente o error si hubiese alguno
+     */
     Log.d("avatar_update", "Updating ${currentUser.user_id}")
-    FirebaseFirestore.getInstance().collection("users").whereEqualTo("user_id", currentUser.user_id).get()
+    FirebaseFirestore.getInstance()
+        .collection("users")
+        .whereEqualTo("user_id", currentUser.user_id)
+        .get()
         .addOnSuccessListener {
             for (doc in it.documents) {
-                FirebaseFirestore.getInstance().collection("users").document(doc.id)
-                    .update("avatar_url", image).addOnSuccessListener {
+                FirebaseFirestore.getInstance()
+                    .collection("users")
+                    .document(doc.id)
+                    .update("avatar_url", image)
+                    .addOnSuccessListener {
                         Log.d("avatar_update", "Avatar successfully updated!")
                     }.addOnFailureListener { e ->
                         Log.d("avatar_update", "Error updating avatar $e")
@@ -186,10 +214,13 @@ fun LogOutButton(navController: NavHostController) {
             .size(25.dp)
             .clip(CircleShape)
             .background(Color.White), onClick = {
+            /*
+             * Cerrando sesion:
+             * 1. Navegamos a la pantalla de login
+             * 2. Cerramos la sesion actual en Firebase
+             */
             navController.navigate(MyScreenRoutes.LOGIN)
-            FirebaseAuth
-                .getInstance()
-                .signOut()
+            FirebaseAuth.getInstance().signOut()
         }) {
             Icon(
                 painter = painterResource(id = R.drawable.logout),
@@ -205,7 +236,6 @@ fun LogOutButton(navController: NavHostController) {
 fun UserInfo(user: User) {
     Spacer(modifier = Modifier.fillMaxHeight(0.1f))
     Text(
-        //text = "Username",
         text = user.display_name,
         style = TextStyle(
             fontSize = 20.sp,

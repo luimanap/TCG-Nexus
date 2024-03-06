@@ -6,15 +6,20 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.pixelperfectsoft.tcg_nexus.BackgroundImage
@@ -33,7 +38,7 @@ fun AllCards(navController: NavController, viewModel: CardViewModel = viewModel(
     )
     val totalcards = rememberSaveable { mutableIntStateOf(0) }
     val estimatedCost = rememberSaveable { mutableFloatStateOf(0f) }
-    val estimatedcostString by rememberSaveable { mutableStateOf("${estimatedCost.floatValue} €") }
+    //val estimatedcostString by rememberSaveable { mutableStateOf("${estimatedCost.floatValue} €") }
     BackgroundImage()
     Column(
         Modifier
@@ -41,11 +46,20 @@ fun AllCards(navController: NavController, viewModel: CardViewModel = viewModel(
             .fillMaxHeight(0.33f)
             .background(brush = createGradientBrush(backcolors))
     ) {
-        Spacer(modifier = Modifier.fillMaxHeight(0.05f))
+        //Spacer(modifier = Modifier.fillMaxHeight(0.05f))
 
         //Collection info
-        Row(modifier = Modifier.fillMaxHeight(0.15f)) {
-            Spacer(modifier = Modifier.fillMaxWidth(0.05f))
+
+        Column(modifier = Modifier.padding(horizontal = 16.dp),horizontalAlignment = Alignment.CenterHorizontally) {
+            Spacer(modifier = Modifier.fillMaxHeight(0.05f))
+            InfoCard(
+                text = "BUSCAR CARTAS",
+                number = "",
+                containercolor = Color.White,
+                contentcolor = Color.Black,
+                contenttype = "number"
+            )
+            Spacer(modifier = Modifier.fillMaxHeight(0.025f))
             InfoCard(
                 text = "Cartas en posesión",
                 number = totalcards.intValue.toString(),
@@ -53,14 +67,7 @@ fun AllCards(navController: NavController, viewModel: CardViewModel = viewModel(
                 contentcolor = Color.White,
                 contenttype = "number"
             )
-            Spacer(modifier = Modifier.fillMaxWidth(0.1f))
-            InfoCard(
-                text = "Valor estimado",
-                number = estimatedcostString,
-                containercolor = Color.White,
-                contentcolor = Color.Black,
-                contenttype = "number"
-            )
+
         }
         Spacer(modifier = Modifier.fillMaxHeight(0.05f))
 
@@ -68,7 +75,7 @@ fun AllCards(navController: NavController, viewModel: CardViewModel = viewModel(
         //FilterButton()
 
         //Lista de cartas
-        SetData(viewModel = viewModel, totalcards)
+        SetData(viewModel = viewModel, totalcards, estimatedCost)
 
 
     }

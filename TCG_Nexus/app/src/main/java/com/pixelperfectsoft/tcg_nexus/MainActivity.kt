@@ -34,6 +34,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             TCGNexus_Theme(darkTheme = false) {
+                val context = LocalContext.current
                 val activity = LocalContext.current as Activity
                 activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
@@ -43,7 +44,7 @@ class MainActivity : ComponentActivity() {
                 val selectedDestination = navBackStackEntry?.destination?.route
                     ?: MyScreenRoutes.HOME //Destino inicial de navegación
 
-                val storageConfig = StorageConfig(activity)
+                //val storageConfig = StorageConfig(context)
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background

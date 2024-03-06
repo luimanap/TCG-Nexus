@@ -79,7 +79,7 @@ dependencies {
     implementation("com.google.firebase:firebase-appcheck")
 
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
-    implementation("androidx.navigation:navigation-compose:2.7.6")
+    implementation("androidx.navigation:navigation-compose:2.7.7")
     implementation("io.coil-kt:coil-compose:2.5.0")
     implementation ("com.github.bumptech.glide:glide:4.12.0")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
