@@ -38,7 +38,6 @@ fun AllCards(navController: NavController, viewModel: CardViewModel = viewModel(
     )
     val totalcards = rememberSaveable { mutableIntStateOf(0) }
     val estimatedCost = rememberSaveable { mutableFloatStateOf(0f) }
-    //val estimatedcostString by rememberSaveable { mutableStateOf("${estimatedCost.floatValue} €") }
     BackgroundImage()
     Column(
         Modifier
@@ -48,8 +47,7 @@ fun AllCards(navController: NavController, viewModel: CardViewModel = viewModel(
     ) {
         //Spacer(modifier = Modifier.fillMaxHeight(0.05f))
 
-        //Collection info
-
+        //Informacion
         Column(modifier = Modifier.padding(horizontal = 16.dp),horizontalAlignment = Alignment.CenterHorizontally) {
             Spacer(modifier = Modifier.fillMaxHeight(0.05f))
             InfoCard(

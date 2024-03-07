@@ -9,6 +9,8 @@ color teal_700
 color white
 drawable albums
 drawable blacklotus
+drawable card_back
+drawable card_back_unavailable
 drawable cards
 drawable dice_icon
 drawable dragon_background

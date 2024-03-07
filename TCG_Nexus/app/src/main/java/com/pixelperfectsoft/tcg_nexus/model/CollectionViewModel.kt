@@ -42,6 +42,5 @@ class CollectionViewModel : ViewModel(){
                 Log.w("collection", "createCol: Unspected error creating collection $it")
             }
         }
-
     }
 }

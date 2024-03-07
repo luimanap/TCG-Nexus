@@ -40,6 +40,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -49,6 +50,7 @@ import androidx.compose.ui.window.Dialog
 import coil.compose.AsyncImage
 import coil.compose.rememberAsyncImagePainter
 import com.pixelperfectsoft.tcg_nexus.MyButton
+import com.pixelperfectsoft.tcg_nexus.R
 import com.pixelperfectsoft.tcg_nexus.model.Card
 import kotlinx.coroutines.launch
 import java.util.Locale
@@ -118,7 +120,7 @@ fun CardDialog(show: MutableState<Boolean>, card: Card) {
                     Text(text = "─ ${card.type_line.toString().replace("�", "-")} ─")
                     Spacer(modifier = Modifier.fillMaxHeight(0.05f))
                     Text(
-                        text = "─ ${card.rarity.toString().uppercase(Locale.ROOT)} ─",
+                        text = "Rareza : ${card.rarity.toString().uppercase()} ",
                         textAlign = TextAlign.End
                     )
                     Spacer(modifier = Modifier.height(8.dp))
@@ -130,7 +132,7 @@ fun CardDialog(show: MutableState<Boolean>, card: Card) {
                         thickness = 1.5.dp,
                         modifier = Modifier.padding(top = 8.dp, bottom = 8.dp)
                     )
-                    Text(text = "Estimated prices: ")
+                    Text(text = "Precios de compra estimados: ")
                     Spacer(modifier = Modifier.height(8.dp))
 
                     Row(
@@ -180,14 +182,14 @@ fun CardDialog(show: MutableState<Boolean>, card: Card) {
                     )
                     Column {
                         MyButton(
-                            text = "Add to collection",
+                            text = "Añadir a la colección",
                             onclick = { /*TODO*/ },
                             containercolor = MaterialTheme.colorScheme.primary,
                             bordercolor = MaterialTheme.colorScheme.primary,
                             textcolor = Color.White
                         )
                         MyButton(
-                            text = "View in Cardmarket",
+                            text = "Comprar en Cardmarket",
                             onclick = { uriHandler.openUri(card.purchase_uris_cardmarket.toString()) },
                             containercolor = MaterialTheme.colorScheme.primary,
                             bordercolor = MaterialTheme.colorScheme.primary,
@@ -218,12 +220,22 @@ fun CardItem(
             , horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Box {
-                AsyncImage(
-                    model = card.image_uris_normal.toString().replace("normal", "small"),
-                    contentDescription = card.name.toString(),
-                    modifier = Modifier.fillMaxSize(),
-                    contentScale = ContentScale.Crop
-                )
+                if(card.image_uris_normal.toString()!=""){
+                    AsyncImage(
+                        model = card.image_uris_normal.toString().replace("normal", "small"),
+                        contentDescription = card.name.toString(),
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.Crop
+                    )
+                }
+                else{
+                    AsyncImage(
+                        model = R.drawable.card_back_unavailable,
+                        contentDescription = card.name.toString(),
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.Crop
+                    )
+                }
             }
             Text(
                 text = card.name.toString(),
