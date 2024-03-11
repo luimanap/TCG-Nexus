@@ -52,6 +52,7 @@ import coil.compose.rememberAsyncImagePainter
 import com.pixelperfectsoft.tcg_nexus.MyButton
 import com.pixelperfectsoft.tcg_nexus.R
 import com.pixelperfectsoft.tcg_nexus.model.Card
+import com.pixelperfectsoft.tcg_nexus.model.CollectionViewModel
 import kotlinx.coroutines.launch
 import java.util.Locale
 
@@ -80,13 +81,16 @@ fun FilterDialog(show: MutableState<Boolean>) {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun CardDialog(show: MutableState<Boolean>, card: Card) {
+fun CardDialog(
+    show: MutableState<Boolean>,
+    card: Card,
+    collectionViewModel: CollectionViewModel = CollectionViewModel()
+) {
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val scope = rememberCoroutineScope()
     val uriHandler = LocalUriHandler.current
     if (show.value) {
         ModalBottomSheet(
-
             onDismissRequest = {
                 scope.launch { sheetState.hide() }
                 show.value = false
@@ -111,12 +115,6 @@ fun CardDialog(show: MutableState<Boolean>, card: Card) {
                         thickness = 1.5.dp,
                         modifier = Modifier.padding(top = 16.dp, bottom = 16.dp)
                     )
-
-                    Row(modifier = Modifier.fillMaxWidth()) {
-
-                        //Spacer(modifier = Modifier.fillMaxWidth(0.7f))
-
-                    }
                     Text(text = "─ ${card.type_line.toString().replace("�", "-")} ─")
                     Spacer(modifier = Modifier.fillMaxHeight(0.05f))
                     Text(
@@ -183,7 +181,18 @@ fun CardDialog(show: MutableState<Boolean>, card: Card) {
                     Column {
                         MyButton(
                             text = "Añadir a la colección",
-                            onclick = { /*TODO*/ },
+                            onclick = {
+                                var collection = collectionViewModel.collection.value.cards
+                                if (card.id.toString() != "") {
+                                    collection.add(card.id.toString())
+                                }
+                                collectionViewModel.updateCollection(collection)
+                                scope.launch { sheetState.hide() }.invokeOnCompletion {
+                                    if (!sheetState.isVisible) {
+                                        show.value = false
+                                    }
+                                }
+                            },
                             containercolor = MaterialTheme.colorScheme.primary,
                             bordercolor = MaterialTheme.colorScheme.primary,
                             textcolor = Color.White
@@ -216,19 +225,18 @@ fun CardItem(
             modifier = Modifier
                 .fillMaxHeight()
                 .padding(8.dp)
-                //.background(Color.Green)
+            //.background(Color.Green)
             , horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Box {
-                if(card.image_uris_normal.toString()!=""){
+                if (card.image_uris_normal.toString() != "") {
                     AsyncImage(
                         model = card.image_uris_normal.toString().replace("normal", "small"),
                         contentDescription = card.name.toString(),
                         modifier = Modifier.fillMaxSize(),
                         contentScale = ContentScale.Crop
                     )
-                }
-                else{
+                } else {
                     AsyncImage(
                         model = R.drawable.card_back_unavailable,
                         contentDescription = card.name.toString(),
@@ -246,7 +254,7 @@ fun CardItem(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    //.padding(horizontal = 25.dp)
+                //.padding(horizontal = 25.dp)
                 ,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
@@ -268,7 +276,9 @@ fun CardItem(
 @Composable
 fun CardImage(card: Card, modifier: Modifier) {
     Image(
-        painter = rememberAsyncImagePainter(model = card.image_uris_normal.toString().replace("normal","large")),
+        painter = rememberAsyncImagePainter(
+            model = card.image_uris_normal.toString().replace("normal", "large")
+        ),
         contentDescription = card.name.toString(),
         modifier = modifier,
         contentScale = ContentScale.Fit

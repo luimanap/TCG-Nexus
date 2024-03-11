@@ -31,11 +31,14 @@ import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.SmallFloatingActionButton
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableFloatState
 import androidx.compose.runtime.MutableIntState
 import androidx.compose.runtime.getValue
@@ -47,8 +50,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
 import com.pixelperfectsoft.tcg_nexus.R
 import com.pixelperfectsoft.tcg_nexus.model.Card
@@ -151,11 +158,10 @@ fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel) {
                     ),
                     trailingIcon = {
                         IconButton(onClick = {
-                            if(searchinput!=""){
-                                Log.d("search","Searching by name -> $searchinput")
+                            if (searchinput != "") {
+                                Log.d("search", "Searching by name -> $searchinput")
                                 viewModel.searchCardsByName(searchinput)
-                            }
-                            else{
+                            } else {
                                 viewModel.resetSearch()
                             }
                             scope.launch { sheetState.hide() }.invokeOnCompletion {
@@ -166,9 +172,7 @@ fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel) {
                         }) {
                             Icon(imageVector = Icons.Filled.Search, contentDescription = "search")
                         }
-
                     }
-
                 )
                 HorizontalDivider(modifier = Modifier.padding(vertical = 16.dp))
                 Text(text = "Ordenar por...")
@@ -201,7 +205,6 @@ fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel) {
                         Text(text = "CMC")
                     }
                     Button(
-
                         modifier = Modifier.padding(horizontal = 4.dp),
                         onClick = {
                             viewModel.orderBy("color")
@@ -224,6 +227,7 @@ fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel) {
                                     filtershow.value = false
                                 }
                             }
+                            
                             Toast.makeText(context, "Ordering by Type...", Toast.LENGTH_SHORT)
                                 .show()
                         }) {
@@ -236,61 +240,84 @@ fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel) {
                     Button(
                         modifier = Modifier.padding(horizontal = 4.dp),
                         onClick = {
+                            viewModel.setLimit(100)
                             scope.launch { sheetState.hide() }.invokeOnCompletion {
                                 if (!sheetState.isVisible) {
                                     filtershow.value = false
                                 }
                             }
-                            Toast.makeText(context, "Mostrando 100 cartas...", Toast.LENGTH_SHORT)
-                                .show()
                         }) {
                         Text(text = "100")
                     }
                     Button(
                         modifier = Modifier.padding(horizontal = 4.dp),
                         onClick = {
+                            viewModel.setLimit(1000)
                             scope.launch { sheetState.hide() }.invokeOnCompletion {
                                 if (!sheetState.isVisible) {
                                     filtershow.value = false
                                 }
                             }
-                            Toast.makeText(context, "Mostrando 1000 cartas...", Toast.LENGTH_SHORT).show()
                         }) {
                         Text(text = "1000")
                     }
                     Button(
                         modifier = Modifier.padding(horizontal = 4.dp),
                         onClick = {
+                            viewModel.setLimit(10000)
                             scope.launch { sheetState.hide() }.invokeOnCompletion {
                                 if (!sheetState.isVisible) {
                                     filtershow.value = false
                                 }
                             }
-                            Toast.makeText(context, "Mostrando 10000 cartas...", Toast.LENGTH_SHORT)
-                                .show()
                         }) {
                         Text(text = "10000")
                     }
                     Button(
                         modifier = Modifier.padding(horizontal = 4.dp),
                         onClick = {
+
+                            viewModel.setLimit(0)
                             scope.launch { sheetState.hide() }.invokeOnCompletion {
                                 if (!sheetState.isVisible) {
                                     filtershow.value = false
                                 }
                             }
-                            Toast.makeText(context, "Mostrando todas las cartas...", Toast.LENGTH_SHORT)
-                                .show()
                         }) {
                         Text(text = "Todas")
                     }
                 }
-
             }
         }
     }
 }
 
+/*@Composable
+fun ShowNotification(align: Alignment = Alignment.BottomCenter, text: String) {
+    val snackbarHostState = remember { SnackbarHostState() }
+    LaunchedEffect(key1 = text) {
+        if (text.isNotEmpty()) {
+            snackbarHostState.showSnackbar(text)
+        }
+    }
+    SnackbarHost(hostState = snackbarHostState) {
+        Box(modifier = Modifier.fillMaxSize()) {
+            Text(
+                modifier = Modifier
+                    .padding(4.dp)
+                    .fillMaxWidth()
+                    .padding(vertical = 30.dp)
+                    .graphicsLayer { shadowElevation = 5f }
+                    .align(align),
+                text = text,
+                color = Color.White,
+                fontSize = 18.sp,
+                textAlign = TextAlign.Center
+            )
+        }
+    }
+
+}*/
 
 
 @Composable
