@@ -133,7 +133,6 @@ fun LoadCollection(
                 }
             }
         }
-
         is DataState.Success -> {
             totalcards.intValue = result.data.size
             /*price@ for (i in result.data){
@@ -159,11 +158,10 @@ fun LoadCollection(
 }
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ShowCollectionLazyList(cards: MutableList<String>, collectionViewModel: CollectionViewModel, cardViewModel: CardViewModel = CardViewModel()) {
-    var cardcollection = mutableListOf<Card>()
+fun ShowCollectionLazyList(cards: MutableList<Card>, collectionViewModel: CollectionViewModel) {
     val sheetState = rememberModalBottomSheetState()
     val scope = rememberCoroutineScope()
-    val currentSelectedItem = remember { mutableStateOf(cardcollection[0]) }
+    val currentSelectedItem = remember { mutableStateOf(cards[0]) }
     val show =
         rememberSaveable { mutableStateOf(false) } //Variable booleana de estado para mostrar u ocultar el dialogo de informacion de cada carta
     val addshow =
@@ -171,14 +169,7 @@ fun ShowCollectionLazyList(cards: MutableList<String>, collectionViewModel: Coll
     val filtershow =
         rememberSaveable { mutableStateOf(false) } //Variable booleana de estado para mostrar u ocultar el dialogo de filtrar u ordenar la lista
 
-    collection@ for (i in cards){
-        cards@ for(j in cardViewModel.tempList){
-            if(i == j.id){
-                cardcollection.add(j)
-                break@cards
-            }
-        }
-    }
+
 
     Box(contentAlignment = Alignment.BottomEnd, modifier = Modifier.fillMaxSize()) {
         LazyVerticalGrid(
@@ -186,7 +177,7 @@ fun ShowCollectionLazyList(cards: MutableList<String>, collectionViewModel: Coll
             horizontalArrangement = Arrangement.Center,
             columns = GridCells.Fixed(3),
             content = {
-                items(cardcollection) {
+                items(cards) {
                     Log.d("Cards", "Loading card ${it.name}")
                     Log.d("card_image", it.image_uris_normal.toString())
                     CardItem(card = it, show = show, currentSelectedItem = currentSelectedItem)

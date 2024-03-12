@@ -183,9 +183,7 @@ fun CardDialog(
                             text = "Añadir a la colección",
                             onclick = {
                                 var collection = collectionViewModel.collection.value.cards
-                                if (card.id.toString() != "") {
-                                    collection.add(card.id.toString())
-                                }
+                                collection.add(card)
                                 collectionViewModel.updateCollection(collection)
                                 scope.launch { sheetState.hide() }.invokeOnCompletion {
                                     if (!sheetState.isVisible) {

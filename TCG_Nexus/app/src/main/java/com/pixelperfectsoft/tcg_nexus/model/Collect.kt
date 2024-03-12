@@ -3,7 +3,7 @@ package com.pixelperfectsoft.tcg_nexus.model
 class Collect (
     var collection_id : String = "",
     var user_id : String = "",
-    var cards: MutableList<String> = mutableListOf<String>()
+    var cards: MutableList<Card> = mutableListOf()
 ){
     fun toMap(): MutableMap<String,Any>{
         return mutableMapOf(
@@ -13,4 +13,3 @@ class Collect (
         )
     }
 }
-
