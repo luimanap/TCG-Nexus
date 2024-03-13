@@ -2,7 +2,6 @@ package com.pixelperfectsoft.tcg_nexus.ui.cards
 
 import android.util.Log
 import android.widget.Toast
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -15,9 +14,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Search
@@ -40,6 +42,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
@@ -49,6 +52,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -63,12 +68,19 @@ import com.pixelperfectsoft.tcg_nexus.model.viewmodel.CollectionViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun FilterButton(filtershow: MutableState<Boolean>) {
+fun FilterButton(
+    screen: String,
+    cardviewmodel: CardViewModel?,
+    colviewmodel: CollectionViewModel?
+) {
+    val sheetState = rememberModalBottomSheetState()
+    val scope = rememberCoroutineScope()
     SmallFloatingActionButton(
         containerColor = MaterialTheme.colorScheme.primary,
         modifier = Modifier.padding(horizontal = 16.dp),
-        onClick = { filtershow.value = true },
+        onClick = {scope.launch { sheetState.show() }},
         shape = CircleShape,
         content = {
             Icon(
@@ -78,30 +90,39 @@ fun FilterButton(filtershow: MutableState<Boolean>) {
         },
         elevation = FloatingActionButtonDefaults.elevation(defaultElevation = 8.dp)
     )
+    if (sheetState.isVisible) {
+        FilterModalSheet(
+            sheetState = sheetState,
+            scope = scope,
+            cardviewmodel = cardviewmodel,
+            colviewmodel = colviewmodel,
+            screen = screen
+        )
+    }
 }
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CardDialog(
-    show: MutableState<Boolean>,
+    sheetState: SheetState,
     card: Card,
     collectionViewModel: CollectionViewModel = CollectionViewModel()
 ) {
-    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-    val scope = rememberCoroutineScope()
-    val uriHandler = LocalUriHandler.current
-    if (show.value) {
+    if (sheetState.isVisible) {
+        val scope = rememberCoroutineScope()
+        val uriHandler = LocalUriHandler.current
         ModalBottomSheet(
             onDismissRequest = {
                 scope.launch { sheetState.hide() }
-                show.value = false
             },
             sheetState = sheetState,
             content = {
                 Column(
-                    Modifier.padding(horizontal = 16.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
+                    Modifier
+                        .padding(horizontal = 16.dp)
+                        .verticalScroll(rememberScrollState()),
+                    horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
                     Text(text = card.name.toString(), fontWeight = FontWeight.Bold)
                     HorizontalDivider(
@@ -119,13 +140,70 @@ fun CardDialog(
                     )
                     Text(text = "─ ${card.type_line.toString().replace("�", "-")} ─")
                     Spacer(modifier = Modifier.fillMaxHeight(0.05f))
+                    if (card.type_line.toString().lowercase().contains("planeswalker")) {
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = 120.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            Text(text = "- Lealtad -")
+                            Box(contentAlignment = Alignment.Center) {
+                                Icon(
+                                    painter = painterResource(id = R.drawable.loyalty),
+                                    contentDescription = "loyalty",
+                                    modifier = Modifier.size(50.dp)
+                                )
+                                Text(
+                                    text = "${card.loyalty}",
+                                    color = Color.White,
+                                    style = TextStyle(fontSize = 20.sp)
+                                )
+                            }
+                        }
+
+
+                    }
+                    if (card.type_line.toString().lowercase().contains("creature")) {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = 120.dp),
+                            horizontalArrangement = Arrangement.Center
+                        ) {
+                            Column(
+                                modifier = Modifier.fillMaxWidth(0.5f),
+                                horizontalAlignment = Alignment.CenterHorizontally
+                            ) {
+                                Icon(
+                                    painter = painterResource(id = R.drawable.sword),
+                                    contentDescription = "power",
+                                    modifier = Modifier.size(24.dp)
+                                )
+                                Text(text = "${card.power}")
+                            }
+                            Column(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalAlignment = Alignment.CenterHorizontally
+                            ) {
+                                Icon(
+                                    painter = painterResource(id = R.drawable.heart),
+                                    contentDescription = "toughness",
+                                    modifier = Modifier.size(24.dp)
+                                )
+                                Text(text = "${card.toughness}")
+                            }
+                        }
+                    }
+                    Spacer(modifier = Modifier.fillMaxHeight(0.05f))
                     Text(
-                        text = "Rareza : ${card.rarity.toString().uppercase()} ",
+                        text = "Rareza : ${card.get_rarity()}",
                         textAlign = TextAlign.End
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                     Text(
-                        text = card.oracle_text.toString().replace("�", "-"),
+                        text = card.oracle_text.toString().replace("�", "-")
+                            .replace("?", "-"),
                         textAlign = TextAlign.Justify
                     )
                     HorizontalDivider(
@@ -140,7 +218,11 @@ fun CardDialog(
                         horizontalArrangement = Arrangement.Center
                     ) {
                         if (card.prices_eur != "") {
-                            Text(text = "${card.prices_eur.toString().toDouble() / 100} EUR")
+                            Text(
+                                text = "${
+                                    card.prices_eur.toString().toDouble() / 100
+                                } EUR"
+                            )
                         } else {
                             Text(text = "??? EUR")
                         }
@@ -160,7 +242,11 @@ fun CardDialog(
                         horizontalArrangement = Arrangement.Center
                     ) {
                         if (card.prices_eur != "") {
-                            Text(text = "${card.prices_usd.toString().toDouble() / 100} USD")
+                            Text(
+                                text = "${
+                                    card.prices_usd.toString().toDouble() / 100
+                                } USD"
+                            )
                         } else {
                             Text(text = "??? USD")
                         }
@@ -187,11 +273,7 @@ fun CardDialog(
                                 var collection = collectionViewModel.collection.value.cards
                                 collection.add(card)
                                 collectionViewModel.updateCollection(collection)
-                                scope.launch { sheetState.hide() }.invokeOnCompletion {
-                                    if (!sheetState.isVisible) {
-                                        show.value = false
-                                    }
-                                }
+                                scope.launch { sheetState.hide() }
                             },
                             containercolor = MaterialTheme.colorScheme.primary,
                             bordercolor = MaterialTheme.colorScheme.primary,
@@ -206,21 +288,26 @@ fun CardDialog(
                         )
                     }
                 }
-            }
-        )
+                //AddModalSheet(sheetState = sheetState, scope = scope)
+            })
     }
 }
 
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CardItem(
     card: Card,
-    show: MutableState<Boolean>,
+    sheetState: SheetState,
     currentSelectedItem: MutableState<Card>,
+    scope: CoroutineScope,
 ) {
     Box(modifier = Modifier
         .background(Color.Transparent)
-        .clickable { currentSelectedItem.value = card; show.value = true }) {
+        .clickable {
+            currentSelectedItem.value = card
+            scope.launch { sheetState.show() }
+        }) {
         Column(
             modifier = Modifier
                 .fillMaxHeight()
@@ -269,27 +356,32 @@ fun CardItem(
             }
         }
     }
-    CardDialog(show = show, card = currentSelectedItem.value)
+    CardDialog(sheetState = sheetState, card = currentSelectedItem.value)
 
 }
 
 @Composable
 fun CardImage(card: Card, modifier: Modifier) {
-    Image(
+    AsyncImage(
+        model = card.image_uris_normal.toString().replace("normal", "large"),
+        contentDescription = card.name.toString(),
+        modifier = modifier,
+        contentScale = ContentScale.Fit
+    )
+    /*Image(
         painter = rememberAsyncImagePainter(
             model = card.image_uris_normal.toString().replace("normal", "large")
         ),
         contentDescription = card.name.toString(),
         modifier = modifier,
         contentScale = ContentScale.Fit
-    )
+    )*/
 }
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FilterModalSheet(
-    filtershow: MutableState<Boolean>,
     sheetState: SheetState,
     scope: CoroutineScope,
     cardviewmodel: CardViewModel?,
@@ -299,248 +391,196 @@ fun FilterModalSheet(
     val context = LocalContext.current
     var searchinput by rememberSaveable { mutableStateOf("") }
     ModalBottomSheet(
-        onDismissRequest = { filtershow.value = false },
+        onDismissRequest = {
+            scope.launch { sheetState.hide() }
+        },
         sheetState = sheetState,
-    ) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            TextField(
-                value = searchinput,
-                onValueChange = { searchinput = it },
-                label = { Text(text = "Buscar...") },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 12.dp),
-                shape = RoundedCornerShape(45.dp),
-                singleLine = true,
-                colors = TextFieldDefaults.textFieldColors(
-                    containerColor = Color.Transparent,
-                    cursorColor = Color.Black,
-                    focusedTextColor = Color.Black,
-                    unfocusedTextColor = Color.Black,
-                    focusedLabelColor = Color.Black,
-                    focusedIndicatorColor = Color.Black,
-                    focusedSupportingTextColor = Color.Red,
-                    unfocusedSupportingTextColor = Color.Red
-                ),
-                trailingIcon = {
-                    IconButton(onClick = {
-                        if (searchinput != "") {
-                            Log.d("search", "Searching by name -> $searchinput")
-                            when(screen){
-                                "cards" -> cardviewmodel?.searchCardsByName(searchinput)
-                                "col" -> colviewmodel?.searchCardsByName(searchinput)
+        content = {
+            Column(modifier = Modifier.padding(16.dp)) {
+                TextField(
+                    value = searchinput,
+                    onValueChange = { searchinput = it },
+                    label = { Text(text = "Buscar...") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 12.dp),
+                    shape = RoundedCornerShape(45.dp),
+                    singleLine = true,
+                    colors = TextFieldDefaults.textFieldColors(
+                        containerColor = Color.Transparent,
+                        cursorColor = Color.Black,
+                        focusedTextColor = Color.Black,
+                        unfocusedTextColor = Color.Black,
+                        focusedLabelColor = Color.Black,
+                        focusedIndicatorColor = Color.Black,
+                        focusedSupportingTextColor = Color.Red,
+                        unfocusedSupportingTextColor = Color.Red
+                    ),
+                    trailingIcon = {
+                        IconButton(onClick = {
+                            if (searchinput != "") {
+                                Log.d("search", "Searching by name -> $searchinput")
+                                when (screen) {
+                                    "cards" -> cardviewmodel?.searchCardsByName(searchinput)
+                                    "col" -> colviewmodel?.searchCardsByName(searchinput)
+                                }
+                            } else {
+                                when (screen) {
+                                    "cards" -> cardviewmodel?.resetSearch()
+                                    "col" -> colviewmodel?.resetSearch()
+                                }
                             }
-                        } else {
-                            when(screen){
-                                "cards" -> cardviewmodel?.resetSearch()
-                                "col" -> colviewmodel?.resetSearch()
-                            }
+                            scope.launch { sheetState.hide() }
+                        }) {
+                            Icon(imageVector = Icons.Filled.Search, contentDescription = "search")
                         }
-                        scope.launch { sheetState.hide() }.invokeOnCompletion {
-                            if (!sheetState.isVisible) {
-                                filtershow.value = false
+                    }
+                )
+                HorizontalDivider(modifier = Modifier.padding(vertical = 16.dp))
+                Text(text = "Ordenar por...")
+                Row(Modifier.fillMaxWidth()) {
+                    Button(
+                        modifier = Modifier.padding(horizontal = 4.dp),
+                        onClick = {
+                            when (screen) {
+                                "cards" -> cardviewmodel?.orderBy("name")
+                                "col" -> colviewmodel?.orderBy("name")
                             }
-                        }
-                    }) {
-                        Icon(imageVector = Icons.Filled.Search, contentDescription = "search")
+
+                            scope.launch { sheetState.hide() }
+                            Toast.makeText(context, "Ordering by name...", Toast.LENGTH_SHORT)
+                                .show()
+                        }) {
+                        Text(text = "Nombre")
+                    }
+                    Button(
+                        modifier = Modifier.padding(horizontal = 4.dp),
+                        onClick = {
+                            when (screen) {
+                                "cards" -> cardviewmodel?.orderBy("cmc")
+                                "col" -> colviewmodel?.orderBy("cmc")
+                            }
+                            scope.launch { sheetState.hide() }
+                            Toast.makeText(context, "Ordering by CMC...", Toast.LENGTH_SHORT).show()
+                        }) {
+                        Text(text = "CMC")
+                    }
+                    Button(
+                        modifier = Modifier.padding(horizontal = 4.dp),
+                        onClick = {
+                            when (screen) {
+                                "cards" -> cardviewmodel?.orderBy("color")
+                                "col" -> colviewmodel?.orderBy("color")
+                            }
+                            scope.launch { sheetState.hide() }
+                            Toast.makeText(context, "Ordering by Color...", Toast.LENGTH_SHORT)
+                                .show()
+                        }) {
+                        Text(text = "Color")
+                    }
+                    Button(
+                        modifier = Modifier.padding(horizontal = 4.dp),
+                        onClick = {
+                            when (screen) {
+                                "cards" -> cardviewmodel?.orderBy("type")
+                                "col" -> colviewmodel?.orderBy("type")
+                            }
+                            scope.launch { sheetState.hide() }
+                            Toast.makeText(context, "Ordering by Type...", Toast.LENGTH_SHORT)
+                                .show()
+                        }) {
+                        Text(text = "Tipo")
                     }
                 }
-            )
-            HorizontalDivider(modifier = Modifier.padding(vertical = 16.dp))
-            Text(text = "Ordenar por...")
-            Row(Modifier.fillMaxWidth()) {
-                Button(
-                    modifier = Modifier.padding(horizontal = 4.dp),
-                    onClick = {
-                        when(screen){
-                            "cards" -> cardviewmodel?.orderBy("name")
-                            "col" -> colviewmodel?.orderBy("name")
-                        }
-
-                        scope.launch { sheetState.hide() }.invokeOnCompletion {
-                            if (!sheetState.isVisible) {
-                                filtershow.value = false
+                HorizontalDivider(modifier = Modifier.padding(vertical = 16.dp))
+                Text(text = "Mostrar...")
+                Row(Modifier.fillMaxWidth()) {
+                    Button(
+                        modifier = Modifier.padding(horizontal = 4.dp),
+                        onClick = {
+                            when (screen) {
+                                "cards" -> cardviewmodel?.setLimit(100)
+                                "col" -> colviewmodel?.setLimit(100)
                             }
-                        }
-                        Toast.makeText(context, "Ordering by name...", Toast.LENGTH_SHORT)
-                            .show()
-                    }) {
-                    Text(text = "Nombre")
-                }
-                Button(
-                    modifier = Modifier.padding(horizontal = 4.dp),
-                    onClick = {
-                        when(screen){
-                            "cards" -> cardviewmodel?.orderBy("cmc")
-                            "col" -> colviewmodel?.orderBy("cmc")
-                        }
-                        scope.launch { sheetState.hide() }.invokeOnCompletion {
-                            if (!sheetState.isVisible) {
-                                filtershow.value = false
+                            scope.launch { sheetState.hide() }
+                            Toast.makeText(context, "Mostrando 100 cartas...", Toast.LENGTH_SHORT)
+                                .show()
+                        }) {
+                        Text(text = "100")
+                    }
+                    Button(
+                        modifier = Modifier.padding(horizontal = 4.dp),
+                        onClick = {
+                            when (screen) {
+                                "cards" -> cardviewmodel?.setLimit(1000)
+                                "col" -> colviewmodel?.setLimit(1000)
                             }
-                        }
-                        Toast.makeText(context, "Ordering by CMC...", Toast.LENGTH_SHORT).show()
-                    }) {
-                    Text(text = "CMC")
-                }
-                Button(
-                    modifier = Modifier.padding(horizontal = 4.dp),
-                    onClick = {
-                        when(screen){
-                            "cards" -> cardviewmodel?.orderBy("color")
-                            "col" -> colviewmodel?.orderBy("color")
-                        }
-                        scope.launch { sheetState.hide() }.invokeOnCompletion {
-                            if (!sheetState.isVisible) {
-                                filtershow.value = false
+                            scope.launch { sheetState.hide() }
+                            Toast.makeText(context, "Mostrando 1000 cartas...", Toast.LENGTH_SHORT)
+                                .show()
+                        }) {
+                        Text(text = "1000")
+                    }
+                    Button(
+                        modifier = Modifier.padding(horizontal = 4.dp),
+                        onClick = {
+                            when (screen) {
+                                "cards" -> cardviewmodel?.setLimit(10000)
+                                "col" -> colviewmodel?.setLimit(10000)
                             }
-                        }
-                        Toast.makeText(context, "Ordering by Color...", Toast.LENGTH_SHORT)
-                            .show()
-                    }) {
-                    Text(text = "Color")
-                }
-                Button(
-                    modifier = Modifier.padding(horizontal = 4.dp),
-                    onClick = {
-                        when(screen){
-                            "cards" -> cardviewmodel?.orderBy("type")
-                            "col" -> colviewmodel?.orderBy("type")
-                        }
-                        scope.launch { sheetState.hide() }.invokeOnCompletion {
-                            if (!sheetState.isVisible) {
-                                filtershow.value = false
+                            scope.launch { sheetState.hide() }
+                            Toast.makeText(context, "Mostrando 10000 cartas...", Toast.LENGTH_SHORT)
+                                .show()
+                        }) {
+                        Text(text = "10000")
+                    }
+                    Button(
+                        modifier = Modifier.padding(horizontal = 4.dp),
+                        onClick = {
+                            when (screen) {
+                                "cards" -> cardviewmodel?.setLimit(-1)
+                                "col" -> colviewmodel?.setLimit(-1)
                             }
-                        }
-                        Toast.makeText(context, "Ordering by Type...", Toast.LENGTH_SHORT)
-                            .show()
-                    }) {
-                    Text(text = "Tipo")
+                            scope.launch { sheetState.hide() }
+                            Toast.makeText(
+                                context,
+                                "Mostrando todas las cartas...",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }) {
+                        Text(text = "Todas")
+                    }
                 }
             }
-            HorizontalDivider(modifier = Modifier.padding(vertical = 16.dp))
-            Text(text = "Mostrar...")
-            Row(Modifier.fillMaxWidth()) {
-                Button(
-                    modifier = Modifier.padding(horizontal = 4.dp),
-                    onClick = {
-                        when(screen){
-                            "cards" -> cardviewmodel?.setLimit(100)
-                            "col" -> colviewmodel?.setLimit(100)
-                        }
-                        scope.launch { sheetState.hide() }.invokeOnCompletion {
-                            if (!sheetState.isVisible) {
-                                filtershow.value = false
-                            }
-                        }
-                        Toast.makeText(context, "Mostrando 100 cartas...", Toast.LENGTH_SHORT)
-                            .show()
-                    }) {
-                    Text(text = "100")
-                }
-                Button(
-                    modifier = Modifier.padding(horizontal = 4.dp),
-                    onClick = {
-                        when(screen){
-                            "cards" -> cardviewmodel?.setLimit(1000)
-                            "col" -> colviewmodel?.setLimit(1000)
-                        }
-                        scope.launch { sheetState.hide() }.invokeOnCompletion {
-                            if (!sheetState.isVisible) {
-                                filtershow.value = false
-                            }
-                        }
-                        Toast.makeText(context, "Mostrando 1000 cartas...", Toast.LENGTH_SHORT)
-                            .show()
-                    }) {
-                    Text(text = "1000")
-                }
-                Button(
-                    modifier = Modifier.padding(horizontal = 4.dp),
-                    onClick = {
-                        when(screen){
-                            "cards" -> cardviewmodel?.setLimit(10000)
-                            "col" -> colviewmodel?.setLimit(10000)
-                        }
-                        scope.launch { sheetState.hide() }.invokeOnCompletion {
-                            if (!sheetState.isVisible) {
-                                filtershow.value = false
-                            }
-                        }
-                        Toast.makeText(context, "Mostrando 10000 cartas...", Toast.LENGTH_SHORT)
-                            .show()
-                    }) {
-                    Text(text = "10000")
-                }
-                Button(
-                    modifier = Modifier.padding(horizontal = 4.dp),
-                    onClick = {
-                        when(screen){
-                            "cards" -> cardviewmodel?.setLimit(-1)
-                            "col" -> colviewmodel?.setLimit(-1)
-                        }
-                        scope.launch { sheetState.hide() }.invokeOnCompletion {
-                            if (!sheetState.isVisible) {
-                                filtershow.value = false
-                            }
-                        }
-                        Toast.makeText(context, "Mostrando todas las cartas...", Toast.LENGTH_SHORT)
-                            .show()
-                    }) {
-                    Text(text = "Todas")
-                }
-            }
-        }
-    }
+        })
 }
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AddModalSheet(addshow: MutableState<Boolean>, sheetState: SheetState, scope: CoroutineScope) {
-    ModalBottomSheet(
-        onDismissRequest = { addshow.value = false },
-        sheetState = sheetState
-    ) {
-        Text(text = "Add Cards")
-        Button(onClick = {
-            scope.launch { sheetState.hide() }.invokeOnCompletion {
-                if (!sheetState.isVisible) {
-                    addshow.value = false
-                }
-            }
-        }) {
-
-        }
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun AddButton(addshow: MutableState<Boolean>) {
+fun AddButton() {
     val sheetState = rememberModalBottomSheetState()
     val scope = rememberCoroutineScope()
     FloatingActionButton(
         containerColor = MaterialTheme.colorScheme.primary,
         modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
-        onClick = { addshow.value = true },
+        onClick = { scope.launch { sheetState.show() }},
         shape = CircleShape,
         content = { Icon(imageVector = Icons.Default.Add, contentDescription = "") },
         elevation = FloatingActionButtonDefaults.elevation(defaultElevation = 8.dp)
     )
-    if (addshow.value) {
+    if (sheetState.isVisible) {
         ModalBottomSheet(
-            onDismissRequest = { addshow.value = false },
-            sheetState = sheetState
-        ) {
-            Button(onClick = {
-                scope.launch { sheetState.hide() }.invokeOnCompletion {
-                    if (!sheetState.isVisible) {
-                        addshow.value = false
-                    }
-                }
-            }) {
+            onDismissRequest = {
+                scope.launch { sheetState.hide() }
+            },
+            sheetState = sheetState,
+            content = {
+                Text(text = "Add Cards")
+                Button(onClick = { scope.launch { sheetState.hide() }}
+                ) {
 
-            }
-        }
+                }
+            })
     }
 }

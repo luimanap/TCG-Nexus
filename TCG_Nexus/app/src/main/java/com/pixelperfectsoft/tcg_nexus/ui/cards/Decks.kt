@@ -80,7 +80,7 @@ fun Decks(navController: NavController) {
             ) {
 
         }
-        AddButton(addshow)
+        //AddButton()
     }
 }
 

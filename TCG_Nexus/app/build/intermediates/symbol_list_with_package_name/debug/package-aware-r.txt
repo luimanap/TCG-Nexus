@@ -136,6 +136,7 @@ drawable dice_icon
 drawable dragon_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable heart
 drawable home
 drawable ic_call_answer
 drawable ic_call_answer_low
@@ -147,6 +148,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable logotcgnexus
 drawable logout
+drawable loyalty
 drawable materialsymbolsfilteralt
 drawable notification_action_background
 drawable notification_bg
@@ -165,6 +167,7 @@ drawable passwordeye
 drawable passwordeyeopen
 drawable personcirclesharp
 drawable searchicon
+drawable sword
 drawable woodtable
 id accessibility_action_clickable_span
 id accessibility_custom_action_0

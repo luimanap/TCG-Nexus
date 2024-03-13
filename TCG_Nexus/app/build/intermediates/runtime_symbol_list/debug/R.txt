@@ -135,6 +135,7 @@ int drawable dice_icon 0x7f040018
 int drawable dragon_background 0x7f040019
 int drawable googleg_disabled_color_18 0x7f04001a
 int drawable googleg_standard_color_18 0x7f04001b
+int drawable heart 0x7f04003d
 int drawable home 0x7f04001c
 int drawable ic_call_answer 0x7f04001d
 int drawable ic_call_answer_low 0x7f04001e
@@ -146,6 +147,7 @@ int drawable ic_launcher_background 0x7f040023
 int drawable ic_launcher_foreground 0x7f040024
 int drawable logotcgnexus 0x7f040025
 int drawable logout 0x7f040026
+int drawable loyalty 0x7f04003e
 int drawable materialsymbolsfilteralt 0x7f040039
 int drawable notification_action_background 0x7f040027
 int drawable notification_bg 0x7f040028
@@ -164,6 +166,7 @@ int drawable passwordeye 0x7f040034
 int drawable passwordeyeopen 0x7f040035
 int drawable personcirclesharp 0x7f040036
 int drawable searchicon 0x7f040037
+int drawable sword 0x7f04003c
 int drawable woodtable 0x7f040038
 int id accessibility_action_clickable_span 0x7f050000
 int id accessibility_custom_action_0 0x7f050001

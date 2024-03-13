@@ -15,7 +15,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 
 class CollectionViewModel : ViewModel() {
-    var state: MutableState<DataState> = mutableStateOf(DataState.Empty)
+    var state: MutableState<DataState> = mutableStateOf(DataState.Loading)
     val collection = mutableStateOf(Collect())
     val cards = mutableListOf<Card>()
     val order = mutableStateOf("null")
@@ -150,7 +150,7 @@ class CollectionViewModel : ViewModel() {
                 .get().await().map {
                     val result = it.toObject(Collect::class.java)
                     if (userId != null) {
-                        Log.d("collection-retrieve", "Collection found -> $collection")
+                        Log.d("collection-retrieve", "Collection found -> ${collection.value}")
                         current_collection.value = result
                     }
                 }

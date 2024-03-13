@@ -119,7 +119,7 @@ fun LoadCollection(
                 }
             }*/
             ShowCollectionLazyList(
-                collectionViewModel = viewModel,
+                viewModel = viewModel,
                 cards = viewModel.collection.value.cards
             )
         }
@@ -140,18 +140,10 @@ fun LoadCollection(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ShowCollectionLazyList(cards: MutableList<Card>, collectionViewModel: CollectionViewModel) {
-    val sheetState = rememberModalBottomSheetState()
+fun ShowCollectionLazyList(cards: MutableList<Card>, viewModel: CollectionViewModel) {
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val scope = rememberCoroutineScope()
     val currentSelectedItem = remember { mutableStateOf(cards[0]) }
-    val show =
-        rememberSaveable { mutableStateOf(false) } //Variable booleana de estado para mostrar u ocultar el dialogo de informacion de cada carta
-    val addshow =
-        rememberSaveable { mutableStateOf(false) } //Variable booleana de estado para mostrar u ocultar el dialogo de añadir cartas a la coleccion
-    val filtershow =
-        rememberSaveable { mutableStateOf(false) } //Variable booleana de estado para mostrar u ocultar el dialogo de filtrar u ordenar la lista
-
-
 
     Box(contentAlignment = Alignment.BottomEnd, modifier = Modifier.fillMaxSize()) {
         LazyVerticalGrid(
@@ -162,19 +154,17 @@ fun ShowCollectionLazyList(cards: MutableList<Card>, collectionViewModel: Collec
                 items(cards) {
                     Log.d("Cards", "Loading card ${it.name}")
                     Log.d("card_image", it.image_uris_normal.toString())
-                    CardItem(card = it, show = show, currentSelectedItem = currentSelectedItem)
+                    CardItem(
+                        card = it,
+                        sheetState = sheetState,
+                        currentSelectedItem = currentSelectedItem,
+                        scope = scope
+                    )
                 }
             })
         Column(horizontalAlignment = Alignment.End) {
-            FilterButton(filtershow)
-            AddButton(addshow)
-
+            FilterButton("col", null, viewModel)
+            AddButton()
         }
-    }
-    if (addshow.value) {
-        AddModalSheet(addshow, sheetState, scope)
-    }
-    if (filtershow.value) {
-        FilterModalSheet(filtershow, sheetState, scope, cardviewmodel = null, colviewmodel = collectionViewModel, "col")
     }
 }
