@@ -45,16 +45,16 @@ fun AllCards(navController: NavController, viewModel: CardViewModel = viewModel(
         //Informacion
         Column(modifier = Modifier.padding(horizontal = 16.dp),horizontalAlignment = Alignment.CenterHorizontally) {
             Spacer(modifier = Modifier.fillMaxHeight(0.05f))
-            InfoCard(
+            /*InfoCard(
                 text = "BUSCAR CARTAS",
                 number = "",
                 containercolor = Color.White,
                 contentcolor = Color.Black,
                 contenttype = "number"
-            )
+            )*/
             Spacer(modifier = Modifier.fillMaxHeight(0.025f))
             InfoCard(
-                text = "Cartas en posesión",
+                text = "Cartas cargadas",
                 number = totalcards.intValue.toString(),
                 containercolor = MaterialTheme.colorScheme.primary,
                 contentcolor = Color.White,

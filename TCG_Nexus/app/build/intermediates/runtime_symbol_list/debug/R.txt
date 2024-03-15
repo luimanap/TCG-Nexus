@@ -112,6 +112,7 @@ int drawable blacklotus 0x7f040003
 int drawable card_back 0x7f04003a
 int drawable card_back_unavailable 0x7f04003b
 int drawable cards 0x7f040004
+int drawable common 0x7f04003f
 int drawable common_full_open_on_phone 0x7f040005
 int drawable common_google_signin_btn_icon_dark 0x7f040006
 int drawable common_google_signin_btn_icon_dark_focused 0x7f040007
@@ -133,6 +134,7 @@ int drawable common_google_signin_btn_text_light_normal 0x7f040016
 int drawable common_google_signin_btn_text_light_normal_background 0x7f040017
 int drawable dice_icon 0x7f040018
 int drawable dragon_background 0x7f040019
+int drawable foil 0x7f040043
 int drawable googleg_disabled_color_18 0x7f04001a
 int drawable googleg_standard_color_18 0x7f04001b
 int drawable heart 0x7f04003d
@@ -149,6 +151,7 @@ int drawable logotcgnexus 0x7f040025
 int drawable logout 0x7f040026
 int drawable loyalty 0x7f04003e
 int drawable materialsymbolsfilteralt 0x7f040039
+int drawable mythic 0x7f040040
 int drawable notification_action_background 0x7f040027
 int drawable notification_bg 0x7f040028
 int drawable notification_bg_low 0x7f040029
@@ -165,8 +168,10 @@ int drawable notify_panel_notification_icon_bg 0x7f040033
 int drawable passwordeye 0x7f040034
 int drawable passwordeyeopen 0x7f040035
 int drawable personcirclesharp 0x7f040036
+int drawable rare 0x7f040041
 int drawable searchicon 0x7f040037
 int drawable sword 0x7f04003c
+int drawable uncommon 0x7f040042
 int drawable woodtable 0x7f040038
 int id accessibility_action_clickable_span 0x7f050000
 int id accessibility_custom_action_0 0x7f050001

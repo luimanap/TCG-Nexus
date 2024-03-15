@@ -1,5 +1,9 @@
 [
     {
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_foil.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/foil.xml"
+    },
+    {
         "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-merged_res-61:\\drawable_card_back_unavailable.png.flat",
         "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-main-63:\\drawable\\card_back_unavailable.png"
     },
@@ -36,6 +40,10 @@
         "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-main-63:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-merged_res-61:\\drawable_rare.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-main-63:\\drawable\\rare.xml"
+    },
+    {
         "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-merged_res-61:\\drawable_heart.xml.flat",
         "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-main-63:\\drawable\\heart.xml"
     },
@@ -54,6 +62,14 @@
     {
         "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-merged_res-61:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-main-63:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-merged_res-61:\\drawable_loyalty.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-main-63:\\drawable\\loyalty.xml"
+    },
+    {
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-merged_res-61:\\drawable_common.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-main-63:\\drawable\\common.xml"
     },
     {
         "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-merged_res-61:\\mipmap-xhdpi_ic_launcher.webp.flat",
@@ -108,12 +124,16 @@
         "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-main-63:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_loyalty.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/loyalty.xml"
-    },
-    {
         "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-merged_res-61:\\drawable_cards.xml.flat",
         "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-main-63:\\drawable\\cards.xml"
+    },
+    {
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-merged_res-61:\\drawable_uncommon.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-main-63:\\drawable\\uncommon.xml"
+    },
+    {
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-merged_res-61:\\drawable_mythic.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-main-63:\\drawable\\mythic.xml"
     },
     {
         "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.0\\com.pixelperfectsoft.tcg_nexus.app-merged_res-61:\\drawable_passwordeye.xml.flat",

@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -61,11 +62,11 @@ fun Collection(navController: NavController, viewModel: CollectionViewModel = vi
             .fillMaxHeight(0.33f)
             .background(brush = createGradientBrush(backcolors))
     ) {
-        Spacer(modifier = Modifier.fillMaxHeight(0.05f))
+        //Spacer(modifier = Modifier.fillMaxHeight(0.05f))
 
         //Collection info
-        Row(modifier = Modifier.fillMaxHeight(0.15f)) {
-            Spacer(modifier = Modifier.fillMaxWidth(0.05f))
+        Column(modifier = Modifier.padding(horizontal = 16.dp),horizontalAlignment = Alignment.CenterHorizontally) {
+            Spacer(modifier = Modifier.fillMaxHeight(0.05f))
             InfoCard(
                 text = "Cartas en posesión",
                 number = totalcards.intValue.toString(),
@@ -73,7 +74,7 @@ fun Collection(navController: NavController, viewModel: CollectionViewModel = vi
                 contentcolor = Color.White,
                 contenttype = "number"
             )
-            Spacer(modifier = Modifier.fillMaxWidth(0.1f))
+            Spacer(modifier = Modifier.fillMaxHeight(0.025f))
             InfoCard(
                 text = "Valor estimado",
                 number = estimatedcostString,
@@ -113,14 +114,14 @@ fun LoadCollection(
 
         is DataState.Success -> {
             totalcards.intValue = result.data.size
-            /*price@ for (i in result.data){
+            /*for (i in result.data){
                 if(i.prices_eur!=""){
                     estimatedCost.floatValue += (i.prices_eur.toString().toFloat())/100
                 }
             }*/
             ShowCollectionLazyList(
                 viewModel = viewModel,
-                cards = viewModel.collection.value.cards
+                cards = result.data
             )
         }
 
@@ -141,9 +142,8 @@ fun LoadCollection(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ShowCollectionLazyList(cards: MutableList<Card>, viewModel: CollectionViewModel) {
-    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-    val scope = rememberCoroutineScope()
-    val currentSelectedItem = remember { mutableStateOf(cards[0]) }
+    //val currentSelectedItem = remember { mutableStateOf(cards[0]) }
+    val currentSelectedItem = remember { mutableStateOf(Card()) }
 
     Box(contentAlignment = Alignment.BottomEnd, modifier = Modifier.fillMaxSize()) {
         LazyVerticalGrid(
@@ -156,9 +156,7 @@ fun ShowCollectionLazyList(cards: MutableList<Card>, viewModel: CollectionViewMo
                     Log.d("card_image", it.image_uris_normal.toString())
                     CardItem(
                         card = it,
-                        sheetState = sheetState,
                         currentSelectedItem = currentSelectedItem,
-                        scope = scope
                     )
                 }
             })

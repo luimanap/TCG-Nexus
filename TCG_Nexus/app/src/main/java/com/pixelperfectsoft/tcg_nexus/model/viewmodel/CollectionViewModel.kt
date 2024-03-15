@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.FirebaseAuth
@@ -16,6 +17,7 @@ import kotlinx.coroutines.tasks.await
 
 class CollectionViewModel : ViewModel() {
     var state: MutableState<DataState> = mutableStateOf(DataState.Loading)
+    var searchresult = mutableListOf<Card>()
     val collection = mutableStateOf(Collect())
     val cards = mutableListOf<Card>()
     val order = mutableStateOf("null")
@@ -27,19 +29,18 @@ class CollectionViewModel : ViewModel() {
           * Buscando cartas por nombre:
           * 1. Nos creamos un array de cartas vacio
           * 2. Ponemos el estado de la respuesta en cargando
-          * 3. Recorremos el array de cartas templist que es el que obtiene todas las cartas de Firebase
+          * 3. Recorremos el array de cartas cards que es el que obtiene todas las cartas de la coleccion
           * 4. Si el nombre de la carta en minusculas contiene lo que introducimos se va a añadir al nuevo array
           * 5. Ponemos el estado de la respuesta en completado y le pasamos el nuevo array
         */
-        var searchList = mutableListOf<Card>()
+        searchresult.removeAll(searchresult)
         state.value = DataState.Loading
-        for (i in cards) {
+        for (i in collection.value.cards) {
             if (i.name.toString().lowercase().contains(searchinput.lowercase())) {
-                searchList.add(i)
+                searchresult.add(i)
             }
         }
-        state.value = DataState.Success(searchList)
-
+        state.value = DataState.Success(searchresult)
     }
     fun orderBy(criteria: String) {
         /*
@@ -49,6 +50,7 @@ class CollectionViewModel : ViewModel() {
          */
         order.value = criteria
         show_cards_from_collection()
+        //get_collection()
     }
     fun resetSearch() {
         /*
@@ -57,7 +59,9 @@ class CollectionViewModel : ViewModel() {
         * 2. Ponemos el estado en completado y le pasamos el array inicial
          */
         state.value = DataState.Loading
-        state.value = DataState.Success(cards)
+        state.value = DataState.Success(collection.value.cards)
+
+        get_collection()
     }
     fun updateCollection(cards: List<Card>) {
         /*
@@ -144,16 +148,30 @@ class CollectionViewModel : ViewModel() {
         var current_collection = mutableStateOf(Collect())
         val userId = FirebaseAuth.getInstance().currentUser?.uid
         try {
-            FirebaseFirestore.getInstance()
-                .collection("collections")
-                .whereEqualTo("user_id", userId)
-                .get().await().map {
-                    val result = it.toObject(Collect::class.java)
-                    if (userId != null) {
-                        Log.d("collection-retrieve", "Collection found -> ${collection.value}")
-                        current_collection.value = result
+            if(order.value!="null") {
+                FirebaseFirestore.getInstance()
+                    .collection("collections")
+                    .whereEqualTo("user_id", userId)
+                    .orderBy("cards.${order.value}")
+                    .get().await().map {
+                        val result = it.toObject(Collect::class.java)
+                        if (userId != null) {
+                            Log.d("collection-retrieve", "Collection found -> ${collection.value}")
+                            current_collection.value = result
+                        }
                     }
-                }
+            }else{
+                FirebaseFirestore.getInstance()
+                    .collection("collections")
+                    .whereEqualTo("user_id", userId)
+                    .get().await().map {
+                        val result = it.toObject(Collect::class.java)
+                        if (userId != null) {
+                            Log.d("collection-retrieve", "Collection found -> ${collection.value}")
+                            current_collection.value = result
+                        }
+                    }
+            }
         } catch (e: FirebaseFirestoreException) {
             Log.w("collection-retrieve", "Error retrieving collection data: $e")
         }
@@ -169,10 +187,10 @@ class CollectionViewModel : ViewModel() {
         * 4. Ponemos el estado de la operacion en completado y le pasamos el array temporal
         * 4. Obtenemos cartas de la Realtime Database de Firestore y las añadimos al array temporal
          */
-        val collection = collection.value.cards
+        val collection = mutableStateOf(collection.value.cards)
         cards.removeAll(cards)
         state.value = DataState.Loading
-        for(i in collection){
+        for(i in collection.value){
             cards.add(i)
         }
         state.value = DataState.Success(cards)

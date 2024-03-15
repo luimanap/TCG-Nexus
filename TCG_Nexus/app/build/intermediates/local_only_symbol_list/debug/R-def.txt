@@ -12,8 +12,10 @@ drawable blacklotus
 drawable card_back
 drawable card_back_unavailable
 drawable cards
+drawable common
 drawable dice_icon
 drawable dragon_background
+drawable foil
 drawable heart
 drawable home
 drawable ic_launcher_background
@@ -22,11 +24,14 @@ drawable logotcgnexus
 drawable logout
 drawable loyalty
 drawable materialsymbolsfilteralt
+drawable mythic
 drawable passwordeye
 drawable passwordeyeopen
 drawable personcirclesharp
+drawable rare
 drawable searchicon
 drawable sword
+drawable uncommon
 drawable woodtable
 mipmap ic_launcher
 mipmap ic_launcher_round

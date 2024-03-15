@@ -113,6 +113,7 @@ drawable blacklotus
 drawable card_back
 drawable card_back_unavailable
 drawable cards
+drawable common
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -134,6 +135,7 @@ drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
 drawable dice_icon
 drawable dragon_background
+drawable foil
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable heart
@@ -150,6 +152,7 @@ drawable logotcgnexus
 drawable logout
 drawable loyalty
 drawable materialsymbolsfilteralt
+drawable mythic
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -166,8 +169,10 @@ drawable notify_panel_notification_icon_bg
 drawable passwordeye
 drawable passwordeyeopen
 drawable personcirclesharp
+drawable rare
 drawable searchicon
 drawable sword
+drawable uncommon
 drawable woodtable
 id accessibility_action_clickable_span
 id accessibility_custom_action_0

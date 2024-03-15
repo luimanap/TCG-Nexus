@@ -25,9 +25,10 @@ class Card(
     var toughness: Any = "",
     var type_line: Any = "",
     var set_type: Any = "",
-    var loyalty: Any = ""
+    var loyalty: Any = "",
+    var _rarity: Any = ""
 ){
-    fun get_rarity(): String {
+    fun getrarities(): String {
         when (this.rarity.toString().lowercase()){
             "common" -> return "Común"
             "uncommon" -> return "Infrecuente"
