@@ -2,6 +2,8 @@ package com.pixelperfectsoft.tcg_nexus.model.viewmodel
 
 import android.util.Log
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableDoubleStateOf
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -14,12 +16,15 @@ import com.pixelperfectsoft.tcg_nexus.model.classes.Card
 import com.pixelperfectsoft.tcg_nexus.model.classes.Collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
+import java.math.BigDecimal
+import java.math.RoundingMode
 
 class CollectionViewModel : ViewModel() {
     var state: MutableState<DataState> = mutableStateOf(DataState.Loading)
     var searchresult = mutableListOf<Card>()
     val collection = mutableStateOf(Collect())
     val cards = mutableListOf<Card>()
+    val price = mutableStateOf(BigDecimal(0))
     val order = mutableStateOf("null")
     val limit = mutableIntStateOf(cards.size)
 
@@ -52,6 +57,15 @@ class CollectionViewModel : ViewModel() {
         show_cards_from_collection()
         //get_collection()
     }
+    fun get_collection_price(){
+        for(i in 0..cards.lastIndex){
+            if(cards[i].prices_eur!="") {
+                price.value += (cards[i].prices_eur.toString().toDouble() / 100).toBigDecimal().setScale(2)
+            }else if (cards[i].prices_eur_foil!=""){
+                price.value += (cards[i].prices_eur_foil.toString().toDouble() / 100).toBigDecimal().setScale(2)
+            }
+        }
+    }
     fun resetSearch() {
         /*
         * Reiniciando la busqueda:
@@ -60,7 +74,6 @@ class CollectionViewModel : ViewModel() {
          */
         state.value = DataState.Loading
         state.value = DataState.Success(collection.value.cards)
-
         get_collection()
     }
     fun updateCollection(cards: List<Card>) {

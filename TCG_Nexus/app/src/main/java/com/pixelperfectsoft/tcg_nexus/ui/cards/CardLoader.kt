@@ -34,7 +34,7 @@ import com.pixelperfectsoft.tcg_nexus.model.viewmodel.DataState
 fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel) {
 
 
-    val currentSelectedItem = remember { mutableStateOf(cards[0]) }
+    val currentSelectedItem = remember { mutableStateOf(Card()) }
     Box(contentAlignment = Alignment.BottomEnd, modifier = Modifier.fillMaxSize()) {
         LazyVerticalGrid(
             modifier = Modifier.fillMaxHeight(),
@@ -67,7 +67,7 @@ fun SetData(
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     //CircularProgressIndicator()
-                    Text(text = "Cargando lista de cartas...")
+                    Text(text = "Revelando los secretos de lo arcano...")
                     Spacer(modifier = Modifier.height(16.dp))
                     LinearProgressIndicator()
                 }

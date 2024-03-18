@@ -163,7 +163,7 @@ fun CardDialog(
                                 "uncommon" -> R.drawable.uncommon
                                 "rare" -> R.drawable.rare
                                 "mythic" -> R.drawable.mythic
-                                else -> 0
+                                else -> R.drawable.common
                             }
                         ),
                         contentDescription = "rarity",
@@ -447,6 +447,7 @@ fun FilterModalSheet(
 ) {
     val context = LocalContext.current
     var searchinput by rememberSaveable { mutableStateOf("") }
+
     ModalBottomSheet(
         onDismissRequest = {
             scope.launch { sheetState.hide() }
@@ -454,6 +455,7 @@ fun FilterModalSheet(
         sheetState = sheetState,
         content = {
             Column(modifier = Modifier.padding(16.dp)) {
+
                 TextField(
                     value = searchinput,
                     onValueChange = { searchinput = it },
@@ -549,6 +551,8 @@ fun FilterModalSheet(
                         Text(text = "Tipo")
                     }
                 }
+
+                /*
                 HorizontalDivider(modifier = Modifier.padding(vertical = 16.dp))
                 Text(text = "Mostrar...")
                 Row(Modifier.fillMaxWidth()) {
@@ -607,7 +611,7 @@ fun FilterModalSheet(
                         }) {
                         Text(text = "Todas")
                     }
-                }
+                }*/
             }
         })
 }

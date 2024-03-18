@@ -53,8 +53,8 @@ fun Collection(navController: NavController, viewModel: CollectionViewModel = vi
         Color.White,
     )
     val totalcards = rememberSaveable { mutableIntStateOf(0) }
-    val estimatedCost = rememberSaveable { mutableFloatStateOf(0f) }
-    val estimatedcostString by rememberSaveable { mutableStateOf("${estimatedCost.floatValue} €") }
+    //val estimatedCost = rememberSaveable { mutableFloatStateOf(0f) }
+    //val estimatedcostString by rememberSaveable { mutableStateOf("${estimatedCost.floatValue} €") }
     BackgroundImage()
     Column(
         Modifier
@@ -77,7 +77,8 @@ fun Collection(navController: NavController, viewModel: CollectionViewModel = vi
             Spacer(modifier = Modifier.fillMaxHeight(0.025f))
             InfoCard(
                 text = "Valor estimado",
-                number = estimatedcostString,
+                //number = viewModel.price.value.toString(),
+                number = "?€",
                 containercolor = Color.White,
                 contentcolor = Color.Black,
                 contenttype = "number"
@@ -88,8 +89,7 @@ fun Collection(navController: NavController, viewModel: CollectionViewModel = vi
         //Lista de cartas
         LoadCollection(
             viewModel = viewModel,
-            totalcards = totalcards,
-            estimatedCost = estimatedCost
+            totalcards = totalcards
         )
     }
 }
@@ -98,7 +98,6 @@ fun Collection(navController: NavController, viewModel: CollectionViewModel = vi
 fun LoadCollection(
     viewModel: CollectionViewModel,
     totalcards: MutableIntState,
-    estimatedCost: MutableFloatState
 ) {
     when (val result = viewModel.state.value) {
         is DataState.Loading -> {
@@ -114,11 +113,7 @@ fun LoadCollection(
 
         is DataState.Success -> {
             totalcards.intValue = result.data.size
-            /*for (i in result.data){
-                if(i.prices_eur!=""){
-                    estimatedCost.floatValue += (i.prices_eur.toString().toFloat())/100
-                }
-            }*/
+            //viewModel.get_collection_price()
             ShowCollectionLazyList(
                 viewModel = viewModel,
                 cards = result.data

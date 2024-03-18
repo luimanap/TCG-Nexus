@@ -29,7 +29,6 @@ import com.pixelperfectsoft.tcg_nexus.ui.auth.LoginScreen
 import com.pixelperfectsoft.tcg_nexus.ui.auth.RegisterScreen
 import com.pixelperfectsoft.tcg_nexus.ui.cards.AllCards
 import com.pixelperfectsoft.tcg_nexus.ui.cards.Collection
-import com.pixelperfectsoft.tcg_nexus.ui.cards.Decks
 import com.pixelperfectsoft.tcg_nexus.ui.home.HomeScreen
 import com.pixelperfectsoft.tcg_nexus.ui.play.Fourplayers
 import com.pixelperfectsoft.tcg_nexus.ui.play.PlayScreen
@@ -102,11 +101,11 @@ val AUTH_MENU_ITEMS = listOf(
         textId = R.string.collection,
         path = MyScreenRoutes.COLLECTION,
         label = "Colección"
-    ), MenuItems(
+    /*), MenuItems(
         icon = R.drawable.cards,
         textId = R.string.decks,
         path = MyScreenRoutes.DECKS,
-        label = "Mazos"
+        label = "Mazos"*/
     ), MenuItems(
         icon = R.drawable.dice_icon,
         textId = R.string.play,
@@ -169,9 +168,6 @@ fun BottomBarNaviContainer(
                 }
                 composable(MyScreenRoutes.COLLECTION) {
                     Collection(navController = navController)
-                }
-                composable(MyScreenRoutes.DECKS) {
-                    Decks(navController = navController)
                 }
                 composable(MyScreenRoutes.PLAY) {
                     PlayScreen(navController = navController)

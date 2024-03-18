@@ -17,6 +17,7 @@ class CardViewModel : ViewModel() {
     private var loaded = false
     private var filter = mutableStateOf("null")
     private var limit = mutableIntStateOf(allcards)
+    private var searchkey = mutableStateOf("")
 
 
     init {
@@ -50,14 +51,14 @@ class CardViewModel : ViewModel() {
         response.value = DataState.Loading
         tempList.removeAll(tempList)
         db.getReference("cards")
-            .limitToFirst(limit.intValue)
             .orderByChild(filter.value.lowercase())
+            .limitToFirst(limit.intValue)
             .addListenerForSingleValueEvent(object :
                 ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     for (i in snapshot.children) {
                         val card = i.getValue(Card::class.java)
-                        if (card != null) {
+                        if (card != null && card.name.toString().lowercase().contains(searchkey.value.lowercase())) {
                             tempList.add(card)
                         }
                     }
@@ -109,18 +110,22 @@ class CardViewModel : ViewModel() {
           *    añadir al nuevo array
           * 5. Ponemos el estado de la respuesta en completado y le pasamos el nuevo array
         */
-        var searchList = mutableListOf<Card>()
+        response.value = DataState.Loading
+        searchkey.value = searchinput
+        retrieveData()
+        /*var searchList = mutableListOf<Card>()
         response.value = DataState.Loading
         for (i in tempList) {
             if (i.name.toString().lowercase().contains(searchinput.lowercase())) {
                 searchList.add(i)
             }
         }
-        response.value = DataState.Success(searchList)
+        response.value = DataState.Success(searchList)*/
     }
 
     fun resetSearch() {
         response.value = DataState.Loading
-        response.value = DataState.Success(tempList)
+        searchkey.value = ""
+        retrieveData()
     }
 }
