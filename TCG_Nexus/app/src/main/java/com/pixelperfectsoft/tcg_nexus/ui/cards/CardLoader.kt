@@ -32,8 +32,6 @@ import com.pixelperfectsoft.tcg_nexus.model.viewmodel.DataState
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel) {
-
-
     val currentSelectedItem = remember { mutableStateOf(Card()) }
     Box(contentAlignment = Alignment.BottomEnd, modifier = Modifier.fillMaxSize()) {
         LazyVerticalGrid(
@@ -46,7 +44,9 @@ fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel) {
                     Log.d("card_image", it.image_uris_normal.toString())
                     CardItem(
                         card = it,
-                        currentSelectedItem = currentSelectedItem
+                        currentSelectedItem = currentSelectedItem,
+                        dialogplace = "allcards"
+
                     )
                 }
             })

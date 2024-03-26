@@ -1,17 +1,15 @@
-package com.pixelperfectsoft.tcg_nexus
+package com.pixelperfectsoft.tcg_nexus.ui
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ButtonDefaults
@@ -41,7 +39,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavHostController
+import com.pixelperfectsoft.tcg_nexus.R
 
 @Composable
 fun BackgroundImage() {
@@ -151,7 +149,7 @@ fun MyCanvasSeparator() {
 @Composable
 fun MyTextField(
     iserror: Boolean,
-    supporting_text: String,
+    supportingText: String,
     data: String,
     label: String,
     onvaluechange: (String) -> Unit,
@@ -179,7 +177,7 @@ fun MyTextField(
         ),
         supportingText = {
             if (iserror) {
-                Text(text = supporting_text)
+                Text(text = supportingText)
             }
 
         }

@@ -208,8 +208,4 @@ class CollectionViewModel : ViewModel() {
         }
         state.value = DataState.Success(cards)
     }
-
-    fun setLimit(i: Int) {
-
-    }
 }

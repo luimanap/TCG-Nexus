@@ -1,7 +1,6 @@
 package com.pixelperfectsoft.tcg_nexus.ui.cards
 
 import android.util.Log
-import android.widget.Space
 import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -62,7 +61,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import coil.compose.rememberAsyncImagePainter
-import com.pixelperfectsoft.tcg_nexus.MyButton
+import com.pixelperfectsoft.tcg_nexus.ui.MyButton
 import com.pixelperfectsoft.tcg_nexus.R
 import com.pixelperfectsoft.tcg_nexus.model.classes.Card
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.CardViewModel
@@ -131,7 +130,8 @@ fun FilterButton(
 fun CardDialog(
     sheetState: SheetState,
     card: Card,
-    collectionViewModel: CollectionViewModel = CollectionViewModel()
+    collectionViewModel: CollectionViewModel = CollectionViewModel(),
+    dialogplace: String
 ) {
     if (sheetState.isVisible) {
         val scope = rememberCoroutineScope()
@@ -319,18 +319,35 @@ fun CardDialog(
                         modifier = Modifier.padding(top = 8.dp, bottom = 8.dp)
                     )
                     Column {
-                        MyButton(
-                            text = "Añadir a la colección",
-                            onclick = {
-                                var collection = collectionViewModel.collection.value.cards
-                                collection.add(card)
-                                collectionViewModel.updateCollection(collection)
-                                scope.launch { sheetState.hide() }
-                            },
-                            containercolor = MaterialTheme.colorScheme.primary,
-                            bordercolor = MaterialTheme.colorScheme.primary,
-                            textcolor = Color.White
-                        )
+                        if (dialogplace == "collection") {
+                            MyButton(
+                                text = "Eliminar",
+                                onclick = {
+                                    val collection = collectionViewModel.collection.value.cards
+                                    collection.remove(card)
+                                    collectionViewModel.updateCollection(collection)
+                                    scope.launch { sheetState.hide() }
+                                },
+                                containercolor = MaterialTheme.colorScheme.primary,
+                                bordercolor = MaterialTheme.colorScheme.primary,
+                                textcolor = Color.White
+                            )
+
+                        } else if (dialogplace == "allcards") {
+                            MyButton(
+                                text = "Añadir a la colección",
+                                onclick = {
+                                    val collection = collectionViewModel.collection.value.cards
+                                    collection.add(card)
+                                    collectionViewModel.updateCollection(collection)
+                                    scope.launch { sheetState.hide() }
+                                },
+                                containercolor = MaterialTheme.colorScheme.primary,
+                                bordercolor = MaterialTheme.colorScheme.primary,
+                                textcolor = Color.White
+                            )
+                        }
+
                         MyButton(
                             text = "Comprar en Cardmarket",
                             onclick = { uriHandler.openUri(card.purchase_uris_cardmarket.toString()) },
@@ -349,7 +366,8 @@ fun CardDialog(
 @Composable
 fun CardItem(
     card: Card,
-    currentSelectedItem: MutableState<Card>
+    currentSelectedItem: MutableState<Card>,
+    dialogplace: String
 ) {
     val scope = rememberCoroutineScope()
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
@@ -389,10 +407,12 @@ fun CardItem(
                     )
                 }
             }
+            Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = card.name.toString(),
                 fontWeight = FontWeight.Medium,
-                fontSize = 12.sp
+                fontSize = 15.sp,
+                textAlign = TextAlign.Center
             )
 
             Column(
@@ -413,7 +433,7 @@ fun CardItem(
             }
         }
     }
-    CardDialog(sheetState = sheetState, card = currentSelectedItem.value)
+    CardDialog(sheetState = sheetState, card = currentSelectedItem.value, dialogplace = dialogplace)
 
 }
 
@@ -501,11 +521,8 @@ fun FilterModalSheet(
                     Button(
                         modifier = Modifier.padding(horizontal = 4.dp),
                         onClick = {
-                            when (screen) {
-                                "cards" -> cardviewmodel?.orderBy("name")
-                                "col" -> colviewmodel?.orderBy("name")
-                            }
-
+                            cardviewmodel?.orderBy("name")
+                            colviewmodel?.orderBy("name")
                             scope.launch { sheetState.hide() }
                             Toast.makeText(context, "Ordering by name...", Toast.LENGTH_SHORT)
                                 .show()
@@ -528,8 +545,8 @@ fun FilterModalSheet(
                         modifier = Modifier.padding(horizontal = 4.dp),
                         onClick = {
                             when (screen) {
-                                "cards" -> cardviewmodel?.orderBy("color")
-                                "col" -> colviewmodel?.orderBy("color")
+                                "cards" -> cardviewmodel?.orderBy("colors")
+                                "col" -> colviewmodel?.orderBy("colors")
                             }
                             scope.launch { sheetState.hide() }
                             Toast.makeText(context, "Ordering by Color...", Toast.LENGTH_SHORT)
@@ -541,8 +558,8 @@ fun FilterModalSheet(
                         modifier = Modifier.padding(horizontal = 4.dp),
                         onClick = {
                             when (screen) {
-                                "cards" -> cardviewmodel?.orderBy("type")
-                                "col" -> colviewmodel?.orderBy("type")
+                                "cards" -> cardviewmodel?.orderBy("typeline")
+                                "col" -> colviewmodel?.orderBy("typeline")
                             }
                             scope.launch { sheetState.hide() }
                             Toast.makeText(context, "Ordering by Type...", Toast.LENGTH_SHORT)

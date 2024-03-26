@@ -33,11 +33,11 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import androidx.navigation.NavController
 import com.google.firebase.auth.FirebaseAuth
-import com.pixelperfectsoft.tcg_nexus.BackgroundImage
-import com.pixelperfectsoft.tcg_nexus.MyButton
-import com.pixelperfectsoft.tcg_nexus.MyCanvasSeparator
-import com.pixelperfectsoft.tcg_nexus.MyPasswordField
-import com.pixelperfectsoft.tcg_nexus.MyTextField
+import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
+import com.pixelperfectsoft.tcg_nexus.ui.MyButton
+import com.pixelperfectsoft.tcg_nexus.ui.MyCanvasSeparator
+import com.pixelperfectsoft.tcg_nexus.ui.MyPasswordField
+import com.pixelperfectsoft.tcg_nexus.ui.MyTextField
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.LoginViewModel
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -90,7 +90,7 @@ fun LoginForm(navController: NavController, viewModel: LoginViewModel) {
         data = userinput,
         label = "Correo Electrónico",
         onvaluechange = { userinput = it; error = false }, //Siempre que escribamos algo el boolean error se va a poner en false
-        supporting_text = "Correo electronico incorrecto o mal formateado",
+        supportingText = "Correo electronico incorrecto o mal formateado",
         iserror = error
     )
     Spacer(Modifier.size(16.dp))

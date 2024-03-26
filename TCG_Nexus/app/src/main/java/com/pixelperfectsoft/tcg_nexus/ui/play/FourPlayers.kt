@@ -7,7 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.navigation.NavController
-import com.pixelperfectsoft.tcg_nexus.GameBackgroundImage
+import com.pixelperfectsoft.tcg_nexus.ui.GameBackgroundImage
 
 @Composable
 fun Fourplayers(navController: NavController, life: Int) {

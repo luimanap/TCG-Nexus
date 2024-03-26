@@ -31,11 +31,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
-import com.pixelperfectsoft.tcg_nexus.BackgroundImage
-import com.pixelperfectsoft.tcg_nexus.InfoCard
+import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
+import com.pixelperfectsoft.tcg_nexus.ui.InfoCard
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.CardViewModel
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
-import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -50,7 +49,7 @@ fun AllCards(navController: NavController, viewModel: CardViewModel = viewModel(
     val totalcards = rememberSaveable { mutableIntStateOf(0) }
     val estimatedCost = rememberSaveable { mutableFloatStateOf(0f) }
     var searchinput by rememberSaveable { mutableStateOf("") }
-    var searched = rememberSaveable { mutableStateOf(false) }
+    val searched = rememberSaveable { mutableStateOf(true) }
     BackgroundImage()
     Column(
         verticalArrangement = Arrangement.Center,
@@ -67,7 +66,8 @@ fun AllCards(navController: NavController, viewModel: CardViewModel = viewModel(
                     label = { Text(text = "Buscar...") },
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 32.dp),
+                        .padding(horizontal = 32.dp)
+                        .padding(top = 64.dp),
                     shape = RoundedCornerShape(45.dp),
                     singleLine = true,
                     colors = TextFieldDefaults.textFieldColors(

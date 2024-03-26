@@ -16,7 +16,6 @@ class CardViewModel : ViewModel() {
     private val allcards = 29237
     private var loaded = false
     private var filter = mutableStateOf("null")
-    private var limit = mutableIntStateOf(allcards)
     private var searchkey = mutableStateOf("")
 
 
@@ -52,14 +51,16 @@ class CardViewModel : ViewModel() {
         tempList.removeAll(tempList)
         db.getReference("cards")
             .orderByChild(filter.value.lowercase())
-            .limitToFirst(limit.intValue)
+            .limitToFirst(allcards)
             .addListenerForSingleValueEvent(object :
                 ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     for (i in snapshot.children) {
                         val card = i.getValue(Card::class.java)
-                        if (card != null && card.name.toString().lowercase().contains(searchkey.value.lowercase())) {
-                            tempList.add(card)
+                        if (card != null) {
+                            if (card.name.toString().lowercase().contains(searchkey.value.lowercase().trim())) {
+                                tempList.add(card)
+                            }
                         }
                     }
                     response.value = DataState.Success(tempList)
@@ -82,22 +83,6 @@ class CardViewModel : ViewModel() {
         retrieveData()
     }
 
-    fun setLimit(limit: Int) {
-        /*
-        * Cambiando el limite de la consulta
-        * 1. Si el numero que le pasamos al metodo no es 0, ponemos ese numero como limite.
-        *    Por otro lado si el numero que le pasamos es 0, vamos a poner el numero
-        *    maximo de cartas como limite.
-        * 2. Ejecutamos la consulta para actualizar
-         */
-        if(limit!=-1){
-            this.limit.intValue = limit
-        }else{
-            this.limit.intValue = allcards
-        }
-        response.value = DataState.Loading
-        retrieveData()
-    }
 
     fun searchCardsByName(searchinput: String) {
         /*
@@ -112,7 +97,7 @@ class CardViewModel : ViewModel() {
         */
         response.value = DataState.Loading
         searchkey.value = searchinput
-        retrieveData()
+        //retrieveData()
         /*var searchList = mutableListOf<Card>()
         response.value = DataState.Loading
         for (i in tempList) {

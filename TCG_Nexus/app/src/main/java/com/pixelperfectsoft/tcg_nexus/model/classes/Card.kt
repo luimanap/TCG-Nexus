@@ -14,8 +14,6 @@ class Card(
     var power: Any = "",
     var prices_eur: Any = "",
     var prices_eur_foil: Any = "",
-    var prices_usd: Any = "",
-    var prices_usd_foil: Any = "",
     var produced_mana: Any = "",
     var purchase_uris_cardmarket: Any = "",
     var rarity: Any = "",
@@ -24,11 +22,9 @@ class Card(
     var set_name: Any = "",
     var toughness: Any = "",
     var type_line: Any = "",
-    var set_type: Any = "",
     var loyalty: Any = "",
-    var _rarity: Any = ""
 ){
-    fun getrarities(): String {
+    /*fun getrarities(): String {
         when (this.rarity.toString().lowercase()){
             "common" -> return "Común"
             "uncommon" -> return "Infrecuente"
@@ -36,5 +32,5 @@ class Card(
             "mythic" -> return "Mítica"
             else -> return ""
         }
-    }
+    }*/
 }

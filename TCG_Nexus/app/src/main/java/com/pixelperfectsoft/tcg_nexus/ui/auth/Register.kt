@@ -27,11 +27,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.pixelperfectsoft.tcg_nexus.BackgroundImage
-import com.pixelperfectsoft.tcg_nexus.MyButton
-import com.pixelperfectsoft.tcg_nexus.MyCanvasSeparator
-import com.pixelperfectsoft.tcg_nexus.MyPasswordField
-import com.pixelperfectsoft.tcg_nexus.MyTextField
+import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
+import com.pixelperfectsoft.tcg_nexus.ui.MyButton
+import com.pixelperfectsoft.tcg_nexus.ui.MyCanvasSeparator
+import com.pixelperfectsoft.tcg_nexus.ui.MyPasswordField
+import com.pixelperfectsoft.tcg_nexus.ui.MyTextField
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.LoginViewModel
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
@@ -70,7 +70,7 @@ fun RegisterScreen(
         Spacer(Modifier.size(25.dp))
 
         //Name Input
-        MyTextField(data = userinput, label = "Usuario", onvaluechange = { userinput = it },supporting_text = "", iserror = error)
+        MyTextField(data = userinput, label = "Usuario", onvaluechange = { userinput = it },supportingText = "", iserror = error)
         Spacer(Modifier.size(16.dp))
 
 
@@ -78,7 +78,7 @@ fun RegisterScreen(
         MyTextField(
             data = emailinput,
             label = "Correo Electrónico",
-            onvaluechange = { emailinput = it },supporting_text = "", iserror = error)
+            onvaluechange = { emailinput = it },supportingText = "", iserror = error)
         Spacer(Modifier.size(16.dp))
 
         //Password Input
