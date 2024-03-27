@@ -36,34 +36,34 @@ class LoginViewModel : ViewModel() {
         password: String,
         profile: () -> Unit
     ) {
-        var usercol = CollectionViewModel()
+        val usercol = CollectionViewModel()
         if (_loading.value == false) {
             _loading.value = true
             auth.createUserWithEmailAndPassword(email.trim(), password.trim())
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        Log.d("createuser", "createUser: User created successfully")
+                        Log.d("create_user", "create_user: User created successfully")
                         createUser(displayname, email)
                         usercol.createCollection()
                         profile()
                     } else {
-                        Log.d("createuser", "createuser : ${task.result}")
+                        Log.d("create_user", "create_user : ${task.result}")
                     }
                     _loading.value = false
                 }
         }
     }
 
-    private fun createUser(displayname: String?, email: String) {
+    private fun createUser(displayName: String?, email: String) {
         val userId = auth.currentUser?.uid
         //val user = mutableMapOf<String, Any>()
 
         //user["user_id"]= userId.toString()
-        //user["display_name"]= displayname.toString()
+        //user["display_name"]= displayName.toString()
 
         val user = User(
             avatar_url = "",
-            display_name = displayname.toString(),
+            display_name = displayName.toString(),
             email = email,
             user_id = userId.toString()
         ).toMap()
@@ -71,7 +71,7 @@ class LoginViewModel : ViewModel() {
         FirebaseFirestore.getInstance().collection("users").add(user).addOnSuccessListener {
             Log.d("users", "createUser: Display name ${it.id} created successfully")
         }.addOnFailureListener {
-            Log.d("users", "createUser: Unspected error creating user $it")
+            Log.d("users", "createUser: Unexpected error creating user $it")
         }
 
     }

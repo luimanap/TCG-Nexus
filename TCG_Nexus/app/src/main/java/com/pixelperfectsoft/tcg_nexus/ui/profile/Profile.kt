@@ -25,11 +25,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -39,6 +38,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
@@ -79,62 +79,56 @@ fun Profile(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         LogOutButton(navController)
-        AvatarImage(currentuser = currentuser, navController = navController)
+        AvatarImage(currentuser = currentuser)
         UserInfo(currentuser)
-        EditProfile(currentuser)
+        EditProfile(currentuser, navController = navController)
     }
 }
 
 @Composable
-fun EditProfile(currentuser: User) {
-    var show by rememberSaveable {
+fun EditProfile(currentuser: User, navController: NavHostController) {
+    var show = rememberSaveable {
         mutableStateOf(false)
     }
     Spacer(modifier = Modifier.fillMaxHeight(0.2f))
     MyButton(
-        text = "Edit profile",
-        onclick = { show = true },
+        text = "Editar perfil",
+        onclick = {
+            show.value = true
+        },
         containercolor = MaterialTheme.colorScheme.primary,
         bordercolor = MaterialTheme.colorScheme.primary,
         textcolor = Color.White
     )
+    if (show.value) {
+        ProfileSelector(show, currentuser = currentuser, navcontroller = navController)
+    }
 
 }
 
 @Composable
-fun AvatarImage(
-    navController: NavController,
+fun ProfileSelector(
+    show: MutableState<Boolean>,
+    avatarImagesViewModel: StorageConfig = viewModel(),
     currentuser: User,
-    avatarImagesViewModel: StorageConfig = viewModel()
+    navcontroller: NavHostController,
 ) {
-    val show = remember { mutableStateOf(false) }
-    Spacer(modifier = Modifier.fillMaxHeight(0.1f))
-    Box(
-        modifier = Modifier
-            .clip(CircleShape)
-            .background(Color.Transparent)
-            .size(200.dp)
-            .clickable {
-                show.value = true
-            },
-        contentAlignment = Alignment.Center
-    ) {
-        AsyncImage(
-            model = currentuser.avatar_url, contentDescription = "Avatar",
-            modifier = Modifier.fillMaxSize(),
-            contentScale = ContentScale.Crop
-        )
-    }
-    if (show.value) {
-        Dialog(onDismissRequest = { show.value = false }) {
-            val avatarImages = avatarImagesViewModel.images.value
-            Surface(
-                modifier = Modifier
-                    .fillMaxHeight(0.5f)
-                    .requiredWidth(LocalConfiguration.current.screenWidthDp.dp * 0.96f),
-                shape = RoundedCornerShape(16.dp),
-                color = Color.White
-            ) {
+    Dialog(onDismissRequest = { show.value = false }) {
+        val avatarImages = avatarImagesViewModel.images.value
+        Surface(
+            modifier = Modifier
+                .fillMaxHeight(0.5f)
+                .requiredWidth(LocalConfiguration.current.screenWidthDp.dp * 0.96f),
+            shape = RoundedCornerShape(16.dp),
+            color = Color.White
+        ) {
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text(
+                    text = "Selecciona una imagen de perfil:",
+                    modifier = Modifier.padding(top = 16.dp),
+                    fontWeight = FontWeight.SemiBold,
+                    textAlign = TextAlign.Center
+                )
                 LazyVerticalGrid(
                     modifier = Modifier
                         .fillMaxSize()
@@ -151,23 +145,43 @@ fun AvatarImage(
                                     .fillMaxWidth()
                                     .clickable {
                                         /*
-                                        * Al hacer clic en la imagen que deseamos:
+                                        * Al hacer click en la imagen que deseamos:
                                         * 1. Mostramos por consola la ruta de la imagen para facilitar
-                                        *    la depuracion
+                                        *    la depuración
                                         * 2. Cambiamos la imagen en Firebase
                                         * 3. Cerramos el dialogo
                                         * 4. Navegamos a la pantalla de login, que comprueba si
-                                        *    estamos logueados, lo que recarga la pagina en su defecto
+                                        *    estamos logueados, lo que recarga la página en su defecto
                                         */
                                         Log.d("avatar", "New profile -> $image")
                                         changeAvatar(image, currentuser)
                                         show.value = false
-                                        navController.navigate(MyScreenRoutes.LOGIN)
+                                        navcontroller.navigate(MyScreenRoutes.LOGIN)
                                     })
                         }
                     })
             }
         }
+    }
+}
+
+@Composable
+fun AvatarImage(
+    currentuser: User,
+    ) {
+    Spacer(modifier = Modifier.fillMaxHeight(0.1f))
+    Box(
+        modifier = Modifier
+            .clip(CircleShape)
+            .background(Color.Transparent)
+            .size(200.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        AsyncImage(
+            model = currentuser.avatar_url, contentDescription = "Avatar",
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop
+        )
     }
 }
 
@@ -223,7 +237,7 @@ fun LogOutButton(navController: NavHostController) {
             Icon(
                 painter = painterResource(id = R.drawable.logout),
                 contentDescription = "logout",
-                tint = Color.Red,
+                tint = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.fillMaxSize()
             )
         }

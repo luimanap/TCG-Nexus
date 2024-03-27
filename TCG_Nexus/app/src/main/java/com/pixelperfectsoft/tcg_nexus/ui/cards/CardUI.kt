@@ -355,6 +355,7 @@ fun CardDialog(
                             bordercolor = MaterialTheme.colorScheme.primary,
                             textcolor = Color.White
                         )
+                        Spacer(modifier = Modifier.height(16.dp))
                     }
                 }
             })
@@ -517,9 +518,9 @@ fun FilterModalSheet(
                 )
                 HorizontalDivider(modifier = Modifier.padding(vertical = 16.dp))
                 Text(text = "Ordenar por...")
-                Row(Modifier.fillMaxWidth()) {
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
                     Button(
-                        modifier = Modifier.padding(horizontal = 4.dp),
+                        modifier = Modifier.padding(horizontal = 2.dp),
                         onClick = {
                             cardviewmodel?.orderBy("name")
                             colviewmodel?.orderBy("name")
@@ -530,7 +531,7 @@ fun FilterModalSheet(
                         Text(text = "Nombre")
                     }
                     Button(
-                        modifier = Modifier.padding(horizontal = 4.dp),
+                        modifier = Modifier.padding(horizontal = 2.dp),
                         onClick = {
                             when (screen) {
                                 "cards" -> cardviewmodel?.orderBy("cmc")
@@ -542,7 +543,7 @@ fun FilterModalSheet(
                         Text(text = "CMC")
                     }
                     Button(
-                        modifier = Modifier.padding(horizontal = 4.dp),
+                        modifier = Modifier.padding(horizontal = 2.dp),
                         onClick = {
                             when (screen) {
                                 "cards" -> cardviewmodel?.orderBy("colors")
@@ -555,7 +556,7 @@ fun FilterModalSheet(
                         Text(text = "Color")
                     }
                     Button(
-                        modifier = Modifier.padding(horizontal = 4.dp),
+                        modifier = Modifier.padding(horizontal = 2.dp),
                         onClick = {
                             when (screen) {
                                 "cards" -> cardviewmodel?.orderBy("typeline")

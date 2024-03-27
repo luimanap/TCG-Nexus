@@ -28,6 +28,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
@@ -38,7 +39,7 @@ import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AllCards(navController: NavController, viewModel: CardViewModel = viewModel()) {
+fun AllCards(navController: NavController, viewModel: CardViewModel = CardViewModel(context = LocalContext.current)) {
     val backcolors = listOf(
         Color.Transparent,
         Color.White,

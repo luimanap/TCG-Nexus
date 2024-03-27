@@ -24,6 +24,42 @@ class Card(
     var type_line: Any = "",
     var loyalty: Any = "",
 ){
+    fun serialize(): String {
+        return "$cmc|$color_identity|$colors|$flavor_text|$id|" +
+                "$image_uris_normal|$mana_cost|$name|$oracle_id|" +
+                "$oracle_text|$power|$prices_eur|$prices_eur_foil|" +
+                "$produced_mana|$purchase_uris_cardmarket|$rarity|" +
+                "$set|$set_id|$set_name|$toughness|$type_line|$loyalty"
+    }
+
+    companion object{
+        fun deserialize(s: String): Card {
+            val split = s.split("|")
+            return Card(
+                cmc = split[0],
+                color_identity = split[1],
+                colors = split[2],
+                flavor_text = split[3],
+                id = split[4],
+                image_uris_normal = split[5],
+                mana_cost = split[6],
+                name = split[7],
+                oracle_id = split[8],
+                oracle_text = split[9],
+                power = split[10],
+                prices_eur = split[11],
+                prices_eur_foil = split[12],
+                produced_mana = split[13],
+                purchase_uris_cardmarket = split[14],
+                rarity = split[15],
+                set = split[16],
+                set_id = split[17],
+                set_name = split[18],
+                toughness = split[19],
+                type_line = split[20],
+                loyalty = split[21])
+        }
+    }
     /*fun getrarities(): String {
         when (this.rarity.toString().lowercase()){
             "common" -> return "Común"
