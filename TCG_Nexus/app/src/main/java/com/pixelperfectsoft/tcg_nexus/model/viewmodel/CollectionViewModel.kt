@@ -2,11 +2,8 @@ package com.pixelperfectsoft.tcg_nexus.model.viewmodel
 
 import android.util.Log
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.mutableDoubleStateOf
-import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.FirebaseAuth
@@ -17,15 +14,14 @@ import com.pixelperfectsoft.tcg_nexus.model.classes.Collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import java.math.BigDecimal
-import java.math.RoundingMode
 
 class CollectionViewModel : ViewModel() {
     var state: MutableState<DataState> = mutableStateOf(DataState.Loading)
-    var searchresult = mutableListOf<Card>()
+    private var searchresult = mutableListOf<Card>()
     val collection = mutableStateOf(Collect())
-    val cards = mutableListOf<Card>()
-    val price = mutableStateOf(BigDecimal(0))
-    val order = mutableStateOf("null")
+    private val cards = mutableListOf<Card>()
+    private val price = mutableStateOf(BigDecimal(0))
+    private val order = mutableStateOf("null")
     val limit = mutableIntStateOf(cards.size)
 
 
@@ -54,7 +50,7 @@ class CollectionViewModel : ViewModel() {
         * 2. Ejecutamos la consulta para actualizar
          */
         order.value = criteria
-        show_cards_from_collection()
+        showCardsFromCollection()
         //get_collection()
     }
     fun get_collection_price(){
@@ -74,7 +70,7 @@ class CollectionViewModel : ViewModel() {
          */
         state.value = DataState.Loading
         state.value = DataState.Success(collection.value.cards)
-        get_collection()
+        getCollection()
     }
     fun updateCollection(cards: List<Card>) {
         /*
@@ -137,18 +133,25 @@ class CollectionViewModel : ViewModel() {
         /*
             Este metodo se va a ejecutar cuando se instancie la clase CollectionViewModel
          */
-        get_collection()
+        getCollection()
     }
 
-    fun get_collection() {
+    private fun getCollection() {
         viewModelScope.launch {
             collection.value = retrieveCollection()
-            show_cards_from_collection()
+            showCardsFromCollection()
         }
 
     }
 
-    suspend fun retrieveCollection(): Collect {
+    fun deleteCardFromCollection(card: Card){
+        viewModelScope.launch {
+            delete(card)
+        }
+        getCollection()
+    }
+
+    private suspend fun retrieveCollection(): Collect {
         /*
          * Obteniendo la coleccion del usuario:
          * 1. Nos creamos una coleccion vacia
@@ -158,7 +161,7 @@ class CollectionViewModel : ViewModel() {
          * 4. Parseamos el resultado de la query a un objeto de la clase Collect
          * 5. Si el userId no es nulo, devolvemos el resultado con la variable current_collection
         */
-        var current_collection = mutableStateOf(Collect())
+        val current_collection = mutableStateOf(Collect())
         val userId = FirebaseAuth.getInstance().currentUser?.uid
         try {
             if(order.value!="null") {
@@ -191,21 +194,62 @@ class CollectionViewModel : ViewModel() {
         return current_collection.value
     }
 
-    fun show_cards_from_collection() {
+    private fun showCardsFromCollection() {
         /*
-        * Mostrando las cartas de la coleccion:
+        * Mostrando las cartas de la colección:
         * 1. Limpiamos el array de temporal de cartas por si hubiera restos de alguna query anterior
-        * 2. Ponemos el estado de la operacion en Loading
-        * 3. Recorremos el array perteneciente a la coleccion y añadimos sus cartas al temporal
-        * 4. Ponemos el estado de la operacion en completado y le pasamos el array temporal
+        * 2. Ponemos el estado de la operación en Loading
+        * 3. Recorremos el array perteneciente a la colección y añadimos sus cartas al temporal
+        * 4. Ponemos el estado de la operación en completado y le pasamos el array temporal
         * 4. Obtenemos cartas de la Realtime Database de Firestore y las añadimos al array temporal
          */
-        val collection = mutableStateOf(collection.value.cards)
+        val collection = collection.value.cards
         cards.removeAll(cards)
         state.value = DataState.Loading
-        for(i in collection.value){
+        for(i in collection){
             cards.add(i)
         }
         state.value = DataState.Success(cards)
+    }
+
+    private suspend fun delete(card: Card) {
+        /*
+        * Borrando una carta de la coleccion:
+        * 1. Obtenemos el id del usuario actualmente logueado
+        * 2. Obtenemos el id de la carta a borrar
+        * 3. Obtenemos la coleccion de colecciones y le decimos que obtenga los documentos que
+        *      tengan el atributo "user_id" que coincida con el id del usuario actualmente logueado
+        * 4. Parseamos el resultado de la query a un objeto de la clase Collect
+        * 5. Si el userId no es nulo, devolvemos el resultado con la variable current_collection
+        * 6. Obtenemos la coleccion de cartas y le decimos que obtenga los documentos que
+        *      tengan el atributo "card_id" que coincida con el id de la carta a borrar.
+        * 7. Parseamos el resultado de la query a un objeto de la clase Card
+        * 8. Eliminamos la carta del array de cartas
+         */
+        val userId = FirebaseAuth.getInstance().currentUser?.uid
+        val cardId = card.id
+        try {
+            FirebaseFirestore.getInstance()
+               .collection("collections")
+               .whereEqualTo("user_id", userId)
+               .get().await().map { document ->
+                    val collection = document.toObject(Collect::class.java)
+                    if (userId != null) {
+                        FirebaseFirestore.getInstance()
+                           .collection("cards")
+                           .whereEqualTo("card_id", cardId)
+                           .get().await().map { element ->
+                                val cardElement = element.toObject(Card::class.java)
+                                Log.d("collection-delete", "Card found -> $cardElement")
+                                collection.cards.remove(cardElement)
+                                updateCollection(collection.cards)
+                            }
+                    }
+                }
+        } catch (e: FirebaseFirestoreException) {
+            Log.w("collection-delete", "Error retrieving collection data: $e")
+        }
+
+
     }
 }
