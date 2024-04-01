@@ -1,17 +1,17 @@
 package com.pixelperfectsoft.tcg_nexus.model.classes
 
 data class User(
-    val avatar_url : String? = "",
-    val display_name: String = "",
+    val avatarUrl : String? = "",
+    val displayName: String = "",
     val email: String = "",
-    val user_id: String = ""
+    val userId: String = ""
 ){
     fun toMap(): MutableMap<String,Any>{
         return mutableMapOf(
-            "avatar_url" to this.avatar_url.toString(),
-            "display_name" to this.display_name,
+            "avatar_url" to this.avatarUrl.toString(),
+            "display_name" to this.displayName,
             "email" to this.email,
-            "user_id" to this.user_id
+            "user_id" to this.userId
         )
     }
 }

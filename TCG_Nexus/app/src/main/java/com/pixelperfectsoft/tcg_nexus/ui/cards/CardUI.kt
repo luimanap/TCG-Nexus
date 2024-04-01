@@ -10,16 +10,12 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.safeContent
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.systemBars
-import androidx.compose.foundation.layout.waterfall
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
@@ -28,7 +24,6 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
@@ -38,8 +33,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
-import androidx.compose.material3.ModalBottomSheetDefaults
-import androidx.compose.material3.ModalBottomSheetProperties
 import androidx.compose.material3.SheetState
 import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.material3.Text
@@ -66,6 +59,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
 import coil.compose.rememberAsyncImagePainter
 import com.pixelperfectsoft.tcg_nexus.ui.MyButton
@@ -73,6 +67,7 @@ import com.pixelperfectsoft.tcg_nexus.R
 import com.pixelperfectsoft.tcg_nexus.model.classes.Card
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.CardViewModel
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.CollectionViewModel
+import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -143,6 +138,7 @@ fun CardDialog(
     if (sheetState.isVisible) {
         val scope = rememberCoroutineScope()
         val uriHandler = LocalUriHandler.current
+        val navController = rememberNavController()
         ModalBottomSheet(
             onDismissRequest = {
                 scope.launch {
@@ -332,12 +328,12 @@ fun CardDialog(
                                 onclick = {
                                     collectionViewModel.deleteCardFromCollection(card)
                                     scope.launch { sheetState.hide() }
+                                    navController.navigate(MyScreenRoutes.COLLECTION)
                                 },
                                 containercolor = MaterialTheme.colorScheme.primary,
                                 bordercolor = MaterialTheme.colorScheme.primary,
                                 textcolor = Color.White
                             )
-
                         } else if (dialogplace == "allcards") {
                             MyButton(
                                 text = "Añadir a la colección",
@@ -567,8 +563,8 @@ fun FilterModalSheet(
                         modifier = Modifier.padding(horizontal = 2.dp),
                         onClick = {
                             when (screen) {
-                                "cards" -> cardviewmodel?.orderBy("typeline")
-                                "col" -> colviewmodel?.orderBy("typeline")
+                                "cards" -> cardviewmodel?.orderBy("type_line")
+                                "col" -> colviewmodel?.orderBy("type_line")
                             }
                             scope.launch { sheetState.hide() }
                             Toast.makeText(context, "Ordering by Type...", Toast.LENGTH_SHORT)

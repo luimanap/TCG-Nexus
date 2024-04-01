@@ -27,7 +27,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -50,7 +49,6 @@ import com.pixelperfectsoft.tcg_nexus.model.classes.User
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.UserDataViewModel
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import com.google.firebase.firestore.FirebaseFirestore
 import com.pixelperfectsoft.tcg_nexus.ui.MyButton
@@ -178,7 +176,7 @@ fun AvatarImage(
         contentAlignment = Alignment.Center
     ) {
         AsyncImage(
-            model = currentuser.avatar_url, contentDescription = "Avatar",
+            model = currentuser.avatarUrl, contentDescription = "Avatar",
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
@@ -195,10 +193,10 @@ fun changeAvatar(image: String, currentUser: User) {
      *    por la ruta de la imagen que pasamos como parametro al metodo
      * 4. Mostramos los logs de actualizado correctamente o error si hubiese alguno
      */
-    Log.d("avatar_update", "Updating ${currentUser.user_id}")
+    Log.d("avatar_update", "Updating ${currentUser.userId}")
     FirebaseFirestore.getInstance()
         .collection("users")
-        .whereEqualTo("user_id", currentUser.user_id)
+        .whereEqualTo("user_id", currentUser.userId)
         .get()
         .addOnSuccessListener {
             for (doc in it.documents) {
@@ -248,7 +246,7 @@ fun LogOutButton(navController: NavHostController) {
 fun UserInfo(user: User) {
     Spacer(modifier = Modifier.fillMaxHeight(0.1f))
     Text(
-        text = user.display_name,
+        text = user.displayName,
         style = TextStyle(
             fontSize = 20.sp,
             fontWeight = FontWeight.SemiBold

@@ -62,10 +62,10 @@ class LoginViewModel : ViewModel() {
         //user["display_name"]= displayName.toString()
 
         val user = User(
-            avatar_url = "",
-            display_name = displayName.toString(),
+            avatarUrl = "",
+            displayName = displayName.toString(),
             email = email,
-            user_id = userId.toString()
+            userId = userId.toString()
         ).toMap()
 
         FirebaseFirestore.getInstance().collection("users").add(user).addOnSuccessListener {

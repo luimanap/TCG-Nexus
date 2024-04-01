@@ -47,7 +47,7 @@ fun BackgroundImage() {
         Image(
             painter = painterResource(id = R.drawable.dragon_background),
             contentDescription = "Background Image",
-            contentScale = ContentScale.FillBounds,
+            contentScale = ContentScale.Crop,
             modifier = Modifier.matchParentSize()
         )
     }

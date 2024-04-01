@@ -39,12 +39,12 @@ suspend fun getUserDataFromFirestore(): User {
             .map {//Obtenemos la coleccion perteneciente a usuarios y esperamos a que se obtenga algo desde esa coleccion con await
                 val result = it.toObject(User::class.java)
                 if (currentuser != null) {
-                    if (currentuser.uid == result.user_id) {
+                    if (currentuser.uid == result.userId) {
                         Log.d("get-user", "User found -> $user")
                         user = result
                     } else {
                         Log.d("get-user", "User id mismatch")
-                        Log.d("get-user", "Id founded -> ${result.user_id}")
+                        Log.d("get-user", "Id founded -> ${result.userId}")
                         Log.d("get-user", "User founded $result")
                         Log.d("get-user", "Id to found -> ${currentuser.uid}")
                     }

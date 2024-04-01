@@ -161,7 +161,7 @@ fun BottomBarNaviContainer(
                 startDestination = MyScreenRoutes.HOME
             ) {
                 composable(MyScreenRoutes.HOME) {
-                    HomeScreen(navController = navController)
+                    HomeScreen()
                 }
                 composable(MyScreenRoutes.SEARCH) {
                     AllCards(navController = navController)

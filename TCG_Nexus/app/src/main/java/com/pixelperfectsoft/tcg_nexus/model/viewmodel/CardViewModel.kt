@@ -3,14 +3,17 @@ package com.pixelperfectsoft.tcg_nexus.model.viewmodel
 import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
+import androidx.collection.emptyLongSet
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.pixelperfectsoft.tcg_nexus.model.classes.Card
+import kotlinx.coroutines.launch
 
 
 class CardViewModel(context: Context) : ViewModel() {
@@ -29,12 +32,17 @@ class CardViewModel(context: Context) : ViewModel() {
         load()
     }
 
-    private fun load(){
-        if (tempList.size==0) {
+    private fun load() {
+        /*if (!loaded.value) {
+            viewModelScope.launch {
+                retrieveData()
+            }.invokeOnCompletion {loaded.value = true}
+        }*/
+        if (tempList.size == 0) {
             retrieveData()
             saveCardsToStorage()
             Log.d("load_cards", "Loaded cards from Firebase and saved to cache")
-        }else{
+        } else {
             retrieveCardsFromSharedPreferences()
             Log.d("load_cards", "Loaded cards from cache")
         }
@@ -62,7 +70,7 @@ class CardViewModel(context: Context) : ViewModel() {
         val db = FirebaseDatabase.getInstance()
         db.getReference("cards").keepSynced(true)
         response.value = DataState.Loading
-        tempList.clear()
+        //tempList.removeAll(tempList)
         db.getReference("cards")
             //.orderByKey()
             //.startAt(100.0)
@@ -78,6 +86,7 @@ class CardViewModel(context: Context) : ViewModel() {
                             if (card.name.toString().lowercase()
                                     .contains(searchkey.value.lowercase().trim())
                             ) {
+                                //Log.d("card_loader", tempList.size.toString())
                                 tempList.add(card)
                             }
                         }
@@ -108,7 +117,8 @@ class CardViewModel(context: Context) : ViewModel() {
             2. Deserializamos las cartas
             3. Añadimos las cartas a la colección
             4. Cambiamos el estado de la operación a Success y
-                le pasamos el array si se ha realizado correctamente
+                le pasamos el array si se ha realizado correctamente con
+                su correspondiente filtro de orden
          */
         response.value = DataState.Loading
         val serializedCards = sharedPreferences.getString("cards", null)
@@ -118,7 +128,33 @@ class CardViewModel(context: Context) : ViewModel() {
             cards.forEach { serializedCard ->
                 tempList.add(Card.deserialize(serializedCard))
             }
-            response.value = DataState.Success(tempList)
+            response.value = DataState.Success(
+                when (filter.value) {
+                    "name" -> tempList.sortedBy { card ->
+                        card.name.toString()
+                    }
+
+                    "cmc" -> tempList.sortedBy { card ->
+                        card.cmc.toString()
+                    }
+
+                    "colors" -> tempList.sortedBy { card ->
+                        card.colors.toString()
+                    }
+
+                    "type_line" -> tempList.sortedBy { card ->
+                        card.type_line.toString()
+                    }
+                    else -> tempList
+
+                }.toMutableList())
+            /*tempList.sortedBy {
+                when (filter) {
+                    "name" -> it.name.toString().lowercase(),
+                    else -> it.id
+                }
+            }.toMutableList()*/
+
         }
     }
 
@@ -130,6 +166,7 @@ class CardViewModel(context: Context) : ViewModel() {
         * 2. Ejecutamos la consulta para actualizar
          */
         filter.value = criteria
+        Log.d("orderBy", "Ordering by -> $criteria")
         load()
     }
 
@@ -145,8 +182,9 @@ class CardViewModel(context: Context) : ViewModel() {
           *    añadir al nuevo array
           * 5. Ponemos el estado de la respuesta en completado y le pasamos el nuevo array
         */
-        response.value = DataState.Loading
+        //response.value = DataState.Loading
         searchkey.value = searchinput
+        Log.d("searchCardsByName", "Searching by -> $searchinput")
         load()
         /*var searchList = mutableListOf<Card>()
         response.value = DataState.Loading
@@ -161,6 +199,7 @@ class CardViewModel(context: Context) : ViewModel() {
     fun resetSearch() {
         response.value = DataState.Loading
         searchkey.value = ""
+        Log.d("resetSearch", "Search reset is done")
         load()
     }
 }
