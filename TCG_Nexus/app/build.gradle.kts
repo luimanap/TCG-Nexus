@@ -82,6 +82,8 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.7.7")
     implementation("io.coil-kt:coil-compose:2.5.0")
     implementation ("com.github.bumptech.glide:glide:4.12.0")
+    implementation("com.google.code.gson:gson:2.10.1")
+
     annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
 
 }

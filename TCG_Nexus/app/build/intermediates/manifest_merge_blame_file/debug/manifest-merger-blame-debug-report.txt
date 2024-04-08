@@ -9,325 +9,325 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:4:5-67
-11-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:4:22-64
+11-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:4:5-67
+11-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:4:22-64
 12
 13    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
 14    <!-- <uses-sdk android:minSdkVersion="14"/> -->
 15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-15-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:23:5-79
-15-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:23:22-76
+15-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:23:5-79
+15-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:23:22-76
 16    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-16-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\c171879f95046a145b3bd321fe5af983\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:5-98
-16-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\c171879f95046a145b3bd321fe5af983\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:22-95
+16-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\c171879f95046a145b3bd321fe5af983\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:5-98
+16-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\c171879f95046a145b3bd321fe5af983\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:22-95
 17
 18    <permission
-18-->[androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+18-->[androidx.core:core:1.12.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
 19        android:name="com.pixelperfectsoft.tcg_nexus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-19-->[androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+19-->[androidx.core:core:1.12.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
 20        android:protectionLevel="signature" />
-20-->[androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+20-->[androidx.core:core:1.12.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
 21
 22    <uses-permission android:name="com.pixelperfectsoft.tcg_nexus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-22-->[androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
-22-->[androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+22-->[androidx.core:core:1.12.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+22-->[androidx.core:core:1.12.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
 23
 24    <application
-24-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:5:5-26:19
+24-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:5:5-26:19
 25        android:allowBackup="true"
-25-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:6:9-35
+25-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:6:9-35
 26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-26-->[androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+26-->[androidx.core:core:1.12.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 27        android:dataExtractionRules="@xml/data_extraction_rules"
-27-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:7:9-65
+27-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:7:9-65
 28        android:debuggable="true"
 29        android:extractNativeLibs="false"
 30        android:fullBackupContent="@xml/backup_rules"
-30-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:8:9-54
+30-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:8:9-54
 31        android:icon="@mipmap/ic_launcher"
-31-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:9:9-43
+31-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:9:9-43
 32        android:label="@string/app_name"
-32-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:10:9-41
+32-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:10:9-41
 33        android:roundIcon="@mipmap/ic_launcher_round"
-33-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:11:9-54
+33-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:11:9-54
 34        android:supportsRtl="true"
-34-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:12:9-35
+34-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:12:9-35
 35        android:testOnly="true"
 36        android:theme="@style/Theme.Pruebas_App_TFG" >
-36-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:13:9-53
+36-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:13:9-53
 37        <activity
-37-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:15:9-25:20
+37-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:15:9-25:20
 38            android:name="com.pixelperfectsoft.tcg_nexus.MainActivity"
-38-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:16:13-41
+38-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:16:13-41
 39            android:exported="true"
-39-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:17:13-36
+39-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:17:13-36
 40            android:label="@string/app_name"
-40-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:18:13-45
+40-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:18:13-45
 41            android:theme="@style/Theme.Pruebas_App_TFG" >
-41-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:19:13-57
+41-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:19:13-57
 42            <intent-filter>
-42-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:20:13-24:29
+42-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:20:13-24:29
 43                <action android:name="android.intent.action.MAIN" />
-43-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:21:17-69
-43-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:21:25-66
+43-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:21:17-69
+43-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:21:25-66
 44
 45                <category android:name="android.intent.category.LAUNCHER" />
-45-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:23:17-77
-45-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:23:27-74
+45-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:23:17-77
+45-->C:\Users\LENOVO X280 i5 M2\Documents\GitHub\TCG_Nexus_\TCG_Nexus\app\src\main\AndroidManifest.xml:23:27-74
 46            </intent-filter>
 47        </activity>
 48
 49        <service
-49-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:27:9-36:19
+49-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:27:9-36:19
 50            android:name="com.google.firebase.components.ComponentDiscoveryService"
-50-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:28:13-84
+50-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:28:13-84
 51            android:directBootAware="true"
-51-->[com.google.firebase:firebase-common:20.4.2] C:\Users\luisv\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:32:13-43
+51-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:32:13-43
 52            android:exported="false" >
-52-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:29:13-37
+52-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:29:13-37
 53            <meta-data
-53-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:30:13-32:85
+53-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:30:13-32:85
 54                android:name="com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar"
-54-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:31:17-118
+54-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:31:17-118
 55                android:value="com.google.firebase.components.ComponentRegistrar" />
-55-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:32:17-82
+55-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:32:17-82
 56            <meta-data
-56-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:33:13-35:85
+56-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:33:13-35:85
 57                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
-57-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:34:17-107
+57-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:34:17-107
 58                android:value="com.google.firebase.components.ComponentRegistrar" />
-58-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:35:17-82
+58-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:35:17-82
 59            <meta-data
-59-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\luisv\.gradle\caches\transforms-3\097e830bb7710ded1b4e0a8efb8ce5db\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:25:13-27:85
+59-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\097e830bb7710ded1b4e0a8efb8ce5db\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:25:13-27:85
 60                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar"
-60-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\luisv\.gradle\caches\transforms-3\097e830bb7710ded1b4e0a8efb8ce5db\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:26:17-120
+60-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\097e830bb7710ded1b4e0a8efb8ce5db\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:26:17-120
 61                android:value="com.google.firebase.components.ComponentRegistrar" />
-61-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\luisv\.gradle\caches\transforms-3\097e830bb7710ded1b4e0a8efb8ce5db\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:27:17-82
+61-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\097e830bb7710ded1b4e0a8efb8ce5db\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:27:17-82
 62            <meta-data
-62-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\luisv\.gradle\caches\transforms-3\097e830bb7710ded1b4e0a8efb8ce5db\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:28:13-30:85
+62-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\097e830bb7710ded1b4e0a8efb8ce5db\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:28:13-30:85
 63                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
-63-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\luisv\.gradle\caches\transforms-3\097e830bb7710ded1b4e0a8efb8ce5db\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:29:17-117
+63-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\097e830bb7710ded1b4e0a8efb8ce5db\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:29:17-117
 64                android:value="com.google.firebase.components.ComponentRegistrar" />
-64-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\luisv\.gradle\caches\transforms-3\097e830bb7710ded1b4e0a8efb8ce5db\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:30:17-82
+64-->[com.google.firebase:firebase-appcheck:17.1.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\097e830bb7710ded1b4e0a8efb8ce5db\transformed\firebase-appcheck-17.1.1\AndroidManifest.xml:30:17-82
 65            <meta-data
-65-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:69:13-71:85
+65-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:69:13-71:85
 66                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-66-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:70:17-109
+66-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:70:17-109
 67                android:value="com.google.firebase.components.ComponentRegistrar" />
-67-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:71:17-82
+67-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:71:17-82
 68            <meta-data
-68-->[com.google.firebase:firebase-firestore:24.10.1] C:\Users\luisv\.gradle\caches\transforms-3\8b91c6ecd6b0b77bb78020e2e9d850ab\transformed\firebase-firestore-24.10.1\AndroidManifest.xml:17:13-19:85
+68-->[com.google.firebase:firebase-firestore:24.10.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\8b91c6ecd6b0b77bb78020e2e9d850ab\transformed\firebase-firestore-24.10.1\AndroidManifest.xml:17:13-19:85
 69                android:name="com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar"
-69-->[com.google.firebase:firebase-firestore:24.10.1] C:\Users\luisv\.gradle\caches\transforms-3\8b91c6ecd6b0b77bb78020e2e9d850ab\transformed\firebase-firestore-24.10.1\AndroidManifest.xml:18:17-122
+69-->[com.google.firebase:firebase-firestore:24.10.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\8b91c6ecd6b0b77bb78020e2e9d850ab\transformed\firebase-firestore-24.10.1\AndroidManifest.xml:18:17-122
 70                android:value="com.google.firebase.components.ComponentRegistrar" />
-70-->[com.google.firebase:firebase-firestore:24.10.1] C:\Users\luisv\.gradle\caches\transforms-3\8b91c6ecd6b0b77bb78020e2e9d850ab\transformed\firebase-firestore-24.10.1\AndroidManifest.xml:19:17-82
+70-->[com.google.firebase:firebase-firestore:24.10.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\8b91c6ecd6b0b77bb78020e2e9d850ab\transformed\firebase-firestore-24.10.1\AndroidManifest.xml:19:17-82
 71            <meta-data
-71-->[com.google.firebase:firebase-firestore:24.10.1] C:\Users\luisv\.gradle\caches\transforms-3\8b91c6ecd6b0b77bb78020e2e9d850ab\transformed\firebase-firestore-24.10.1\AndroidManifest.xml:20:13-22:85
+71-->[com.google.firebase:firebase-firestore:24.10.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\8b91c6ecd6b0b77bb78020e2e9d850ab\transformed\firebase-firestore-24.10.1\AndroidManifest.xml:20:13-22:85
 72                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-72-->[com.google.firebase:firebase-firestore:24.10.1] C:\Users\luisv\.gradle\caches\transforms-3\8b91c6ecd6b0b77bb78020e2e9d850ab\transformed\firebase-firestore-24.10.1\AndroidManifest.xml:21:17-111
+72-->[com.google.firebase:firebase-firestore:24.10.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\8b91c6ecd6b0b77bb78020e2e9d850ab\transformed\firebase-firestore-24.10.1\AndroidManifest.xml:21:17-111
 73                android:value="com.google.firebase.components.ComponentRegistrar" />
-73-->[com.google.firebase:firebase-firestore:24.10.1] C:\Users\luisv\.gradle\caches\transforms-3\8b91c6ecd6b0b77bb78020e2e9d850ab\transformed\firebase-firestore-24.10.1\AndroidManifest.xml:22:17-82
+73-->[com.google.firebase:firebase-firestore:24.10.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\8b91c6ecd6b0b77bb78020e2e9d850ab\transformed\firebase-firestore-24.10.1\AndroidManifest.xml:22:17-82
 74            <meta-data
-74-->[com.google.firebase:firebase-database:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:29:13-31:85
+74-->[com.google.firebase:firebase-database:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:29:13-31:85
 75                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
-75-->[com.google.firebase:firebase-database:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:30:17-120
+75-->[com.google.firebase:firebase-database:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:30:17-120
 76                android:value="com.google.firebase.components.ComponentRegistrar" />
-76-->[com.google.firebase:firebase-database:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:31:17-82
+76-->[com.google.firebase:firebase-database:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:31:17-82
 77            <meta-data
-77-->[com.google.firebase:firebase-database:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:32:13-34:85
+77-->[com.google.firebase:firebase-database:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:32:13-34:85
 78                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-78-->[com.google.firebase:firebase-database:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:33:17-109
+78-->[com.google.firebase:firebase-database:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:33:17-109
 79                android:value="com.google.firebase.components.ComponentRegistrar" />
-79-->[com.google.firebase:firebase-database:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:34:17-82
+79-->[com.google.firebase:firebase-database:20.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\5abe0d8e4181fd934e3eadb56e0886d1\transformed\firebase-database-20.3.0\AndroidManifest.xml:34:17-82
 80            <meta-data
-80-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\luisv\.gradle\caches\transforms-3\47f655d333cf7ed31591c310445fc329\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:12:13-14:85
+80-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\47f655d333cf7ed31591c310445fc329\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:12:13-14:85
 81                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
-81-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\luisv\.gradle\caches\transforms-3\47f655d333cf7ed31591c310445fc329\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:13:17-116
+81-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\47f655d333cf7ed31591c310445fc329\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:13:17-116
 82                android:value="com.google.firebase.components.ComponentRegistrar" />
-82-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\luisv\.gradle\caches\transforms-3\47f655d333cf7ed31591c310445fc329\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:14:17-82
+82-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\47f655d333cf7ed31591c310445fc329\transformed\firebase-common-ktx-20.4.2\AndroidManifest.xml:14:17-82
 83            <meta-data
-83-->[com.google.firebase:firebase-common:20.4.2] C:\Users\luisv\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:35:13-37:85
+83-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:35:13-37:85
 84                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
-84-->[com.google.firebase:firebase-common:20.4.2] C:\Users\luisv\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:36:17-109
+84-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:36:17-109
 85                android:value="com.google.firebase.components.ComponentRegistrar" />
-85-->[com.google.firebase:firebase-common:20.4.2] C:\Users\luisv\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:37:17-82
+85-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:37:17-82
 86        </service>
 87
 88        <activity
-88-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:29:9-46:20
+88-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:29:9-46:20
 89            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-89-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:30:13-80
+89-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:30:13-80
 90            android:excludeFromRecents="true"
-90-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:31:13-46
+90-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:31:13-46
 91            android:exported="true"
-91-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:32:13-36
+91-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:32:13-36
 92            android:launchMode="singleTask"
-92-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:33:13-44
+92-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:33:13-44
 93            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-93-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:34:13-72
+93-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:34:13-72
 94            <intent-filter>
-94-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:35:13-45:29
+94-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:35:13-45:29
 95                <action android:name="android.intent.action.VIEW" />
-95-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
-95-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
+95-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
+95-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
 96
 97                <category android:name="android.intent.category.DEFAULT" />
-97-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
-97-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
+97-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
+97-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
 98                <category android:name="android.intent.category.BROWSABLE" />
-98-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
-98-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
+98-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
+98-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
 99
 100                <data
-100-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:41:17-44:51
+100-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:41:17-44:51
 101                    android:host="firebase.auth"
-101-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:42:21-49
+101-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:42:21-49
 102                    android:path="/"
-102-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:43:21-37
+102-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:43:21-37
 103                    android:scheme="genericidp" />
-103-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:44:21-48
+103-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:44:21-48
 104            </intent-filter>
 105        </activity>
 106        <activity
-106-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:47:9-64:20
+106-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:47:9-64:20
 107            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-107-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:48:13-79
+107-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:48:13-79
 108            android:excludeFromRecents="true"
-108-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:49:13-46
+108-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:49:13-46
 109            android:exported="true"
-109-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:50:13-36
+109-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:50:13-36
 110            android:launchMode="singleTask"
-110-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:51:13-44
+110-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:51:13-44
 111            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-111-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:52:13-72
+111-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:52:13-72
 112            <intent-filter>
-112-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:53:13-63:29
+112-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:53:13-63:29
 113                <action android:name="android.intent.action.VIEW" />
-113-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
-113-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
+113-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
+113-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
 114
 115                <category android:name="android.intent.category.DEFAULT" />
-115-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
-115-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
+115-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
+115-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
 116                <category android:name="android.intent.category.BROWSABLE" />
-116-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
-116-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
+116-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
+116-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
 117
 118                <data
-118-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:41:17-44:51
+118-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:41:17-44:51
 119                    android:host="firebase.auth"
-119-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:42:21-49
+119-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:42:21-49
 120                    android:path="/"
-120-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:43:21-37
+120-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:43:21-37
 121                    android:scheme="recaptcha" />
-121-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:44:21-48
+121-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:44:21-48
 122            </intent-filter>
 123        </activity>
 124        <activity
-124-->[androidx.compose.ui:ui-tooling-android:1.6.1] C:\Users\luisv\.gradle\caches\transforms-3\6b17f38afa102bd0d4837a21edee90e2\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
+124-->[androidx.compose.ui:ui-tooling-android:1.6.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6b17f38afa102bd0d4837a21edee90e2\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
 125            android:name="androidx.compose.ui.tooling.PreviewActivity"
-125-->[androidx.compose.ui:ui-tooling-android:1.6.1] C:\Users\luisv\.gradle\caches\transforms-3\6b17f38afa102bd0d4837a21edee90e2\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
+125-->[androidx.compose.ui:ui-tooling-android:1.6.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6b17f38afa102bd0d4837a21edee90e2\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
 126            android:exported="true" />
-126-->[androidx.compose.ui:ui-tooling-android:1.6.1] C:\Users\luisv\.gradle\caches\transforms-3\6b17f38afa102bd0d4837a21edee90e2\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
+126-->[androidx.compose.ui:ui-tooling-android:1.6.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6b17f38afa102bd0d4837a21edee90e2\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
 127        <activity
-127-->[androidx.compose.ui:ui-test-manifest:1.6.1] C:\Users\luisv\.gradle\caches\transforms-3\4acd2f74ca41eb45e136bd70b3cc2ed5\transformed\ui-test-manifest-1.6.1\AndroidManifest.xml:23:9-25:39
+127-->[androidx.compose.ui:ui-test-manifest:1.6.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\4acd2f74ca41eb45e136bd70b3cc2ed5\transformed\ui-test-manifest-1.6.1\AndroidManifest.xml:23:9-25:39
 128            android:name="androidx.activity.ComponentActivity"
-128-->[androidx.compose.ui:ui-test-manifest:1.6.1] C:\Users\luisv\.gradle\caches\transforms-3\4acd2f74ca41eb45e136bd70b3cc2ed5\transformed\ui-test-manifest-1.6.1\AndroidManifest.xml:24:13-63
+128-->[androidx.compose.ui:ui-test-manifest:1.6.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\4acd2f74ca41eb45e136bd70b3cc2ed5\transformed\ui-test-manifest-1.6.1\AndroidManifest.xml:24:13-63
 129            android:exported="true" />
-129-->[androidx.compose.ui:ui-test-manifest:1.6.1] C:\Users\luisv\.gradle\caches\transforms-3\4acd2f74ca41eb45e136bd70b3cc2ed5\transformed\ui-test-manifest-1.6.1\AndroidManifest.xml:25:13-36
+129-->[androidx.compose.ui:ui-test-manifest:1.6.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\4acd2f74ca41eb45e136bd70b3cc2ed5\transformed\ui-test-manifest-1.6.1\AndroidManifest.xml:25:13-36
 130
 131        <provider
-131-->[com.google.firebase:firebase-common:20.4.2] C:\Users\luisv\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:23:9-28:39
+131-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:23:9-28:39
 132            android:name="com.google.firebase.provider.FirebaseInitProvider"
-132-->[com.google.firebase:firebase-common:20.4.2] C:\Users\luisv\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:24:13-77
+132-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:24:13-77
 133            android:authorities="com.pixelperfectsoft.tcg_nexus.firebaseinitprovider"
-133-->[com.google.firebase:firebase-common:20.4.2] C:\Users\luisv\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:25:13-72
+133-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:25:13-72
 134            android:directBootAware="true"
-134-->[com.google.firebase:firebase-common:20.4.2] C:\Users\luisv\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:26:13-43
+134-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:26:13-43
 135            android:exported="false"
-135-->[com.google.firebase:firebase-common:20.4.2] C:\Users\luisv\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:27:13-37
+135-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:27:13-37
 136            android:initOrder="100" />
-136-->[com.google.firebase:firebase-common:20.4.2] C:\Users\luisv\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:28:13-36
+136-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\6b301706b1e0a7cc490126a4723c7d85\transformed\firebase-common-20.4.2\AndroidManifest.xml:28:13-36
 137
 138        <activity
-138-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\d143305733e5e592ae0fd2c8ac1e67d4\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+138-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\d143305733e5e592ae0fd2c8ac1e67d4\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
 139            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-139-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\d143305733e5e592ae0fd2c8ac1e67d4\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+139-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\d143305733e5e592ae0fd2c8ac1e67d4\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
 140            android:exported="false"
-140-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\d143305733e5e592ae0fd2c8ac1e67d4\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+140-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\d143305733e5e592ae0fd2c8ac1e67d4\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
 141            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-141-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\d143305733e5e592ae0fd2c8ac1e67d4\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+141-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\d143305733e5e592ae0fd2c8ac1e67d4\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
 142
 143        <provider
-143-->[androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+143-->[androidx.emoji2:emoji2:1.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
 144            android:name="androidx.startup.InitializationProvider"
-144-->[androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+144-->[androidx.emoji2:emoji2:1.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
 145            android:authorities="com.pixelperfectsoft.tcg_nexus.androidx-startup"
-145-->[androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+145-->[androidx.emoji2:emoji2:1.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
 146            android:exported="false" >
-146-->[androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+146-->[androidx.emoji2:emoji2:1.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
 147            <meta-data
-147-->[androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+147-->[androidx.emoji2:emoji2:1.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
 148                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-148-->[androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+148-->[androidx.emoji2:emoji2:1.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
 149                android:value="androidx.startup" />
-149-->[androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+149-->[androidx.emoji2:emoji2:1.3.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
 150            <meta-data
-150-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\396c676b32b67aba0e3c1dc7ac90affb\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+150-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\396c676b32b67aba0e3c1dc7ac90affb\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
 151                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-151-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\396c676b32b67aba0e3c1dc7ac90affb\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+151-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\396c676b32b67aba0e3c1dc7ac90affb\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
 152                android:value="androidx.startup" />
-152-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\396c676b32b67aba0e3c1dc7ac90affb\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+152-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\396c676b32b67aba0e3c1dc7ac90affb\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
 153            <meta-data
-153-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+153-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
 154                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-154-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+154-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
 155                android:value="androidx.startup" />
-155-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+155-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
 156        </provider>
 157
 158        <meta-data
-158-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\8c04395a1f19fb4682454e6a11eccd3b\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+158-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\8c04395a1f19fb4682454e6a11eccd3b\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
 159            android:name="com.google.android.gms.version"
-159-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\8c04395a1f19fb4682454e6a11eccd3b\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+159-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\8c04395a1f19fb4682454e6a11eccd3b\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
 160            android:value="@integer/google_play_services_version" />
-160-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\8c04395a1f19fb4682454e6a11eccd3b\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+160-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\8c04395a1f19fb4682454e6a11eccd3b\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
 161
 162        <receiver
-162-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+162-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
 163            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-163-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+163-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
 164            android:directBootAware="false"
-164-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+164-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
 165            android:enabled="true"
-165-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+165-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
 166            android:exported="true"
-166-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+166-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
 167            android:permission="android.permission.DUMP" >
-167-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+167-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
 168            <intent-filter>
-168-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+168-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
 169                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-169-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
-169-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+169-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+169-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
 170            </intent-filter>
 171            <intent-filter>
-171-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+171-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
 172                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-172-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
-172-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+172-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+172-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
 173            </intent-filter>
 174            <intent-filter>
-174-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+174-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
 175                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-175-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
-175-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+175-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+175-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
 176            </intent-filter>
 177            <intent-filter>
-177-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+177-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
 178                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-178-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
-178-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+178-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+178-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\LENOVO X280 i5 M2\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
 179            </intent-filter>
 180        </receiver>
 181    </application>

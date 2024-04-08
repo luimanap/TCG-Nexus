@@ -39,7 +39,6 @@ import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 @Composable
 @Preview(showBackground = true, showSystemUi = true)
 fun HomeScreen() {
-    val cards = CardViewModel(context = LocalContext.current)
     val news = listOf(
         /*News(
             image = R.drawable.ic_launcher_background,
