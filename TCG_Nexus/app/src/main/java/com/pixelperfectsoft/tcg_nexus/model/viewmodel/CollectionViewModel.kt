@@ -266,6 +266,5 @@ class CollectionViewModel : ViewModel() {
             Log.w("collection-delete", "Error retrieving collection data: $e")
         }*/
 
-
     }
 }

@@ -51,6 +51,7 @@ fun AllCards(navController: NavController, viewModel: CardViewModel = CardViewMo
     val estimatedCost = rememberSaveable { mutableFloatStateOf(0f) }
     var searchinput by rememberSaveable { mutableStateOf("") }
     val searched = rememberSaveable { mutableStateOf(true) }
+    //var viewModel: CardViewModel = CardViewModel(context = LocalContext.current)
     BackgroundImage()
     Column(
         verticalArrangement = Arrangement.Center,

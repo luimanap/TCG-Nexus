@@ -26,7 +26,7 @@ class LoginViewModel : ViewModel() {
                     onError()
                 }
             } catch (e: FirebaseAuthInvalidCredentialsException) {
-                Log.d("login", "signIn: ${e.message}")
+                Log.w("login", "signIn: ${e.message}")
             }
         }
 

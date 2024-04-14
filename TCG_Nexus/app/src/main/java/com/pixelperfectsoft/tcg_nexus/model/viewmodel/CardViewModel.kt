@@ -19,11 +19,12 @@ import com.pixelperfectsoft.tcg_nexus.model.classes.User
 import kotlinx.coroutines.launch
 import java.io.File
 import java.io.FileOutputStream
+import java.io.IOException
 
 
 class CardViewModel(context: Context) : ViewModel() {
     val response: MutableState<DataState> = mutableStateOf(DataState.Empty)
-    val tempList = mutableListOf<Card>() //Lista de cartas que vamos a devolver posteriormente
+    var tempList = mutableListOf<Card>() //Lista de cartas que vamos a devolver posteriormente
     private val allcards = 29237
     private val loaded = mutableStateOf(false)
     private var filter = mutableStateOf("id")
@@ -34,11 +35,32 @@ class CardViewModel(context: Context) : ViewModel() {
     private val sharedPreferencesEditor: SharedPreferences.Editor = sharedPreferences.edit()
 
     init {
-        loadjson()
+        loadjson(context)
         //load()
     }
+    fun loadData(context : Context): String{
+        var jsonStr = ""
+        try {
+            val stream = context.assets.open("cards.json")
+            val size = stream.available()
+            val buffer = ByteArray(size)
+            stream.read(buffer)
+            stream.close()
+            jsonStr = String(buffer)
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
+        return jsonStr
+    }
+    private fun loadjson(context : Context){
+        response.value = DataState.Loading
+        val jsonString = loadData(context)
+        val json = Gson().fromJson(jsonString, Array<Card>::class.java)
+        tempList = json.toMutableList()
+        response.value = DataState.Success(tempList)
+    }
 
-    private fun load() {
+    /*private fun load() {
         /*if (!loaded.value) {
             viewModelScope.launch {
                 retrieveData()
@@ -49,21 +71,12 @@ class CardViewModel(context: Context) : ViewModel() {
          //   saveCardsToStorage()
             Log.d("load_cards", "Loaded cards from Firebase and saved to cache")
         } else {
-            retrieveCardsFromSharedPreferences()
+
             Log.d("load_cards", "Loaded cards from cache")
         }
 
-    }
-    private fun loadjson(){
-        val jsonFile = File("src/main/assets/cards/data.json")
-        val jsonString = jsonFile.readText()
-        val gson = Gson()
-        val card: User = gson.fromJson(jsonString, User::class.java)
+    }*/
 
-        println("User ID : ${card.userId}")
-        println("Name : ${card.displayName}")
-        println("Email: ${card.email}")
-    }
 /*
     private fun retrieveData() {
 
@@ -121,65 +134,6 @@ class CardViewModel(context: Context) : ViewModel() {
 
  */
 
-    private fun saveCardsToStorage(context: Context) {
-        /*
-            Guardando las cartas en el almacenamiento:
-            1. Serializamos las cartas
-            2. Guardamos las cartas en SharedPreferences
-         */
-        val serializedCards = tempList.joinToString(";") { it.serialize() }
-       // val fos : FileOutputStream = context.openFileOutput("cards.dat")
-        sharedPreferencesEditor.putString("cards", serializedCards).apply()
-    }
-
-    private fun retrieveCardsFromSharedPreferences() {
-        /*
-            Recuperando las cartas desde el almacenamiento:
-            1. Recuperamos las cartas desde SharedPreferences
-            2. Deserializamos las cartas
-            3. Añadimos las cartas a la colección
-            4. Cambiamos el estado de la operación a Success y
-                le pasamos el array si se ha realizado correctamente con
-                su correspondiente filtro de orden
-         */
-        response.value = DataState.Loading
-        val serializedCards = sharedPreferences.getString("cards", null)
-        serializedCards?.let {
-            tempList.clear()
-            val cards = it.split(";")
-            cards.forEach { serializedCard ->
-                tempList.add(Card.deserialize(serializedCard))
-            }
-            response.value = DataState.Success(
-                when (filter.value) {
-                    "name" -> tempList.sortedBy { card ->
-                        card.name.toString()
-                    }
-
-                    "cmc" -> tempList.sortedBy { card ->
-                        card.cmc.toString()
-                    }
-
-                    "colors" -> tempList.sortedBy { card ->
-                        card.colors.toString()
-                    }
-
-                    "type_line" -> tempList.sortedBy { card ->
-                        card.type_line.toString()
-                    }
-                    else -> tempList
-
-                }.toMutableList())
-            /*tempList.sortedBy {
-                when (filter) {
-                    "name" -> it.name.toString().lowercase(),
-                    else -> it.id
-                }
-            }.toMutableList()*/
-
-        }
-    }
-
 
     fun orderBy(criteria: String) {
         /*
@@ -189,7 +143,7 @@ class CardViewModel(context: Context) : ViewModel() {
          */
         filter.value = criteria
         Log.d("orderBy", "Ordering by -> $criteria")
-        load()
+        //load()
     }
 
 
@@ -207,7 +161,7 @@ class CardViewModel(context: Context) : ViewModel() {
         //response.value = DataState.Loading
         searchkey.value = searchinput
         Log.d("searchCardsByName", "Searching by -> $searchinput")
-        load()
+        //load()
         /*var searchList = mutableListOf<Card>()
         response.value = DataState.Loading
         for (i in tempList) {
@@ -222,7 +176,7 @@ class CardViewModel(context: Context) : ViewModel() {
         response.value = DataState.Loading
         searchkey.value = ""
         Log.d("resetSearch", "Search reset is done")
-        load()
+        //load()
     }
 }
 

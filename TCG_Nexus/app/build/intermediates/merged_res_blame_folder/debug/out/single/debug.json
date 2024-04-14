@@ -1,162 +1,162 @@
 [
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_foil.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/foil.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_passwordeye.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/passwordeye.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_card_back_unavailable.png.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/card_back_unavailable.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_cards.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/cards.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_dice_icon.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/dice_icon.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_sword.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/sword.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_rare.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/rare.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_searchicon.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/searchicon.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/xml_data_extraction_rules.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_card_back_unavailable.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/card_back_unavailable.png"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_foil.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/foil.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_passwordeyeopen.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/passwordeyeopen.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_heart.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/heart.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_materialsymbolsfilteralt.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/materialsymbolsfilteralt.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_logout.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/logout.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_home.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/home.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_cards.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/cards.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_card_back.jpeg.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/card_back.jpeg"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_mythic.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/mythic.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_blacklotus.jpg.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/blacklotus.jpg"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_logout.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/logout.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_passwordeye.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/passwordeye.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/xml_data_extraction_rules.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/xml/data_extraction_rules.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_common.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/common.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_loyalty.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/loyalty.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_common.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/common.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_blacklotus.jpg.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/blacklotus.jpg"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_rare.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/rare.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_woodtable.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/woodtable.png"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_heart.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/heart.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_passwordeyeopen.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/passwordeyeopen.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_logotcgnexus.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/logotcgnexus.png"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_home.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/home.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_loyalty.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/loyalty.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_woodtable.png.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/woodtable.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/ic_launcher_background.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_dragon_background.png.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/dragon_background.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_albums.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/albums.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_uncommon.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/uncommon.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/ic_launcher_foreground.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_logotcgnexus.png.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/logotcgnexus.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_uncommon.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/uncommon.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_mythic.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/mythic.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/xml_backup_rules.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/xml/backup_rules.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_materialsymbolsfilteralt.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/materialsymbolsfilteralt.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_personcirclesharp.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/personcirclesharp.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_personcirclesharp.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/personcirclesharp.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_sword.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/sword.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_dragon_background.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/dragon_background.png"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_albums.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/albums.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/drawable_card_back.jpeg.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/drawable/card_back.jpeg"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_dice_icon.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/dice_icon.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-61:/xml_backup_rules.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-63:/xml/backup_rules.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_searchicon.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/searchicon.xml"
     }
 ]
