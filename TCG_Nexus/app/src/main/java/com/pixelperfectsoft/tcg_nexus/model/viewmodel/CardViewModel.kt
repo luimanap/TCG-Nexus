@@ -30,15 +30,12 @@ class CardViewModel(context: Context) : ViewModel() {
     private var filter = mutableStateOf("id")
     private var searchkey = mutableStateOf("")
 
-    private val sharedPreferences: SharedPreferences =
-        context.getSharedPreferences("CardViewModel", Context.MODE_PRIVATE)
-    private val sharedPreferencesEditor: SharedPreferences.Editor = sharedPreferences.edit()
 
-    init {
+    /*init {
         loadjson(context)
         //load()
-    }
-    fun loadData(context : Context): String{
+    }*/
+    private fun loadData(context: Context): String {
         var jsonStr = ""
         try {
             val stream = context.assets.open("cards.json")
@@ -52,7 +49,8 @@ class CardViewModel(context: Context) : ViewModel() {
         }
         return jsonStr
     }
-    private fun loadjson(context : Context){
+
+    fun loadjson(context: Context) {
         response.value = DataState.Loading
         val jsonString = loadData(context)
         val json = Gson().fromJson(jsonString, Array<Card>::class.java)
@@ -60,79 +58,82 @@ class CardViewModel(context: Context) : ViewModel() {
         response.value = DataState.Success(tempList)
     }
 
-    /*private fun load() {
+    fun load(context: Context) {
+        viewModelScope.launch {
+            loadjson(context)
+        }
         /*if (!loaded.value) {
             viewModelScope.launch {
                 retrieveData()
             }.invokeOnCompletion {loaded.value = true}
         }*/
-        if (tempList.size == 0) {
+        /*if (tempList.size == 0) {
             //retrieveData()
          //   saveCardsToStorage()
             Log.d("load_cards", "Loaded cards from Firebase and saved to cache")
         } else {
 
             Log.d("load_cards", "Loaded cards from cache")
-        }
+        }*/
 
-    }*/
-
-/*
-    private fun retrieveData() {
-
-        /*
-        * Obteniendo las cartas:
-        * 1. Obtenemos la instancia de la BDD
-        * 2. Obtenemos la referencia "cards" dentro de la instancia y le decimos que guarde
-        *    el resultado de la consulta en caché
-        * 3. Cambiamos el estado de la operación a Loading
-        * 4. Limitamos la consulta a la variable (si la variable vale 100, muestra las 100
-        *    primeras cartas)
-        * 5. Ordenamos los resultados en cuanto a la columna correspondiente a la variable
-        *    (si la variable es "name", ordena por la columna con el mismo nombre y si no hay
-        *    ninguna columna con ese nombre, no ordena los datos)
-        * 6. Creamos un listener para cada valor y por cada uno lo convertimos a objeto de
-        *    la clase Card.
-        * 7. Si ese objeto no es nulo, y contiene el nombre que indicamos lo añadimos al array de cartas que devolveremos
-        * 8. Cambiamos el estado de la operación a Success y le pasamos el array si se ha realizado
-        *    correctamente o a Failure y le pasamos el mensaje de error si ha habido algún error
-         */
-        val db = FirebaseDatabase.getInstance()
-        db.getReference("cards").keepSynced(true)
-        response.value = DataState.Loading
-        //tempList.removeAll(tempList)
-        db.getReference("cards")
-        db.getReference("cards")
-            .orderByChild("name")
-            .startAt("a")
-            .endAt("b")
-            //.orderByChild(filter.value.lowercase())
-            //.limitToFirst(10)
-            .addListenerForSingleValueEvent(object :
-                ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    for (i in snapshot.children) {
-                        val card = i.getValue(Card::class.java)
-
-                        if (card != null) {
-                            if (card.name.toString().lowercase()
-                                    .contains(searchkey.value.lowercase().trim())
-                            ) {
-                                //Log.d("card_loader", tempList.size.toString())
-                                tempList.add(card)
-                            }
-                        }
-                    }
-                    response.value = DataState.Success(tempList)
-                }
-
-                override fun onCancelled(error: DatabaseError) {
-                    response.value = DataState.Failure(error.message)
-                }
-            })
     }
 
- */
+    /*
+        private fun retrieveData() {
+
+            /*
+            * Obteniendo las cartas:
+            * 1. Obtenemos la instancia de la BDD
+            * 2. Obtenemos la referencia "cards" dentro de la instancia y le decimos que guarde
+            *    el resultado de la consulta en caché
+            * 3. Cambiamos el estado de la operación a Loading
+            * 4. Limitamos la consulta a la variable (si la variable vale 100, muestra las 100
+            *    primeras cartas)
+            * 5. Ordenamos los resultados en cuanto a la columna correspondiente a la variable
+            *    (si la variable es "name", ordena por la columna con el mismo nombre y si no hay
+            *    ninguna columna con ese nombre, no ordena los datos)
+            * 6. Creamos un listener para cada valor y por cada uno lo convertimos a objeto de
+            *    la clase Card.
+            * 7. Si ese objeto no es nulo, y contiene el nombre que indicamos lo añadimos al array de cartas que devolveremos
+            * 8. Cambiamos el estado de la operación a Success y le pasamos el array si se ha realizado
+            *    correctamente o a Failure y le pasamos el mensaje de error si ha habido algún error
+             */
+            val db = FirebaseDatabase.getInstance()
+            db.getReference("cards").keepSynced(true)
+            response.value = DataState.Loading
+            //tempList.removeAll(tempList)
+            db.getReference("cards")
+            db.getReference("cards")
+                .orderByChild("name")
+                .startAt("a")
+                .endAt("b")
+                //.orderByChild(filter.value.lowercase())
+                //.limitToFirst(10)
+                .addListenerForSingleValueEvent(object :
+                    ValueEventListener {
+                    override fun onDataChange(snapshot: DataSnapshot) {
+                        for (i in snapshot.children) {
+                            val card = i.getValue(Card::class.java)
+
+                            if (card != null) {
+                                if (card.name.toString().lowercase()
+                                        .contains(searchkey.value.lowercase().trim())
+                                ) {
+                                    //Log.d("card_loader", tempList.size.toString())
+                                    tempList.add(card)
+                                }
+                            }
+                        }
+                        response.value = DataState.Success(tempList)
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                        response.value = DataState.Failure(error.message)
+                    }
+                })
+        }
+
+     */
 
 
     fun orderBy(criteria: String) {

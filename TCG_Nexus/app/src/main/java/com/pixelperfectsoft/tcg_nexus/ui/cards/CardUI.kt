@@ -162,6 +162,7 @@ fun CardDialog(
                     Image(
                         painter = painterResource(
                             id = when (card.rarity.toString().lowercase()) {
+                                //"common" -> R.drawable.common
                                 "common" -> R.drawable.common
                                 "uncommon" -> R.drawable.uncommon
                                 "rare" -> R.drawable.rare
