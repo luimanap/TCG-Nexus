@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import android.util.Log
 import androidx.collection.emptyLongSet
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.ViewModel
@@ -14,6 +15,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import com.pixelperfectsoft.tcg_nexus.model.classes.Card
 import com.pixelperfectsoft.tcg_nexus.model.classes.User
 import kotlinx.coroutines.launch
@@ -23,13 +25,17 @@ import java.io.IOException
 
 
 class CardViewModel(context: Context) : ViewModel() {
+    private val gson: Gson = GsonBuilder().setLenient().create()
+
+    //private val gson: Gson = Gson
     val response: MutableState<DataState> = mutableStateOf(DataState.Empty)
     var tempList = mutableListOf<Card>() //Lista de cartas que vamos a devolver posteriormente
     private val allcards = 29237
     private val loaded = mutableStateOf(false)
     private var filter = mutableStateOf("id")
     private var searchkey = mutableStateOf("")
-
+    var start = 0
+    var end = 9
 
     /*init {
         loadjson(context)
@@ -51,11 +57,47 @@ class CardViewModel(context: Context) : ViewModel() {
     }
 
     fun loadjson(context: Context) {
+        tempList.removeAll(tempList)
         response.value = DataState.Loading
         val jsonString = loadData(context)
-        val json = Gson().fromJson(jsonString, Array<Card>::class.java)
-        tempList = json.toMutableList()
+        val json = gson.fromJson(jsonString, Array<Card>::class.java)
+        val filteredJson = json.filter { it.name.toString().contains(searchkey.value) }
+        val orderedJson = filteredJson.sortedBy {
+
+            when (filter.value) {
+                "id" -> it.id.toString()
+                "name" -> it.name.toString()
+                "type" -> it.type_line.toString()
+                //"rarity" -> it.rarity.toString()
+                "color" -> it.colors.toString()
+                else -> it.name.toString()
+            }
+        }
+        orderedJson.toList().forEach{
+            Log.d("Loading", it.name.toString())
+        }
+        /*
+        tempList.addAll(
+            orderedJson.subList(start, end)
+        )
+        */
+        tempList.addAll(
+            if(orderedJson.size >= end){
+                orderedJson.subList(start,end)
+            }else{
+                orderedJson.subList(start,orderedJson.size)
+            }
+        )
         response.value = DataState.Success(tempList)
+        /*
+        tempList = if (orderedJson.size >= end) {
+            orderedJson.toMutableList().subList(start, end)
+        } else {
+            orderedJson.toMutableList().subList(start, orderedJson.size)
+        }
+
+        //tempList = orderedJson.toMutableList().subList(start, end)
+        response.value = DataState.Success(tempList)*/
     }
 
     fun load(context: Context) {
@@ -148,7 +190,7 @@ class CardViewModel(context: Context) : ViewModel() {
     }
 
 
-    fun searchCardsByName(searchinput: String) {
+    fun searchCardsByName(searchinput: String, context: Context) {
         /*
           * Buscando cartas por nombre:
           * 1. Nos creamos un array de cartas vacio
@@ -160,10 +202,20 @@ class CardViewModel(context: Context) : ViewModel() {
           * 5. Ponemos el estado de la respuesta en completado y le pasamos el nuevo array
         */
         //response.value = DataState.Loading
+        //val searchlist = mutableStateListOf<Card>()
         searchkey.value = searchinput
-        Log.d("searchCardsByName", "Searching by -> $searchinput")
+        /*for (i in tempList) {
+            if (i.name.toString().lowercase().contains(searchkey.value.lowercase().trim())) {
+                //Log.d("searchCardsByName", tempList.size.toString())
+                searchlist.add(i)
+            }
+        }*/
+        //load(context)
+        /*response.value = DataState.Success(searchlist)
+        Log.d("searchCardsByName", "Searching by -> $searchinput")*/
         //load()
-        /*var searchList = mutableListOf<Card>()
+        /*
+        val searchList = mutableListOf<Card>()
         response.value = DataState.Loading
         for (i in tempList) {
             if (i.name.toString().lowercase().contains(searchinput.lowercase())) {
@@ -173,11 +225,28 @@ class CardViewModel(context: Context) : ViewModel() {
         response.value = DataState.Success(searchList)*/
     }
 
-    fun resetSearch() {
+    fun resetSearch(context: Context) {
         response.value = DataState.Loading
         searchkey.value = ""
         Log.d("resetSearch", "Search reset is done")
-        //load()
+        load(context)
+    }
+
+    fun prevPage(context: Context) {
+        if (start != 0) {
+            start -= 10
+            end -= 10
+            load(context)
+        }
+    }
+
+    fun nextPage(context: Context) {
+        if (start + 10 < tempList.size) {
+            start += 10
+            end += 10
+            load(context)
+        }
+
     }
 }
 

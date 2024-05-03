@@ -1,4 +1,4 @@
-#Thu Apr 18 17:39:51 CEST 2024
+#Thu May 02 15:49:28 CEST 2024
 base.0=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex

@@ -503,12 +503,12 @@ fun FilterModalSheet(
                             if (searchinput != "") {
                                 Log.d("search", "Searching by name -> $searchinput")
                                 when (screen) {
-                                    "cards" -> cardviewmodel?.searchCardsByName(searchinput)
+                                    "cards" -> cardviewmodel?.searchCardsByName(searchinput, context)
                                     "col" -> colviewmodel?.searchCardsByName(searchinput)
                                 }
                             } else {
                                 when (screen) {
-                                    "cards" -> cardviewmodel?.resetSearch()
+                                    "cards" -> cardviewmodel?.resetSearch(context)
                                     "col" -> colviewmodel?.resetSearch()
                                 }
                             }

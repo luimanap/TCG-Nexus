@@ -50,7 +50,8 @@ fun AllCards(navController: NavController, viewModel: CardViewModel = CardViewMo
     val totalcards = rememberSaveable { mutableIntStateOf(0) }
     val estimatedCost = rememberSaveable { mutableFloatStateOf(0f) }
     var searchinput by rememberSaveable { mutableStateOf("") }
-    val searched = rememberSaveable { mutableStateOf(true) }
+    val searched = rememberSaveable { mutableStateOf(false) }
+    val context = LocalContext.current
     //var viewModel: CardViewModel = CardViewModel(context = LocalContext.current)
     BackgroundImage()
     Column(
@@ -88,7 +89,8 @@ fun AllCards(navController: NavController, viewModel: CardViewModel = CardViewMo
                                 Log.d("search", "Searching by name -> $searchinput")
 
                                 searched.value = true
-                                viewModel.searchCardsByName(searchinput)
+                                viewModel.searchCardsByName(searchinput, context)
+                                viewModel.load(context)
                             }
                         }) {
                             Icon(imageVector = Icons.Filled.Search, contentDescription = "search")
@@ -124,7 +126,7 @@ fun AllCards(navController: NavController, viewModel: CardViewModel = CardViewMo
                 }
                 Spacer(modifier = Modifier.fillMaxHeight(0.05f))
                 //Cargar la busqueda
-                SetData(viewModel = viewModel, totalcards, estimatedCost)
+                SetData(viewModel = viewModel, navController = navController)
             }
 
         }

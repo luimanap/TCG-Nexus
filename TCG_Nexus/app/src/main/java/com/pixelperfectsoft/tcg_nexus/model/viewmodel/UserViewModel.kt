@@ -30,8 +30,7 @@ suspend fun getUserDataFromFirestore(): User {
     val auth =
         FirebaseAuth.getInstance() //Obtenemos la instancia del sistema de autenticacion de Firebase
     val currentuser = auth.currentUser //Obtenemos el usuario actualmente logueado
-    val db =
-        FirebaseFirestore.getInstance()   //Obtenemos la instasncia del sistema de BDD de Firebase
+    val db = FirebaseFirestore.getInstance()   //Obtenemos la instasncia del sistema de BDD de Firebase
     var user = User()
 
     try {
@@ -40,13 +39,13 @@ suspend fun getUserDataFromFirestore(): User {
                 val result = it.toObject(User::class.java)
                 if (currentuser != null) {
                     if (currentuser.uid == result.userId) {
-                        Log.d("get-user", "User found -> $user")
+                        Log.d("get-user", "User id match -> $user")
                         user = result
                     } else {
-                        Log.d("get-user", "User id mismatch")
+                        /*Log.d("get-user", "User id mismatch")
                         Log.d("get-user", "Id founded -> ${result.userId}")
                         Log.d("get-user", "User founded $result")
-                        Log.d("get-user", "Id to found -> ${currentuser.uid}")
+                        Log.d("get-user", "Id to found -> ${currentuser.uid}")*/
                     }
                 }
                 else{

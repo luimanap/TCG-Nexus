@@ -19,6 +19,8 @@ import com.pixelperfectsoft.tcg_nexus.ui.theme.TCGNexus_Theme
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.view.WindowCompat
+import androidx.lifecycle.ViewModelProvider
+import com.pixelperfectsoft.tcg_nexus.model.viewmodel.CardViewModel
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.BottomBarNaviContainer
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.NaviActions
@@ -39,10 +41,10 @@ class MainActivity : ComponentActivity() {
             val navBackStackEntry by navController.currentBackStackEntryAsState()
             val selectedDestination = navBackStackEntry?.destination?.route
                 ?: MyScreenRoutes.HOME //Destino inicial de navegación
-
-            //val storageConfig = StorageConfig(context)
-
-
+            /*
+            val cardViewModel = CardViewModel(context)
+            cardViewModel.load(context)
+            */
             TCGNexus_Theme(darkTheme = false) {
                 Surface(
                     modifier = Modifier.fillMaxSize(),

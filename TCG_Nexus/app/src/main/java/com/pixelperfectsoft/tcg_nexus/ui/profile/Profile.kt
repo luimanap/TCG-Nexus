@@ -34,6 +34,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -107,12 +108,17 @@ fun EditProfile(currentuser: User, navController: NavHostController) {
 @Composable
 fun ProfileSelector(
     show: MutableState<Boolean>,
-    avatarImagesViewModel: StorageConfig = viewModel(),
+    //avatarImagesViewModel: StorageConfig = viewModel(),
     currentuser: User,
     navcontroller: NavHostController,
 ) {
     Dialog(onDismissRequest = { show.value = false }) {
-        val avatarImages = avatarImagesViewModel.images.value
+
+        //val avatarImages = avatarImagesViewModel.images.value
+        val avatarImages = mutableListOf<String>()
+        LocalContext.current.assets.list("avatars")?.forEach {
+            avatarImages.add("avatars/$it")
+        }
         Surface(
             modifier = Modifier
                 .fillMaxHeight(0.5f)

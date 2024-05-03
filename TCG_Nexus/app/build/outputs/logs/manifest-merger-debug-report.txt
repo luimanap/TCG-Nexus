@@ -4,95 +4,95 @@ ADDED from C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\Andr
 INJECTED from C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:2:1-28:12
 INJECTED from C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:2:1-28:12
 INJECTED from C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:2:1-28:12
-MERGED from [io.coil-kt:coil-compose:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\bea40c4bc98b049965d4f0f79ad36476\transformed\coil-compose-2.5.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.constraintlayout:constraintlayout-compose:1.0.1] C:\Users\luisv\.gradle\caches\transforms-3\49b7a5e38d3abaa25ed210445cc88749\transformed\constraintlayout-compose-1.0.1\AndroidManifest.xml:17:1-24:12
-MERGED from [io.coil-kt:coil-compose-base:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\6dc05b8dfb0bd78e368502a4401a054b\transformed\coil-compose-base-2.5.0\AndroidManifest.xml:2:1-7:12
-MERGED from [io.coil-kt:coil:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\dd779b460025d239b5cdf6ea2e4b809f\transformed\coil-2.5.0\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:15:1-39:12
-MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\8b8ccc4ba798d1379090b1ca27d9927f\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:15:1-34:12
-MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:17:1-75:12
-MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e2bf18e963e18c46a296725c13b99a\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:2:1-26:12
-MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\746dd24f64837085af2065175bd4c8ee\transformed\firebase-database-20.3.1\AndroidManifest.xml:15:1-38:12
-MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\a155912f3f547c17c1344e053342155d\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:2:1-18:12
-MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] C:\Users\luisv\.gradle\caches\transforms-3\3d9fd54b549b9bdde65be42143561fe5\transformed\accompanist-drawablepainter-0.32.0\AndroidManifest.xml:17:1-23:12
-MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\407a90e7fac3f455d95e7fb0ec9259d7\transformed\navigation-common-2.7.7\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.navigation:navigation-runtime:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\ed39b48810268e4d3e1aa7a66acae2e5\transformed\navigation-runtime-2.7.7\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\a53116c6015fde044adc1bab12eca779\transformed\navigation-common-ktx-2.7.7\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\00e581408bd0e802a5c26b19be6c16f2\transformed\navigation-runtime-ktx-2.7.7\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.navigation:navigation-compose:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\5cf1c887daea917b8d94a097a5309780\transformed\navigation-compose-2.7.7\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.material3:material3-android:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\e4481e238f88cce1d4d2ca1b6d6ee647\transformed\material3-release\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.compose.material:material-ripple-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\15f92cd009007848ca04a9209e581caf\transformed\material-ripple-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.material:material-icons-core-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\b1e68016cb552eeb91bbb854d2f58a64\transformed\material-icons-core-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.material:material-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\d05d6e111a06210c82205e2c82df685d\transformed\material-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\67df519f75ee837125255c125cd4f2ec\transformed\foundation-layout-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.foundation:foundation-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\4a898b70e906cbd4ac3f00282c0ce1c7\transformed\foundation-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.animation:animation-core-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\765fec152c6c8b1c8ca3ba6562107cc5\transformed\animation-core-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.animation:animation-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\b11abd2a3ae00cf9d2b93905e4c7e089\transformed\animation-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\80b43797a1a4494109d829f9b8677d1c\transformed\ui-tooling-data-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-geometry-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\ef17155ea8bd50f1d304f00976f11585\transformed\ui-geometry-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-text-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\0ec69d5efad91457e1df9776bf5b0b39\transformed\ui-text-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-util-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\37607d7f32506354cdf7d4420d91640f\transformed\ui-util-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-unit-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\9d260951c561f249a43bca264f13e4cf\transformed\ui-unit-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\94c4723bf6fc9697541a5e7469aff2c9\transformed\ui-tooling-preview-release\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\2e3f60393442c9f1d48ea45dd653da27\transformed\ui-tooling-release\AndroidManifest.xml:17:1-28:12
-MERGED from [androidx.compose.ui:ui-graphics-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\710f28efbf253b7c76f723e9c89dc922\transformed\ui-graphics-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\aaa24e0d09db7f7ca4418db99e06867d\transformed\ui-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\c1e6998264b32710702f6604831db6d2\transformed\ui-test-manifest-1.6.5\AndroidManifest.xml:17:1-28:12
-MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\6cbf5d8df9c3932292e09cf749785edd\transformed\glide-4.12.0\AndroidManifest.xml:2:1-12:12
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\luisv\.gradle\caches\transforms-3\5a151974c8c10f9f1979ceeb714bd2bb\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:15:1-23:12
-MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\luisv\.gradle\caches\transforms-3\0d52432877d156b260f12ca99ab7915f\transformed\play-services-auth-api-phone-17.4.0\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\luisv\.gradle\caches\transforms-3\c8a372e2dea8cb536f3081c6c2b7b77b\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\d143305733e5e592ae0fd2c8ac1e67d4\transformed\play-services-base-18.1.0\AndroidManifest.xml:16:1-24:12
-MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\luisv\.gradle\caches\transforms-3\4203ca0583c34092bc93d6f680a6af1a\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:15:1-41:12
-MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\c171879f95046a145b3bd321fe5af983\transformed\recaptcha-18.4.0\AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\luisv\.gradle\caches\transforms-3\67c93c918d9d3e8cba9f5a03f0991a54\transformed\integrity-1.2.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\4511bf5cf8d91327eb24f17cd7c2d135\transformed\runtime-saveable-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.runtime:runtime-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\4110a17295a6ed88157def8dc6cc0f11\transformed\runtime-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\6be82c03d610e1fcb4406e1fe924bcde\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\3833bc8f27892a23f5669a28775d44fa\transformed\lifecycle-livedata-core-ktx-2.7.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\396c676b32b67aba0e3c1dc7ac90affb\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\52bbcf55e7cd3600e7deb938fdcaabcd\transformed\lifecycle-livedata-2.7.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\49179b827895e10a38258c78297bd3b1\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\4e132a429ed8fbf7aec6f692121e5f71\transformed\lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\6abf72c9424b38677860f4efbc0945b4\transformed\lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\ba17e59b71b3ac2a7bd82f10c77903dc\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\6a018466877aa4c03fd45b6fa9f67be9\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\5756ec6ee6740ee42731b4e80f4ffea0\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\8873e6cdda41b5b713c758291841b594\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\luisv\.gradle\caches\transforms-3\d026b8686ae5e190ec3255620e5a4702\transformed\play-services-basement-18.3.0\AndroidManifest.xml:16:1-26:12
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\2681fefb7d95638c42faa604f68573ff\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.activity:activity:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\17fd2d0454902f64b4161511b68362c5\transformed\activity-1.8.2\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity-compose:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\fe483ef8197a13513d6f5dcc7b8f6b01\transformed\activity-compose-1.8.2\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.activity:activity-ktx:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\b4a32c04f7ca1728ddd62322de148536\transformed\activity-ktx-1.8.2\AndroidManifest.xml:2:1-7:12
-MERGED from [io.coil-kt:coil-base:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\1ea006a81999d2d6e9d34d51d22f50a5\transformed\coil-base-2.5.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\6390c7b9bf0fdb4079ffcd57063b1e8f\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
-MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\c8e2e5741180dc1aac26124256cc19eb\transformed\core-ktx-1.12.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.browser:browser:1.4.0] C:\Users\luisv\.gradle\caches\transforms-3\fa1cb8cc700a57edb3032df9055ebdfc\transformed\browser-1.4.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\355078dc773ba64bef272cc4c8df8156\transformed\autofill-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\luisv\.gradle\caches\transforms-3\2594635622fc6dd7ce0feaab394fa38f\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\cf0008b848ad087e61c1ad77b0f8df9f\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\7416c42763f894242d8ee39c095bd6f7\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\08323cc86a4d3b6121fbaae4b1ad3dca\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\a9c0c4904a34ac4042f1c136ad3fb040\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\80944703374838cbccb34aad819fea2f\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\926fbda354eb5cb4662ac679c2c3b86a\transformed\lifecycle-viewmodel-compose-2.7.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\b491734c6ee4e3f47afcdac5942e3829\transformed\lifecycle-runtime-ktx-2.7.0\AndroidManifest.xml:17:1-22:12
-MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\luisv\.gradle\caches\transforms-3\0bfe7f120ff844ed6aea24346d84b7e1\transformed\grpc-android-1.57.2\AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\luisv\.gradle\caches\transforms-3\6fe5836105a9625c6f078070d53d05bb\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\40ca0f65932554e9cdbc4d66b6633d86\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\2ebfc5b73140616974e9af236c96681c\transformed\gifdecoder-4.12.0\AndroidManifest.xml:2:1-11:12
-MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\luisv\.gradle\caches\transforms-3\a01502d2292a018216886ac9841bf056\transformed\firebase-components-17.1.5\AndroidManifest.xml:15:1-20:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\80417a8ab9459394ba7bf9a10a9d8a5f\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\068f18fce9725c0e79ff994864dbe53a\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\luisv\.gradle\caches\transforms-3\8dd8576269634e3201fe0c4a8833cc1c\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:17:1-55:12
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\51c432835795083f4855b3c3d8326248\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\9769aee7a4993f67fcb25979b7730c8f\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\luisv\.gradle\caches\transforms-3\7175a2b63a74847636ccbdaef563b37a\transformed\exifinterface-1.3.6\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\luisv\.gradle\caches\transforms-3\dd0d718cd12e71920f7ea6ae744c2f1f\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
+MERGED from [io.coil-kt:coil-compose:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\1cb7c4ef3db1c29c4f9e168b709e6d0d\transformed\coil-compose-2.5.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.constraintlayout:constraintlayout-compose:1.0.1] C:\Users\luisv\.gradle\caches\transforms-3\d244304bef3ccf38950d8f7a33901895\transformed\constraintlayout-compose-1.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [io.coil-kt:coil-compose-base:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\35594a0bbb6aa90cef5a0a74d00a4afd\transformed\coil-compose-base-2.5.0\AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\e0c73fa85988cd58c097ffabaf5a09c4\transformed\coil-2.5.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\f3acfc85820a245392abf77037987fb1\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:15:1-34:12
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:17:1-75:12
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\226be5e3fa0e79bd070dce8dda11755e\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\685ff546e827012467f66e002ab3e3cf\transformed\firebase-database-20.3.1\AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\4e4da6bbc5650afea7c1b4ee4d88c64b\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e09f8cba6e387cea71d9c6bd24ece9\transformed\accompanist-drawablepainter-0.32.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\672810706695aef65c4201841c76f930\transformed\navigation-common-2.7.7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\71f97877b976447f276f9c8c9ebb2505\transformed\navigation-runtime-2.7.7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\b2ae79050a005b86a8e0c138421a942d\transformed\navigation-common-ktx-2.7.7\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\c4aec21475e90668cc2b4f820f9355e8\transformed\navigation-runtime-ktx-2.7.7\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-compose:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\310950f03d7dc46a1faa7e6e0892f4e3\transformed\navigation-compose-2.7.7\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material3:material3-android:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\9d852251b692bd0272232cc8b35678f2\transformed\material3-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material:material-ripple-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\1b6255965490767a4eca6f6779ee96b3\transformed\material-ripple-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\924332fc7935ad71eb33fb73fcd6bddc\transformed\material-icons-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\3bd796e3463410ebbc2742a685b2a591\transformed\material-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\47ec0e9b9c4aa001d13730badac11717\transformed\foundation-layout-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\b131f890c04cc65f7f5e0a35cc1fc3a4\transformed\foundation-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\02e56826fc9e6e74dbafeb2fb037cc3c\transformed\animation-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\0561490769337e64e725e01f8438bc2e\transformed\animation-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\12e92cd6a5a57d6507f7b4abd96516b1\transformed\ui-tooling-data-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\c3a9626cf8711efdd0ba263127323c4e\transformed\ui-geometry-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\539c17f6a0c84a41a972a43533bb5cdc\transformed\ui-text-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\b26044b9a664efef4e28d4ef73be916c\transformed\ui-util-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\c853d0adabbe959bb0a6d345f63dfc77\transformed\ui-unit-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\812b62a7cd8b3f9ddc4e65bfc440507e\transformed\ui-tooling-preview-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\777011602e497a9f488b156914db70b9\transformed\ui-tooling-release\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\92b3ebf28d3c1f11b479c9d5d60f1f6a\transformed\ui-graphics-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\b74a4b10d75ec3d94d93c7a85238c0e2\transformed\ui-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\f879483cafca89e74d05de2912c366bf\transformed\ui-test-manifest-1.6.5\AndroidManifest.xml:17:1-28:12
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\f670628f0f533c2a4b47c7eb2e20ecde\transformed\glide-4.12.0\AndroidManifest.xml:2:1-12:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\luisv\.gradle\caches\transforms-3\45ccc0d2a83060795d55d5c5c9a01b3a\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\luisv\.gradle\caches\transforms-3\106e475e218571e61f30e8fff9f82b7f\transformed\play-services-auth-api-phone-17.4.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\luisv\.gradle\caches\transforms-3\7afd1ab021bb25abb84e465f82a643d4\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\55fe3a89a8b6ab5487f8134e5b79539b\transformed\play-services-base-18.1.0\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\luisv\.gradle\caches\transforms-3\b6d3b6a6e3bde5735f0af50f843c5cfe\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\5944e7313eb6f809ae08f58329caa57b\transformed\recaptcha-18.4.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\luisv\.gradle\caches\transforms-3\81068d39d5b31832282f50147a19e029\transformed\integrity-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\6066d42dcb9e9d375f92813cb1777bd2\transformed\runtime-saveable-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\8c70485f88f22182bd8aaba491df50e3\transformed\runtime-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\fafaf886224ff475bfb32a17b37f6844\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\57ba2bd58c6f7c7d76c77cc695488e22\transformed\emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\1ee035de275b8ae7638dcd286ee38874\transformed\lifecycle-livedata-core-ktx-2.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\e5d6ce1dd0dfee33bfe6ba40dd7b019b\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\16d8da7fd3e4db5bc1a06219e1e408a6\transformed\lifecycle-livedata-2.7.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\02de43a73404d670aaa4e6773e825671\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\527ff623b1320254c357546187545db8\transformed\lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\473e12c1dfe9742635fa169a63ee6b08\transformed\lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\1ae673d3d6aaaabeee227ac9c30c27ca\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\9944959f227886c41aa838e0b5730e7f\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\839ae4ba5a14c1233e0b8b946561c8ab\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\2c7ee561526e9a20c2ab8a4235d7bfcc\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\luisv\.gradle\caches\transforms-3\33bf24935a538d1e9bac6f964cb3ed52\transformed\play-services-basement-18.3.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\8e72729d5aa7480e127baaea452af27a\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\4200466384b59668287ca51003fa5d99\transformed\activity-1.8.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-compose:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\6f24473e5880e132e93fbcad438367a5\transformed\activity-compose-1.8.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\ddb71d1476f7c7e10e78cac6a4a26f60\transformed\activity-ktx-1.8.2\AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-base:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\6e731e02fa4814921eeab978eb9e6d36\transformed\coil-base-2.5.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\d7aab47e8a68f3406d05a30485f59d78\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\6fd83c82ae1441165c2c8d715ac69985\transformed\core-ktx-1.12.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\luisv\.gradle\caches\transforms-3\1fc51afc2d7b30698b2565787bfca2b3\transformed\browser-1.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\3e33f67f42ae2e0705e60750a4fccf22\transformed\autofill-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\luisv\.gradle\caches\transforms-3\37e367a0a52dda0d89505658ba8c7b79\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\52be591ab018bf89b71c13550c90bbda\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\26932f695e05cd9151ea7311576451e0\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\74cbc6db8e67602936eb71dafc0c8e10\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\9078e49bef788a9ccb344980a707afa7\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\0d721393054d7d65448d0efbd44fa266\transformed\core-1.12.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\0ad95a86be574969c22550f78c43aa8f\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\b15e08ab3bcfbb5f4cebe0d15b653ffc\transformed\lifecycle-viewmodel-compose-2.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\ba861e4accb10829fd8463ecf54275fd\transformed\lifecycle-runtime-ktx-2.7.0\AndroidManifest.xml:17:1-22:12
+MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\luisv\.gradle\caches\transforms-3\38834bf4739c4556ef00c23775b34bde\transformed\grpc-android-1.57.2\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\luisv\.gradle\caches\transforms-3\844fac8311e8094d68857ea8adf92f0f\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\87b6c8f348097629c6d2f825fc97087b\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\47038ae929d99aec74ed35f9fbe8207f\transformed\gifdecoder-4.12.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\luisv\.gradle\caches\transforms-3\ab795f86108f955484e5a690748c5055\transformed\firebase-components-17.1.5\AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\13b1712526158b7340bf801778e54643\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\70fe938f41c2a3aee6fd91c57cecf6b6\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\luisv\.gradle\caches\transforms-3\521a639f63635f1bc30de1730e683970\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\8743552256f79d0d2870860708190f87\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\839f04d70601d84358f21f8df46c4a19\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\luisv\.gradle\caches\transforms-3\20eb7c54681d2e9f2211533b54d85f80\transformed\exifinterface-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\luisv\.gradle\caches\transforms-3\5d6484844386ba1cc27c4d16ca878d95\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 	package
 		INJECTED from C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -105,71 +105,71 @@ MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\lui
 		ADDED from C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
 ADDED from C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:4:5-67
-MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e2bf18e963e18c46a296725c13b99a\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:11:5-67
-MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e2bf18e963e18c46a296725c13b99a\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:11:5-67
-MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\746dd24f64837085af2065175bd4c8ee\transformed\firebase-database-20.3.1\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\746dd24f64837085af2065175bd4c8ee\transformed\firebase-database-20.3.1\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\c171879f95046a145b3bd321fe5af983\transformed\recaptcha-18.4.0\AndroidManifest.xml:7:5-67
-MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\c171879f95046a145b3bd321fe5af983\transformed\recaptcha-18.4.0\AndroidManifest.xml:7:5-67
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\226be5e3fa0e79bd070dce8dda11755e\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\226be5e3fa0e79bd070dce8dda11755e\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\685ff546e827012467f66e002ab3e3cf\transformed\firebase-database-20.3.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\685ff546e827012467f66e002ab3e3cf\transformed\firebase-database-20.3.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\5944e7313eb6f809ae08f58329caa57b\transformed\recaptcha-18.4.0\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\5944e7313eb6f809ae08f58329caa57b\transformed\recaptcha-18.4.0\AndroidManifest.xml:7:5-67
 	android:name
 		ADDED from C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:4:22-64
 application
 ADDED from C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:5:5-26:19
 INJECTED from C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:5:5-26:19
-MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:26:5-37:19
-MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:26:5-37:19
-MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\8b8ccc4ba798d1379090b1ca27d9927f\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:21:5-32:19
-MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\8b8ccc4ba798d1379090b1ca27d9927f\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:21:5-32:19
-MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:28:5-73:19
-MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:28:5-73:19
-MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e2bf18e963e18c46a296725c13b99a\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:13:5-24:19
-MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e2bf18e963e18c46a296725c13b99a\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:13:5-24:19
-MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\746dd24f64837085af2065175bd4c8ee\transformed\firebase-database-20.3.1\AndroidManifest.xml:25:5-36:19
-MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\746dd24f64837085af2065175bd4c8ee\transformed\firebase-database-20.3.1\AndroidManifest.xml:25:5-36:19
-MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\a155912f3f547c17c1344e053342155d\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:8:5-16:19
-MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\a155912f3f547c17c1344e053342155d\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:8:5-16:19
-MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\2e3f60393442c9f1d48ea45dd653da27\transformed\ui-tooling-release\AndroidManifest.xml:22:5-26:19
-MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\2e3f60393442c9f1d48ea45dd653da27\transformed\ui-tooling-release\AndroidManifest.xml:22:5-26:19
-MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\c1e6998264b32710702f6604831db6d2\transformed\ui-test-manifest-1.6.5\AndroidManifest.xml:22:5-26:19
-MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\c1e6998264b32710702f6604831db6d2\transformed\ui-test-manifest-1.6.5\AndroidManifest.xml:22:5-26:19
-MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\6cbf5d8df9c3932292e09cf749785edd\transformed\glide-4.12.0\AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\6cbf5d8df9c3932292e09cf749785edd\transformed\glide-4.12.0\AndroidManifest.xml:10:5-20
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\luisv\.gradle\caches\transforms-3\5a151974c8c10f9f1979ceeb714bd2bb\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\luisv\.gradle\caches\transforms-3\5a151974c8c10f9f1979ceeb714bd2bb\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
-MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\d143305733e5e592ae0fd2c8ac1e67d4\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\d143305733e5e592ae0fd2c8ac1e67d4\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\luisv\.gradle\caches\transforms-3\4203ca0583c34092bc93d6f680a6af1a\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\luisv\.gradle\caches\transforms-3\4203ca0583c34092bc93d6f680a6af1a\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:22:5-39:19
-MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:22:5-39:19
-MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\luisv\.gradle\caches\transforms-3\67c93c918d9d3e8cba9f5a03f0991a54\transformed\integrity-1.2.0\AndroidManifest.xml:5:5-6:19
-MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\luisv\.gradle\caches\transforms-3\67c93c918d9d3e8cba9f5a03f0991a54\transformed\integrity-1.2.0\AndroidManifest.xml:5:5-6:19
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\396c676b32b67aba0e3c1dc7ac90affb\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\396c676b32b67aba0e3c1dc7ac90affb\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:23:5-33:19
-MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\8873e6cdda41b5b713c758291841b594\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\8873e6cdda41b5b713c758291841b594\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\luisv\.gradle\caches\transforms-3\d026b8686ae5e190ec3255620e5a4702\transformed\play-services-basement-18.3.0\AndroidManifest.xml:20:5-24:19
-MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\luisv\.gradle\caches\transforms-3\d026b8686ae5e190ec3255620e5a4702\transformed\play-services-basement-18.3.0\AndroidManifest.xml:20:5-24:19
-MERGED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
-MERGED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\40ca0f65932554e9cdbc4d66b6633d86\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\40ca0f65932554e9cdbc4d66b6633d86\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
-MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\2ebfc5b73140616974e9af236c96681c\transformed\gifdecoder-4.12.0\AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\2ebfc5b73140616974e9af236c96681c\transformed\gifdecoder-4.12.0\AndroidManifest.xml:9:5-20
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\51c432835795083f4855b3c3d8326248\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\51c432835795083f4855b3c3d8326248\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:26:5-37:19
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:26:5-37:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\f3acfc85820a245392abf77037987fb1\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:21:5-32:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\f3acfc85820a245392abf77037987fb1\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:21:5-32:19
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\226be5e3fa0e79bd070dce8dda11755e\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\226be5e3fa0e79bd070dce8dda11755e\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\685ff546e827012467f66e002ab3e3cf\transformed\firebase-database-20.3.1\AndroidManifest.xml:25:5-36:19
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\685ff546e827012467f66e002ab3e3cf\transformed\firebase-database-20.3.1\AndroidManifest.xml:25:5-36:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\4e4da6bbc5650afea7c1b4ee4d88c64b\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\4e4da6bbc5650afea7c1b4ee4d88c64b\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:8:5-16:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\777011602e497a9f488b156914db70b9\transformed\ui-tooling-release\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\777011602e497a9f488b156914db70b9\transformed\ui-tooling-release\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\f879483cafca89e74d05de2912c366bf\transformed\ui-test-manifest-1.6.5\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\f879483cafca89e74d05de2912c366bf\transformed\ui-test-manifest-1.6.5\AndroidManifest.xml:22:5-26:19
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\f670628f0f533c2a4b47c7eb2e20ecde\transformed\glide-4.12.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\f670628f0f533c2a4b47c7eb2e20ecde\transformed\glide-4.12.0\AndroidManifest.xml:10:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\luisv\.gradle\caches\transforms-3\45ccc0d2a83060795d55d5c5c9a01b3a\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\luisv\.gradle\caches\transforms-3\45ccc0d2a83060795d55d5c5c9a01b3a\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\55fe3a89a8b6ab5487f8134e5b79539b\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\55fe3a89a8b6ab5487f8134e5b79539b\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\luisv\.gradle\caches\transforms-3\b6d3b6a6e3bde5735f0af50f843c5cfe\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\luisv\.gradle\caches\transforms-3\b6d3b6a6e3bde5735f0af50f843c5cfe\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\luisv\.gradle\caches\transforms-3\81068d39d5b31832282f50147a19e029\transformed\integrity-1.2.0\AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\luisv\.gradle\caches\transforms-3\81068d39d5b31832282f50147a19e029\transformed\integrity-1.2.0\AndroidManifest.xml:5:5-6:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\57ba2bd58c6f7c7d76c77cc695488e22\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\57ba2bd58c6f7c7d76c77cc695488e22\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\e5d6ce1dd0dfee33bfe6ba40dd7b019b\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\e5d6ce1dd0dfee33bfe6ba40dd7b019b\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\2c7ee561526e9a20c2ab8a4235d7bfcc\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\2c7ee561526e9a20c2ab8a4235d7bfcc\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\luisv\.gradle\caches\transforms-3\33bf24935a538d1e9bac6f964cb3ed52\transformed\play-services-basement-18.3.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\luisv\.gradle\caches\transforms-3\33bf24935a538d1e9bac6f964cb3ed52\transformed\play-services-basement-18.3.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\0d721393054d7d65448d0efbd44fa266\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\0d721393054d7d65448d0efbd44fa266\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\87b6c8f348097629c6d2f825fc97087b\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\87b6c8f348097629c6d2f825fc97087b\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\47038ae929d99aec74ed35f9fbe8207f\transformed\gifdecoder-4.12.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\47038ae929d99aec74ed35f9fbe8207f\transformed\gifdecoder-4.12.0\AndroidManifest.xml:9:5-20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\8743552256f79d0d2870860708190f87\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\8743552256f79d0d2870860708190f87\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
 	android:extractNativeLibs
 		INJECTED from C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+		ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\0d721393054d7d65448d0efbd44fa266\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
 		ADDED from C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:12:9-35
 	android:label
@@ -212,469 +212,469 @@ uses-sdk
 INJECTED from C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml
-MERGED from [io.coil-kt:coil-compose:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\bea40c4bc98b049965d4f0f79ad36476\transformed\coil-compose-2.5.0\AndroidManifest.xml:5:5-44
-MERGED from [io.coil-kt:coil-compose:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\bea40c4bc98b049965d4f0f79ad36476\transformed\coil-compose-2.5.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.constraintlayout:constraintlayout-compose:1.0.1] C:\Users\luisv\.gradle\caches\transforms-3\49b7a5e38d3abaa25ed210445cc88749\transformed\constraintlayout-compose-1.0.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.constraintlayout:constraintlayout-compose:1.0.1] C:\Users\luisv\.gradle\caches\transforms-3\49b7a5e38d3abaa25ed210445cc88749\transformed\constraintlayout-compose-1.0.1\AndroidManifest.xml:20:5-22:41
-MERGED from [io.coil-kt:coil-compose-base:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\6dc05b8dfb0bd78e368502a4401a054b\transformed\coil-compose-base-2.5.0\AndroidManifest.xml:5:5-44
-MERGED from [io.coil-kt:coil-compose-base:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\6dc05b8dfb0bd78e368502a4401a054b\transformed\coil-compose-base-2.5.0\AndroidManifest.xml:5:5-44
-MERGED from [io.coil-kt:coil:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\dd779b460025d239b5cdf6ea2e4b809f\transformed\coil-2.5.0\AndroidManifest.xml:5:5-44
-MERGED from [io.coil-kt:coil:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\dd779b460025d239b5cdf6ea2e4b809f\transformed\coil-2.5.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:19:5-44
-MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:19:5-44
-MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\8b8ccc4ba798d1379090b1ca27d9927f\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:18:5-44
-MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\8b8ccc4ba798d1379090b1ca27d9927f\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:18:5-44
-MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:21:5-23:64
-MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:21:5-23:64
-MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e2bf18e963e18c46a296725c13b99a\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e2bf18e963e18c46a296725c13b99a\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\746dd24f64837085af2065175bd4c8ee\transformed\firebase-database-20.3.1\AndroidManifest.xml:18:5-44
-MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\746dd24f64837085af2065175bd4c8ee\transformed\firebase-database-20.3.1\AndroidManifest.xml:18:5-44
-MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\a155912f3f547c17c1344e053342155d\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\a155912f3f547c17c1344e053342155d\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:5:5-44
-MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] C:\Users\luisv\.gradle\caches\transforms-3\3d9fd54b549b9bdde65be42143561fe5\transformed\accompanist-drawablepainter-0.32.0\AndroidManifest.xml:21:5-44
-MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] C:\Users\luisv\.gradle\caches\transforms-3\3d9fd54b549b9bdde65be42143561fe5\transformed\accompanist-drawablepainter-0.32.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\407a90e7fac3f455d95e7fb0ec9259d7\transformed\navigation-common-2.7.7\AndroidManifest.xml:20:5-44
-MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\407a90e7fac3f455d95e7fb0ec9259d7\transformed\navigation-common-2.7.7\AndroidManifest.xml:20:5-44
-MERGED from [androidx.navigation:navigation-runtime:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\ed39b48810268e4d3e1aa7a66acae2e5\transformed\navigation-runtime-2.7.7\AndroidManifest.xml:20:5-44
-MERGED from [androidx.navigation:navigation-runtime:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\ed39b48810268e4d3e1aa7a66acae2e5\transformed\navigation-runtime-2.7.7\AndroidManifest.xml:20:5-44
-MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\a53116c6015fde044adc1bab12eca779\transformed\navigation-common-ktx-2.7.7\AndroidManifest.xml:5:5-44
-MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\a53116c6015fde044adc1bab12eca779\transformed\navigation-common-ktx-2.7.7\AndroidManifest.xml:5:5-44
-MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\00e581408bd0e802a5c26b19be6c16f2\transformed\navigation-runtime-ktx-2.7.7\AndroidManifest.xml:5:5-44
-MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\00e581408bd0e802a5c26b19be6c16f2\transformed\navigation-runtime-ktx-2.7.7\AndroidManifest.xml:5:5-44
-MERGED from [androidx.navigation:navigation-compose:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\5cf1c887daea917b8d94a097a5309780\transformed\navigation-compose-2.7.7\AndroidManifest.xml:5:5-44
-MERGED from [androidx.navigation:navigation-compose:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\5cf1c887daea917b8d94a097a5309780\transformed\navigation-compose-2.7.7\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material3:material3-android:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\e4481e238f88cce1d4d2ca1b6d6ee647\transformed\material3-release\AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.material3:material3-android:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\e4481e238f88cce1d4d2ca1b6d6ee647\transformed\material3-release\AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.material:material-ripple-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\15f92cd009007848ca04a9209e581caf\transformed\material-ripple-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-ripple-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\15f92cd009007848ca04a9209e581caf\transformed\material-ripple-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-icons-core-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\b1e68016cb552eeb91bbb854d2f58a64\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-icons-core-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\b1e68016cb552eeb91bbb854d2f58a64\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\d05d6e111a06210c82205e2c82df685d\transformed\material-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.material:material-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\d05d6e111a06210c82205e2c82df685d\transformed\material-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\67df519f75ee837125255c125cd4f2ec\transformed\foundation-layout-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\67df519f75ee837125255c125cd4f2ec\transformed\foundation-layout-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.foundation:foundation-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\4a898b70e906cbd4ac3f00282c0ce1c7\transformed\foundation-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.foundation:foundation-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\4a898b70e906cbd4ac3f00282c0ce1c7\transformed\foundation-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.animation:animation-core-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\765fec152c6c8b1c8ca3ba6562107cc5\transformed\animation-core-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.animation:animation-core-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\765fec152c6c8b1c8ca3ba6562107cc5\transformed\animation-core-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.animation:animation-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\b11abd2a3ae00cf9d2b93905e4c7e089\transformed\animation-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.animation:animation-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\b11abd2a3ae00cf9d2b93905e4c7e089\transformed\animation-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\80b43797a1a4494109d829f9b8677d1c\transformed\ui-tooling-data-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\80b43797a1a4494109d829f9b8677d1c\transformed\ui-tooling-data-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-geometry-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\ef17155ea8bd50f1d304f00976f11585\transformed\ui-geometry-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-geometry-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\ef17155ea8bd50f1d304f00976f11585\transformed\ui-geometry-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-text-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\0ec69d5efad91457e1df9776bf5b0b39\transformed\ui-text-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-text-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\0ec69d5efad91457e1df9776bf5b0b39\transformed\ui-text-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-util-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\37607d7f32506354cdf7d4420d91640f\transformed\ui-util-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-util-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\37607d7f32506354cdf7d4420d91640f\transformed\ui-util-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-unit-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\9d260951c561f249a43bca264f13e4cf\transformed\ui-unit-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-unit-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\9d260951c561f249a43bca264f13e4cf\transformed\ui-unit-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\94c4723bf6fc9697541a5e7469aff2c9\transformed\ui-tooling-preview-release\AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\94c4723bf6fc9697541a5e7469aff2c9\transformed\ui-tooling-preview-release\AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\2e3f60393442c9f1d48ea45dd653da27\transformed\ui-tooling-release\AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\2e3f60393442c9f1d48ea45dd653da27\transformed\ui-tooling-release\AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.ui:ui-graphics-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\710f28efbf253b7c76f723e9c89dc922\transformed\ui-graphics-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-graphics-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\710f28efbf253b7c76f723e9c89dc922\transformed\ui-graphics-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\aaa24e0d09db7f7ca4418db99e06867d\transformed\ui-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\aaa24e0d09db7f7ca4418db99e06867d\transformed\ui-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\c1e6998264b32710702f6604831db6d2\transformed\ui-test-manifest-1.6.5\AndroidManifest.xml:20:5-44
-MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\c1e6998264b32710702f6604831db6d2\transformed\ui-test-manifest-1.6.5\AndroidManifest.xml:20:5-44
-MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\6cbf5d8df9c3932292e09cf749785edd\transformed\glide-4.12.0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\6cbf5d8df9c3932292e09cf749785edd\transformed\glide-4.12.0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\luisv\.gradle\caches\transforms-3\5a151974c8c10f9f1979ceeb714bd2bb\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\luisv\.gradle\caches\transforms-3\5a151974c8c10f9f1979ceeb714bd2bb\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\luisv\.gradle\caches\transforms-3\0d52432877d156b260f12ca99ab7915f\transformed\play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\luisv\.gradle\caches\transforms-3\0d52432877d156b260f12ca99ab7915f\transformed\play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\luisv\.gradle\caches\transforms-3\c8a372e2dea8cb536f3081c6c2b7b77b\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\luisv\.gradle\caches\transforms-3\c8a372e2dea8cb536f3081c6c2b7b77b\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\d143305733e5e592ae0fd2c8ac1e67d4\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\d143305733e5e592ae0fd2c8ac1e67d4\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
-MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\luisv\.gradle\caches\transforms-3\4203ca0583c34092bc93d6f680a6af1a\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\luisv\.gradle\caches\transforms-3\4203ca0583c34092bc93d6f680a6af1a\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:19:5-44
-MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:19:5-44
-MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\c171879f95046a145b3bd321fe5af983\transformed\recaptcha-18.4.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\c171879f95046a145b3bd321fe5af983\transformed\recaptcha-18.4.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\luisv\.gradle\caches\transforms-3\67c93c918d9d3e8cba9f5a03f0991a54\transformed\integrity-1.2.0\AndroidManifest.xml:4:5-44
-MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\luisv\.gradle\caches\transforms-3\67c93c918d9d3e8cba9f5a03f0991a54\transformed\integrity-1.2.0\AndroidManifest.xml:4:5-44
-MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\4511bf5cf8d91327eb24f17cd7c2d135\transformed\runtime-saveable-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\4511bf5cf8d91327eb24f17cd7c2d135\transformed\runtime-saveable-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.runtime:runtime-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\4110a17295a6ed88157def8dc6cc0f11\transformed\runtime-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.runtime:runtime-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\4110a17295a6ed88157def8dc6cc0f11\transformed\runtime-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\6be82c03d610e1fcb4406e1fe924bcde\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\6be82c03d610e1fcb4406e1fe924bcde\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\3833bc8f27892a23f5669a28775d44fa\transformed\lifecycle-livedata-core-ktx-2.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\3833bc8f27892a23f5669a28775d44fa\transformed\lifecycle-livedata-core-ktx-2.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\396c676b32b67aba0e3c1dc7ac90affb\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\396c676b32b67aba0e3c1dc7ac90affb\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\52bbcf55e7cd3600e7deb938fdcaabcd\transformed\lifecycle-livedata-2.7.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\52bbcf55e7cd3600e7deb938fdcaabcd\transformed\lifecycle-livedata-2.7.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\49179b827895e10a38258c78297bd3b1\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\49179b827895e10a38258c78297bd3b1\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\4e132a429ed8fbf7aec6f692121e5f71\transformed\lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\4e132a429ed8fbf7aec6f692121e5f71\transformed\lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\6abf72c9424b38677860f4efbc0945b4\transformed\lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\6abf72c9424b38677860f4efbc0945b4\transformed\lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\ba17e59b71b3ac2a7bd82f10c77903dc\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\ba17e59b71b3ac2a7bd82f10c77903dc\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\6a018466877aa4c03fd45b6fa9f67be9\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\6a018466877aa4c03fd45b6fa9f67be9\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\5756ec6ee6740ee42731b4e80f4ffea0\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\5756ec6ee6740ee42731b4e80f4ffea0\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\8873e6cdda41b5b713c758291841b594\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\8873e6cdda41b5b713c758291841b594\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\luisv\.gradle\caches\transforms-3\d026b8686ae5e190ec3255620e5a4702\transformed\play-services-basement-18.3.0\AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\luisv\.gradle\caches\transforms-3\d026b8686ae5e190ec3255620e5a4702\transformed\play-services-basement-18.3.0\AndroidManifest.xml:18:5-43
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\2681fefb7d95638c42faa604f68573ff\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\2681fefb7d95638c42faa604f68573ff\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\17fd2d0454902f64b4161511b68362c5\transformed\activity-1.8.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\17fd2d0454902f64b4161511b68362c5\transformed\activity-1.8.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity-compose:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\fe483ef8197a13513d6f5dcc7b8f6b01\transformed\activity-compose-1.8.2\AndroidManifest.xml:5:5-44
-MERGED from [androidx.activity:activity-compose:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\fe483ef8197a13513d6f5dcc7b8f6b01\transformed\activity-compose-1.8.2\AndroidManifest.xml:5:5-44
-MERGED from [androidx.activity:activity-ktx:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\b4a32c04f7ca1728ddd62322de148536\transformed\activity-ktx-1.8.2\AndroidManifest.xml:5:5-44
-MERGED from [androidx.activity:activity-ktx:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\b4a32c04f7ca1728ddd62322de148536\transformed\activity-ktx-1.8.2\AndroidManifest.xml:5:5-44
-MERGED from [io.coil-kt:coil-base:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\1ea006a81999d2d6e9d34d51d22f50a5\transformed\coil-base-2.5.0\AndroidManifest.xml:5:5-44
-MERGED from [io.coil-kt:coil-base:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\1ea006a81999d2d6e9d34d51d22f50a5\transformed\coil-base-2.5.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\6390c7b9bf0fdb4079ffcd57063b1e8f\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\6390c7b9bf0fdb4079ffcd57063b1e8f\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
-MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\c8e2e5741180dc1aac26124256cc19eb\transformed\core-ktx-1.12.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\c8e2e5741180dc1aac26124256cc19eb\transformed\core-ktx-1.12.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.browser:browser:1.4.0] C:\Users\luisv\.gradle\caches\transforms-3\fa1cb8cc700a57edb3032df9055ebdfc\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.browser:browser:1.4.0] C:\Users\luisv\.gradle\caches\transforms-3\fa1cb8cc700a57edb3032df9055ebdfc\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\355078dc773ba64bef272cc4c8df8156\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\355078dc773ba64bef272cc4c8df8156\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\luisv\.gradle\caches\transforms-3\2594635622fc6dd7ce0feaab394fa38f\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\luisv\.gradle\caches\transforms-3\2594635622fc6dd7ce0feaab394fa38f\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\cf0008b848ad087e61c1ad77b0f8df9f\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\cf0008b848ad087e61c1ad77b0f8df9f\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\7416c42763f894242d8ee39c095bd6f7\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\7416c42763f894242d8ee39c095bd6f7\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\08323cc86a4d3b6121fbaae4b1ad3dca\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\08323cc86a4d3b6121fbaae4b1ad3dca\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\a9c0c4904a34ac4042f1c136ad3fb040\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\a9c0c4904a34ac4042f1c136ad3fb040\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\80944703374838cbccb34aad819fea2f\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\80944703374838cbccb34aad819fea2f\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\926fbda354eb5cb4662ac679c2c3b86a\transformed\lifecycle-viewmodel-compose-2.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\926fbda354eb5cb4662ac679c2c3b86a\transformed\lifecycle-viewmodel-compose-2.7.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\b491734c6ee4e3f47afcdac5942e3829\transformed\lifecycle-runtime-ktx-2.7.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\b491734c6ee4e3f47afcdac5942e3829\transformed\lifecycle-runtime-ktx-2.7.0\AndroidManifest.xml:20:5-44
-MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\luisv\.gradle\caches\transforms-3\0bfe7f120ff844ed6aea24346d84b7e1\transformed\grpc-android-1.57.2\AndroidManifest.xml:5:5-44
-MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\luisv\.gradle\caches\transforms-3\0bfe7f120ff844ed6aea24346d84b7e1\transformed\grpc-android-1.57.2\AndroidManifest.xml:5:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\luisv\.gradle\caches\transforms-3\6fe5836105a9625c6f078070d53d05bb\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\luisv\.gradle\caches\transforms-3\6fe5836105a9625c6f078070d53d05bb\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\40ca0f65932554e9cdbc4d66b6633d86\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\40ca0f65932554e9cdbc4d66b6633d86\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\2ebfc5b73140616974e9af236c96681c\transformed\gifdecoder-4.12.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\2ebfc5b73140616974e9af236c96681c\transformed\gifdecoder-4.12.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\luisv\.gradle\caches\transforms-3\a01502d2292a018216886ac9841bf056\transformed\firebase-components-17.1.5\AndroidManifest.xml:18:5-44
-MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\luisv\.gradle\caches\transforms-3\a01502d2292a018216886ac9841bf056\transformed\firebase-components-17.1.5\AndroidManifest.xml:18:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\80417a8ab9459394ba7bf9a10a9d8a5f\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\80417a8ab9459394ba7bf9a10a9d8a5f\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\068f18fce9725c0e79ff994864dbe53a\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\068f18fce9725c0e79ff994864dbe53a\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\luisv\.gradle\caches\transforms-3\8dd8576269634e3201fe0c4a8833cc1c\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\luisv\.gradle\caches\transforms-3\8dd8576269634e3201fe0c4a8833cc1c\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\51c432835795083f4855b3c3d8326248\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\51c432835795083f4855b3c3d8326248\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\9769aee7a4993f67fcb25979b7730c8f\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\9769aee7a4993f67fcb25979b7730c8f\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\luisv\.gradle\caches\transforms-3\7175a2b63a74847636ccbdaef563b37a\transformed\exifinterface-1.3.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\luisv\.gradle\caches\transforms-3\7175a2b63a74847636ccbdaef563b37a\transformed\exifinterface-1.3.6\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\luisv\.gradle\caches\transforms-3\dd0d718cd12e71920f7ea6ae744c2f1f\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\luisv\.gradle\caches\transforms-3\dd0d718cd12e71920f7ea6ae744c2f1f\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [io.coil-kt:coil-compose:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\1cb7c4ef3db1c29c4f9e168b709e6d0d\transformed\coil-compose-2.5.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\1cb7c4ef3db1c29c4f9e168b709e6d0d\transformed\coil-compose-2.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.constraintlayout:constraintlayout-compose:1.0.1] C:\Users\luisv\.gradle\caches\transforms-3\d244304bef3ccf38950d8f7a33901895\transformed\constraintlayout-compose-1.0.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout-compose:1.0.1] C:\Users\luisv\.gradle\caches\transforms-3\d244304bef3ccf38950d8f7a33901895\transformed\constraintlayout-compose-1.0.1\AndroidManifest.xml:20:5-22:41
+MERGED from [io.coil-kt:coil-compose-base:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\35594a0bbb6aa90cef5a0a74d00a4afd\transformed\coil-compose-base-2.5.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose-base:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\35594a0bbb6aa90cef5a0a74d00a4afd\transformed\coil-compose-base-2.5.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\e0c73fa85988cd58c097ffabaf5a09c4\transformed\coil-2.5.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\e0c73fa85988cd58c097ffabaf5a09c4\transformed\coil-2.5.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\f3acfc85820a245392abf77037987fb1\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\f3acfc85820a245392abf77037987fb1\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\226be5e3fa0e79bd070dce8dda11755e\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\226be5e3fa0e79bd070dce8dda11755e\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\685ff546e827012467f66e002ab3e3cf\transformed\firebase-database-20.3.1\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\685ff546e827012467f66e002ab3e3cf\transformed\firebase-database-20.3.1\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\4e4da6bbc5650afea7c1b4ee4d88c64b\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\4e4da6bbc5650afea7c1b4ee4d88c64b\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:5:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e09f8cba6e387cea71d9c6bd24ece9\transformed\accompanist-drawablepainter-0.32.0\AndroidManifest.xml:21:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e09f8cba6e387cea71d9c6bd24ece9\transformed\accompanist-drawablepainter-0.32.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\672810706695aef65c4201841c76f930\transformed\navigation-common-2.7.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\672810706695aef65c4201841c76f930\transformed\navigation-common-2.7.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\71f97877b976447f276f9c8c9ebb2505\transformed\navigation-runtime-2.7.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\71f97877b976447f276f9c8c9ebb2505\transformed\navigation-runtime-2.7.7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\b2ae79050a005b86a8e0c138421a942d\transformed\navigation-common-ktx-2.7.7\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\b2ae79050a005b86a8e0c138421a942d\transformed\navigation-common-ktx-2.7.7\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\c4aec21475e90668cc2b4f820f9355e8\transformed\navigation-runtime-ktx-2.7.7\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\c4aec21475e90668cc2b4f820f9355e8\transformed\navigation-runtime-ktx-2.7.7\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\310950f03d7dc46a1faa7e6e0892f4e3\transformed\navigation-compose-2.7.7\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose:2.7.7] C:\Users\luisv\.gradle\caches\transforms-3\310950f03d7dc46a1faa7e6e0892f4e3\transformed\navigation-compose-2.7.7\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material3:material3-android:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\9d852251b692bd0272232cc8b35678f2\transformed\material3-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\9d852251b692bd0272232cc8b35678f2\transformed\material3-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\1b6255965490767a4eca6f6779ee96b3\transformed\material-ripple-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\1b6255965490767a4eca6f6779ee96b3\transformed\material-ripple-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\924332fc7935ad71eb33fb73fcd6bddc\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\924332fc7935ad71eb33fb73fcd6bddc\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\3bd796e3463410ebbc2742a685b2a591\transformed\material-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\3bd796e3463410ebbc2742a685b2a591\transformed\material-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\47ec0e9b9c4aa001d13730badac11717\transformed\foundation-layout-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\47ec0e9b9c4aa001d13730badac11717\transformed\foundation-layout-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\b131f890c04cc65f7f5e0a35cc1fc3a4\transformed\foundation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\b131f890c04cc65f7f5e0a35cc1fc3a4\transformed\foundation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\02e56826fc9e6e74dbafeb2fb037cc3c\transformed\animation-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\02e56826fc9e6e74dbafeb2fb037cc3c\transformed\animation-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\0561490769337e64e725e01f8438bc2e\transformed\animation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\0561490769337e64e725e01f8438bc2e\transformed\animation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\12e92cd6a5a57d6507f7b4abd96516b1\transformed\ui-tooling-data-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\12e92cd6a5a57d6507f7b4abd96516b1\transformed\ui-tooling-data-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\c3a9626cf8711efdd0ba263127323c4e\transformed\ui-geometry-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\c3a9626cf8711efdd0ba263127323c4e\transformed\ui-geometry-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\539c17f6a0c84a41a972a43533bb5cdc\transformed\ui-text-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\539c17f6a0c84a41a972a43533bb5cdc\transformed\ui-text-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\b26044b9a664efef4e28d4ef73be916c\transformed\ui-util-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\b26044b9a664efef4e28d4ef73be916c\transformed\ui-util-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\c853d0adabbe959bb0a6d345f63dfc77\transformed\ui-unit-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\c853d0adabbe959bb0a6d345f63dfc77\transformed\ui-unit-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\812b62a7cd8b3f9ddc4e65bfc440507e\transformed\ui-tooling-preview-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\812b62a7cd8b3f9ddc4e65bfc440507e\transformed\ui-tooling-preview-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\777011602e497a9f488b156914db70b9\transformed\ui-tooling-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\777011602e497a9f488b156914db70b9\transformed\ui-tooling-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\92b3ebf28d3c1f11b479c9d5d60f1f6a\transformed\ui-graphics-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\92b3ebf28d3c1f11b479c9d5d60f1f6a\transformed\ui-graphics-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\b74a4b10d75ec3d94d93c7a85238c0e2\transformed\ui-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\b74a4b10d75ec3d94d93c7a85238c0e2\transformed\ui-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\f879483cafca89e74d05de2912c366bf\transformed\ui-test-manifest-1.6.5\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\f879483cafca89e74d05de2912c366bf\transformed\ui-test-manifest-1.6.5\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\f670628f0f533c2a4b47c7eb2e20ecde\transformed\glide-4.12.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\f670628f0f533c2a4b47c7eb2e20ecde\transformed\glide-4.12.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\luisv\.gradle\caches\transforms-3\45ccc0d2a83060795d55d5c5c9a01b3a\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\luisv\.gradle\caches\transforms-3\45ccc0d2a83060795d55d5c5c9a01b3a\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\luisv\.gradle\caches\transforms-3\106e475e218571e61f30e8fff9f82b7f\transformed\play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\luisv\.gradle\caches\transforms-3\106e475e218571e61f30e8fff9f82b7f\transformed\play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\luisv\.gradle\caches\transforms-3\7afd1ab021bb25abb84e465f82a643d4\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\luisv\.gradle\caches\transforms-3\7afd1ab021bb25abb84e465f82a643d4\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\55fe3a89a8b6ab5487f8134e5b79539b\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\55fe3a89a8b6ab5487f8134e5b79539b\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\luisv\.gradle\caches\transforms-3\b6d3b6a6e3bde5735f0af50f843c5cfe\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\luisv\.gradle\caches\transforms-3\b6d3b6a6e3bde5735f0af50f843c5cfe\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:19:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\5944e7313eb6f809ae08f58329caa57b\transformed\recaptcha-18.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\5944e7313eb6f809ae08f58329caa57b\transformed\recaptcha-18.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\luisv\.gradle\caches\transforms-3\81068d39d5b31832282f50147a19e029\transformed\integrity-1.2.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\luisv\.gradle\caches\transforms-3\81068d39d5b31832282f50147a19e029\transformed\integrity-1.2.0\AndroidManifest.xml:4:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\6066d42dcb9e9d375f92813cb1777bd2\transformed\runtime-saveable-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\6066d42dcb9e9d375f92813cb1777bd2\transformed\runtime-saveable-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\8c70485f88f22182bd8aaba491df50e3\transformed\runtime-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\8c70485f88f22182bd8aaba491df50e3\transformed\runtime-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\fafaf886224ff475bfb32a17b37f6844\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\fafaf886224ff475bfb32a17b37f6844\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\57ba2bd58c6f7c7d76c77cc695488e22\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\57ba2bd58c6f7c7d76c77cc695488e22\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\1ee035de275b8ae7638dcd286ee38874\transformed\lifecycle-livedata-core-ktx-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\1ee035de275b8ae7638dcd286ee38874\transformed\lifecycle-livedata-core-ktx-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\e5d6ce1dd0dfee33bfe6ba40dd7b019b\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\e5d6ce1dd0dfee33bfe6ba40dd7b019b\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\16d8da7fd3e4db5bc1a06219e1e408a6\transformed\lifecycle-livedata-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\16d8da7fd3e4db5bc1a06219e1e408a6\transformed\lifecycle-livedata-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\02de43a73404d670aaa4e6773e825671\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\02de43a73404d670aaa4e6773e825671\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\527ff623b1320254c357546187545db8\transformed\lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\527ff623b1320254c357546187545db8\transformed\lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\473e12c1dfe9742635fa169a63ee6b08\transformed\lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\473e12c1dfe9742635fa169a63ee6b08\transformed\lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\1ae673d3d6aaaabeee227ac9c30c27ca\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\1ae673d3d6aaaabeee227ac9c30c27ca\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\9944959f227886c41aa838e0b5730e7f\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\9944959f227886c41aa838e0b5730e7f\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\839ae4ba5a14c1233e0b8b946561c8ab\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\luisv\.gradle\caches\transforms-3\839ae4ba5a14c1233e0b8b946561c8ab\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\2c7ee561526e9a20c2ab8a4235d7bfcc\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\2c7ee561526e9a20c2ab8a4235d7bfcc\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\luisv\.gradle\caches\transforms-3\33bf24935a538d1e9bac6f964cb3ed52\transformed\play-services-basement-18.3.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\luisv\.gradle\caches\transforms-3\33bf24935a538d1e9bac6f964cb3ed52\transformed\play-services-basement-18.3.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\8e72729d5aa7480e127baaea452af27a\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\8e72729d5aa7480e127baaea452af27a\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\4200466384b59668287ca51003fa5d99\transformed\activity-1.8.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\4200466384b59668287ca51003fa5d99\transformed\activity-1.8.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\6f24473e5880e132e93fbcad438367a5\transformed\activity-compose-1.8.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\6f24473e5880e132e93fbcad438367a5\transformed\activity-compose-1.8.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\ddb71d1476f7c7e10e78cac6a4a26f60\transformed\activity-ktx-1.8.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.2] C:\Users\luisv\.gradle\caches\transforms-3\ddb71d1476f7c7e10e78cac6a4a26f60\transformed\activity-ktx-1.8.2\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\6e731e02fa4814921eeab978eb9e6d36\transformed\coil-base-2.5.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.5.0] C:\Users\luisv\.gradle\caches\transforms-3\6e731e02fa4814921eeab978eb9e6d36\transformed\coil-base-2.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\d7aab47e8a68f3406d05a30485f59d78\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\d7aab47e8a68f3406d05a30485f59d78\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\6fd83c82ae1441165c2c8d715ac69985\transformed\core-ktx-1.12.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\6fd83c82ae1441165c2c8d715ac69985\transformed\core-ktx-1.12.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\luisv\.gradle\caches\transforms-3\1fc51afc2d7b30698b2565787bfca2b3\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\luisv\.gradle\caches\transforms-3\1fc51afc2d7b30698b2565787bfca2b3\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\3e33f67f42ae2e0705e60750a4fccf22\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\3e33f67f42ae2e0705e60750a4fccf22\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\luisv\.gradle\caches\transforms-3\37e367a0a52dda0d89505658ba8c7b79\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\luisv\.gradle\caches\transforms-3\37e367a0a52dda0d89505658ba8c7b79\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\52be591ab018bf89b71c13550c90bbda\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\52be591ab018bf89b71c13550c90bbda\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\26932f695e05cd9151ea7311576451e0\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\26932f695e05cd9151ea7311576451e0\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\74cbc6db8e67602936eb71dafc0c8e10\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\luisv\.gradle\caches\transforms-3\74cbc6db8e67602936eb71dafc0c8e10\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\9078e49bef788a9ccb344980a707afa7\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\9078e49bef788a9ccb344980a707afa7\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\0d721393054d7d65448d0efbd44fa266\transformed\core-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\0d721393054d7d65448d0efbd44fa266\transformed\core-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\0ad95a86be574969c22550f78c43aa8f\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\0ad95a86be574969c22550f78c43aa8f\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\b15e08ab3bcfbb5f4cebe0d15b653ffc\transformed\lifecycle-viewmodel-compose-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\b15e08ab3bcfbb5f4cebe0d15b653ffc\transformed\lifecycle-viewmodel-compose-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\ba861e4accb10829fd8463ecf54275fd\transformed\lifecycle-runtime-ktx-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\ba861e4accb10829fd8463ecf54275fd\transformed\lifecycle-runtime-ktx-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\luisv\.gradle\caches\transforms-3\38834bf4739c4556ef00c23775b34bde\transformed\grpc-android-1.57.2\AndroidManifest.xml:5:5-44
+MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\luisv\.gradle\caches\transforms-3\38834bf4739c4556ef00c23775b34bde\transformed\grpc-android-1.57.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\luisv\.gradle\caches\transforms-3\844fac8311e8094d68857ea8adf92f0f\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\luisv\.gradle\caches\transforms-3\844fac8311e8094d68857ea8adf92f0f\transformed\annotation-experimental-1.4.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\87b6c8f348097629c6d2f825fc97087b\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\87b6c8f348097629c6d2f825fc97087b\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\47038ae929d99aec74ed35f9fbe8207f\transformed\gifdecoder-4.12.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] C:\Users\luisv\.gradle\caches\transforms-3\47038ae929d99aec74ed35f9fbe8207f\transformed\gifdecoder-4.12.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\luisv\.gradle\caches\transforms-3\ab795f86108f955484e5a690748c5055\transformed\firebase-components-17.1.5\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\luisv\.gradle\caches\transforms-3\ab795f86108f955484e5a690748c5055\transformed\firebase-components-17.1.5\AndroidManifest.xml:18:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\13b1712526158b7340bf801778e54643\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\13b1712526158b7340bf801778e54643\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\70fe938f41c2a3aee6fd91c57cecf6b6\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\70fe938f41c2a3aee6fd91c57cecf6b6\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\luisv\.gradle\caches\transforms-3\521a639f63635f1bc30de1730e683970\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\luisv\.gradle\caches\transforms-3\521a639f63635f1bc30de1730e683970\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\8743552256f79d0d2870860708190f87\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\8743552256f79d0d2870860708190f87\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\839f04d70601d84358f21f8df46c4a19\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\luisv\.gradle\caches\transforms-3\839f04d70601d84358f21f8df46c4a19\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\luisv\.gradle\caches\transforms-3\20eb7c54681d2e9f2211533b54d85f80\transformed\exifinterface-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\luisv\.gradle\caches\transforms-3\20eb7c54681d2e9f2211533b54d85f80\transformed\exifinterface-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\luisv\.gradle\caches\transforms-3\5d6484844386ba1cc27c4d16ca878d95\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\luisv\.gradle\caches\transforms-3\5d6484844386ba1cc27c4d16ca878d95\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
 	tools:overrideLibrary
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:23:9-61
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:23:9-61
 	android:targetSdkVersion
 		INJECTED from C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:26:5-79
-MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:26:5-79
-MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e2bf18e963e18c46a296725c13b99a\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:10:5-79
-MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e2bf18e963e18c46a296725c13b99a\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:10:5-79
-MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\746dd24f64837085af2065175bd4c8ee\transformed\firebase-database-20.3.1\AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\746dd24f64837085af2065175bd4c8ee\transformed\firebase-database-20.3.1\AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\c171879f95046a145b3bd321fe5af983\transformed\recaptcha-18.4.0\AndroidManifest.xml:8:5-79
-MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\c171879f95046a145b3bd321fe5af983\transformed\recaptcha-18.4.0\AndroidManifest.xml:8:5-79
-MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\luisv\.gradle\caches\transforms-3\0bfe7f120ff844ed6aea24346d84b7e1\transformed\grpc-android-1.57.2\AndroidManifest.xml:7:5-79
-MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\luisv\.gradle\caches\transforms-3\0bfe7f120ff844ed6aea24346d84b7e1\transformed\grpc-android-1.57.2\AndroidManifest.xml:7:5-79
+ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\226be5e3fa0e79bd070dce8dda11755e\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\226be5e3fa0e79bd070dce8dda11755e\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\685ff546e827012467f66e002ab3e3cf\transformed\firebase-database-20.3.1\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\685ff546e827012467f66e002ab3e3cf\transformed\firebase-database-20.3.1\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\5944e7313eb6f809ae08f58329caa57b\transformed\recaptcha-18.4.0\AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\5944e7313eb6f809ae08f58329caa57b\transformed\recaptcha-18.4.0\AndroidManifest.xml:8:5-79
+MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\luisv\.gradle\caches\transforms-3\38834bf4739c4556ef00c23775b34bde\transformed\grpc-android-1.57.2\AndroidManifest.xml:7:5-79
+MERGED from [io.grpc:grpc-android:1.57.2] C:\Users\luisv\.gradle\caches\transforms-3\38834bf4739c4556ef00c23775b34bde\transformed\grpc-android-1.57.2\AndroidManifest.xml:7:5-79
 	android:name
-		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:23:22-76
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:23:22-76
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:27:9-36:19
-MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\8b8ccc4ba798d1379090b1ca27d9927f\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:22:9-31:19
-MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\8b8ccc4ba798d1379090b1ca27d9927f\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:22:9-31:19
-MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:66:9-72:19
-MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:66:9-72:19
-MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e2bf18e963e18c46a296725c13b99a\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:14:9-23:19
-MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e2bf18e963e18c46a296725c13b99a\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:14:9-23:19
-MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\746dd24f64837085af2065175bd4c8ee\transformed\firebase-database-20.3.1\AndroidManifest.xml:26:9-35:19
-MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\746dd24f64837085af2065175bd4c8ee\transformed\firebase-database-20.3.1\AndroidManifest.xml:26:9-35:19
-MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\a155912f3f547c17c1344e053342155d\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:9:9-15:19
-MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\a155912f3f547c17c1344e053342155d\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:9:9-15:19
-MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:30:9-38:19
-MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:30:9-38:19
+ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:27:9-36:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\f3acfc85820a245392abf77037987fb1\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:22:9-31:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\f3acfc85820a245392abf77037987fb1\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:22:9-31:19
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\226be5e3fa0e79bd070dce8dda11755e\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\226be5e3fa0e79bd070dce8dda11755e\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\685ff546e827012467f66e002ab3e3cf\transformed\firebase-database-20.3.1\AndroidManifest.xml:26:9-35:19
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\685ff546e827012467f66e002ab3e3cf\transformed\firebase-database-20.3.1\AndroidManifest.xml:26:9-35:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\4e4da6bbc5650afea7c1b4ee4d88c64b\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\4e4da6bbc5650afea7c1b4ee4d88c64b\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:30:9-38:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:29:13-37
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:29:13-37
 	tools:targetApi
-		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:34:13-32
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:34:13-32
 	android:directBootAware
-		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:32:13-43
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:32:13-43
 	android:name
-		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:28:13-84
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:28:13-84
 meta-data#com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar
-ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:30:13-32:85
+ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:30:13-32:85
 	android:value
-		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:32:17-82
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:32:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:31:17-118
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:31:17-118
 meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
-ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:33:13-35:85
+ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:33:13-35:85
 	android:value
-		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:35:17-82
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:35:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\6e0916c9a9d204abdcadad80db422fb7\transformed\firebase-storage-20.3.0\AndroidManifest.xml:34:17-107
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\luisv\.gradle\caches\transforms-3\7b2be74a7cefa82e34f0d6ea639ee84a\transformed\firebase-storage-20.3.0\AndroidManifest.xml:34:17-107
 meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar
-ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\8b8ccc4ba798d1379090b1ca27d9927f\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:25:13-27:85
+ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\f3acfc85820a245392abf77037987fb1\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:25:13-27:85
 	android:value
-		ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\8b8ccc4ba798d1379090b1ca27d9927f\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:27:17-82
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\f3acfc85820a245392abf77037987fb1\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:27:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\8b8ccc4ba798d1379090b1ca27d9927f\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:26:17-120
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\f3acfc85820a245392abf77037987fb1\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:26:17-120
 meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar
-ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\8b8ccc4ba798d1379090b1ca27d9927f\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:28:13-30:85
+ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\f3acfc85820a245392abf77037987fb1\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:28:13-30:85
 	android:value
-		ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\8b8ccc4ba798d1379090b1ca27d9927f\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:30:17-82
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\f3acfc85820a245392abf77037987fb1\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:30:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\8b8ccc4ba798d1379090b1ca27d9927f\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:29:17-117
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.2] C:\Users\luisv\.gradle\caches\transforms-3\f3acfc85820a245392abf77037987fb1\transformed\firebase-appcheck-17.1.2\AndroidManifest.xml:29:17-117
 activity#com.google.firebase.auth.internal.GenericIdpActivity
-ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:29:9-46:20
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:29:9-46:20
 	android:excludeFromRecents
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:31:13-46
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:31:13-46
 	android:launchMode
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:33:13-44
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:33:13-44
 	android:exported
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:32:13-36
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:32:13-36
 	android:theme
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:34:13-72
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:34:13-72
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:30:13-80
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:30:13-80
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
-ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:35:13-45:29
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:35:13-45:29
 action#android.intent.action.VIEW
-ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
 category#android.intent.category.DEFAULT
-ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
 category#android.intent.category.BROWSABLE
-ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
 data
-ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:41:17-44:51
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:41:17-44:51
 	android:path
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:43:21-37
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:43:21-37
 	android:host
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:42:21-49
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:42:21-49
 	android:scheme
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:44:21-48
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:44:21-48
 activity#com.google.firebase.auth.internal.RecaptchaActivity
-ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:47:9-64:20
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:47:9-64:20
 	android:excludeFromRecents
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:49:13-46
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:49:13-46
 	android:launchMode
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:51:13-44
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:51:13-44
 	android:exported
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:50:13-36
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:50:13-36
 	android:theme
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:52:13-72
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:52:13-72
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:48:13-79
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:48:13-79
 intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
-ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:53:13-63:29
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:53:13-63:29
 meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
-ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:69:13-71:85
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:69:13-71:85
 	android:value
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:71:17-82
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:71:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\46d66849e53063e943165d86dc17226d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:70:17-109
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\luisv\.gradle\caches\transforms-3\834d055354df02ebe397ad3c228fa29d\transformed\firebase-auth-22.3.1\AndroidManifest.xml:70:17-109
 meta-data#com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar
-ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e2bf18e963e18c46a296725c13b99a\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:17:13-19:85
+ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\226be5e3fa0e79bd070dce8dda11755e\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:17:13-19:85
 	android:value
-		ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e2bf18e963e18c46a296725c13b99a\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:19:17-82
+		ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\226be5e3fa0e79bd070dce8dda11755e\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:19:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e2bf18e963e18c46a296725c13b99a\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:18:17-122
+		ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\226be5e3fa0e79bd070dce8dda11755e\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:18:17-122
 meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
-ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e2bf18e963e18c46a296725c13b99a\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:20:13-22:85
+ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\226be5e3fa0e79bd070dce8dda11755e\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:20:13-22:85
 	android:value
-		ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e2bf18e963e18c46a296725c13b99a\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:22:17-82
+		ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\226be5e3fa0e79bd070dce8dda11755e\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:22:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\d7e2bf18e963e18c46a296725c13b99a\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:21:17-111
+		ADDED from [com.google.firebase:firebase-firestore:24.11.0] C:\Users\luisv\.gradle\caches\transforms-3\226be5e3fa0e79bd070dce8dda11755e\transformed\firebase-firestore-24.11.0\AndroidManifest.xml:21:17-111
 meta-data#com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar
-ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\746dd24f64837085af2065175bd4c8ee\transformed\firebase-database-20.3.1\AndroidManifest.xml:29:13-31:85
+ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\685ff546e827012467f66e002ab3e3cf\transformed\firebase-database-20.3.1\AndroidManifest.xml:29:13-31:85
 	android:value
-		ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\746dd24f64837085af2065175bd4c8ee\transformed\firebase-database-20.3.1\AndroidManifest.xml:31:17-82
+		ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\685ff546e827012467f66e002ab3e3cf\transformed\firebase-database-20.3.1\AndroidManifest.xml:31:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\746dd24f64837085af2065175bd4c8ee\transformed\firebase-database-20.3.1\AndroidManifest.xml:30:17-120
+		ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\685ff546e827012467f66e002ab3e3cf\transformed\firebase-database-20.3.1\AndroidManifest.xml:30:17-120
 meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
-ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\746dd24f64837085af2065175bd4c8ee\transformed\firebase-database-20.3.1\AndroidManifest.xml:32:13-34:85
+ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\685ff546e827012467f66e002ab3e3cf\transformed\firebase-database-20.3.1\AndroidManifest.xml:32:13-34:85
 	android:value
-		ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\746dd24f64837085af2065175bd4c8ee\transformed\firebase-database-20.3.1\AndroidManifest.xml:34:17-82
+		ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\685ff546e827012467f66e002ab3e3cf\transformed\firebase-database-20.3.1\AndroidManifest.xml:34:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\746dd24f64837085af2065175bd4c8ee\transformed\firebase-database-20.3.1\AndroidManifest.xml:33:17-109
+		ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\luisv\.gradle\caches\transforms-3\685ff546e827012467f66e002ab3e3cf\transformed\firebase-database-20.3.1\AndroidManifest.xml:33:17-109
 meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
-ADDED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\a155912f3f547c17c1344e053342155d\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:12:13-14:85
+ADDED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\4e4da6bbc5650afea7c1b4ee4d88c64b\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:12:13-14:85
 	android:value
-		ADDED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\a155912f3f547c17c1344e053342155d\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:14:17-82
+		ADDED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\4e4da6bbc5650afea7c1b4ee4d88c64b\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:14:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\a155912f3f547c17c1344e053342155d\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:13:17-116
+		ADDED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\4e4da6bbc5650afea7c1b4ee4d88c64b\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:13:17-116
 activity#androidx.compose.ui.tooling.PreviewActivity
-ADDED from [androidx.compose.ui:ui-tooling-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\2e3f60393442c9f1d48ea45dd653da27\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
+ADDED from [androidx.compose.ui:ui-tooling-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\777011602e497a9f488b156914db70b9\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
 	android:exported
-		ADDED from [androidx.compose.ui:ui-tooling-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\2e3f60393442c9f1d48ea45dd653da27\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\777011602e497a9f488b156914db70b9\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
 	android:name
-		ADDED from [androidx.compose.ui:ui-tooling-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\2e3f60393442c9f1d48ea45dd653da27\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\777011602e497a9f488b156914db70b9\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
 activity#androidx.activity.ComponentActivity
-ADDED from [androidx.compose.ui:ui-test-manifest:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\c1e6998264b32710702f6604831db6d2\transformed\ui-test-manifest-1.6.5\AndroidManifest.xml:23:9-25:39
+ADDED from [androidx.compose.ui:ui-test-manifest:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\f879483cafca89e74d05de2912c366bf\transformed\ui-test-manifest-1.6.5\AndroidManifest.xml:23:9-25:39
 	android:exported
-		ADDED from [androidx.compose.ui:ui-test-manifest:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\c1e6998264b32710702f6604831db6d2\transformed\ui-test-manifest-1.6.5\AndroidManifest.xml:25:13-36
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\f879483cafca89e74d05de2912c366bf\transformed\ui-test-manifest-1.6.5\AndroidManifest.xml:25:13-36
 	android:name
-		ADDED from [androidx.compose.ui:ui-test-manifest:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\c1e6998264b32710702f6604831db6d2\transformed\ui-test-manifest-1.6.5\AndroidManifest.xml:24:13-63
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.6.5] C:\Users\luisv\.gradle\caches\transforms-3\f879483cafca89e74d05de2912c366bf\transformed\ui-test-manifest-1.6.5\AndroidManifest.xml:24:13-63
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\d143305733e5e592ae0fd2c8ac1e67d4\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\55fe3a89a8b6ab5487f8134e5b79539b\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\d143305733e5e592ae0fd2c8ac1e67d4\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\55fe3a89a8b6ab5487f8134e5b79539b\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\d143305733e5e592ae0fd2c8ac1e67d4\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\55fe3a89a8b6ab5487f8134e5b79539b\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\d143305733e5e592ae0fd2c8ac1e67d4\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\luisv\.gradle\caches\transforms-3\55fe3a89a8b6ab5487f8134e5b79539b\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:23:9-28:39
+ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:23:9-28:39
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:25:13-72
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:25:13-72
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:27:13-37
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:27:13-37
 	android:directBootAware
-		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:26:13-43
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:26:13-43
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:28:13-36
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:28:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:24:13-77
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:24:13-77
 meta-data#com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar
-ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:35:13-37:85
+ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:35:13-37:85
 	android:value
-		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:37:17-82
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:37:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\f17c9c6c836cd5bedfc0edaa70a2c6b1\transformed\firebase-common-20.4.3\AndroidManifest.xml:36:17-109
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\luisv\.gradle\caches\transforms-3\e0d2df2a5ad19a1258b409965c44e150\transformed\firebase-common-20.4.3\AndroidManifest.xml:36:17-109
 uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
-ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\c171879f95046a145b3bd321fe5af983\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:5-98
+ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\5944e7313eb6f809ae08f58329caa57b\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:5-98
 	android:name
-		ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\c171879f95046a145b3bd321fe5af983\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:22-95
+		ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\luisv\.gradle\caches\transforms-3\5944e7313eb6f809ae08f58329caa57b\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:22-95
 provider#androidx.startup.InitializationProvider
-ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\396c676b32b67aba0e3c1dc7ac90affb\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\396c676b32b67aba0e3c1dc7ac90affb\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\51c432835795083f4855b3c3d8326248\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\51c432835795083f4855b3c3d8326248\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\57ba2bd58c6f7c7d76c77cc695488e22\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\e5d6ce1dd0dfee33bfe6ba40dd7b019b\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\e5d6ce1dd0dfee33bfe6ba40dd7b019b\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\8743552256f79d0d2870860708190f87\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\luisv\.gradle\caches\transforms-3\8743552256f79d0d2870860708190f87\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
 	tools:node
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:28:13-31
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\57ba2bd58c6f7c7d76c77cc695488e22\transformed\emoji2-1.3.0\AndroidManifest.xml:28:13-31
 	android:authorities
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\57ba2bd58c6f7c7d76c77cc695488e22\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
 	android:exported
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\57ba2bd58c6f7c7d76c77cc695488e22\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\57ba2bd58c6f7c7d76c77cc695488e22\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
 meta-data#androidx.emoji2.text.EmojiCompatInitializer
-ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\57ba2bd58c6f7c7d76c77cc695488e22\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
 	android:value
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\57ba2bd58c6f7c7d76c77cc695488e22\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\197b3aec9db91ae909e55c045c129252\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\luisv\.gradle\caches\transforms-3\57ba2bd58c6f7c7d76c77cc695488e22\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
 meta-data#androidx.lifecycle.ProcessLifecycleInitializer
-ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\396c676b32b67aba0e3c1dc7ac90affb\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\e5d6ce1dd0dfee33bfe6ba40dd7b019b\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
 	android:value
-		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\396c676b32b67aba0e3c1dc7ac90affb\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\e5d6ce1dd0dfee33bfe6ba40dd7b019b\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
 	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\396c676b32b67aba0e3c1dc7ac90affb\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luisv\.gradle\caches\transforms-3\e5d6ce1dd0dfee33bfe6ba40dd7b019b\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\luisv\.gradle\caches\transforms-3\d026b8686ae5e190ec3255620e5a4702\transformed\play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
+ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\luisv\.gradle\caches\transforms-3\33bf24935a538d1e9bac6f964cb3ed52\transformed\play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\luisv\.gradle\caches\transforms-3\d026b8686ae5e190ec3255620e5a4702\transformed\play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
+		ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\luisv\.gradle\caches\transforms-3\33bf24935a538d1e9bac6f964cb3ed52\transformed\play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\luisv\.gradle\caches\transforms-3\d026b8686ae5e190ec3255620e5a4702\transformed\play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
+		ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\luisv\.gradle\caches\transforms-3\33bf24935a538d1e9bac6f964cb3ed52\transformed\play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
 permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\0d721393054d7d65448d0efbd44fa266\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
-		ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+		ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\0d721393054d7d65448d0efbd44fa266\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
 	android:name
-		ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+		ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\0d721393054d7d65448d0efbd44fa266\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
 permission#com.pixelperfectsoft.tcg_nexus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\0d721393054d7d65448d0efbd44fa266\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
-		ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+		ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\0d721393054d7d65448d0efbd44fa266\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
 	android:name
-		ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+		ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\0d721393054d7d65448d0efbd44fa266\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
 uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\0d721393054d7d65448d0efbd44fa266\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
 	android:name
-		ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+		ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\0d721393054d7d65448d0efbd44fa266\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
 uses-permission#com.pixelperfectsoft.tcg_nexus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\0d721393054d7d65448d0efbd44fa266\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
 	android:name
-		ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\21cd4332a08ba2e575c45b0c1920f818\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+		ADDED from [androidx.core:core:1.12.0] C:\Users\luisv\.gradle\caches\transforms-3\0d721393054d7d65448d0efbd44fa266\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
 meta-data#androidx.profileinstaller.ProfileInstallerInitializer
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
 	android:value
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
 receiver#androidx.profileinstaller.ProfileInstallReceiver
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
 	android:enabled
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
 	android:exported
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
 	android:permission
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
 	android:directBootAware
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
 intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
 action#androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
 intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
 action#androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
 intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
 action#androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
 intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
 action#androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\9a5f7d0695a61b4bb0230c68d3e04606\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\luisv\.gradle\caches\transforms-3\202b355713cf5ce3e395f3eae29f2e8d\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
