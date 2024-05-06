@@ -24,6 +24,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
@@ -54,6 +55,8 @@ import coil.compose.AsyncImage
 import com.google.firebase.firestore.FirebaseFirestore
 import com.pixelperfectsoft.tcg_nexus.ui.MyButton
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.StorageConfig
+import com.pixelperfectsoft.tcg_nexus.ui.MyPasswordField
+import com.pixelperfectsoft.tcg_nexus.ui.MyTextField
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 
 @Composable
@@ -62,6 +65,11 @@ fun Profile(
     dataViewModel: UserDataViewModel = viewModel(),
 
     ) {
+    //Creamos un array con las rutas de los avatares a partir de los elementos existentes dentro de la carpeta avatars
+    // Si la lista devuelve nulo utilizamos el operador ?: para asegurarnos de que se cree una lista mutable vacia
+    val avatarImages =
+        LocalContext.current.assets.list("avatars")?.mapNotNull { "avatars/$it" }?.toMutableList()
+            ?: mutableListOf()
     val currentuser = dataViewModel.user.value
     val backcolors = listOf(
         Color.Transparent,
@@ -77,8 +85,9 @@ fun Profile(
             .background(brush = createGradientBrush(backcolors)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        Log.d("Profile", "Username: ${currentuser.displayName}")
         LogOutButton(navController)
-        AvatarImage(currentuser = currentuser)
+        AvatarImage(avatarImages = avatarImages, currentuser = currentuser, navController = navController)
         UserInfo(currentuser)
         EditProfile(currentuser, navController = navController)
     }
@@ -86,39 +95,76 @@ fun Profile(
 
 @Composable
 fun EditProfile(currentuser: User, navController: NavHostController) {
-    var show = rememberSaveable {
-        mutableStateOf(false)
-    }
-    Spacer(modifier = Modifier.fillMaxHeight(0.2f))
+    val newdisplayname = rememberSaveable { mutableStateOf(currentuser.displayName) }
+    val newemail = rememberSaveable { mutableStateOf(currentuser.email) }
+    val pass = rememberSaveable { mutableStateOf("") }
+    val newpass = rememberSaveable{ mutableStateOf("") }
+    Spacer(modifier = Modifier.fillMaxHeight(0.1f))
+
+    MyTextField(
+        data = newdisplayname.value,
+        label = "Usuario",
+        onvaluechange = {
+            newdisplayname.value = it
+        }, //Siempre que escribamos algo el boolean error se va a poner en false
+        supportingText = "",
+        iserror = false
+    )
+    MyTextField(
+        data = newemail.value,
+        label = "Correo electrónico",
+        onvaluechange = {
+            newemail.value = it
+        }, //Siempre que escribamos algo el boolean error se va a poner en false
+        supportingText = "",
+        iserror = false
+    )
+    MyPasswordField(
+        data = pass.value,
+        label = "Contraseña actual",
+        onvaluechange = {
+            pass.value = it
+        }, //Siempre que escribamos algo el boolean error se va a poner en false
+        supporting_text = "Contraseña incorrecta",
+        iserror = false
+    )
+    MyPasswordField(
+        data = pass.value,
+        label = "Nueva contraseña",
+        onvaluechange = {
+            pass.value = it
+        }, //Siempre que escribamos algo el boolean error se va a poner en false
+        supporting_text = "Contraseña incorrecta",
+        iserror = false
+    )
+
+    Spacer(Modifier.size(8.dp))
+
+    Spacer(modifier = Modifier.fillMaxHeight(0.1f))
     MyButton(
         text = "Editar perfil",
         onclick = {
-            show.value = true
+
         },
         containercolor = MaterialTheme.colorScheme.primary,
         bordercolor = MaterialTheme.colorScheme.primary,
         textcolor = Color.White
     )
-    if (show.value) {
-        ProfileSelector(show, currentuser = currentuser, navcontroller = navController)
-    }
+
 
 }
 
 @Composable
 fun ProfileSelector(
     show: MutableState<Boolean>,
-    //avatarImagesViewModel: StorageConfig = viewModel(),
+    avatarImages: MutableList<String>,
     currentuser: User,
     navcontroller: NavHostController,
 ) {
     Dialog(onDismissRequest = { show.value = false }) {
+        val context = LocalContext.current
 
-        //val avatarImages = avatarImagesViewModel.images.value
-        val avatarImages = mutableListOf<String>()
-        LocalContext.current.assets.list("avatars")?.forEach {
-            avatarImages.add("avatars/$it")
-        }
+
         Surface(
             modifier = Modifier
                 .fillMaxHeight(0.5f)
@@ -172,13 +218,21 @@ fun ProfileSelector(
 @Composable
 fun AvatarImage(
     currentuser: User,
-    ) {
+    navController: NavHostController,
+    avatarImages: MutableList<String>
+) {
+    var show = rememberSaveable {
+        mutableStateOf(false)
+    }
     Spacer(modifier = Modifier.fillMaxHeight(0.1f))
     Box(
         modifier = Modifier
             .clip(CircleShape)
             .background(Color.Transparent)
-            .size(200.dp),
+            .size(200.dp)
+            .clickable {
+                show.value = true
+            },
         contentAlignment = Alignment.Center
     ) {
         AsyncImage(
@@ -186,6 +240,11 @@ fun AvatarImage(
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
+    }
+
+    if (show.value) {
+        ProfileSelector(avatarImages = avatarImages,
+            show = show, currentuser = currentuser, navcontroller = navController)
     }
 }
 
@@ -252,7 +311,7 @@ fun LogOutButton(navController: NavHostController) {
 fun UserInfo(user: User) {
     Spacer(modifier = Modifier.fillMaxHeight(0.1f))
     Text(
-        text = user.displayName,
+        text = "User: "+ user.displayName,
         style = TextStyle(
             fontSize = 20.sp,
             fontWeight = FontWeight.SemiBold

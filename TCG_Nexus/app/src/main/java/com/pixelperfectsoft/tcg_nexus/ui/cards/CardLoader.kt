@@ -14,9 +14,12 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.LinearProgressIndicator
@@ -46,34 +49,38 @@ fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel, navController: Nav
     val currentSelectedItem = remember { mutableStateOf(Card()) }
     Box(contentAlignment = Alignment.BottomEnd, modifier = Modifier.fillMaxSize()) {
         LazyVerticalGrid(
-            modifier = Modifier.fillMaxHeight(),
+
+            //LazyColumn(
+            modifier = Modifier.fillMaxSize(),
             horizontalArrangement = Arrangement.Center,
             columns = GridCells.Fixed(3),
             content = {
-                /*item {
-                    Box(Modifier.size(8.dp).background(Color.Transparent)) {}
+                val extraitems = if (cards.size % 3 == 0) {
+                    0
+                } else {
+                    3 - (cards.size % 3)
                 }
-                item {
-                    PageButtons(viewModel, LocalContext.current)
-                }
-                item {
-                    Box(Modifier.size(8.dp).background(Color.Transparent)) {}
-                }*/
                 items(cards) {
-                    Log.d("Cards", "Loading card ${it.name}")
-                    Log.d("card_image", it.image_uris_normal.toString())
-                    CardItem(
+                    CollectionCardItem(
                         card = it,
                         currentSelectedItem = currentSelectedItem,
                         dialogplace = "allcards"
                     )
                 }
+                Log.d("array", cards.size.toString())
+
+                items(extraitems) {
+                    // Agregar elementos adicionales para centrar los botones de paginación
+                    Box(modifier = Modifier.size(100.dp, 100.dp))
+                }
                 item {
                     Box(
                         Modifier
                             .size(8.dp)
-                            .background(Color.Transparent)) {}
+                            .background(Color.Transparent)
+                    )
                 }
+
                 item {
                     PageButtons(viewModel, LocalContext.current)
                 }
@@ -81,9 +88,15 @@ fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel, navController: Nav
                     Box(
                         Modifier
                             .size(8.dp)
-                            .background(Color.Transparent)) {}
+                            .background(Color.Transparent)
+                    )
                 }
             })
+        /*
+        VerticalScrollbar(
+            modifier = Modifier.align(Alignment.CenterEnd).fillMaxHeight(),
+            adapter = rememberScrollbarAdapter(scrollState = state)
+        )*/
         Column(horizontalAlignment = Alignment.End) {
             FilterButton("cards", cardviewmodel = viewModel, colviewmodel = null)
         }
@@ -92,14 +105,16 @@ fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel, navController: Nav
 
 @Composable
 fun PageButtons(viewModel: CardViewModel, context: Context) {
-    Column {
-        Text(text = "Mostrando ${viewModel.start+1}..${viewModel.end} cartas", style = TextStyle(
-            fontSize = 12.sp,
-            fontStyle = FontStyle.Italic,
-            textAlign = TextAlign.Center
-        ))
+    Column(modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
+        Text(
+            text = "Mostrando ${viewModel.start + 1}..${viewModel.end} cartas", style = TextStyle(
+                fontSize = 12.sp,
+                fontStyle = FontStyle.Italic,
+                textAlign = TextAlign.Center
+            )
+        )
         Spacer(modifier = Modifier.size(8.dp))
-        Row(modifier = Modifier.fillMaxWidth()) {
+        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
             Button(onClick = {
                 viewModel.prevPage(context)
             }) {
@@ -113,7 +128,7 @@ fun PageButtons(viewModel: CardViewModel, context: Context) {
             }
         }
     }
-    
+
 }
 
 @Composable
@@ -124,7 +139,7 @@ fun SetData(
     //estimatedCost: MutableFloatState
 ) {
 
-    viewModel.load(LocalContext.current)
+
     when (val result = viewModel.response.value) {
         is DataState.Loading -> {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -158,5 +173,7 @@ fun SetData(
                 Text(text = "No se han encontrado cartas")
             }
         }
+
+        else -> {}
     }
 }

@@ -69,7 +69,7 @@ fun GameBackgroundImage() {
 @Composable
 fun MyLogo(height: Int) {
     Image(
-        painterResource(id = R.drawable.logotcgnexus),
+        painterResource(id = R.drawable.logotcgnexus_new),
         "Logo",
         Modifier
             .fillMaxWidth()

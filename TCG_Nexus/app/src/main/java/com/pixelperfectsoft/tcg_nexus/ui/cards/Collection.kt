@@ -30,6 +30,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.google.firebase.auth.FirebaseAuth
 import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.ui.InfoCard
 import com.pixelperfectsoft.tcg_nexus.model.classes.Card
@@ -98,7 +99,7 @@ fun LoadCollection(
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                     //CircularProgressIndicator()
-                    Text(text = "Cargando lista de cartas...")
+                    Text(text = "Cargando colección de ${FirebaseAuth.getInstance().currentUser?.displayName}...")
                     Spacer(modifier = Modifier.height(16.dp))
                     LinearProgressIndicator()
                 }
@@ -141,9 +142,7 @@ fun ShowCollectionLazyList(cards: MutableList<Card>, viewModel: CollectionViewMo
             columns = GridCells.Fixed(3),
             content = {
                 items(cards) {
-                    Log.d("Cards", "Loading card ${it.name}")
-                    Log.d("card_image", it.image_uris_normal.toString())
-                    CardItem(
+                    CollectionCardItem(
                         card = it,
                         currentSelectedItem = currentSelectedItem,
                         dialogplace = "collection",
@@ -152,7 +151,7 @@ fun ShowCollectionLazyList(cards: MutableList<Card>, viewModel: CollectionViewMo
             })
         Column(horizontalAlignment = Alignment.End) {
             FilterButton("col", null, viewModel)
-            AddButton()
+            //AddButton()
         }
     }
 }

@@ -39,7 +39,10 @@ import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AllCards(navController: NavController, viewModel: CardViewModel = CardViewModel(context = LocalContext.current)) {
+fun AllCards(
+    navController: NavController,
+    viewModel: CardViewModel = CardViewModel(context = LocalContext.current)
+) {
     val backcolors = listOf(
         Color.Transparent,
         Color.White,
@@ -52,7 +55,7 @@ fun AllCards(navController: NavController, viewModel: CardViewModel = CardViewMo
     var searchinput by rememberSaveable { mutableStateOf("") }
     val searched = rememberSaveable { mutableStateOf(false) }
     val context = LocalContext.current
-    //var viewModel: CardViewModel = CardViewModel(context = LocalContext.current)
+    //viewModel.load(LocalContext.current)
     BackgroundImage()
     Column(
         verticalArrangement = Arrangement.Center,
@@ -61,80 +64,33 @@ fun AllCards(navController: NavController, viewModel: CardViewModel = CardViewMo
             .fillMaxHeight(0.33f)
             .background(brush = createGradientBrush(backcolors))
     ) {
-        when (searched.value) {
-            false -> {
-                TextField(
-                    value = searchinput,
-                    onValueChange = { searchinput = it },
-                    label = { Text(text = "Buscar...") },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 32.dp)
-                        .padding(top = 64.dp),
-                    shape = RoundedCornerShape(45.dp),
-                    singleLine = true,
-                    colors = TextFieldDefaults.textFieldColors(
-                        containerColor = Color.Transparent,
-                        cursorColor = Color.Black,
-                        focusedTextColor = Color.Black,
-                        unfocusedTextColor = Color.Black,
-                        focusedLabelColor = Color.Black,
-                        focusedIndicatorColor = Color.Black,
-                        focusedSupportingTextColor = Color.Red,
-                        unfocusedSupportingTextColor = Color.Red
-                    ),
-                    trailingIcon = {
-                        IconButton(onClick = {
-                            if (searchinput != "") {
-                                Log.d("search", "Searching by name -> $searchinput")
-
-                                searched.value = true
-                                viewModel.searchCardsByName(searchinput, context)
-                                viewModel.load(context)
-                            }
-                        }) {
-                            Icon(imageVector = Icons.Filled.Search, contentDescription = "search")
-                        }
-                    }
-                )
-
-            }
-
-            true -> {
-                //Informacion
-                Column(
-                    modifier = Modifier.padding(horizontal = 16.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    Spacer(modifier = Modifier.fillMaxHeight(0.05f))
-                    /*InfoCard(
-                        text = "BUSCAR CARTAS",
-                        number = "",
-                        containercolor = Color.White,
-                        contentcolor = Color.Black,
-                        contenttype = "number"
-                    )*/
-                    Spacer(modifier = Modifier.fillMaxHeight(0.025f))
-                    InfoCard(
-                        text = "Cartas encontradas",
-                        number = totalcards.intValue.toString(),
-                        containercolor = MaterialTheme.colorScheme.primary,
-                        contentcolor = Color.White,
-                        contenttype = "number"
-                    )
-
-                }
-                Spacer(modifier = Modifier.fillMaxHeight(0.05f))
-                //Cargar la busqueda
-                SetData(viewModel = viewModel, navController = navController)
-            }
+        //Informacion
+        Column(
+            modifier = Modifier.padding(horizontal = 16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Spacer(modifier = Modifier.fillMaxHeight(0.05f))
+            /*InfoCard(
+                text = "BUSCAR CARTAS",
+                number = "",
+                containercolor = Color.White,
+                contentcolor = Color.Black,
+                contenttype = "number"
+            )*/
+            Spacer(modifier = Modifier.fillMaxHeight(0.025f))
+            InfoCard(
+                text = "Cartas encontradas",
+                number = totalcards.intValue.toString(),
+                containercolor = MaterialTheme.colorScheme.primary,
+                contentcolor = Color.White,
+                contenttype = "number"
+            )
 
         }
+        Spacer(modifier = Modifier.fillMaxHeight(0.05f))
+        //Cargar la busqueda
 
-        //Boton de filtrar
-        //FilterButton()
-        //Lista de cartas
-
-
+        SetData(viewModel = viewModel, navController = navController)
     }
+
 }

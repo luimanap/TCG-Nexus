@@ -15,6 +15,7 @@ val Pink40 = Color(0xFF7D5260)
 
 val PrimaryBlue = Color(92, 115, 255)
 
+
 fun createGradientBrush(colors: List<Color>, isVertical: Boolean = true): Brush {
     val endOffset = if (isVertical) {
         Offset(0f, Float.POSITIVE_INFINITY)

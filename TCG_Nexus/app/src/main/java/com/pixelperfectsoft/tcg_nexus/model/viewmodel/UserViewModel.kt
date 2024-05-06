@@ -27,35 +27,34 @@ class UserDataViewModel : ViewModel() {
 }
 
 suspend fun getUserDataFromFirestore(): User {
-    val auth =
-        FirebaseAuth.getInstance() //Obtenemos la instancia del sistema de autenticacion de Firebase
+    val auth = FirebaseAuth.getInstance() //Obtenemos la instancia del sistema de autenticacion de Firebase
     val currentuser = auth.currentUser //Obtenemos el usuario actualmente logueado
     val db = FirebaseFirestore.getInstance()   //Obtenemos la instasncia del sistema de BDD de Firebase
-    var user = User()
-
+    var user = mutableStateOf( User())
     try {
-        db.collection("users").get().await()
-            .map {//Obtenemos la coleccion perteneciente a usuarios y esperamos a que se obtenga algo desde esa coleccion con await
-                val result = it.toObject(User::class.java)
-                if (currentuser != null) {
-                    if (currentuser.uid == result.userId) {
-                        Log.d("get-user", "User id match -> $user")
-                        user = result
-                    } else {
-                        /*Log.d("get-user", "User id mismatch")
-                        Log.d("get-user", "Id founded -> ${result.userId}")
-                        Log.d("get-user", "User founded $result")
-                        Log.d("get-user", "Id to found -> ${currentuser.uid}")*/
-                    }
+        if (currentuser != null) {
+            db.collection("users").whereEqualTo("user_id", currentuser.uid).get().await()
+                .map {//Obtenemos la coleccion perteneciente a usuarios y esperamos a que se obtenga algo desde esa coleccion con await
+                    val result = it.toObject(User::class.java)
+
+                    Log.d("get-user", "User -> $result")
+                    //Log.d("get-user", "User id match -> $user")
+                    user.value = result
+                    /*
+                    Log.d("get-user", "User id mismatch")
+                    Log.d("get-user", "Id founded -> ${result.userId}")
+                    Log.d("get-user", "User founded $result")
+                    Log.d("get-user", "Id to found -> ${currentuser.uid}")
+                    */
                 }
-                else{
-                    Log.d("get-user", "Current User is null")
-                }
-            }
+        } else {
+            Log.d("get-user", "Current User is null")
+        }
+
     } catch (e: FirebaseFirestoreException) {
         Log.d("UserInfo", "UserInfo : Error retrieving user data: $e")
     }
-    return user
+    return user.value
 }
 
 /*@Composable

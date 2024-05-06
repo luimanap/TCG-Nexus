@@ -6,6 +6,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -69,7 +71,6 @@ object MyScreenRoutes {
     const val TWOPLAYERS40LIVES = "2p40"
     const val TWOPLAYERS50LIVES = "2p50"
     const val TWOPLAYERS60LIVES = "2p60"
-
 }
 
 
@@ -142,6 +143,12 @@ val GUEST_MENU_ITEMS = listOf(
         path = MyScreenRoutes.LOGIN,
         label = "Login"
     )
+    /*, MenuItems(
+        icon = Icons.Filled.Settings,
+        textId = R.string.settings,
+        path = MyScreenRoutes.LOGIN,
+        label = "Settings"
+    )*/
 )
 
 
@@ -240,7 +247,7 @@ fun BottomBarNavigation(selectedDestination: String, navigateTo: (MenuItems) -> 
         modifier = Modifier
             .fillMaxWidth()
             .height(70.dp),
-        containerColor = Color.White
+        containerColor = Color(255,255,255)
     ) {
         if (user != null) {
             AUTH_MENU_ITEMS.forEach { destinations ->

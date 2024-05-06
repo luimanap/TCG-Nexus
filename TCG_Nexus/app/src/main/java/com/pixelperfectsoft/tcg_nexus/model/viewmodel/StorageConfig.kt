@@ -51,7 +51,7 @@ class StorageConfig: ViewModel() {
         val listResult: ListResult = getStorageRef().listAll().await()
         for (i in listResult.items) {
                 val url = i.downloadUrl.await().toString()
-                Log.d("avatar",url)
+                //Log.d("avatar",url)
                 imageUrls.add(url)
                 //TODO Pendiente por descubrir como pasarle el contexto a glide sin que pete
                 //Glide.with(get_context()).load(url).preload()
