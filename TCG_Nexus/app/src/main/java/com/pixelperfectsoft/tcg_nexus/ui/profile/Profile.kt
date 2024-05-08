@@ -105,7 +105,7 @@ fun Profile(
 
 @Composable
 fun EditProfile(currentuser: User, navController: NavHostController) {
-    val newdisplayname = rememberSaveable { mutableStateOf(currentuser.displayName) }
+    val newdisplayname = rememberSaveable { mutableStateOf(currentuser.display_name) }
     val newemail = rememberSaveable { mutableStateOf(currentuser.email) }
     val pass = rememberSaveable { mutableStateOf("") }
     val newpass = rememberSaveable { mutableStateOf("") }
@@ -180,10 +180,10 @@ fun ProfileSelector(
         for (i in LocalContext.current.assets.list("avatars")!!) {
             Log.d("avatars", "Loading avatar -> avatars/$i")
             if (i != null) {
-                    bitmapState.value =
-                        BitmapFactory.decodeStream(context.assets.open("avatars/$i"))
-                    bitmapImages.add(bitmapState.value)
-                    avatarImages.add("avatars/$i")
+                bitmapState.value =
+                    BitmapFactory.decodeStream(context.assets.open("avatars/$i"))
+                bitmapImages.add(bitmapState.value)
+                avatarImages.add("avatars/$i")
             }
         }
         Surface(
@@ -247,11 +247,24 @@ fun AvatarImage(
     currentuser: User,
     navController: NavHostController,
 ) {
+    val context = LocalContext.current
+    var bitmapState = remember { mutableStateOf<Bitmap?>(null) }
+    Log.d("avatar", currentuser.avatar_url)
+
+    LaunchedEffect(Unit) {
+        var avatar = context.assets.open("avatars/ava4.jpg")
+        //while (currentuser.avatar_url == ""){}
+        //avatar = context.assets.open(currentuser.avatar_url)
+
+        bitmapState.value = BitmapFactory.decodeStream(avatar)
+    }
+
+
+
     var show = rememberSaveable {
         mutableStateOf(false)
     }
-
-    Spacer(modifier = Modifier.fillMaxHeight(0.1f))
+    Spacer(modifier = Modifier.fillMaxHeight(0.05f))
     Box(
         modifier = Modifier
             .clip(CircleShape)
@@ -262,11 +275,15 @@ fun AvatarImage(
             },
         contentAlignment = Alignment.Center
     ) {
-        AsyncImage(
-            model = currentuser.avatarUrl, contentDescription = "Avatar",
-            modifier = Modifier.fillMaxSize(),
-            contentScale = ContentScale.Crop
-        )
+        if (bitmapState.value != null) {
+            val bitmap = bitmapState.value!!.asImageBitmap()
+            Image(
+                bitmap = bitmap, contentDescription = "Avatar",
+                modifier = Modifier.fillMaxSize(),
+                contentScale = ContentScale.Crop
+            )
+        }
+
     }
 
     if (show.value) {
@@ -286,10 +303,10 @@ fun changeAvatar(image: String, currentUser: User) {
      *    por la ruta de la imagen que pasamos como parametro al metodo
      * 4. Mostramos los logs de actualizado correctamente o error si hubiese alguno
      */
-    Log.d("avatar_update", "Updating ${currentUser.userId}")
+    Log.d("avatar_update", "Updating ${currentUser.user_id}")
     FirebaseFirestore.getInstance()
         .collection("users")
-        .whereEqualTo("user_id", currentUser.userId)
+        .whereEqualTo("user_id", currentUser.user_id)
         .get()
         .addOnSuccessListener {
             for (doc in it.documents) {
@@ -338,18 +355,21 @@ fun LogOutButton(navController: NavHostController) {
 @Composable
 fun UserInfo(user: User) {
     Spacer(modifier = Modifier.fillMaxHeight(0.1f))
-    Text(
-        text = "user: " + user.displayName,
-        style = TextStyle(
-            fontSize = 20.sp,
-            fontWeight = FontWeight.SemiBold
+    Row{
+        Text(
+            text = user.display_name,
+            style = TextStyle(
+                fontSize = 20.sp,
+                fontWeight = FontWeight.SemiBold
+            )
         )
-    )
-    Text(
-        text = "email: " + user.email,
-        style = TextStyle(
-            fontSize = 20.sp,
-            fontWeight = FontWeight.Light
+        Text(
+            text = user.email,
+            style = TextStyle(
+                fontSize = 20.sp,
+                fontWeight = FontWeight.Light
+            )
         )
-    )
+    }
+
 }

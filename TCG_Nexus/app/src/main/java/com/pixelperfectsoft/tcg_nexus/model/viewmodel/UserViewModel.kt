@@ -36,7 +36,7 @@ suspend fun getUserDataFromFirestore(): User {
         Log.d("get-user", "Current logged User -> ${currentuser.uid}")
     }
     val db = FirebaseFirestore.getInstance()   //Obtenemos la instasncia del sistema de BDD de Firebase
-    var user by mutableStateOf( User())
+    var user = User()
     try {
         if (currentuser != null) {
             val querySnapshot = db.collection("users").whereEqualTo("user_id", currentuser.uid).get().await()
