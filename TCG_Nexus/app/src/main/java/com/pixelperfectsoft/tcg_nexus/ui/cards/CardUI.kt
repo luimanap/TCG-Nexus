@@ -2,7 +2,6 @@ package com.pixelperfectsoft.tcg_nexus.ui.cards
 
 import android.annotation.SuppressLint
 import android.util.Log
-import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -24,7 +23,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -32,27 +30,22 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.SheetState
-import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
@@ -62,11 +55,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.graphics.toColor
-import androidx.core.graphics.toColorLong
+import androidx.navigation.NavHost
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
-import coil.compose.rememberAsyncImagePainter
 import com.pixelperfectsoft.tcg_nexus.ui.MyButton
 import com.pixelperfectsoft.tcg_nexus.R
 import com.pixelperfectsoft.tcg_nexus.model.classes.Card
@@ -114,6 +106,7 @@ fun FilterButton(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CardDialog(
+    navController : NavHostController,
     sheetState: SheetState,
     card: Card,
     collectionViewModel: CollectionViewModel = CollectionViewModel(),
@@ -122,7 +115,7 @@ fun CardDialog(
     if (sheetState.isVisible) {
         val scope = rememberCoroutineScope()
         val uriHandler = LocalUriHandler.current
-        val navController = rememberNavController()
+
         ModalBottomSheet(
             onDismissRequest = {
                 scope.launch {
@@ -147,11 +140,11 @@ fun CardDialog(
                         painter = painterResource(
                             id = when (card.rarity.toString().lowercase()) {
                                 //"common" -> R.drawable.common
-                                "common" -> R.drawable.common
-                                "uncommon" -> R.drawable.uncommon
-                                "rare" -> R.drawable.rare
-                                "mythic" -> R.drawable.mythic
-                                else -> R.drawable.common
+                                "common" -> R.drawable.rarity_common
+                                "uncommon" -> R.drawable.rarity_uncommon
+                                "rare" -> R.drawable.rarity_rare
+                                "mythic" -> R.drawable.rarity_mythic
+                                else -> R.drawable.rarity_common
                             }
                         ),
                         contentDescription = "rarity",
@@ -313,7 +306,7 @@ fun CardDialog(
                                 onclick = {
                                     collectionViewModel.deleteCardFromCollection(card)
                                     scope.launch { sheetState.hide() }
-                                    navController.navigate(MyScreenRoutes.COLLECTION)
+                                    navController.navigate(MyScreenRoutes.UPDATE)
                                 },
                                 containercolor = MaterialTheme.colorScheme.primary,
                                 bordercolor = MaterialTheme.colorScheme.primary,
@@ -352,6 +345,7 @@ fun CardDialog(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CardItem(
+    navController: NavHostController,
     card: Card,
     currentSelectedItem: MutableState<Card>,
     dialogplace: String
@@ -405,13 +399,14 @@ fun CardItem(
         }
     }
 
-    CardDialog(sheetState = sheetState, card = currentSelectedItem.value, dialogplace = dialogplace)
+    CardDialog(navController = navController, sheetState = sheetState, card = currentSelectedItem.value, dialogplace = dialogplace)
 }
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CollectionCardItem(
+    navController: NavHostController,
     card: Card,
     currentSelectedItem: MutableState<Card>,
     dialogplace: String
@@ -480,7 +475,7 @@ fun CollectionCardItem(
             }
         }
     }
-    CardDialog(sheetState = sheetState, card = currentSelectedItem.value, dialogplace = dialogplace)
+    CardDialog(navController = navController, sheetState = sheetState, card = currentSelectedItem.value, dialogplace = dialogplace)
 
 }
 

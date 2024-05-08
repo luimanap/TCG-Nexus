@@ -37,6 +37,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import com.pixelperfectsoft.tcg_nexus.model.classes.Card
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.CardViewModel
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.DataState
@@ -45,7 +46,7 @@ import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel, navController: NavController) {
+fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel, navController: NavHostController) {
     val currentSelectedItem = remember { mutableStateOf(Card()) }
     Box(contentAlignment = Alignment.BottomEnd, modifier = Modifier.fillMaxSize()) {
         LazyVerticalGrid(
@@ -62,6 +63,7 @@ fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel, navController: Nav
                 }
                 items(cards) {
                     CollectionCardItem(
+                        navController = navController,
                         card = it,
                         currentSelectedItem = currentSelectedItem,
                         dialogplace = "allcards"
@@ -133,7 +135,7 @@ fun PageButtons(viewModel: CardViewModel, context: Context) {
 
 @Composable
 fun SetData(
-    navController: NavController,
+    navController: NavHostController,
     viewModel: CardViewModel,
     //totalcards: MutableIntState,
     //estimatedCost: MutableFloatState

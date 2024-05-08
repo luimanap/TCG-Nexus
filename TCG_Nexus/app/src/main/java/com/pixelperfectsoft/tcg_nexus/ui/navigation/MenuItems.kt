@@ -27,6 +27,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.google.firebase.auth.FirebaseAuth
 import com.pixelperfectsoft.tcg_nexus.R
+import com.pixelperfectsoft.tcg_nexus.ui.UpdateScreen
 import com.pixelperfectsoft.tcg_nexus.ui.auth.LoginScreen
 import com.pixelperfectsoft.tcg_nexus.ui.auth.RegisterScreen
 import com.pixelperfectsoft.tcg_nexus.ui.cards.AllCards
@@ -37,6 +38,7 @@ import com.pixelperfectsoft.tcg_nexus.ui.play.PlayScreen
 import com.pixelperfectsoft.tcg_nexus.ui.play.Threeplayers
 import com.pixelperfectsoft.tcg_nexus.ui.play.Twoplayers
 import com.pixelperfectsoft.tcg_nexus.ui.profile.Profile
+import com.pixelperfectsoft.tcg_nexus.ui.settings.SettingsScreen
 
 //Clase para los elementos de la barra
 data class MenuItems(
@@ -48,10 +50,12 @@ data class MenuItems(
 
 //Objeto para identificar las rutas de navegación de cada pantalla
 object MyScreenRoutes {
+    const val SETTINGS = "settings"
     const val LOGIN: String = "login"
     const val HOME = "home"
     const val SEARCH = "search"
     const val COLLECTION = "collection"
+    const val UPDATE = "update"
     const val DECKS = "decks"
     const val PLAY = "play"
     const val PROFILE = "profile"
@@ -91,17 +95,17 @@ val AUTH_MENU_ITEMS = listOf(
         icon = R.drawable.home,
         textId = R.string.home,
         path = MyScreenRoutes.HOME,
-        label = "Inicio"
+        label = "Home"
     ), MenuItems(
         icon = R.drawable.searchicon,
         textId = R.string.collection,
         path = MyScreenRoutes.SEARCH,
-        label = "Buscar"
+        label = "Search"
     ), MenuItems(
         icon = R.drawable.albums,
         textId = R.string.collection,
         path = MyScreenRoutes.COLLECTION,
-        label = "Colección"
+        label = "Colecction"
     /*), MenuItems(
         icon = R.drawable.cards,
         textId = R.string.decks,
@@ -111,12 +115,17 @@ val AUTH_MENU_ITEMS = listOf(
         icon = R.drawable.dice_icon,
         textId = R.string.play,
         path = MyScreenRoutes.PLAY,
-        label = "Jugar"
+        label = "Play"
     ), MenuItems(
         icon = R.drawable.personcirclesharp,
         textId = R.string.profile,
         path = MyScreenRoutes.LOGIN,
-        label = "Perfil"
+        label = "Profile"
+    ), MenuItems(
+        icon = R.drawable.settings,
+        textId = R.string.settings,
+        path = MyScreenRoutes.SETTINGS,
+        label = "Settings"
     )
 )
 
@@ -126,29 +135,28 @@ val GUEST_MENU_ITEMS = listOf(
         icon = R.drawable.home,
         textId = R.string.home,
         path = MyScreenRoutes.HOME,
-        label = "Inicio"
+        label = "Home"
     ), MenuItems(
         icon = R.drawable.searchicon,
         textId = R.string.collection,
         path = MyScreenRoutes.SEARCH,
-        label = "Buscar"
+        label = "Collection"
     ), MenuItems(
         icon = R.drawable.dice_icon,
         textId = R.string.play,
         path = MyScreenRoutes.PLAY,
-        label = "Jugar"
+        label = "Play"
     ), MenuItems(
         icon = R.drawable.personcirclesharp,
-        textId = R.string.profile,
+        textId = R.string.login,
         path = MyScreenRoutes.LOGIN,
-        label = "Login"
-    )
-    /*, MenuItems(
-        icon = Icons.Filled.Settings,
+        label = "Log In"
+    ), MenuItems(
+        icon = R.drawable.settings,
         textId = R.string.settings,
-        path = MyScreenRoutes.LOGIN,
+        path = MyScreenRoutes.SETTINGS,
         label = "Settings"
-    )*/
+    )
 )
 
 
@@ -167,6 +175,12 @@ fun BottomBarNaviContainer(
                 navController = navController,
                 startDestination = MyScreenRoutes.HOME
             ) {
+                composable(MyScreenRoutes.SETTINGS){
+                    SettingsScreen(navController)
+                }
+                composable(MyScreenRoutes.UPDATE){
+                    UpdateScreen(navController)
+                }
                 composable(MyScreenRoutes.HOME) {
                     HomeScreen()
                 }
@@ -246,20 +260,20 @@ fun BottomBarNavigation(selectedDestination: String, navigateTo: (MenuItems) -> 
     NavigationBar(
         modifier = Modifier
             .fillMaxWidth()
-            .height(70.dp),
+            .height(65.dp),
         containerColor = Color(255,255,255)
     ) {
         if (user != null) {
             AUTH_MENU_ITEMS.forEach { destinations ->
                 NavigationBarItem(
-                    label = { Text(text = destinations.label, fontSize = 12.sp) },
+                    label = { Text(text = destinations.label, fontSize = 11.sp) },
                     selected = selectedDestination == destinations.path,
                     onClick = { navigateTo(destinations) },
                     icon = {
                         Icon(
                             painter = painterResource(id = destinations.icon),
                             contentDescription = stringResource(id = destinations.textId),
-                            modifier = Modifier.size(24.dp)
+                            modifier = Modifier.size(25.dp)
                         )
                     }, colors = NavigationBarItemDefaults.colors(
                         selectedIconColor = MaterialTheme.colorScheme.primary,
@@ -270,14 +284,14 @@ fun BottomBarNavigation(selectedDestination: String, navigateTo: (MenuItems) -> 
         } else {
             GUEST_MENU_ITEMS.forEach { destinations ->
                 NavigationBarItem(
-                    label = { Text(text = destinations.label, fontSize = 12.sp) },
+                    label = { Text(text = destinations.label, fontSize = 11.sp) },
                     selected = selectedDestination == destinations.path,
                     onClick = { navigateTo(destinations) },
                     icon = {
                         Icon(
                             painter = painterResource(id = destinations.icon),
                             contentDescription = stringResource(id = destinations.textId),
-                            modifier = Modifier.size(24.dp)
+                            modifier = Modifier.size(25.dp)
                         )
                     }, colors = NavigationBarItemDefaults.colors(
                         selectedIconColor = Color(92, 115, 255),

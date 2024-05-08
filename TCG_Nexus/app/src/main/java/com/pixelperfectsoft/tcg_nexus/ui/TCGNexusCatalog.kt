@@ -18,6 +18,7 @@ import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -40,7 +41,9 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.pixelperfectsoft.tcg_nexus.R
+import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 
 @Composable
 fun BackgroundImage() {
@@ -49,7 +52,9 @@ fun BackgroundImage() {
             painter = painterResource(id = R.drawable.dragon_background),
             contentDescription = "Background Image",
             contentScale = ContentScale.Crop,
-            modifier = Modifier.matchParentSize().blur(radius = 6.dp)
+            modifier = Modifier
+                .matchParentSize()
+                .blur(radius = 6.dp)
         )
     }
 }
@@ -65,7 +70,11 @@ fun GameBackgroundImage() {
         )
     }
 }
-
+@Composable
+fun UpdateScreen(navController: NavHostController){
+    LinearProgressIndicator()
+    navController.navigate(MyScreenRoutes.COLLECTION)
+}
 @Composable
 fun MyLogo(height: Int) {
     Image(

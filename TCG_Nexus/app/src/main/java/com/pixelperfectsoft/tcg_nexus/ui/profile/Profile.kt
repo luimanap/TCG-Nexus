@@ -1,7 +1,11 @@
 package com.pixelperfectsoft.tcg_nexus.ui.profile
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.util.Log
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -26,13 +30,16 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
@@ -52,6 +59,7 @@ import com.pixelperfectsoft.tcg_nexus.model.viewmodel.UserDataViewModel
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
+import coil.compose.rememberAsyncImagePainter
 import com.google.firebase.firestore.FirebaseFirestore
 import com.pixelperfectsoft.tcg_nexus.ui.MyButton
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.StorageConfig
@@ -63,13 +71,15 @@ import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 fun Profile(
     navController: NavHostController,
     dataViewModel: UserDataViewModel = viewModel(),
+) {
 
-    ) {
     //Creamos un array con las rutas de los avatares a partir de los elementos existentes dentro de la carpeta avatars
     // Si la lista devuelve nulo utilizamos el operador ?: para asegurarnos de que se cree una lista mutable vacia
-    val avatarImages =
+
+    /*val avatarImages =
         LocalContext.current.assets.list("avatars")?.mapNotNull { "avatars/$it" }?.toMutableList()
-            ?: mutableListOf()
+            ?: mutableListOf()*/
+    dataViewModel.get_User()
     val currentuser = dataViewModel.user.value
     val backcolors = listOf(
         Color.Transparent,
@@ -85,9 +95,9 @@ fun Profile(
             .background(brush = createGradientBrush(backcolors)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Log.d("Profile", "Username: ${currentuser.displayName}")
+        Log.d("Profile", "Username: $currentuser")
         LogOutButton(navController)
-        AvatarImage(avatarImages = avatarImages, currentuser = currentuser, navController = navController)
+        AvatarImage(currentuser = currentuser, navController = navController)
         UserInfo(currentuser)
         EditProfile(currentuser, navController = navController)
     }
@@ -98,12 +108,12 @@ fun EditProfile(currentuser: User, navController: NavHostController) {
     val newdisplayname = rememberSaveable { mutableStateOf(currentuser.displayName) }
     val newemail = rememberSaveable { mutableStateOf(currentuser.email) }
     val pass = rememberSaveable { mutableStateOf("") }
-    val newpass = rememberSaveable{ mutableStateOf("") }
+    val newpass = rememberSaveable { mutableStateOf("") }
     Spacer(modifier = Modifier.fillMaxHeight(0.1f))
 
     MyTextField(
         data = newdisplayname.value,
-        label = "Usuario",
+        label = "Username",
         onvaluechange = {
             newdisplayname.value = it
         }, //Siempre que escribamos algo el boolean error se va a poner en false
@@ -112,7 +122,7 @@ fun EditProfile(currentuser: User, navController: NavHostController) {
     )
     MyTextField(
         data = newemail.value,
-        label = "Correo electrónico",
+        label = "Email",
         onvaluechange = {
             newemail.value = it
         }, //Siempre que escribamos algo el boolean error se va a poner en false
@@ -121,20 +131,20 @@ fun EditProfile(currentuser: User, navController: NavHostController) {
     )
     MyPasswordField(
         data = pass.value,
-        label = "Contraseña actual",
+        label = "Current password",
         onvaluechange = {
             pass.value = it
         }, //Siempre que escribamos algo el boolean error se va a poner en false
-        supporting_text = "Contraseña incorrecta",
+        supporting_text = "Incorrect password",
         iserror = false
     )
     MyPasswordField(
         data = pass.value,
-        label = "Nueva contraseña",
+        label = "New password",
         onvaluechange = {
             pass.value = it
         }, //Siempre que escribamos algo el boolean error se va a poner en false
-        supporting_text = "Contraseña incorrecta",
+        supporting_text = "Incorrect password",
         iserror = false
     )
 
@@ -142,7 +152,7 @@ fun EditProfile(currentuser: User, navController: NavHostController) {
 
     Spacer(modifier = Modifier.fillMaxHeight(0.1f))
     MyButton(
-        text = "Editar perfil",
+        text = "Edit Profile",
         onclick = {
 
         },
@@ -157,14 +167,25 @@ fun EditProfile(currentuser: User, navController: NavHostController) {
 @Composable
 fun ProfileSelector(
     show: MutableState<Boolean>,
-    avatarImages: MutableList<String>,
+    //avatarImages: MutableList<String>,
     currentuser: User,
     navcontroller: NavHostController,
 ) {
     Dialog(onDismissRequest = { show.value = false }) {
+        var bitmapState = remember { mutableStateOf<Bitmap?>(null) }
         val context = LocalContext.current
+        val bitmapImages = mutableListOf<Bitmap?>()
+        val avatarImages = mutableListOf<String>()
 
-
+        for (i in LocalContext.current.assets.list("avatars")!!) {
+            Log.d("avatars", "Loading avatar -> avatars/$i")
+            if (i != null) {
+                    bitmapState.value =
+                        BitmapFactory.decodeStream(context.assets.open("avatars/$i"))
+                    bitmapImages.add(bitmapState.value)
+                    avatarImages.add("avatars/$i")
+            }
+        }
         Surface(
             modifier = Modifier
                 .fillMaxHeight(0.5f)
@@ -174,7 +195,7 @@ fun ProfileSelector(
         ) {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Text(
-                    text = "Selecciona una imagen de perfil:",
+                    text = "Select an avatar:",
                     modifier = Modifier.padding(top = 16.dp),
                     fontWeight = FontWeight.SemiBold,
                     textAlign = TextAlign.Center
@@ -187,27 +208,33 @@ fun ProfileSelector(
                     columns = GridCells.Fixed(4),
                     content = {
                         items(avatarImages) { image ->
-                            AsyncImage(
-                                model = image,
-                                contentDescription = "",
-                                contentScale = ContentScale.FillWidth,
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .clickable {
-                                        /*
-                                        * Al hacer click en la imagen que deseamos:
-                                        * 1. Mostramos por consola la ruta de la imagen para facilitar
-                                        *    la depuración
-                                        * 2. Cambiamos la imagen en Firebase
-                                        * 3. Cerramos el dialogo
-                                        * 4. Navegamos a la pantalla de login, que comprueba si
-                                        *    estamos logueados, lo que recarga la página en su defecto
-                                        */
-                                        Log.d("avatar", "New profile -> $image")
-                                        changeAvatar(image, currentuser)
-                                        show.value = false
-                                        navcontroller.navigate(MyScreenRoutes.LOGIN)
-                                    })
+                            if (bitmapState.value != null) {
+                                val bitmap =
+                                    bitmapImages[avatarImages.indexOf(image)]!!.asImageBitmap()
+                                Text(text = image)
+                                Image(
+                                    //painter = rememberAsyncImagePainter(model = image),
+                                    bitmap = bitmap,
+                                    contentDescription = "",
+                                    contentScale = ContentScale.FillWidth,
+                                    modifier = Modifier
+                                        .fillMaxSize()
+                                        .clickable {
+                                            /*
+                                            * Al hacer click en la imagen que deseamos:
+                                            * 1. Mostramos por consola la ruta de la imagen para facilitar
+                                            *    la depuración
+                                            * 2. Cambiamos la imagen en Firebase
+                                            * 3. Cerramos el dialogo
+                                            * 4. Navegamos a la pantalla de login, que comprueba si
+                                            *    estamos logueados, lo que recarga la página en su defecto
+                                            */
+                                            Log.d("avatar", "New profile -> $image")
+                                            changeAvatar(image, currentuser)
+                                            show.value = false
+                                            navcontroller.navigate(MyScreenRoutes.LOGIN)
+                                        })
+                            }
                         }
                     })
             }
@@ -219,11 +246,11 @@ fun ProfileSelector(
 fun AvatarImage(
     currentuser: User,
     navController: NavHostController,
-    avatarImages: MutableList<String>
 ) {
     var show = rememberSaveable {
         mutableStateOf(false)
     }
+
     Spacer(modifier = Modifier.fillMaxHeight(0.1f))
     Box(
         modifier = Modifier
@@ -243,8 +270,9 @@ fun AvatarImage(
     }
 
     if (show.value) {
-        ProfileSelector(avatarImages = avatarImages,
-            show = show, currentuser = currentuser, navcontroller = navController)
+        ProfileSelector(//avatarImages = avatarImages,
+            show = show, currentuser = currentuser, navcontroller = navController
+        )
     }
 }
 
@@ -311,10 +339,17 @@ fun LogOutButton(navController: NavHostController) {
 fun UserInfo(user: User) {
     Spacer(modifier = Modifier.fillMaxHeight(0.1f))
     Text(
-        text = "User: "+ user.displayName,
+        text = "user: " + user.displayName,
         style = TextStyle(
             fontSize = 20.sp,
             fontWeight = FontWeight.SemiBold
+        )
+    )
+    Text(
+        text = "email: " + user.email,
+        style = TextStyle(
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Light
         )
     )
 }

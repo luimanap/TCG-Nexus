@@ -62,8 +62,9 @@ class CardViewModel(context: Context) : ViewModel() {
             }
         }
         tempList = filteredjson
+        val cuttedjson = filteredjson.subList(start, end)
         Log.d("search", "array length -> ${tempList.size}")
-        response.value = DataState.Success(tempList)
+        response.value = DataState.Success(cuttedjson)
     }
 
     private fun load() {
@@ -71,7 +72,8 @@ class CardViewModel(context: Context) : ViewModel() {
             if (tempList.isEmpty()) {
                 loadjson()
             } else {
-                response.value = DataState.Success(tempList)
+                val cuttedjson = tempList.subList(start,end)
+                response.value = DataState.Success(cuttedjson)
             }
         }
         /*

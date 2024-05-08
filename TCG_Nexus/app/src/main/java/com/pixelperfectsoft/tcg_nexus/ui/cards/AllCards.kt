@@ -32,15 +32,15 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.ui.InfoCard
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.CardViewModel
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AllCards(
-    navController: NavController,
+    navController: NavHostController,
     viewModel: CardViewModel = CardViewModel(context = LocalContext.current)
 ) {
     val backcolors = listOf(
@@ -79,7 +79,7 @@ fun AllCards(
             )*/
             Spacer(modifier = Modifier.fillMaxHeight(0.025f))
             InfoCard(
-                text = "Cartas encontradas",
+                text = "Cards found",
                 number = totalcards.intValue.toString(),
                 containercolor = MaterialTheme.colorScheme.primary,
                 contentcolor = Color.White,

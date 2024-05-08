@@ -30,6 +30,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import com.google.firebase.auth.FirebaseAuth
 import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.ui.InfoCard
@@ -39,7 +40,7 @@ import com.pixelperfectsoft.tcg_nexus.model.viewmodel.DataState
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 
 @Composable
-fun Collection(navController: NavController, viewModel: CollectionViewModel = viewModel()) {
+fun Collection(navController: NavHostController, viewModel: CollectionViewModel = viewModel()) {
     val backcolors = listOf(
         Color.Transparent,
         Color.White,
@@ -83,6 +84,7 @@ fun Collection(navController: NavController, viewModel: CollectionViewModel = vi
 
         //Lista de cartas
         LoadCollection(
+            navController = navController,
             viewModel = viewModel,
             totalcards = totalcards
         )
@@ -91,6 +93,7 @@ fun Collection(navController: NavController, viewModel: CollectionViewModel = vi
 
 @Composable
 fun LoadCollection(
+    navController: NavHostController,
     viewModel: CollectionViewModel,
     totalcards: MutableIntState,
 ) {
@@ -110,6 +113,7 @@ fun LoadCollection(
             totalcards.intValue = result.data.size
             //viewModel.get_collection_price()
             ShowCollectionLazyList(
+                navController = navController,
                 viewModel = viewModel,
                 cards = result.data
             )
@@ -131,7 +135,7 @@ fun LoadCollection(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ShowCollectionLazyList(cards: MutableList<Card>, viewModel: CollectionViewModel) {
+fun ShowCollectionLazyList(navController: NavHostController, cards: MutableList<Card>, viewModel: CollectionViewModel) {
     //val currentSelectedItem = remember { mutableStateOf(cards[0]) }
     val currentSelectedItem = remember { mutableStateOf(Card()) }
 
@@ -143,6 +147,7 @@ fun ShowCollectionLazyList(cards: MutableList<Card>, viewModel: CollectionViewMo
             content = {
                 items(cards) {
                     CollectionCardItem(
+                        navController = navController,
                         card = it,
                         currentSelectedItem = currentSelectedItem,
                         dialogplace = "collection",

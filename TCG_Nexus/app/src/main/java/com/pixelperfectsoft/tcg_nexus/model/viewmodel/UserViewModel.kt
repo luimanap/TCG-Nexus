@@ -1,7 +1,10 @@
 package com.pixelperfectsoft.tcg_nexus.model.viewmodel
 
 import android.util.Log
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.FirebaseAuth
@@ -14,12 +17,12 @@ import kotlinx.coroutines.tasks.await
 
 class UserDataViewModel : ViewModel() {
     val user = mutableStateOf(User())
-
+/*
     init { //Iniciamos la corrutina de obtener los datos
         get_User()
-    }
+    }*/
 
-    private fun get_User() {
+    fun get_User() {
         viewModelScope.launch {
             user.value = getUserDataFromFirestore()
         }
@@ -29,24 +32,23 @@ class UserDataViewModel : ViewModel() {
 suspend fun getUserDataFromFirestore(): User {
     val auth = FirebaseAuth.getInstance() //Obtenemos la instancia del sistema de autenticacion de Firebase
     val currentuser = auth.currentUser //Obtenemos el usuario actualmente logueado
+    if (currentuser != null) {
+        Log.d("get-user", "Current logged User -> ${currentuser.uid}")
+    }
     val db = FirebaseFirestore.getInstance()   //Obtenemos la instasncia del sistema de BDD de Firebase
-    var user = mutableStateOf( User())
+    var user by mutableStateOf( User())
     try {
         if (currentuser != null) {
-            db.collection("users").whereEqualTo("user_id", currentuser.uid).get().await()
-                .map {//Obtenemos la coleccion perteneciente a usuarios y esperamos a que se obtenga algo desde esa coleccion con await
-                    val result = it.toObject(User::class.java)
-
-                    Log.d("get-user", "User -> $result")
-                    //Log.d("get-user", "User id match -> $user")
-                    user.value = result
-                    /*
-                    Log.d("get-user", "User id mismatch")
-                    Log.d("get-user", "Id founded -> ${result.userId}")
-                    Log.d("get-user", "User founded $result")
-                    Log.d("get-user", "Id to found -> ${currentuser.uid}")
-                    */
-                }
+            val querySnapshot = db.collection("users").whereEqualTo("user_id", currentuser.uid).get().await()
+                //.map {//Obtenemos la coleccion perteneciente a usuarios y esperamos a que se obtenga algo desde esa coleccion con await
+                    for (doc in querySnapshot.documents){
+                        val result = doc.toObject(User::class.java)
+                        Log.d("get-user", "User -> $result")
+                        if (result != null) {
+                            user = result
+                        }
+                    }
+               // }
         } else {
             Log.d("get-user", "Current User is null")
         }
@@ -54,7 +56,7 @@ suspend fun getUserDataFromFirestore(): User {
     } catch (e: FirebaseFirestoreException) {
         Log.d("UserInfo", "UserInfo : Error retrieving user data: $e")
     }
-    return user.value
+    return user
 }
 
 /*@Composable
