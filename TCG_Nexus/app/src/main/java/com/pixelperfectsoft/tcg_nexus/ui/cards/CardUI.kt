@@ -438,14 +438,16 @@ fun CollectionCardItem(
                         model = card.image_uris_normal.toString().replace("normal", "small"),
                         contentDescription = card.name.toString(),
                         modifier = Modifier.fillMaxSize(),
-                        contentScale = ContentScale.Crop
+                        contentScale = ContentScale.Crop,
+                        placeholder = painterResource(id = R.drawable.card_back_small)
                     )
                 } else {
                     AsyncImage(
                         model = R.drawable.card_back_unavailable,
                         contentDescription = card.name.toString(),
                         modifier = Modifier.fillMaxSize(),
-                        contentScale = ContentScale.Crop
+                        contentScale = ContentScale.Crop,
+                        placeholder = painterResource(id = R.drawable.card_back_small)
                     )
                 }
             }

@@ -1,23 +1,23 @@
 [
     {
-        "merged": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-60:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-62:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
-    },
-    {
         "merged": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-60:\\drawable_loyalty.xml.flat",
         "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-62:\\drawable\\loyalty.xml"
+    },
+    {
+        "merged": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-60:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-62:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-60:\\drawable_cards.xml.flat",
         "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-62:\\drawable\\cards.xml"
     },
     {
-        "merged": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-60:\\drawable_logout.xml.flat",
-        "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-62:\\drawable\\logout.xml"
-    },
-    {
         "merged": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-60:\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-62:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-60:\\drawable_logout.xml.flat",
+        "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-62:\\drawable\\logout.xml"
     },
     {
         "merged": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-60:\\drawable_sword.xml.flat",
@@ -68,12 +68,12 @@
         "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-62:\\drawable\\home.xml"
     },
     {
-        "merged": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-60:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-62:\\mipmap-xxhdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-60:\\drawable_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-62:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-60:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-62:\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-60:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
@@ -206,5 +206,9 @@
     {
         "merged": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-60:\\drawable_personcirclesharp.xml.flat",
         "source": "C:\\Users\\LENOVO X280 i5 M2\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-62:\\drawable\\personcirclesharp.xml"
+    },
+    {
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-60:/drawable_card_back_small.jpeg.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-62:/drawable/card_back_small.jpeg"
     }
 ]

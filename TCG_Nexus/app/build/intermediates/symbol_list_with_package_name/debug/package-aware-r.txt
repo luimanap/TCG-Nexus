@@ -105,6 +105,7 @@ drawable abc_vector_test
 drawable albums
 drawable blacklotus
 drawable card_back
+drawable card_back_small
 drawable card_back_unavailable
 drawable cards
 drawable common_full_open_on_phone
