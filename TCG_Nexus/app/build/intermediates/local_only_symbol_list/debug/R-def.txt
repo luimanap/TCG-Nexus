@@ -13,6 +13,7 @@ color uncommon
 drawable albums
 drawable blacklotus
 drawable card_back
+drawable card_back_small
 drawable card_back_unavailable
 drawable cards
 drawable dice_icon

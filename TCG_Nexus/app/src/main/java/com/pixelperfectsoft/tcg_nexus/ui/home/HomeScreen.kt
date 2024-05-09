@@ -95,7 +95,7 @@ fun HomeScreen() {
 fun NewsPanel(news: News, state: LazyListState) {
     val uriHandler = LocalUriHandler.current
     val context = LocalContext.current
-    var bitmapState = remember { mutableStateOf<Bitmap?>(null) }
+    val bitmapState = remember { mutableStateOf<Bitmap?>(null) }
     /*val visible = remember { mutableStateOf(true) }
 
     val itemOffset =
