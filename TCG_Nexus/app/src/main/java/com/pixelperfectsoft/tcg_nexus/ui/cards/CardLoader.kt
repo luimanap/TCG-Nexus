@@ -50,8 +50,6 @@ fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel, navController: Nav
     val currentSelectedItem = remember { mutableStateOf(Card()) }
     Box(contentAlignment = Alignment.BottomEnd, modifier = Modifier.fillMaxSize()) {
         LazyVerticalGrid(
-
-            //LazyColumn(
             modifier = Modifier.fillMaxSize(),
             horizontalArrangement = Arrangement.Center,
             columns = GridCells.Fixed(3),
@@ -109,7 +107,11 @@ fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel, navController: Nav
 fun PageButtons(viewModel: CardViewModel, context: Context) {
     Column(modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
         Text(
-            text = "Mostrando ${viewModel.start + 1}..${viewModel.end} cartas", style = TextStyle(
+            text = if (viewModel.start == 0) {
+                "Showing ${viewModel.start + 1}-${viewModel.end} of ${viewModel.tempList.size}"
+            } else {
+                "Showing ${viewModel.start}-${viewModel.end} of ${viewModel.tempList.size}"
+            }, style = TextStyle(
                 fontSize = 12.sp,
                 fontStyle = FontStyle.Italic,
                 textAlign = TextAlign.Center

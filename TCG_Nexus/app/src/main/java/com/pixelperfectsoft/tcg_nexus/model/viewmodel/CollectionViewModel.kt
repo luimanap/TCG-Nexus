@@ -54,14 +54,16 @@ class CollectionViewModel : ViewModel() {
     }
 
     fun getCollectionPrice() {
-        for (i in 0..cards.lastIndex) {
+        for (i in 0..5) {
             if (cards[i].prices_eur != "") {
-                price.value += (cards[i].prices_eur.toString().toDouble() / 100).toBigDecimal()
-                    .setScale(2)
-            } else if (cards[i].prices_eur_foil != "") {
+                //price.value += (cards[i].prices_eur.toString().toDouble() / 100).toBigDecimal()
+                    //.setScale(2)
+                Log.d("price counter",cards[i].prices_eur.toString())
+            }
+            /*else if (cards[i].prices_eur_foil != "") {
                 price.value += (cards[i].prices_eur_foil.toString().toDouble() / 100).toBigDecimal()
                     .setScale(2)
-            }
+            }*/
         }
     }
 

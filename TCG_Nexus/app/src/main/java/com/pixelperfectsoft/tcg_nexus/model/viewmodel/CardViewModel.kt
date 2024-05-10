@@ -18,14 +18,14 @@ class CardViewModel(context: Context) : ViewModel() {
 
     //private val gson: Gson = Gson
     val response: MutableState<DataState> = mutableStateOf(DataState.Empty)
-    private var tempList = mutableListOf<Card>() //Lista de cartas que vamos a devolver posteriormente
+    var tempList = mutableListOf<Card>() //Lista de cartas que vamos a devolver posteriormente
     //private val allcards = 29237
     private val context = context
     private val loaded = mutableStateOf(false)
     private var filter = mutableStateOf("id")
     private val searchkey = mutableStateOf("")
     var start = 0
-    var end = 9
+    var end = 18
 
     init {
         load()
@@ -182,18 +182,23 @@ class CardViewModel(context: Context) : ViewModel() {
 
     fun prevPage(context: Context) {
         if (start != 0) {
-            start -= 10
-            end -= 10
+            start -= 18
+            end -= 18
             load()
         }
     }
 
     fun nextPage(context: Context) {
-        if (start + 10 < tempList.size) {
-            start += 10
-            end += 10
+        if (start + 18 < tempList.size) {
+            start += 18
+            end += 18
+            load()
+        } else{
+            start +=18
+            end = tempList.size
             load()
         }
+
 
     }
 }

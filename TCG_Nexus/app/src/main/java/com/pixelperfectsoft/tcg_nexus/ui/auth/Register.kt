@@ -1,18 +1,24 @@
 package com.pixelperfectsoft.tcg_nexus.ui.auth
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxDefaults
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -33,6 +39,7 @@ import com.pixelperfectsoft.tcg_nexus.ui.MyCanvasSeparator
 import com.pixelperfectsoft.tcg_nexus.ui.MyPasswordField
 import com.pixelperfectsoft.tcg_nexus.ui.MyTextField
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.LoginViewModel
+import com.pixelperfectsoft.tcg_nexus.ui.MyLogo
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 
@@ -45,10 +52,10 @@ fun RegisterScreen(
     var policychecked by rememberSaveable {mutableStateOf(false)}
     val backcolors = listOf(
         Color.Transparent,
-        Color(230, 230, 230),
-        Color(225, 225, 225),
-        Color(225, 225, 225),
-        Color(225, 225, 225)
+        Color.White,
+        Color.White,
+        Color.White,
+        Color.White,
     )
     var error by rememberSaveable { mutableStateOf(false) }
     var userinput by rememberSaveable { mutableStateOf("") }
@@ -65,13 +72,15 @@ fun RegisterScreen(
     ) {
 
 
-        Spacer(Modifier.size(125.dp))
-        Text(text = "CREAR CUENTA", style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 20.sp))
-        Spacer(Modifier.size(25.dp))
+        Spacer(Modifier.size(35.dp))
+        MyLogo(height = 100)
+        Spacer(Modifier.size(20.dp))
+        Text(text = "CREAR CUENTA", style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 25.sp))
+
 
         //Name Input
         MyTextField(data = userinput, label = "Usuario", onvaluechange = { userinput = it },supportingText = "", iserror = error)
-        Spacer(Modifier.size(16.dp))
+        //Spacer(Modifier.size(4.dp))
 
 
         //Email Input
@@ -79,12 +88,12 @@ fun RegisterScreen(
             data = emailinput,
             label = "Correo Electrónico",
             onvaluechange = { emailinput = it },supportingText = "", iserror = error)
-        Spacer(Modifier.size(16.dp))
+        //Spacer(Modifier.size(8.dp))
 
         //Password Input
 
         MyPasswordField(data = passinput, label = "Contraseña", onvaluechange = { passinput = it }, supporting_text = "", iserror = error)
-        Spacer(Modifier.size(16.dp))
+        //Spacer(Modifier.size(8.dp))
 
         //Confirm Password Input
         MyPasswordField(
@@ -92,7 +101,7 @@ fun RegisterScreen(
             label = "Confirmar Contraseña",
             onvaluechange = { confpassinput = it },
             supporting_text = "", iserror = error)
-        Spacer(Modifier.size(15.dp))
+        //Spacer(Modifier.size(.dp))
 
         //Checkboxes
         Box(){
@@ -102,11 +111,11 @@ fun RegisterScreen(
                 MyTextCheckBox("Me gustaría recibir ofertas y promociones exclusivas")
             }
         }
-
+        Spacer(modifier = Modifier.size(8.dp))
 
         //Register button
         MyButton(
-            text = "Crear Cuenta",
+            text = "Create Account",
             onclick = {
                 if (passinput == confpassinput && termschecked && policychecked) {
                     viewModel.createUserAccount(userinput, emailinput, passinput) {
@@ -125,13 +134,25 @@ fun RegisterScreen(
         Spacer(Modifier.size(8.dp))
 
         //Login Button
-        MyButton(
-            text = "Iniciar Sesion",
-            onclick = { navController.popBackStack() },
-            containercolor = Color(255, 178, 92),
-            bordercolor = Color(255, 178, 92),
-            textcolor = Color.White
-        )
+        OutlinedButton(
+            onClick = { navController.popBackStack() },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 30.dp, end = 30.dp)
+                .border(
+                    5.dp,
+                    MaterialTheme.colorScheme.primary,
+                    shape = CircleShape
+                ),
+            colors = ButtonColors(
+                containerColor = Color.Transparent,
+                contentColor = MaterialTheme.colorScheme.primary,
+                disabledContainerColor = Color.Transparent,
+                disabledContentColor = Color.Transparent
+            )
+        ) {
+            Text(text = "Log In")
+        }
     }
 }
 

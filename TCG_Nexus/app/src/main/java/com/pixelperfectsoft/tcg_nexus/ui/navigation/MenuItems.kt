@@ -92,10 +92,15 @@ class NaviActions(private val navController: NavHostController) {
 //Elementos de la barra de navegación que se muestran si el usuario está logueado
 val AUTH_MENU_ITEMS = listOf(
     MenuItems(
-        icon = R.drawable.home,
-        textId = R.string.home,
-        path = MyScreenRoutes.HOME,
-        label = "Home"
+        icon = R.drawable.personcirclesharp,
+        textId = R.string.profile,
+        path = MyScreenRoutes.PROFILE,
+        label = "Profile"
+    ), MenuItems(
+        icon = R.drawable.dice_icon,
+        textId = R.string.play,
+        path = MyScreenRoutes.PLAY,
+        label = "Play"
     ), MenuItems(
         icon = R.drawable.searchicon,
         textId = R.string.collection,
@@ -105,22 +110,12 @@ val AUTH_MENU_ITEMS = listOf(
         icon = R.drawable.albums,
         textId = R.string.collection,
         path = MyScreenRoutes.COLLECTION,
-        label = "Colecction"
-    /*), MenuItems(
-        icon = R.drawable.cards,
-        textId = R.string.decks,
-        path = MyScreenRoutes.DECKS,
-        label = "Mazos"*/
+        label = "Collection"
     ), MenuItems(
-        icon = R.drawable.dice_icon,
-        textId = R.string.play,
-        path = MyScreenRoutes.PLAY,
-        label = "Play"
-    ), MenuItems(
-        icon = R.drawable.personcirclesharp,
-        textId = R.string.profile,
-        path = MyScreenRoutes.LOGIN,
-        label = "Profile"
+        icon = R.drawable.home,
+        textId = R.string.home,
+        path = MyScreenRoutes.HOME,
+        label = "News"
     ), MenuItems(
         icon = R.drawable.settings,
         textId = R.string.settings,
@@ -132,25 +127,25 @@ val AUTH_MENU_ITEMS = listOf(
 //Elementos de la barra de navegación que se muestran si el usuario no está logueado
 val GUEST_MENU_ITEMS = listOf(
     MenuItems(
-        icon = R.drawable.home,
-        textId = R.string.home,
-        path = MyScreenRoutes.HOME,
-        label = "Home"
-    ), MenuItems(
-        icon = R.drawable.searchicon,
-        textId = R.string.collection,
-        path = MyScreenRoutes.SEARCH,
-        label = "Collection"
+        icon = R.drawable.personcirclesharp,
+        textId = R.string.login,
+        path = MyScreenRoutes.LOGIN,
+        label = "Log In"
     ), MenuItems(
         icon = R.drawable.dice_icon,
         textId = R.string.play,
         path = MyScreenRoutes.PLAY,
         label = "Play"
     ), MenuItems(
-        icon = R.drawable.personcirclesharp,
-        textId = R.string.login,
-        path = MyScreenRoutes.LOGIN,
-        label = "Log In"
+        icon = R.drawable.searchicon,
+        textId = R.string.collection,
+        path = MyScreenRoutes.SEARCH,
+        label = "Search"
+    ), MenuItems(
+        icon = R.drawable.home,
+        textId = R.string.home,
+        path = MyScreenRoutes.HOME,
+        label = "News"
     ), MenuItems(
         icon = R.drawable.settings,
         textId = R.string.settings,
@@ -164,7 +159,7 @@ val GUEST_MENU_ITEMS = listOf(
 fun BottomBarNaviContainer(
     navController: NavHostController,
     selectedDestination: String,
-    navigateTo: (MenuItems) -> Unit
+    navigateTo: (MenuItems) -> Unit,
 ) {
     Row(
         modifier = Modifier.fillMaxSize()
@@ -173,12 +168,12 @@ fun BottomBarNaviContainer(
             NavHost(
                 modifier = Modifier.weight(1f),
                 navController = navController,
-                startDestination = MyScreenRoutes.HOME
+                startDestination = MyScreenRoutes.LOGIN
             ) {
-                composable(MyScreenRoutes.SETTINGS){
+                composable(MyScreenRoutes.SETTINGS) {
                     SettingsScreen(navController)
                 }
-                composable(MyScreenRoutes.UPDATE){
+                composable(MyScreenRoutes.UPDATE) {
                     UpdateScreen(navController)
                 }
                 composable(MyScreenRoutes.HOME) {
@@ -261,7 +256,7 @@ fun BottomBarNavigation(selectedDestination: String, navigateTo: (MenuItems) -> 
         modifier = Modifier
             .fillMaxWidth()
             .height(65.dp),
-        containerColor = Color(255,255,255)
+        containerColor = Color(255, 255, 255)
     ) {
         if (user != null) {
             AUTH_MENU_ITEMS.forEach { destinations ->

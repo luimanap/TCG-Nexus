@@ -2,15 +2,20 @@ package com.pixelperfectsoft.tcg_nexus.ui.auth
 
 import android.widget.Toast
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
+import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -41,6 +46,7 @@ import com.pixelperfectsoft.tcg_nexus.ui.MyTextField
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.LoginViewModel
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.pixelperfectsoft.tcg_nexus.ui.MyLogo
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 
 @Composable
@@ -68,7 +74,7 @@ fun LoginScreen(
         if (FirebaseAuth.getInstance().currentUser?.email.isNullOrBlank()) {
             LoginForm(navController, viewModel)
         } else {
-            navController.navigate(MyScreenRoutes.PROFILE)
+            navController.navigate(MyScreenRoutes.COLLECTION)
         }
 
     }
@@ -81,8 +87,10 @@ fun LoginForm(navController: NavController, viewModel: LoginViewModel) {
     var passinput by rememberSaveable { mutableStateOf("") }
 
     //Login header
-    Spacer(Modifier.size(225.dp))
-    Text(text = "INICIAR SESION", style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 20.sp))
+    Spacer(Modifier.fillMaxHeight(0.05f))
+    MyLogo(height = 225)
+    Spacer(Modifier.fillMaxHeight(0.05f))
+    Text(text = "INICIAR SESION", style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 25.sp))
     Spacer(Modifier.size(25.dp))
 
     //Input de correo electronico
@@ -102,15 +110,15 @@ fun LoginForm(navController: NavController, viewModel: LoginViewModel) {
         onvaluechange = { passinput = it; error = false }, //Siempre que escribamos algo el boolean error se va a poner en false
         supporting_text = "Contraseña incorrecta",
         iserror = error)
-    Spacer(Modifier.size(8.dp))
+    //Spacer(Modifier.size(4.dp))
 
     //Boton de contraseña olvidada
     ForgottenPasswordButton()
-    Spacer(modifier = Modifier.size(100.dp))
+    Spacer(modifier = Modifier.fillMaxHeight(0.2f))
 
     //Boton de login
     MyButton(
-        text = "Iniciar Sesión",
+        text = "Log In",
         onclick = {
             if (userinput != "" && passinput != "") { //Si correo y contraseña no estan vacios
                 viewModel.signIn(email = userinput.trim(), password = passinput, profile = {
@@ -136,13 +144,25 @@ fun LoginForm(navController: NavController, viewModel: LoginViewModel) {
 
     Spacer(Modifier.size(8.dp))
     //Boton de crear cuenta
-    MyButton(
-        text = "Crear Cuenta",
-        onclick = { navController.navigate("register") },
-        containercolor = Color(41, 188, 117),
-        bordercolor = Color(41, 188, 117),
-        textcolor = Color.White
-    )
+    OutlinedButton(
+        onClick = { navController.navigate("register") },
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(start = 30.dp, end = 30.dp)
+            .border(
+                5.dp,
+                MaterialTheme.colorScheme.primary,
+                shape = CircleShape
+            ),
+        colors = ButtonColors(
+            containerColor = Color.Transparent,
+            contentColor = MaterialTheme.colorScheme.primary,
+            disabledContainerColor = Color.Transparent,
+            disabledContentColor = Color.Transparent
+        )
+    ) {
+        Text(text = "Create Account")
+    }
 }
 
 @Composable

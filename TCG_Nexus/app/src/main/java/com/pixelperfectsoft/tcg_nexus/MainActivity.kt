@@ -40,7 +40,7 @@ class MainActivity : ComponentActivity() {
             val navigateAction = remember(navController) { NaviActions(navController) }
             val navBackStackEntry by navController.currentBackStackEntryAsState()
             val selectedDestination = navBackStackEntry?.destination?.route
-                ?: MyScreenRoutes.HOME //Destino inicial de navegación
+                ?: MyScreenRoutes.LOGIN //Destino inicial de navegación
             /*
             val cardViewModel = CardViewModel(context)
             cardViewModel.load(context)

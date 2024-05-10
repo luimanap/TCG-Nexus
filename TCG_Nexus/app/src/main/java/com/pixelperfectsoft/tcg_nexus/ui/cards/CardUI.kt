@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -25,6 +26,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.FloatingActionButtonDefaults
@@ -32,6 +34,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.SheetState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -73,7 +76,7 @@ import kotlinx.coroutines.launch
 fun FilterButton(
     screen: String,
     cardviewmodel: CardViewModel?,
-    colviewmodel: CollectionViewModel?
+    colviewmodel: CollectionViewModel?,
 ) {
     val sheetState = rememberModalBottomSheetState()
     val scope = rememberCoroutineScope()
@@ -106,11 +109,11 @@ fun FilterButton(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CardDialog(
-    navController : NavHostController,
+    navController: NavHostController,
     sheetState: SheetState,
     card: Card,
     collectionViewModel: CollectionViewModel = CollectionViewModel(),
-    dialogplace: String
+    dialogplace: String,
 ) {
     if (sheetState.isVisible) {
         val scope = rememberCoroutineScope()
@@ -130,7 +133,14 @@ fun CardDialog(
                         .verticalScroll(rememberScrollState()),
                     horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
-                    Text(text = card.name.toString(), fontWeight = FontWeight.Bold)
+                    Text(
+                        text = card.name.toString(),
+                        fontWeight = FontWeight.Bold,
+                        style = TextStyle(
+                            fontSize = 28.sp,
+
+                            )
+                    )
                     Text(
                         text = card.type_line.toString().replace("�", "-"),
                         fontWeight = FontWeight.Normal
@@ -178,18 +188,21 @@ fun CardDialog(
                     )
                     HorizontalDivider(
                         thickness = 1.5.dp,
-                        modifier = Modifier.padding(top = 16.dp, bottom = 16.dp)
+                        modifier = Modifier.padding(top = 16.dp)
                     )
-
-                    Spacer(modifier = Modifier.fillMaxHeight(0.05f))
                     if (card.type_line.toString().lowercase().contains("planeswalker")) {
+                        Spacer(modifier = Modifier.fillMaxHeight(0.05f))
                         Column(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(horizontal = 120.dp),
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
-                            Text(text = "- Lealtad -")
+                            Text(
+                                text = "Lealtad", fontWeight = FontWeight.Bold, style = TextStyle(
+                                    fontSize = 20.sp
+                                ), modifier = Modifier.padding(top = 8.dp)
+                            )
                             Box(contentAlignment = Alignment.Center) {
                                 Icon(
                                     painter = painterResource(id = R.drawable.loyalty),
@@ -205,6 +218,7 @@ fun CardDialog(
                         }
                     }
                     if (card.type_line.toString().lowercase().contains("creature")) {
+                        Spacer(modifier = Modifier.height(10.dp))
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -234,19 +248,8 @@ fun CardDialog(
                                 Text(text = "${card.toughness}")
                             }
                         }
+                        Spacer(modifier = Modifier.fillMaxHeight(0.1f))
                     }
-                    Spacer(modifier = Modifier.fillMaxHeight(0.1f))
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.Center
-                    ) {
-                        /*Text(
-                            text = "Rareza :",
-                            textAlign = TextAlign.End
-                        )*/
-
-                    }
-
 
                     Spacer(modifier = Modifier.height(8.dp))
                     Text(
@@ -258,7 +261,11 @@ fun CardDialog(
                         thickness = 1.5.dp,
                         modifier = Modifier.padding(top = 8.dp, bottom = 8.dp)
                     )
-                    Text(text = "Precio estimado: ")
+                    Text(
+                        text = "Estimated price", fontWeight = FontWeight.Bold, style = TextStyle(
+                            fontSize = 20.sp
+                        )
+                    )
                     Spacer(modifier = Modifier.height(8.dp))
 
                     Column(
@@ -276,24 +283,21 @@ fun CardDialog(
                         }
                         Spacer(modifier = Modifier.height(8.dp))
                         Row {
-                            Image(
-                                painter = painterResource(id = R.drawable.foil),
-                                contentDescription = "foil",
-                                modifier = Modifier
-                                    .size(16.dp)
-                                    .padding(end = 4.dp)
-                            )
                             if (card.prices_eur_foil != "") {
                                 Text(
                                     text = "${
                                         card.prices_eur_foil.toString().toDouble() / 100
-                                    } €"
+                                    } €",
+                                    color = Color(237, 138, 25),
+                                    fontWeight = FontWeight.Bold
                                 )
                             } else {
-                                Text(text = "??? €")
+                                Text(
+                                    text = "??? €", color = Color(237, 138, 25),
+                                    fontWeight = FontWeight.Bold
+                                )
                             }
                         }
-
                     }
                     HorizontalDivider(
                         thickness = 1.5.dp,
@@ -301,6 +305,7 @@ fun CardDialog(
                     )
                     Column {
                         if (dialogplace == "collection") {
+
                             MyButton(
                                 text = "Eliminar",
                                 onclick = {
@@ -326,14 +331,26 @@ fun CardDialog(
                                 textcolor = Color.White
                             )
                         }
-
-                        MyButton(
-                            text = "Comprar en Cardmarket",
-                            onclick = { uriHandler.openUri(card.purchase_uris_cardmarket.toString()) },
-                            containercolor = MaterialTheme.colorScheme.primary,
-                            bordercolor = MaterialTheme.colorScheme.primary,
-                            textcolor = Color.White
-                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        OutlinedButton(
+                            onClick = { uriHandler.openUri(card.purchase_uris_cardmarket.toString()) },
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(start = 30.dp, end = 30.dp)
+                                .border(
+                                    5.dp,
+                                    MaterialTheme.colorScheme.primary,
+                                    shape = CircleShape
+                                ),
+                            colors = ButtonColors(
+                                containerColor = Color.Transparent,
+                                contentColor = MaterialTheme.colorScheme.primary,
+                                disabledContainerColor = Color.Transparent,
+                                disabledContentColor = Color.Transparent
+                            )
+                        ) {
+                            Text(text = "Comprar en Cardmarket")
+                        }
                         Spacer(modifier = Modifier.height(24.dp))
                     }
                 }
@@ -348,7 +365,7 @@ fun CardItem(
     navController: NavHostController,
     card: Card,
     currentSelectedItem: MutableState<Card>,
-    dialogplace: String
+    dialogplace: String,
 ) {
     val scope = rememberCoroutineScope()
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
@@ -399,7 +416,12 @@ fun CardItem(
         }
     }
 
-    CardDialog(navController = navController, sheetState = sheetState, card = currentSelectedItem.value, dialogplace = dialogplace)
+    CardDialog(
+        navController = navController,
+        sheetState = sheetState,
+        card = currentSelectedItem.value,
+        dialogplace = dialogplace
+    )
 }
 
 
@@ -409,7 +431,7 @@ fun CollectionCardItem(
     navController: NavHostController,
     card: Card,
     currentSelectedItem: MutableState<Card>,
-    dialogplace: String
+    dialogplace: String,
 ) {
     val scope = rememberCoroutineScope()
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
@@ -454,7 +476,7 @@ fun CollectionCardItem(
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = card.name.toString(),
-                fontWeight = FontWeight.Medium,
+                fontWeight = FontWeight.Bold,
                 fontSize = 15.sp,
                 textAlign = TextAlign.Center
             )
@@ -477,7 +499,12 @@ fun CollectionCardItem(
             }
         }
     }
-    CardDialog(navController = navController, sheetState = sheetState, card = currentSelectedItem.value, dialogplace = dialogplace)
+    CardDialog(
+        navController = navController,
+        sheetState = sheetState,
+        card = currentSelectedItem.value,
+        dialogplace = dialogplace
+    )
 
 }
 
@@ -508,7 +535,7 @@ fun FilterModalSheet(
     scope: CoroutineScope,
     cardviewmodel: CardViewModel?,
     colviewmodel: CollectionViewModel?,
-    screen: String
+    screen: String,
 ) {
     val context = LocalContext.current
     val searchinput = rememberSaveable { mutableStateOf("") }
@@ -575,33 +602,3 @@ fun FilterModalSheet(
             }
         })
 }
-/*
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun AddButton() {
-    val sheetState = rememberModalBottomSheetState()
-    val scope = rememberCoroutineScope()
-    FloatingActionButton(
-        containerColor = MaterialTheme.colorScheme.primary,
-        modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
-        onClick = { scope.launch { sheetState.show() } },
-        shape = CircleShape,
-        content = { Icon(imageVector = Icons.Default.Add, contentDescription = "") },
-        elevation = FloatingActionButtonDefaults.elevation(defaultElevation = 8.dp)
-    )
-    if (sheetState.isVisible) {
-        ModalBottomSheet(
-            onDismissRequest = {
-                scope.launch { sheetState.hide() }
-            },
-            sheetState = sheetState,
-            content = {
-                Text(text = "Add Cards")
-                Button(onClick = { scope.launch { sheetState.hide() } }
-                ) {
-
-                }
-            })
-    }
-}*/

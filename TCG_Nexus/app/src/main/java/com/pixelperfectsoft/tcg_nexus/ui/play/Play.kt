@@ -6,11 +6,18 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.IconButtonDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
@@ -25,6 +32,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -43,10 +53,18 @@ data class Game(
 fun PlayScreen(navController: NavController) {
     val backcolors = listOf(
         Color.Transparent,
+        //Color(250,250,250),
+        //Color(250,250,250),
+        //Color(225,225,225),
+        //Color(225,225,225),
         Color.White,
         Color.White,
         Color.White,
         Color.White,
+        Color.White,
+        Color.White,
+        //Color.White,
+        //Color.White,
     )
     val game = Game(rememberSaveable {
         mutableIntStateOf(0)
@@ -61,18 +79,28 @@ fun PlayScreen(navController: NavController) {
             .background(brush = createGradientBrush(backcolors)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Spacer(modifier = Modifier.size(250.dp))
+        Spacer(modifier = Modifier.size(80.dp))
+        Text(text = "Let´s Play The Card Games That You Like!",
+            color = MaterialTheme.colorScheme.primary,
+            //color = Color.White,
+            textAlign = TextAlign.Center,
+            fontWeight = FontWeight.Bold,
+            style = TextStyle(
+                fontSize = 60.sp,
+                //fontFamily = FontFamily.SansSerif
+
+        ))
+        Spacer(modifier = Modifier.size(35.dp))
         SelectPlayers(game)
         SelectStartLife(game)
-        Spacer(modifier = Modifier.size(64.dp))
+        Spacer(modifier = Modifier.size(30.dp))
         StartButton(navController, game.life.value, game.numplayers.value)
     }
 }
 
 @Composable
 fun StartButton(navController: NavController, life: Int, players: Int) {
-    MyButton(
-        text = "¡A Jugar!", onclick = {
+    IconButton( onClick = {
             when (players) {
                 2 -> when (life) {
                     20 -> navController.navigate("2p20")
@@ -96,28 +124,18 @@ fun StartButton(navController: NavController, life: Int, players: Int) {
                     40 -> navController.navigate("4p40")
                     50 -> navController.navigate("4p50")
                     60 -> navController.navigate("4p60")
-
                 }
-
-                /*5 -> when (life) {
-                    20 -> navController.navigate("5p20")
-                    30 -> navController.navigate("5p30")
-                    40 -> navController.navigate("5p40")
-                    50 -> navController.navigate("5p50")
-                    60 -> navController.navigate("5p60")
-                }
-
-                6 -> when (life) {
-                    20 -> navController.navigate("6p20")
-                    30 -> navController.navigate("6p30")
-                    40 -> navController.navigate("6p40")
-                    50 -> navController.navigate("6p50")
-                    60 -> navController.navigate("6p60")
-                }*/
             }
-        }, containercolor = Color(92, 115, 255), bordercolor = Color(92, 115, 255),
-        textcolor = Color.White
-    )
+        }, colors = IconButtonDefaults.iconButtonColors(
+            //contentColor = Color(92, 115, 255),
+            containerColor = MaterialTheme.colorScheme.primary
+
+        ), modifier = Modifier.size(100.dp)
+    ){
+        Icon(imageVector = Icons.Filled.PlayArrow, contentDescription = "", tint = Color.White, modifier = Modifier
+            .fillMaxSize()
+            .padding(20.dp))
+    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

@@ -49,13 +49,9 @@ fun AllCards(
         Color.White,
         Color.White,
         Color.White,
+        Color.White,
+        Color.White,
     )
-    val totalcards = rememberSaveable { mutableIntStateOf(0) }
-    val estimatedCost = rememberSaveable { mutableFloatStateOf(0f) }
-    var searchinput by rememberSaveable { mutableStateOf("") }
-    val searched = rememberSaveable { mutableStateOf(false) }
-    val context = LocalContext.current
-    //viewModel.load(LocalContext.current)
     BackgroundImage()
     Column(
         verticalArrangement = Arrangement.Center,
@@ -64,33 +60,7 @@ fun AllCards(
             .fillMaxHeight(0.33f)
             .background(brush = createGradientBrush(backcolors))
     ) {
-        //Informacion
-        Column(
-            modifier = Modifier.padding(horizontal = 16.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Spacer(modifier = Modifier.fillMaxHeight(0.05f))
-            /*InfoCard(
-                text = "BUSCAR CARTAS",
-                number = "",
-                containercolor = Color.White,
-                contentcolor = Color.Black,
-                contenttype = "number"
-            )*/
-            Spacer(modifier = Modifier.fillMaxHeight(0.025f))
-            InfoCard(
-                text = "Cards found",
-                number = totalcards.intValue.toString(),
-                containercolor = MaterialTheme.colorScheme.primary,
-                contentcolor = Color.White,
-                contenttype = "number"
-            )
-
-        }
         Spacer(modifier = Modifier.fillMaxHeight(0.05f))
-        //Cargar la busqueda
-
         SetData(viewModel = viewModel, navController = navController)
     }
-
 }

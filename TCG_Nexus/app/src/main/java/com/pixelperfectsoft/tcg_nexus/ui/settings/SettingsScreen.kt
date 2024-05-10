@@ -25,6 +25,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -42,6 +43,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.platform.LocalConfiguration
@@ -54,6 +56,7 @@ import androidx.compose.ui.window.Dialog
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
+import com.google.firebase.auth.FirebaseAuth
 import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.ui.MyLogo
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
@@ -86,10 +89,16 @@ fun SettingsScreen(navController: NavHostController) {
             modifier = Modifier.fillMaxSize()
 
         ) {
-            SettingsOption(option = "My Account", onClick = {})
-            SettingsOption(option = "About", onClick = {
+            SettingsOption(option = "Language", icon = Icons.Filled.Settings,onClick = {})
+            SettingsOption(option = "My Account", icon = Icons.Filled.Settings, onClick = {})
+            SettingsOption(option = "Theme", icon = Icons.Filled.Settings, onClick = {})
+            SettingsOption(option = "About", icon = Icons.Filled.Settings, onClick = {
                 aboutdialog.value = true
                 Log.d("aboutdialog", aboutdialog.value.toString())
+            })
+            SettingsOption(option = "Log Out", icon = Icons.Filled.Settings, onClick = {
+                navController.navigate(MyScreenRoutes.LOGIN)
+                FirebaseAuth.getInstance().signOut()
             })
             Log.d("aboutdialog", aboutdialog.value.toString())
         }
@@ -173,7 +182,7 @@ fun AboutDialog(aboutdialog: MutableState<Boolean>) {
 }
 
 @Composable
-fun SettingsOption(option: String, onClick: () -> Unit) {
+fun SettingsOption(option: String, icon: ImageVector, onClick: () -> Unit) {
     ElevatedCard(
         colors = CardDefaults.cardColors(
             containerColor = Color(250, 250, 250),
@@ -192,9 +201,14 @@ fun SettingsOption(option: String, onClick: () -> Unit) {
                 .padding(horizontal = 12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
+            Icon(
+                imageVector = icon,
+                contentDescription = null,
+                tint = Color.Gray
+            )
+            Spacer(modifier = Modifier.fillMaxWidth(0.0075f))
             Text(
                 text = option,
-                //style = MaterialTheme.typography.body1,
                 modifier = Modifier.weight(1f)
             )
             Icon(

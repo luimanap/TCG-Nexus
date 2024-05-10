@@ -96,7 +96,6 @@ fun Profile(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Log.d("Profile", "Username: $currentuser")
-        LogOutButton(navController)
         AvatarImage(currentuser = currentuser, navController = navController)
         UserInfo(currentuser)
         EditProfile(currentuser, navController = navController)
@@ -110,25 +109,7 @@ fun EditProfile(currentuser: User, navController: NavHostController) {
     val pass = rememberSaveable { mutableStateOf("") }
     val newpass = rememberSaveable { mutableStateOf("") }
     Spacer(modifier = Modifier.fillMaxHeight(0.1f))
-
-    MyTextField(
-        data = newdisplayname.value,
-        label = "Username",
-        onvaluechange = {
-            newdisplayname.value = it
-        }, //Siempre que escribamos algo el boolean error se va a poner en false
-        supportingText = "",
-        iserror = false
-    )
-    MyTextField(
-        data = newemail.value,
-        label = "Email",
-        onvaluechange = {
-            newemail.value = it
-        }, //Siempre que escribamos algo el boolean error se va a poner en false
-        supportingText = "",
-        iserror = false
-    )
+    Log.d("user", "${newdisplayname.value}, ${newemail.value}")
     MyPasswordField(
         data = pass.value,
         label = "Current password",
@@ -248,23 +229,21 @@ fun AvatarImage(
     navController: NavHostController,
 ) {
     val context = LocalContext.current
-    var bitmapState = remember { mutableStateOf<Bitmap?>(null) }
+    val bitmapState = remember { mutableStateOf<Bitmap?>(null) }
     Log.d("avatar", currentuser.avatar_url)
 
     LaunchedEffect(Unit) {
-        var avatar = context.assets.open("avatars/ava4.jpg")
-        //while (currentuser.avatar_url == ""){}
-        //avatar = context.assets.open(currentuser.avatar_url)
+        val avatar = context.assets.open("avatars/ava4.jpg")
 
         bitmapState.value = BitmapFactory.decodeStream(avatar)
     }
 
 
 
-    var show = rememberSaveable {
+    val show = rememberSaveable {
         mutableStateOf(false)
     }
-    Spacer(modifier = Modifier.fillMaxHeight(0.05f))
+    Spacer(modifier = Modifier.fillMaxHeight(0.1f))
     Box(
         modifier = Modifier
             .clip(CircleShape)
@@ -283,7 +262,6 @@ fun AvatarImage(
                 contentScale = ContentScale.Crop
             )
         }
-
     }
 
     if (show.value) {
@@ -339,8 +317,7 @@ fun LogOutButton(navController: NavHostController) {
              * 1. Navegamos a la pantalla de login
              * 2. Cerramos la sesion actual en Firebase
              */
-            navController.navigate(MyScreenRoutes.LOGIN)
-            FirebaseAuth.getInstance().signOut()
+
         }) {
             Icon(
                 painter = painterResource(id = R.drawable.logout),
@@ -354,12 +331,12 @@ fun LogOutButton(navController: NavHostController) {
 
 @Composable
 fun UserInfo(user: User) {
-    Spacer(modifier = Modifier.fillMaxHeight(0.1f))
-    Row{
+    Spacer(modifier = Modifier.fillMaxHeight(0.025f))
+    Column(horizontalAlignment = Alignment.CenterHorizontally){
         Text(
             text = user.display_name,
             style = TextStyle(
-                fontSize = 20.sp,
+                fontSize = 35.sp,
                 fontWeight = FontWeight.SemiBold
             )
         )
@@ -371,5 +348,4 @@ fun UserInfo(user: User) {
             )
         )
     }
-
 }

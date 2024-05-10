@@ -20,6 +20,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableIntState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -29,7 +31,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.google.firebase.auth.FirebaseAuth
 import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
@@ -49,8 +50,6 @@ fun Collection(navController: NavHostController, viewModel: CollectionViewModel 
         Color.White,
     )
     val totalcards = rememberSaveable { mutableIntStateOf(0) }
-    //val estimatedCost = rememberSaveable { mutableFloatStateOf(0f) }
-    //val estimatedcostString by rememberSaveable { mutableStateOf("${estimatedCost.floatValue} €") }
     BackgroundImage()
     Column(
         Modifier
@@ -68,15 +67,6 @@ fun Collection(navController: NavHostController, viewModel: CollectionViewModel 
                 number = totalcards.intValue.toString(),
                 containercolor = MaterialTheme.colorScheme.primary,
                 contentcolor = Color.White,
-                contenttype = "number"
-            )
-            Spacer(modifier = Modifier.fillMaxHeight(0.025f))
-            InfoCard(
-                text = "Valor estimado",
-                //number = viewModel.price.value.toString(),
-                number = "?€",
-                containercolor = Color.White,
-                contentcolor = Color.Black,
                 contenttype = "number"
             )
         }
@@ -111,7 +101,8 @@ fun LoadCollection(
 
         is DataState.Success -> {
             totalcards.intValue = result.data.size
-            //viewModel.get_collection_price()
+            Log.d("DataState success","Datastate success")
+            //viewModel.getCollectionPrice()
             ShowCollectionLazyList(
                 navController = navController,
                 viewModel = viewModel,
@@ -135,8 +126,11 @@ fun LoadCollection(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ShowCollectionLazyList(navController: NavHostController, cards: MutableList<Card>, viewModel: CollectionViewModel) {
-    //val currentSelectedItem = remember { mutableStateOf(cards[0]) }
+fun ShowCollectionLazyList(
+    navController: NavHostController,
+    cards: MutableList<Card>,
+    viewModel: CollectionViewModel,
+) {
     val currentSelectedItem = remember { mutableStateOf(Card()) }
 
     Box(contentAlignment = Alignment.BottomEnd, modifier = Modifier.fillMaxSize()) {
@@ -156,7 +150,6 @@ fun ShowCollectionLazyList(navController: NavHostController, cards: MutableList<
             })
         Column(horizontalAlignment = Alignment.End) {
             FilterButton("col", null, viewModel)
-            //AddButton()
         }
     }
 }

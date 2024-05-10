@@ -56,7 +56,6 @@ fun HomeScreen() {
     stream.close()
     val jsonStr = String(buffer)
     val json = Gson().fromJson(jsonStr, Array<News>::class.java)
-
     val colors = listOf(
         Color.Transparent,
         Color(255, 255, 255, 100),
@@ -75,8 +74,7 @@ fun HomeScreen() {
             .background(createGradientBrush(colors = colors))
     ) {
         Spacer(Modifier.fillMaxHeight(0.05f))
-        MyLogo(height = 250)
-        Spacer(modifier = Modifier.fillMaxHeight(0.1f))
+        //Spacer(modifier = Modifier.fillMaxHeight(0.1f))
         val state = rememberLazyListState()
         LazyColumn(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -96,22 +94,6 @@ fun NewsPanel(news: News, state: LazyListState) {
     val uriHandler = LocalUriHandler.current
     val context = LocalContext.current
     val bitmapState = remember { mutableStateOf<Bitmap?>(null) }
-    /*val visible = remember { mutableStateOf(true) }
-
-    val itemOffset =
-        remember(news) { state.layoutInfo.visibleItemsInfo.firstOrNull() { it.key == news.id } }?.offset
-            ?: 0
-    LaunchedEffect(visible.value) {
-        // Si el elemento está completamente fuera de la vista, lo marcamos como no visible
-        if (itemOffset > state.layoutInfo.viewportEndOffset) {
-            visible.value = false
-        }
-    }
-    AnimatedVisibility(
-        visible = visible.value,
-        enter = fadeIn(animationSpec = TweenSpec(durationMillis = 500)),
-        exit = fadeOut(animationSpec = TweenSpec(durationMillis = 500))
-    ) {*/
     ElevatedCard(
         colors = CardDefaults.cardColors(
             containerColor = Color(250, 250, 250),
@@ -185,5 +167,4 @@ fun NewsPanel(news: News, state: LazyListState) {
             }
         }
     }
-    //   }
 }
