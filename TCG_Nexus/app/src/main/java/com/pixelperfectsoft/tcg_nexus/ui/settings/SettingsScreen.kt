@@ -3,9 +3,6 @@ package com.pixelperfectsoft.tcg_nexus.ui.settings
 import android.util.Log
 import android.widget.Toast
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -15,25 +12,17 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredWidth
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -44,8 +33,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
@@ -53,18 +40,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
-import coil.compose.AsyncImage
 import com.google.firebase.auth.FirebaseAuth
 import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.ui.MyLogo
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
-import com.pixelperfectsoft.tcg_nexus.ui.profile.changeAvatar
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 
 @Composable
 fun SettingsScreen(navController: NavHostController) {
+    val context = LocalContext.current
     val aboutdialog = remember { mutableStateOf(false) }
 
     val colors = listOf(
@@ -89,9 +74,18 @@ fun SettingsScreen(navController: NavHostController) {
             modifier = Modifier.fillMaxSize()
 
         ) {
-            SettingsOption(option = "Language", icon = Icons.Filled.Settings,onClick = {})
-            SettingsOption(option = "My Account", icon = Icons.Filled.Settings, onClick = {})
-            SettingsOption(option = "Theme", icon = Icons.Filled.Settings, onClick = {})
+            SettingsOption(
+                option = "Language",
+                icon = Icons.Filled.Settings,
+                onClick = { Toast.makeText(context, "Coming soon", Toast.LENGTH_SHORT).show() })
+            SettingsOption(
+                option = "My Account",
+                icon = Icons.Filled.Settings,
+                onClick = { Toast.makeText(context, "Coming soon", Toast.LENGTH_SHORT).show() })
+            SettingsOption(
+                option = "Theme",
+                icon = Icons.Filled.Settings,
+                onClick = { Toast.makeText(context, "Coming soon", Toast.LENGTH_SHORT).show() })
             SettingsOption(option = "About", icon = Icons.Filled.Settings, onClick = {
                 aboutdialog.value = true
                 Log.d("aboutdialog", aboutdialog.value.toString())
@@ -130,16 +124,15 @@ fun AboutDialog(aboutdialog: MutableState<Boolean>) {
                         .fillMaxHeight(0.86f)
                         .verticalScroll(rememberScrollState())
                 ) {
-                    // Spacer(modifier = Modifier.fillMaxHeight(0.05f))
                     MyLogo(height = 165)
 
-                        Text(
-                            text = "TCG Nexus beta2024.5.15",
-                            modifier = Modifier
-                                .padding(top = 16.dp),
-                            fontWeight = FontWeight.ExtraBold,
-                            textAlign = TextAlign.Center
-                        )
+                    Text(
+                        text = "TCG Nexus beta2024.5.15",
+                        modifier = Modifier
+                            .padding(top = 16.dp),
+                        fontWeight = FontWeight.ExtraBold,
+                        textAlign = TextAlign.Center
+                    )
                     Text(
                         text = "Developed by Luis Vaquero Gil from PixelPerfectSoftware",
                         modifier = Modifier.padding(top = 16.dp, bottom = 8.dp),
@@ -158,7 +151,7 @@ fun AboutDialog(aboutdialog: MutableState<Boolean>) {
                         text = "Wizards of the Coast, Magic: The Gathering, and their logos are " +
                                 "trademarks of Wizards of the Coast LLC in the United States and " +
                                 "other countries. © 1993-2024 Wizards. All Rights Reserved. MAGIC: " +
-                                "THE GATHERING ® is a trademark of Wizards of the Coast. "+
+                                "THE GATHERING ® is a trademark of Wizards of the Coast. " +
                                 "For more information about Wizards of the Coast or any of Wizards' " +
                                 "trademarks or other intellectual property, please visit their website " +
                                 "at https://company.wizards.com/.",

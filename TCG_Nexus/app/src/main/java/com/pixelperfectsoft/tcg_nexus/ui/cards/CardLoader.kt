@@ -1,27 +1,21 @@
 package com.pixelperfectsoft.tcg_nexus.ui.cards
 
 import android.content.Context
-import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.Button
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -36,15 +30,12 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.pixelperfectsoft.tcg_nexus.model.classes.Card
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.CardViewModel
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.DataState
-import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel, navController: NavHostController) {
     val currentSelectedItem = remember { mutableStateOf(Card()) }
@@ -60,17 +51,14 @@ fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel, navController: Nav
                     3 - (cards.size % 3)
                 }
                 items(cards) {
-                    CollectionCardItem(
+                    CardItem(
                         navController = navController,
                         card = it,
                         currentSelectedItem = currentSelectedItem,
                         dialogplace = "allcards"
                     )
                 }
-                Log.d("array", cards.size.toString())
-
                 items(extraitems) {
-                    // Agregar elementos adicionales para centrar los botones de paginación
                     Box(modifier = Modifier.size(100.dp, 100.dp))
                 }
                 item {
@@ -80,7 +68,6 @@ fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel, navController: Nav
                             .background(Color.Transparent)
                     )
                 }
-
                 item {
                     PageButtons(viewModel, LocalContext.current)
                 }
@@ -92,11 +79,6 @@ fun ShowLazyList(cards: List<Card>, viewModel: CardViewModel, navController: Nav
                     )
                 }
             })
-        /*
-        VerticalScrollbar(
-            modifier = Modifier.align(Alignment.CenterEnd).fillMaxHeight(),
-            adapter = rememberScrollbarAdapter(scrollState = state)
-        )*/
         Column(horizontalAlignment = Alignment.End) {
             FilterButton("cards", cardviewmodel = viewModel, colviewmodel = null)
         }
@@ -139,11 +121,7 @@ fun PageButtons(viewModel: CardViewModel, context: Context) {
 fun SetData(
     navController: NavHostController,
     viewModel: CardViewModel,
-    //totalcards: MutableIntState,
-    //estimatedCost: MutableFloatState
 ) {
-
-
     when (val result = viewModel.response.value) {
         is DataState.Loading -> {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -157,12 +135,6 @@ fun SetData(
         }
 
         is DataState.Success -> {
-            //totalcards.intValue = result.data.size
-            /*price@ for (i in result.data){
-                if(i.prices_eur!=""){
-                    estimatedCost.floatValue += (i.prices_eur.toString().toFloat())/100
-                }
-            }*/
             ShowLazyList(viewModel = viewModel, cards = result.data, navController = navController)
         }
 
@@ -177,7 +149,5 @@ fun SetData(
                 Text(text = "No se han encontrado cartas")
             }
         }
-
-        else -> {}
     }
 }

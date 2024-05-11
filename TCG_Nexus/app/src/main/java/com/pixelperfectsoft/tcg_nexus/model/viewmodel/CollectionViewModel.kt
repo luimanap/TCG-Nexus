@@ -42,30 +42,9 @@ class CollectionViewModel : ViewModel() {
         state.value = DataState.Success(searchresult)
     }
 
-    fun orderBy(criteria: String) {
-        /*
-        * Cambiando el filtro de la consulta
-        * 1. Ponemos el valor del filtro en el string que le pasamos, exista o no la columna
-        * 2. Ejecutamos la consulta para actualizar
-         */
-        order.value = criteria
-        showCardsFromCollection()
-        //get_collection()
-    }
 
-    fun getCollectionPrice() {
-        for (i in 0..5) {
-            if (cards[i].prices_eur != "") {
-                //price.value += (cards[i].prices_eur.toString().toDouble() / 100).toBigDecimal()
-                    //.setScale(2)
-                Log.d("price counter",cards[i].prices_eur.toString())
-            }
-            /*else if (cards[i].prices_eur_foil != "") {
-                price.value += (cards[i].prices_eur_foil.toString().toDouble() / 100).toBigDecimal()
-                    .setScale(2)
-            }*/
-        }
-    }
+
+
 
     fun resetSearch() {
         /*
@@ -136,9 +115,6 @@ class CollectionViewModel : ViewModel() {
     }
 
     init {
-        /*
-            Este metodo se va a ejecutar cuando se instancie la clase CollectionViewModel
-         */
         getCollection()
     }
 
@@ -219,8 +195,6 @@ class CollectionViewModel : ViewModel() {
         }
         state.value = DataState.Success(cards)
     }
-
-    //private suspend fun delete(card: Card) {
     private fun delete(card: Card) {
         /*
         * Borrando una carta de la coleccion:
@@ -235,7 +209,6 @@ class CollectionViewModel : ViewModel() {
         * 7. Parseamos el resultado de la query a un objeto de la clase Card
         * 8. Eliminamos la carta del array de cartas
          */
-        //val userId = FirebaseAuth.getInstance().currentUser?.uid
         val cardId = card.id
         val collection = this.collection
         for (i in collection.value.cards) {
@@ -245,28 +218,5 @@ class CollectionViewModel : ViewModel() {
             }
         }
         updateCollection(collection.value.cards)
-
-        /*try {
-            FirebaseFirestore.getInstance()
-               .collection("collections")
-               .whereEqualTo("user_id", userId)
-               .get().await().map { document ->
-                    val collection = document.toObject(Collect::class.java)
-                    if (userId != null) {
-                        FirebaseFirestore.getInstance()
-                           .collection("cards")
-                           .whereEqualTo("card_id", cardId)
-                           .get().await().map { element ->
-                                val cardElement = element.toObject(Card::class.java)
-                                Log.d("collection-delete", "Card found -> $cardElement")
-                                collection.cards.remove(cardElement)
-                                updateCollection(collection.cards)
-                            }
-                    }
-                }
-        } catch (e: FirebaseFirestoreException) {
-            Log.w("collection-delete", "Error retrieving collection data: $e")
-        }*/
-
     }
 }

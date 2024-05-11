@@ -70,11 +70,13 @@ fun GameBackgroundImage() {
         )
     }
 }
+
 @Composable
-fun UpdateScreen(navController: NavHostController){
+fun UpdateScreen(navController: NavHostController) {
     LinearProgressIndicator()
     navController.navigate(MyScreenRoutes.COLLECTION)
 }
+
 @Composable
 fun MyLogo(height: Int) {
     Image(
@@ -265,8 +267,7 @@ fun InfoCard(
     ElevatedCard(
         elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
         modifier = Modifier
-            .fillMaxWidth()
-        ,
+            .fillMaxWidth(),
         colors = CardDefaults.cardColors(
             containerColor = containercolor,
             contentColor = contentcolor

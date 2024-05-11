@@ -12,10 +12,10 @@ import androidx.navigation.NavController
 import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
 
 @Composable
-fun Threeplayers(navController: NavController, life: Int) {
+fun Threeplayers(life: Int) {
     BackgroundImage()
     ConstraintLayout(Modifier.fillMaxSize()) {
-        var (p1, p2, p3) = createRefs()
+        val (p1, p2, p3) = createRefs()
         Box(modifier = Modifier
             .fillMaxSize(0.5f)
             .constrainAs(p1) {

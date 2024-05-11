@@ -96,9 +96,9 @@ fun LoginForm(navController: NavController, viewModel: LoginViewModel) {
     //Input de correo electronico
     MyTextField(
         data = userinput,
-        label = "Correo Electrónico",
+        label = "Email",
         onvaluechange = { userinput = it; error = false }, //Siempre que escribamos algo el boolean error se va a poner en false
-        supportingText = "Correo electronico incorrecto o mal formateado",
+        supportingText = "Incorrect or bad formatted email",
         iserror = error
     )
     Spacer(Modifier.size(16.dp))
@@ -108,9 +108,8 @@ fun LoginForm(navController: NavController, viewModel: LoginViewModel) {
         data = passinput,
         label = "Contraseña",
         onvaluechange = { passinput = it; error = false }, //Siempre que escribamos algo el boolean error se va a poner en false
-        supporting_text = "Contraseña incorrecta",
+        supporting_text = "Incorrect password",
         iserror = error)
-    //Spacer(Modifier.size(4.dp))
 
     //Boton de contraseña olvidada
     ForgottenPasswordButton()
@@ -188,7 +187,7 @@ fun ForgottenPasswordButton() {
                 )
             }
         },
-        onClick = { Toast.makeText(context, "Password Forgotten", Toast.LENGTH_SHORT).show() },
+        onClick = { Toast.makeText(context, "Coming Soon", Toast.LENGTH_SHORT).show() },
         style = TextStyle(
             fontSize = 15.sp
         )

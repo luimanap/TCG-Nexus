@@ -6,11 +6,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.constraintlayout.compose.ConstraintLayout
-import androidx.navigation.NavController
 import com.pixelperfectsoft.tcg_nexus.ui.GameBackgroundImage
 
 @Composable
-fun Fourplayers(navController: NavController, life: Int) {
+
+fun Fourplayers(life: Int) {
     GameBackgroundImage()
     ConstraintLayout(Modifier.fillMaxSize()) {
         var (p1, p2, p3, p4) = createRefs()

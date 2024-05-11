@@ -6,8 +6,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -32,7 +30,7 @@ import com.pixelperfectsoft.tcg_nexus.ui.auth.LoginScreen
 import com.pixelperfectsoft.tcg_nexus.ui.auth.RegisterScreen
 import com.pixelperfectsoft.tcg_nexus.ui.cards.AllCards
 import com.pixelperfectsoft.tcg_nexus.ui.cards.Collection
-import com.pixelperfectsoft.tcg_nexus.ui.home.HomeScreen
+import com.pixelperfectsoft.tcg_nexus.ui.news.NewsScreen
 import com.pixelperfectsoft.tcg_nexus.ui.play.Fourplayers
 import com.pixelperfectsoft.tcg_nexus.ui.play.PlayScreen
 import com.pixelperfectsoft.tcg_nexus.ui.play.Threeplayers
@@ -48,7 +46,6 @@ data class MenuItems(
     val label: String,
 )
 
-//Objeto para identificar las rutas de navegación de cada pantalla
 object MyScreenRoutes {
     const val SETTINGS = "settings"
     const val LOGIN: String = "login"
@@ -56,7 +53,6 @@ object MyScreenRoutes {
     const val SEARCH = "search"
     const val COLLECTION = "collection"
     const val UPDATE = "update"
-    const val DECKS = "decks"
     const val PLAY = "play"
     const val PROFILE = "profile"
     const val REGISTER = "register"
@@ -177,7 +173,7 @@ fun BottomBarNaviContainer(
                     UpdateScreen(navController)
                 }
                 composable(MyScreenRoutes.HOME) {
-                    HomeScreen()
+                    NewsScreen()
                 }
                 composable(MyScreenRoutes.SEARCH) {
                     AllCards(navController = navController)
@@ -198,49 +194,49 @@ fun BottomBarNaviContainer(
                     RegisterScreen(navController = navController)
                 }
                 composable(MyScreenRoutes.FOURPLAYERS20LIVES) {
-                    Fourplayers(navController = navController, 20)
+                    Fourplayers(20)
                 }
                 composable(MyScreenRoutes.FOURPLAYERS30LIVES) {
-                    Fourplayers(navController = navController, 30)
+                    Fourplayers(30)
                 }
                 composable(MyScreenRoutes.FOURPLAYERS40LIVES) {
-                    Fourplayers(navController = navController, 40)
+                    Fourplayers(40)
                 }
                 composable(MyScreenRoutes.FOURPLAYERS50LIVES) {
-                    Fourplayers(navController = navController, 50)
+                    Fourplayers(50)
                 }
                 composable(MyScreenRoutes.FOURPLAYERS60LIVES) {
-                    Fourplayers(navController = navController, 60)
+                    Fourplayers(60)
                 }
                 composable(MyScreenRoutes.THREEPLAYERS20LIVES) {
-                    Threeplayers(navController = navController, 20)
+                    Threeplayers(20)
                 }
                 composable(MyScreenRoutes.THREEPLAYERS30LIVES) {
-                    Threeplayers(navController = navController, 30)
+                    Threeplayers(30)
                 }
                 composable(MyScreenRoutes.THREEPLAYERS40LIVES) {
-                    Threeplayers(navController = navController, 40)
+                    Threeplayers(40)
                 }
                 composable(MyScreenRoutes.THREEPLAYERS50LIVES) {
-                    Threeplayers(navController = navController, 50)
+                    Threeplayers(50)
                 }
                 composable(MyScreenRoutes.THREEPLAYERS60LIVES) {
-                    Threeplayers(navController = navController, 60)
+                    Threeplayers(60)
                 }
                 composable(MyScreenRoutes.TWOPLAYERS20LIVES) {
-                    Twoplayers(navController = navController, 20)
+                    Twoplayers(20)
                 }
                 composable(MyScreenRoutes.TWOPLAYERS30LIVES) {
-                    Twoplayers(navController = navController, 30)
+                    Twoplayers(30)
                 }
                 composable(MyScreenRoutes.TWOPLAYERS40LIVES) {
-                    Twoplayers(navController = navController, 40)
+                    Twoplayers(40)
                 }
                 composable(MyScreenRoutes.TWOPLAYERS50LIVES) {
-                    Twoplayers(navController = navController, 50)
+                    Twoplayers(50)
                 }
                 composable(MyScreenRoutes.TWOPLAYERS60LIVES) {
-                    Twoplayers(navController = navController, 60)
+                    Twoplayers(60)
                 }
 
             }

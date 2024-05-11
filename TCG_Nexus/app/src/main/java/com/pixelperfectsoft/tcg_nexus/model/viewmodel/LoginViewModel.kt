@@ -56,11 +56,6 @@ class LoginViewModel : ViewModel() {
 
     private fun createUser(displayName: String?, email: String) {
         val userId = auth.currentUser?.uid
-        //val user = mutableMapOf<String, Any>()
-
-        //user["user_id"]= userId.toString()
-        //user["display_name"]= displayName.toString()
-
         val user = User(
             avatar_url = "",
             display_name = displayName.toString(),

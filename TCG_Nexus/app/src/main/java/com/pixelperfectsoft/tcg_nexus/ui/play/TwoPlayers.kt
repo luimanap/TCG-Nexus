@@ -16,12 +16,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
-import androidx.navigation.NavController
-import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.R
+import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
 
 @Composable
-fun Twoplayers(navController: NavController, life: Int) {
+fun Twoplayers(life: Int) {
     BackgroundImage()
     ConstraintLayout(Modifier.fillMaxSize()) {
         var (p1, p2, tools) = createRefs()
@@ -35,7 +34,12 @@ fun Twoplayers(navController: NavController, life: Int) {
                 top.linkTo(parent.top)
             }) {
 
-            LifePanel(plinitlife = "$life",rotation = "topdown",backcolor = Color(150, 150, 255),player = 1,playermode = 2
+            LifePanel(
+                plinitlife = "$life",
+                rotation = "topdown",
+                backcolor = Color(150, 150, 255),
+                player = 1,
+                playermode = 2
             )
         }
         //Barra de herramientas

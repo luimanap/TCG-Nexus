@@ -22,7 +22,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -43,8 +42,6 @@ fun LifePanel(
         p2life = rememberSaveable { mutableIntStateOf(plinitlifeint) },
         p3life = rememberSaveable { mutableIntStateOf(plinitlifeint) },
         p4life = rememberSaveable { mutableIntStateOf(plinitlifeint) },
-        //p5life = rememberSaveable { mutableIntStateOf(plinitlifeint) },
-        //p6life = rememberSaveable { mutableIntStateOf(plinitlifeint) },
     )
     var rotate = 0f
     if (rotation == "left") {
@@ -383,9 +380,6 @@ fun LifePanel(
                         })
                 }
             }
-            //Jugadores 5 y 6. Futuro añadido para partidas de mas jugadores
-            //5 ->
-            //6 ->
         }
     }
 }

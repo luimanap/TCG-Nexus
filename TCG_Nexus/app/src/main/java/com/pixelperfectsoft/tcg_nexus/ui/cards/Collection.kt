@@ -14,14 +14,11 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableIntState
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -57,13 +54,11 @@ fun Collection(navController: NavHostController, viewModel: CollectionViewModel 
             .fillMaxHeight(0.33f)
             .background(brush = createGradientBrush(backcolors))
     ) {
-        //Spacer(modifier = Modifier.fillMaxHeight(0.05f))
-
         //Collection info
         Column(modifier = Modifier.padding(horizontal = 16.dp),horizontalAlignment = Alignment.CenterHorizontally) {
             Spacer(modifier = Modifier.fillMaxHeight(0.05f))
             InfoCard(
-                text = "Cartas en posesión",
+                text = "Cards in collection",
                 number = totalcards.intValue.toString(),
                 containercolor = MaterialTheme.colorScheme.primary,
                 contentcolor = Color.White,
@@ -91,7 +86,6 @@ fun LoadCollection(
         is DataState.Loading -> {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    //CircularProgressIndicator()
                     Text(text = "Cargando colección de ${FirebaseAuth.getInstance().currentUser?.displayName}...")
                     Spacer(modifier = Modifier.height(16.dp))
                     LinearProgressIndicator()
@@ -102,7 +96,6 @@ fun LoadCollection(
         is DataState.Success -> {
             totalcards.intValue = result.data.size
             Log.d("DataState success","Datastate success")
-            //viewModel.getCollectionPrice()
             ShowCollectionLazyList(
                 navController = navController,
                 viewModel = viewModel,
@@ -124,7 +117,6 @@ fun LoadCollection(
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ShowCollectionLazyList(
     navController: NavHostController,
@@ -140,7 +132,7 @@ fun ShowCollectionLazyList(
             columns = GridCells.Fixed(3),
             content = {
                 items(cards) {
-                    CollectionCardItem(
+                    CardItem(
                         navController = navController,
                         card = it,
                         currentSelectedItem = currentSelectedItem,

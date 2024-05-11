@@ -13,16 +13,10 @@ import kotlinx.coroutines.launch
 import java.io.IOException
 
 
-class CardViewModel(context: Context) : ViewModel() {
+class CardViewModel(val context: Context) : ViewModel() {
     private val gson: Gson = GsonBuilder().setLenient().create()
-
-    //private val gson: Gson = Gson
     val response: MutableState<DataState> = mutableStateOf(DataState.Empty)
     var tempList = mutableListOf<Card>() //Lista de cartas que vamos a devolver posteriormente
-    //private val allcards = 29237
-    private val context = context
-    private val loaded = mutableStateOf(false)
-    private var filter = mutableStateOf("id")
     private val searchkey = mutableStateOf("")
     var start = 0
     var end = 18

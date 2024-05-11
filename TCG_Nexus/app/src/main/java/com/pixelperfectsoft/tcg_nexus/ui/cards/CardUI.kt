@@ -1,6 +1,5 @@
 package com.pixelperfectsoft.tcg_nexus.ui.cards
 
-import android.annotation.SuppressLint
 import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -58,15 +57,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavHost
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
-import com.pixelperfectsoft.tcg_nexus.ui.MyButton
 import com.pixelperfectsoft.tcg_nexus.R
 import com.pixelperfectsoft.tcg_nexus.model.classes.Card
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.CardViewModel
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.CollectionViewModel
+import com.pixelperfectsoft.tcg_nexus.ui.MyButton
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -149,7 +146,6 @@ fun CardDialog(
                     Image(
                         painter = painterResource(
                             id = when (card.rarity.toString().lowercase()) {
-                                //"common" -> R.drawable.common
                                 "common" -> R.drawable.rarity_common
                                 "uncommon" -> R.drawable.rarity_uncommon
                                 "rare" -> R.drawable.rarity_rare
@@ -307,7 +303,7 @@ fun CardDialog(
                         if (dialogplace == "collection") {
 
                             MyButton(
-                                text = "Eliminar",
+                                text = "Delete",
                                 onclick = {
                                     collectionViewModel.deleteCardFromCollection(card)
                                     scope.launch { sheetState.hide() }
@@ -319,7 +315,7 @@ fun CardDialog(
                             )
                         } else if (dialogplace == "allcards") {
                             MyButton(
-                                text = "Añadir a la colección",
+                                text = "Add to collection",
                                 onclick = {
                                     val collection = collectionViewModel.collection.value.cards
                                     collection.add(card)
@@ -349,7 +345,7 @@ fun CardDialog(
                                 disabledContentColor = Color.Transparent
                             )
                         ) {
-                            Text(text = "Comprar en Cardmarket")
+                            Text(text = "Buy in CardMarket")
                         }
                         Spacer(modifier = Modifier.height(24.dp))
                     }
@@ -358,76 +354,10 @@ fun CardDialog(
     }
 }
 
-@SuppressLint("ResourceAsColor")
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CardItem(
-    navController: NavHostController,
-    card: Card,
-    currentSelectedItem: MutableState<Card>,
-    dialogplace: String,
-) {
-    val scope = rememberCoroutineScope()
-    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-
-    Row(modifier = Modifier.clickable {
-        scope
-            .launch { sheetState.show() }
-            .invokeOnCompletion {
-                if (sheetState.hasPartiallyExpandedState) {
-                    scope.launch { sheetState.expand() }
-                }
-            }
-        currentSelectedItem.value = card
-    }) {
-        Box(
-            modifier = Modifier
-                .background(
-                    color = when (card.rarity) {
-                        "common" -> Color(R.color.common)
-                        "uncommon" -> Color(R.color.uncommon)
-                        "rare" -> Color(R.color.rare)
-                        "mythic" -> Color(R.color.mythic)
-                        else -> Color(R.color.common)
-                    }
-                )
-                .fillMaxHeight()
-                .width(3.dp)
-        )
-        Column(
-            modifier = Modifier.background(Color.Transparent)
-        ) {
-            HorizontalDivider()
-            Column(
-                modifier = Modifier
-                    .fillMaxHeight()
-                    .padding(8.dp)
-            ) {
-                Text(
-                    text = card.name.toString(),
-                    fontWeight = FontWeight.Normal,
-                )
-                Text(
-                    text = card.type_line.toString().replace("�", "-"),
-                    fontWeight = FontWeight.Light
-                )
-            }
-            HorizontalDivider()
-        }
-    }
-
-    CardDialog(
-        navController = navController,
-        sheetState = sheetState,
-        card = currentSelectedItem.value,
-        dialogplace = dialogplace
-    )
-}
-
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun CollectionCardItem(
     navController: NavHostController,
     card: Card,
     currentSelectedItem: MutableState<Card>,
@@ -451,7 +381,6 @@ fun CollectionCardItem(
             modifier = Modifier
                 .fillMaxHeight()
                 .padding(8.dp)
-            //.background(Color.Green)
             , horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Box {
@@ -480,23 +409,6 @@ fun CollectionCardItem(
                 fontSize = 15.sp,
                 textAlign = TextAlign.Center
             )
-
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                //.padding(horizontal = 25.dp)
-                ,
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-
-                //Spacer(modifier = Modifier.height(30.dp))
-                /*Text(
-                    text = card.type_line.toString(),
-                    modifier = Modifier.padding(start = 16.dp),
-                    fontWeight = FontWeight.SemiBold,
-                )*/
-                Spacer(modifier = Modifier.height(30.dp))
-            }
         }
     }
     CardDialog(
@@ -517,14 +429,6 @@ fun CardImage(card: Card, modifier: Modifier) {
         modifier = modifier,
         contentScale = ContentScale.Fit
     )
-    /*Image(
-        painter = rememberAsyncImagePainter(
-            model = card.image_uris_normal.toString().replace("normal", "large")
-        ),
-        contentDescription = card.name.toString(),
-        modifier = modifier,
-        contentScale = ContentScale.Fit
-    )*/
 }
 
 
@@ -551,7 +455,6 @@ fun FilterModalSheet(
                 TextField(
                     value = searchinput.value,
                     onValueChange = { searchinput.value = it },
-                    label = { Text(text = "Buscar...") },
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = 12.dp),
@@ -580,13 +483,7 @@ fun FilterModalSheet(
                     if (searchinput.value != "") {
                         Log.d("search", "Searching by name -> ${searchinput.value}")
                         when (screen) {
-                            "cards" -> {
-                                Log.d("search", "Searching from screen cards")
-                                cardviewmodel?.searchCardsByName(
-                                    searchinput.value,
-                                )
-                            }
-
+                            "cards" -> cardviewmodel?.searchCardsByName(searchinput.value)
                             "col" -> colviewmodel?.searchCardsByName(searchinput.value)
                         }
                     } else {
@@ -597,7 +494,7 @@ fun FilterModalSheet(
                     }
                     scope.launch { sheetState.hide() }
                 }) {
-                    Text(text = "Buscar por nombre")
+                    Text(text = "Search")
                 }
             }
         })

@@ -57,7 +57,7 @@ fun RegisterScreen(
         Color.White,
         Color.White,
     )
-    var error by rememberSaveable { mutableStateOf(false) }
+    val error by rememberSaveable { mutableStateOf(false) }
     var userinput by rememberSaveable { mutableStateOf("") }
     var emailinput by rememberSaveable { mutableStateOf("") }
     var passinput by rememberSaveable { mutableStateOf("") }
@@ -80,7 +80,6 @@ fun RegisterScreen(
 
         //Name Input
         MyTextField(data = userinput, label = "Usuario", onvaluechange = { userinput = it },supportingText = "", iserror = error)
-        //Spacer(Modifier.size(4.dp))
 
 
         //Email Input
@@ -88,7 +87,6 @@ fun RegisterScreen(
             data = emailinput,
             label = "Correo Electrónico",
             onvaluechange = { emailinput = it },supportingText = "", iserror = error)
-        //Spacer(Modifier.size(8.dp))
 
         //Password Input
 
@@ -101,14 +99,13 @@ fun RegisterScreen(
             label = "Confirmar Contraseña",
             onvaluechange = { confpassinput = it },
             supporting_text = "", iserror = error)
-        //Spacer(Modifier.size(.dp))
 
         //Checkboxes
         Box(){
             Column {
-                termschecked = MyTextCheckBox("Acepto los términos y condiciones")
-                policychecked = MyTextCheckBox("Acepto la política de privacidad")
-                MyTextCheckBox("Me gustaría recibir ofertas y promociones exclusivas")
+                termschecked = myTextCheckBox("Acepto los términos y condiciones")
+                policychecked = myTextCheckBox("Acepto la política de privacidad")
+                myTextCheckBox("Me gustaría recibir ofertas y promociones exclusivas")
             }
         }
         Spacer(modifier = Modifier.size(8.dp))
@@ -157,7 +154,7 @@ fun RegisterScreen(
 }
 
 @Composable
-fun MyTextCheckBox(text: String): Boolean {
+fun myTextCheckBox(text: String): Boolean {
     var state by rememberSaveable { mutableStateOf(false) }
     Row(Modifier.padding(start = 30.dp, end = 30.dp)) {
         Checkbox(

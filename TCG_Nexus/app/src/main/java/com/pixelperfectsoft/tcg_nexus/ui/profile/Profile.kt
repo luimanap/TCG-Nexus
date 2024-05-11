@@ -3,14 +3,12 @@ package com.pixelperfectsoft.tcg_nexus.ui.profile
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.util.Log
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -23,12 +21,10 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
@@ -43,28 +39,22 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
-import com.google.firebase.auth.FirebaseAuth
-import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
-import com.pixelperfectsoft.tcg_nexus.R
+import com.google.firebase.firestore.FirebaseFirestore
 import com.pixelperfectsoft.tcg_nexus.model.classes.User
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.UserDataViewModel
-import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
-import androidx.lifecycle.viewmodel.compose.viewModel
-import coil.compose.AsyncImage
-import coil.compose.rememberAsyncImagePainter
-import com.google.firebase.firestore.FirebaseFirestore
+import com.pixelperfectsoft.tcg_nexus.model.viewmodel.UserState
+import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.ui.MyButton
-import com.pixelperfectsoft.tcg_nexus.model.viewmodel.StorageConfig
 import com.pixelperfectsoft.tcg_nexus.ui.MyPasswordField
-import com.pixelperfectsoft.tcg_nexus.ui.MyTextField
+import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 
 @Composable
@@ -72,14 +62,7 @@ fun Profile(
     navController: NavHostController,
     dataViewModel: UserDataViewModel = viewModel(),
 ) {
-
-    //Creamos un array con las rutas de los avatares a partir de los elementos existentes dentro de la carpeta avatars
-    // Si la lista devuelve nulo utilizamos el operador ?: para asegurarnos de que se cree una lista mutable vacia
-
-    /*val avatarImages =
-        LocalContext.current.assets.list("avatars")?.mapNotNull { "avatars/$it" }?.toMutableList()
-            ?: mutableListOf()*/
-    dataViewModel.get_User()
+    dataViewModel.getUser()
     val currentuser = dataViewModel.user.value
     val backcolors = listOf(
         Color.Transparent,
@@ -96,26 +79,29 @@ fun Profile(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Log.d("Profile", "Username: $currentuser")
-        AvatarImage(currentuser = currentuser, navController = navController)
+        Spacer(modifier = Modifier.fillMaxHeight(0.05f))
+        AvatarImage(
+            viewModel = dataViewModel,
+            currentuser = currentuser,
+            navController = navController
+        )
         UserInfo(currentuser)
-        EditProfile(currentuser, navController = navController)
+        EditProfile()
     }
 }
 
 @Composable
-fun EditProfile(currentuser: User, navController: NavHostController) {
-    val newdisplayname = rememberSaveable { mutableStateOf(currentuser.display_name) }
-    val newemail = rememberSaveable { mutableStateOf(currentuser.email) }
+fun EditProfile() {
+    val context = LocalContext.current
     val pass = rememberSaveable { mutableStateOf("") }
     val newpass = rememberSaveable { mutableStateOf("") }
-    Spacer(modifier = Modifier.fillMaxHeight(0.1f))
-    Log.d("user", "${newdisplayname.value}, ${newemail.value}")
+    Spacer(modifier = Modifier.fillMaxHeight(0.3f))
     MyPasswordField(
         data = pass.value,
         label = "Current password",
         onvaluechange = {
             pass.value = it
-        }, //Siempre que escribamos algo el boolean error se va a poner en false
+        },
         supporting_text = "Incorrect password",
         iserror = false
     )
@@ -123,8 +109,8 @@ fun EditProfile(currentuser: User, navController: NavHostController) {
         data = pass.value,
         label = "New password",
         onvaluechange = {
-            pass.value = it
-        }, //Siempre que escribamos algo el boolean error se va a poner en false
+            newpass.value = it
+        },
         supporting_text = "Incorrect password",
         iserror = false
     )
@@ -133,9 +119,9 @@ fun EditProfile(currentuser: User, navController: NavHostController) {
 
     Spacer(modifier = Modifier.fillMaxHeight(0.1f))
     MyButton(
-        text = "Edit Profile",
+        text = "Change Password",
         onclick = {
-
+            Toast.makeText(context, "Comming soon", Toast.LENGTH_SHORT).show()
         },
         containercolor = MaterialTheme.colorScheme.primary,
         bordercolor = MaterialTheme.colorScheme.primary,
@@ -148,7 +134,6 @@ fun EditProfile(currentuser: User, navController: NavHostController) {
 @Composable
 fun ProfileSelector(
     show: MutableState<Boolean>,
-    //avatarImages: MutableList<String>,
     currentuser: User,
     navcontroller: NavHostController,
 ) {
@@ -185,7 +170,6 @@ fun ProfileSelector(
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(16.dp),
-                    //horizontalArrangement = Arrangement.Center,
                     columns = GridCells.Fixed(4),
                     content = {
                         items(avatarImages) { image ->
@@ -201,15 +185,6 @@ fun ProfileSelector(
                                     modifier = Modifier
                                         .fillMaxSize()
                                         .clickable {
-                                            /*
-                                            * Al hacer click en la imagen que deseamos:
-                                            * 1. Mostramos por consola la ruta de la imagen para facilitar
-                                            *    la depuración
-                                            * 2. Cambiamos la imagen en Firebase
-                                            * 3. Cerramos el dialogo
-                                            * 4. Navegamos a la pantalla de login, que comprueba si
-                                            *    estamos logueados, lo que recarga la página en su defecto
-                                            */
                                             Log.d("avatar", "New profile -> $image")
                                             changeAvatar(image, currentuser)
                                             show.value = false
@@ -225,44 +200,52 @@ fun ProfileSelector(
 
 @Composable
 fun AvatarImage(
+    viewModel: UserDataViewModel,
     currentuser: User,
     navController: NavHostController,
 ) {
+
+    val show = rememberSaveable { mutableStateOf(false) }
     val context = LocalContext.current
     val bitmapState = remember { mutableStateOf<Bitmap?>(null) }
     Log.d("avatar", currentuser.avatar_url)
-
-    LaunchedEffect(Unit) {
-        val avatar = context.assets.open("avatars/ava4.jpg")
-
-        bitmapState.value = BitmapFactory.decodeStream(avatar)
-    }
-
-
-
-    val show = rememberSaveable {
-        mutableStateOf(false)
-    }
-    Spacer(modifier = Modifier.fillMaxHeight(0.1f))
-    Box(
-        modifier = Modifier
-            .clip(CircleShape)
-            .background(Color.Transparent)
-            .size(200.dp)
-            .clickable {
-                show.value = true
-            },
-        contentAlignment = Alignment.Center
-    ) {
-        if (bitmapState.value != null) {
-            val bitmap = bitmapState.value!!.asImageBitmap()
-            Image(
-                bitmap = bitmap, contentDescription = "Avatar",
-                modifier = Modifier.fillMaxSize(),
-                contentScale = ContentScale.Crop
-            )
+    when (val result = viewModel.state.value) {
+        is UserState.Loading -> {
+            CircularProgressIndicator()
         }
+
+        is UserState.Success -> {
+            LaunchedEffect(Unit) {
+                val avatar = context.assets.open(currentuser.avatar_url)
+                bitmapState.value = BitmapFactory.decodeStream(avatar)
+            }
+            Box(
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .background(Color.Transparent)
+                    .size(200.dp)
+                    //.padding(top = 16.dp)
+                    .clickable {
+                        show.value = true
+                    },
+                contentAlignment = Alignment.Center
+            ) {
+
+                if (bitmapState.value != null) {
+                    val bitmap = bitmapState.value!!.asImageBitmap()
+                    Image(
+                        bitmap = bitmap, contentDescription = "Avatar",
+                        modifier = Modifier.fillMaxSize(),
+                        contentScale = ContentScale.Crop
+                    )
+                }
+            }
+        }
+
+        is UserState.Empty -> {}
+        is UserState.Failure -> {}
     }
+
 
     if (show.value) {
         ProfileSelector(//avatarImages = avatarImages,
@@ -301,38 +284,11 @@ fun changeAvatar(image: String, currentUser: User) {
         }
 }
 
-@Composable
-fun LogOutButton(navController: NavHostController) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(25.dp), horizontalArrangement = Arrangement.End
-    ) {
-        IconButton(modifier = Modifier
-            .size(25.dp)
-            .clip(CircleShape)
-            .background(Color.White), onClick = {
-            /*
-             * Cerrando sesion:
-             * 1. Navegamos a la pantalla de login
-             * 2. Cerramos la sesion actual en Firebase
-             */
-
-        }) {
-            Icon(
-                painter = painterResource(id = R.drawable.logout),
-                contentDescription = "logout",
-                tint = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.fillMaxSize()
-            )
-        }
-    }
-}
 
 @Composable
 fun UserInfo(user: User) {
     Spacer(modifier = Modifier.fillMaxHeight(0.025f))
-    Column(horizontalAlignment = Alignment.CenterHorizontally){
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Text(
             text = user.display_name,
             style = TextStyle(
