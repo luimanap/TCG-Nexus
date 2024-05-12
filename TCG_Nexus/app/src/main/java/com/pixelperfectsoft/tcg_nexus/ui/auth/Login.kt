@@ -90,7 +90,7 @@ fun LoginForm(navController: NavController, viewModel: LoginViewModel) {
     Spacer(Modifier.fillMaxHeight(0.05f))
     MyLogo(height = 225)
     Spacer(Modifier.fillMaxHeight(0.05f))
-    Text(text = "INICIAR SESION", style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 25.sp))
+    Text(text = "LOG IN", style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 25.sp))
     Spacer(Modifier.size(25.dp))
 
     //Input de correo electronico
@@ -106,7 +106,7 @@ fun LoginForm(navController: NavController, viewModel: LoginViewModel) {
     //Input de contraseña
     MyPasswordField(
         data = passinput,
-        label = "Contraseña",
+        label = "Password",
         onvaluechange = { passinput = it; error = false }, //Siempre que escribamos algo el boolean error se va a poner en false
         supporting_text = "Incorrect password",
         iserror = error)
@@ -178,7 +178,7 @@ fun ForgottenPasswordButton() {
                     textDecoration = TextDecoration.None
                 )
             ) {
-                append("¿Olvidaste tu contraseña?")
+                append("¿Forgot your password?")
                 addStringAnnotation(
                     tag = "",
                     annotation = "",

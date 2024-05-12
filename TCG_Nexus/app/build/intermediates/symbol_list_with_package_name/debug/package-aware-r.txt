@@ -1,4 +1,11 @@
 com.pixelperfectsoft.tcg_nexus
+anim fragment_fast_out_extra_slow_in
+animator fragment_close_enter
+animator fragment_close_exit
+animator fragment_fade_enter
+animator fragment_fade_exit
+animator fragment_open_enter
+animator fragment_open_exit
 attr action
 attr alpha
 attr argType
@@ -103,7 +110,6 @@ dimen notification_top_pad
 dimen notification_top_pad_large_text
 drawable abc_vector_test
 drawable albums
-drawable blacklotus
 drawable card_back
 drawable card_back_small
 drawable card_back_unavailable
@@ -129,7 +135,6 @@ drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
 drawable dice_icon
 drawable dragon_background
-drawable foil
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable heart
@@ -142,11 +147,17 @@ drawable ic_call_decline
 drawable ic_call_decline_low
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_other_sign_in
+drawable ic_passkey
+drawable ic_password
+drawable info
+drawable language
 drawable logotcgnexus
 drawable logotcgnexus_new
 drawable logout
 drawable loyalty
 drawable materialsymbolsfilteralt
+drawable news
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -170,6 +181,7 @@ drawable rarity_uncommon
 drawable searchicon
 drawable settings
 drawable sword
+drawable theme
 drawable woodtable
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -228,6 +240,7 @@ id dark
 id dialog_button
 id edit_text_id
 id forever
+id fragment_container_view_tag
 id glide_custom_view_target_tag
 id hide_ime_id
 id hide_in_inspector_tag
@@ -251,6 +264,7 @@ id pooling_container_listener_holder_tag
 id report_drawn
 id right_icon
 id right_side
+id special_effects_controller_view_tag
 id standard
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -273,6 +287,7 @@ id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
+id visible_removing_fragment_view_tag
 id wide
 id wrapped_composition_tag
 integer google_play_services_version
@@ -292,6 +307,8 @@ mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 raw firebase_common_keep
+string android_credentials_TYPE_PASSWORD_CREDENTIAL
+string androidx_credentials_TYPE_PUBLIC_KEY_CREDENTIAL
 string androidx_startup
 string app_name
 string call_notification_answer_action
@@ -420,6 +437,7 @@ style TextAppearance_Compat_Notification_Info
 style TextAppearance_Compat_Notification_Line2
 style TextAppearance_Compat_Notification_Time
 style TextAppearance_Compat_Notification_Title
+style Theme_Hidden
 style Theme_Pruebas_App_TFG
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
@@ -431,6 +449,8 @@ styleable Capability queryPatterns shortcutMatchRequired
 styleable ColorStateListItem android_color android_alpha android_lStar alpha lStar
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery fontProviderSystemFontFamily
 styleable FontFamilyFont android_font android_fontWeight android_fontStyle android_ttcIndex android_fontVariationSettings font fontStyle fontVariationSettings fontWeight ttcIndex
+styleable Fragment android_name android_id android_tag
+styleable FragmentContainerView android_name android_tag
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust

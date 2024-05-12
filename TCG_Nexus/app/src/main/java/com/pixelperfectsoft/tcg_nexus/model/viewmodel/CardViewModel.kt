@@ -51,7 +51,6 @@ class CardViewModel(val context: Context) : ViewModel() {
         val filteredjson = mutableListOf<Card>()
         for (i in json) {
             if (i.name.toString().contains(searchkey.value.lowercase())) {
-                //Log.d("search", "${i.name} contains ${SEARCHKEY.value}")
                 filteredjson.add(i)
             }
         }
@@ -70,81 +69,8 @@ class CardViewModel(val context: Context) : ViewModel() {
                 response.value = DataState.Success(cuttedjson)
             }
         }
-        /*
-        viewModelScope.launch {
-            loadjson(context)
-        }*/
     }
 
-    /*
-        private fun retrieveData() {
-
-            /*
-            * Obteniendo las cartas:
-            * 1. Obtenemos la instancia de la BDD
-            * 2. Obtenemos la referencia "cards" dentro de la instancia y le decimos que guarde
-            *    el resultado de la consulta en caché
-            * 3. Cambiamos el estado de la operación a Loading
-            * 4. Limitamos la consulta a la variable (si la variable vale 100, muestra las 100
-            *    primeras cartas)
-            * 5. Ordenamos los resultados en cuanto a la columna correspondiente a la variable
-            *    (si la variable es "name", ordena por la columna con el mismo nombre y si no hay
-            *    ninguna columna con ese nombre, no ordena los datos)
-            * 6. Creamos un listener para cada valor y por cada uno lo convertimos a objeto de
-            *    la clase Card.
-            * 7. Si ese objeto no es nulo, y contiene el nombre que indicamos lo añadimos al array de cartas que devolveremos
-            * 8. Cambiamos el estado de la operación a Success y le pasamos el array si se ha realizado
-            *    correctamente o a Failure y le pasamos el mensaje de error si ha habido algún error
-             */
-            val db = FirebaseDatabase.getInstance()
-            db.getReference("cards").keepSynced(true)
-            response.value = DataState.Loading
-            //tempList.removeAll(tempList)
-            db.getReference("cards")
-            db.getReference("cards")
-                .orderByChild("name")
-                .startAt("a")
-                .endAt("b")
-                //.orderByChild(filter.value.lowercase())
-                //.limitToFirst(10)
-                .addListenerForSingleValueEvent(object :
-                    ValueEventListener {
-                    override fun onDataChange(snapshot: DataSnapshot) {
-                        for (i in snapshot.children) {
-                            val card = i.getValue(Card::class.java)
-
-                            if (card != null) {
-                                if (card.name.toString().lowercase()
-                                        .contains(searchkey.value.lowercase().trim())
-                                ) {
-                                    //Log.d("card_loader", tempList.size.toString())
-                                    tempList.add(card)
-                                }
-                            }
-                        }
-                        response.value = DataState.Success(tempList)
-                    }
-
-                    override fun onCancelled(error: DatabaseError) {
-                        response.value = DataState.Failure(error.message)
-                    }
-                })
-        }
-
-     */
-/*
-
-    fun orderBy(criteria: String) {
-        /*
-        * Cambiando el filtro de la consulta
-        * 1. Ponemos el valor del filtro en el string que le pasamos, exista o no la columna
-        * 2. Ejecutamos la consulta para actualizar
-         */
-        filter.value = criteria
-        Log.d("orderBy", "Ordering by -> $criteria")
-        //load()
-    }
-*/
 
     fun searchCardsByName(searchinput: String) {
         /*
@@ -192,10 +118,5 @@ class CardViewModel(val context: Context) : ViewModel() {
             end = tempList.size
             load()
         }
-
-
     }
 }
-
-
-

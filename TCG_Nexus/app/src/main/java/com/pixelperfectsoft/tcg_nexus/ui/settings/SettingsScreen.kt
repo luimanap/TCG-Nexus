@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredWidth
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -36,12 +37,14 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.navigation.NavHostController
 import com.google.firebase.auth.FirebaseAuth
+import com.pixelperfectsoft.tcg_nexus.R
 import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.ui.MyLogo
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
@@ -76,24 +79,29 @@ fun SettingsScreen(navController: NavHostController) {
         ) {
             SettingsOption(
                 option = "Language",
-                icon = Icons.Filled.Settings,
+                icon = R.drawable.language,
                 onClick = { Toast.makeText(context, "Coming soon", Toast.LENGTH_SHORT).show() })
-            SettingsOption(
-                option = "My Account",
-                icon = Icons.Filled.Settings,
-                onClick = { Toast.makeText(context, "Coming soon", Toast.LENGTH_SHORT).show() })
+
+            if(!FirebaseAuth.getInstance().currentUser?.email.isNullOrBlank()){
+                SettingsOption(
+                    option = "My Account",
+                    icon = R.drawable.personcirclesharp,
+                    onClick = { Toast.makeText(context, "Coming soon", Toast.LENGTH_SHORT).show() })
+            }
             SettingsOption(
                 option = "Theme",
-                icon = Icons.Filled.Settings,
+                icon = R.drawable.theme,
                 onClick = { Toast.makeText(context, "Coming soon", Toast.LENGTH_SHORT).show() })
-            SettingsOption(option = "About", icon = Icons.Filled.Settings, onClick = {
+            SettingsOption(option = "About", icon = R.drawable.info, onClick = {
                 aboutdialog.value = true
                 Log.d("aboutdialog", aboutdialog.value.toString())
             })
-            SettingsOption(option = "Log Out", icon = Icons.Filled.Settings, onClick = {
-                navController.navigate(MyScreenRoutes.LOGIN)
-                FirebaseAuth.getInstance().signOut()
-            })
+            if(!FirebaseAuth.getInstance().currentUser?.email.isNullOrBlank()) {
+                SettingsOption(option = "Log Out", icon = R.drawable.logout, onClick = {
+                    navController.navigate(MyScreenRoutes.LOGIN)
+                    FirebaseAuth.getInstance().signOut()
+                })
+            }
             Log.d("aboutdialog", aboutdialog.value.toString())
         }
         if (aboutdialog.value) {
@@ -175,7 +183,7 @@ fun AboutDialog(aboutdialog: MutableState<Boolean>) {
 }
 
 @Composable
-fun SettingsOption(option: String, icon: ImageVector, onClick: () -> Unit) {
+fun SettingsOption(option: String, icon: Int, onClick: () -> Unit) {
     ElevatedCard(
         colors = CardDefaults.cardColors(
             containerColor = Color(250, 250, 250),
@@ -194,12 +202,21 @@ fun SettingsOption(option: String, icon: ImageVector, onClick: () -> Unit) {
                 .padding(horizontal = 12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
+            val color = when(option) {
+                "Log Out" -> Color.Red
+                "Language" -> Color(135,206,235)
+                "My Account" -> Color.DarkGray
+                "Theme" -> Color(255, 195, 85)
+                "About" -> Color(173,216,230)
+                else -> Color.Gray
+            }
             Icon(
-                imageVector = icon,
+                painter = painterResource(id = icon),
                 contentDescription = null,
-                tint = Color.Gray
+                tint = color,
+                modifier = Modifier.size(28.dp)
             )
-            Spacer(modifier = Modifier.fillMaxWidth(0.0075f))
+            Spacer(modifier = Modifier.fillMaxWidth(0.05f))
             Text(
                 text = option,
                 modifier = Modifier.weight(1f)

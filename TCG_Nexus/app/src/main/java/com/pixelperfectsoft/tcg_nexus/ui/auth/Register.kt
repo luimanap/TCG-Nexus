@@ -75,37 +75,37 @@ fun RegisterScreen(
         Spacer(Modifier.size(35.dp))
         MyLogo(height = 100)
         Spacer(Modifier.size(20.dp))
-        Text(text = "CREAR CUENTA", style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 25.sp))
+        Text(text = "CREATE ACCOUNT", style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 25.sp))
 
 
         //Name Input
-        MyTextField(data = userinput, label = "Usuario", onvaluechange = { userinput = it },supportingText = "", iserror = error)
+        MyTextField(data = userinput, label = "User", onvaluechange = { userinput = it },supportingText = "", iserror = error)
 
 
         //Email Input
         MyTextField(
             data = emailinput,
-            label = "Correo Electrónico",
+            label = "Email",
             onvaluechange = { emailinput = it },supportingText = "", iserror = error)
 
         //Password Input
 
-        MyPasswordField(data = passinput, label = "Contraseña", onvaluechange = { passinput = it }, supporting_text = "", iserror = error)
+        MyPasswordField(data = passinput, label = "Password", onvaluechange = { passinput = it }, supporting_text = "", iserror = error)
         //Spacer(Modifier.size(8.dp))
 
         //Confirm Password Input
         MyPasswordField(
             data = confpassinput,
-            label = "Confirmar Contraseña",
+            label = "Confirm Pasword",
             onvaluechange = { confpassinput = it },
             supporting_text = "", iserror = error)
 
         //Checkboxes
         Box(){
             Column {
-                termschecked = myTextCheckBox("Acepto los términos y condiciones")
-                policychecked = myTextCheckBox("Acepto la política de privacidad")
-                myTextCheckBox("Me gustaría recibir ofertas y promociones exclusivas")
+                termschecked = myTextCheckBox("I accept the terms and conditions")
+                policychecked = myTextCheckBox("I accept the Privacy Policy")
+                myTextCheckBox("I would like to receive exclusive offers and promotions")
             }
         }
         Spacer(modifier = Modifier.size(8.dp))

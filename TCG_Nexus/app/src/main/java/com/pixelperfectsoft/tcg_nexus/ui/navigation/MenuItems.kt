@@ -108,7 +108,7 @@ val AUTH_MENU_ITEMS = listOf(
         path = MyScreenRoutes.COLLECTION,
         label = "Collection"
     ), MenuItems(
-        icon = R.drawable.home,
+        icon = R.drawable.news,
         textId = R.string.home,
         path = MyScreenRoutes.HOME,
         label = "News"
@@ -138,7 +138,7 @@ val GUEST_MENU_ITEMS = listOf(
         path = MyScreenRoutes.SEARCH,
         label = "Search"
     ), MenuItems(
-        icon = R.drawable.home,
+        icon = R.drawable.news,
         textId = R.string.home,
         path = MyScreenRoutes.HOME,
         label = "News"
@@ -257,7 +257,7 @@ fun BottomBarNavigation(selectedDestination: String, navigateTo: (MenuItems) -> 
         if (user != null) {
             AUTH_MENU_ITEMS.forEach { destinations ->
                 NavigationBarItem(
-                    label = { Text(text = destinations.label, fontSize = 11.sp) },
+                    label = { Text(text = destinations.label, fontSize = 10.5.sp) },
                     selected = selectedDestination == destinations.path,
                     onClick = { navigateTo(destinations) },
                     icon = {

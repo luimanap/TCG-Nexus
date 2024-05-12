@@ -1,26 +1,26 @@
-#Sat May 11 16:44:47 CEST 2024
+#Sun May 12 16:09:10 CEST 2024
 base.0=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.10=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.10=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
 base.2=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
 base.3=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
 base.4=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
 base.5=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
 base.6=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
-base.7=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
-base.8=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
-base.9=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.7=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
+base.8=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.9=C\:\\Users\\luisv\\Documents\\GitHub\\TCG_NEXUS\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
-path.10=classes2.dex
+path.10=classes3.dex
 path.2=10/classes.dex
 path.3=13/classes.dex
 path.4=14/classes.dex
 path.5=2/classes.dex
 path.6=4/classes.dex
-path.7=classes3.dex
-path.8=8/classes.dex
-path.9=9/classes.dex
+path.7=8/classes.dex
+path.8=9/classes.dex
+path.9=classes2.dex
 renamed.0=classes.dex
 renamed.1=classes2.dex
 renamed.10=classes11.dex

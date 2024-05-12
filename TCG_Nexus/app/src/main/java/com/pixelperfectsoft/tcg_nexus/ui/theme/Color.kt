@@ -14,6 +14,7 @@ val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
 val PrimaryBlue = Color(92, 115, 255)
+val PrimaryRed = Color(92, 115, 255)
 
 
 fun createGradientBrush(colors: List<Color>, isVertical: Boolean = true): Brush {

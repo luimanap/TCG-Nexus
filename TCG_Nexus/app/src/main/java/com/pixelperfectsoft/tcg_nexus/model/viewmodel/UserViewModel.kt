@@ -24,36 +24,34 @@ class UserDataViewModel : ViewModel() {
     }
 
 
-    private suspend fun getUserDataFromFirestore(){
-        val auth =
-            FirebaseAuth.getInstance() //Obtenemos la instancia del sistema de autenticacion de Firebase
-        val currentuser = auth.currentUser //Obtenemos el usuario actualmente logueado
+    private suspend fun getUserDataFromFirestore() {
+        val auth = FirebaseAuth.getInstance()
+        val currentuser = auth.currentUser
         if (currentuser != null) {
             Log.d("get-user", "Current logged User -> ${currentuser.uid}")
         }
-        val db =
-            FirebaseFirestore.getInstance()   //Obtenemos la instasncia del sistema de BDD de Firebase
+        val db = FirebaseFirestore.getInstance()
         state.value = UserState.Loading
-            try {
-                if (currentuser != null) {
-                    val querySnapshot =
-                        db.collection("users").whereEqualTo("user_id", currentuser.uid).get()
-                            .await()
-                    for (doc in querySnapshot.documents) {
-                        val result = doc.toObject(User::class.java)
-                        Log.d("get-user", "User -> $result")
-                        if (result != null) {
-                            user.value = result
-                            state.value = UserState.Success(user.value)
-                            break
-                        }
+        try {
+            if (currentuser != null) {
+                val querySnapshot =
+                    db.collection("users").whereEqualTo("user_id", currentuser.uid).get()
+                        .await()
+                for (doc in querySnapshot.documents) {
+                    val result = doc.toObject(User::class.java)
+                    Log.d("get-user", "User -> $result")
+                    if (result != null) {
+                        user.value = result
+                        state.value = UserState.Success(user.value)
+                        break
                     }
-                } else {
-                    Log.d("get-user", "Current User is null")
                 }
-
-            } catch (e: FirebaseFirestoreException) {
-                Log.d("UserInfo", "UserInfo : Error retrieving user data: $e")
+            } else {
+                Log.d("get-user", "Current User is null")
             }
+
+        } catch (e: FirebaseFirestoreException) {
+            Log.d("UserInfo", "UserInfo : Error retrieving user data: $e")
+        }
     }
 }

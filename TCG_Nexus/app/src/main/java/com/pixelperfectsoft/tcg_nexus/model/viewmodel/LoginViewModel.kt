@@ -57,7 +57,7 @@ class LoginViewModel : ViewModel() {
     private fun createUser(displayName: String?, email: String) {
         val userId = auth.currentUser?.uid
         val user = User(
-            avatar_url = "",
+            avatar_url = "avatars/noavatar.png",
             display_name = displayName.toString(),
             email = email,
             user_id = userId.toString()
