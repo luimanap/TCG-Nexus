@@ -29,12 +29,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
-import com.google.firebase.auth.FirebaseAuth
-import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
-import com.pixelperfectsoft.tcg_nexus.ui.InfoCard
 import com.pixelperfectsoft.tcg_nexus.model.classes.Card
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.CollectionViewModel
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.DataState
+import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
+import com.pixelperfectsoft.tcg_nexus.ui.InfoCard
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 
 @Composable
@@ -55,7 +54,10 @@ fun Collection(navController: NavHostController, viewModel: CollectionViewModel 
             .background(brush = createGradientBrush(backcolors))
     ) {
         //Collection info
-        Column(modifier = Modifier.padding(horizontal = 16.dp),horizontalAlignment = Alignment.CenterHorizontally) {
+        Column(
+            modifier = Modifier.padding(horizontal = 16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
             Spacer(modifier = Modifier.fillMaxHeight(0.05f))
             InfoCard(
                 text = "Cards in collection",
@@ -86,7 +88,7 @@ fun LoadCollection(
         is DataState.Loading -> {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text(text = "Cargando colección de ${FirebaseAuth.getInstance().currentUser?.displayName}...")
+                    Text(text = "Loading your collection...")
                     Spacer(modifier = Modifier.height(16.dp))
                     LinearProgressIndicator()
                 }
@@ -95,7 +97,7 @@ fun LoadCollection(
 
         is DataState.Success -> {
             totalcards.intValue = result.data.size
-            Log.d("DataState success","Datastate success")
+            Log.d("DataState success", "Datastate success")
             ShowCollectionLazyList(
                 navController = navController,
                 viewModel = viewModel,
@@ -111,7 +113,7 @@ fun LoadCollection(
 
         is DataState.Empty -> {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                Text(text = "No hay cartas en la coleccion")
+                Text(text = "Collection is empty")
             }
         }
     }

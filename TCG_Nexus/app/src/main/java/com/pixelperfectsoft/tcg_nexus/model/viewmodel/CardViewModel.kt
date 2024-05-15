@@ -40,7 +40,7 @@ class CardViewModel(val context: Context) : ViewModel() {
         return jsonStr
     }
 
-    fun loadjson() {
+    private fun loadjson() {
         Log.d("search", "array length -> ${tempList.size}")
         tempList.removeAll(tempList)
         Log.d("search", "array length -> ${tempList.size}")
@@ -93,14 +93,14 @@ class CardViewModel(val context: Context) : ViewModel() {
         response.value = DataState.Success(searchlist)
     }
 
-    fun resetSearch(context: Context) {
+    fun resetSearch() {
         response.value = DataState.Loading
         searchkey.value = ""
         Log.d("resetSearch", "Search reset is done")
         load()
     }
 
-    fun prevPage(context: Context) {
+    fun prevPage() {
         if (start != 0) {
             start -= 18
             end -= 18
@@ -108,7 +108,7 @@ class CardViewModel(val context: Context) : ViewModel() {
         }
     }
 
-    fun nextPage(context: Context) {
+    fun nextPage() {
         if (start + 18 < tempList.size) {
             start += 18
             end += 18
