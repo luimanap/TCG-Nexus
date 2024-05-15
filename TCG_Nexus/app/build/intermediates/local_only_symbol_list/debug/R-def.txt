@@ -41,6 +41,7 @@ drawable settings
 drawable sword
 drawable theme
 drawable woodtable
+font lobster
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round

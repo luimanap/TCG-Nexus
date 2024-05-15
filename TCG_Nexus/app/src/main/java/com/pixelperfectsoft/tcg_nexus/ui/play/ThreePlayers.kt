@@ -8,12 +8,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.constraintlayout.compose.ConstraintLayout
-import androidx.navigation.NavController
-import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
+import com.pixelperfectsoft.tcg_nexus.ui.GameBackgroundImage
 
 @Composable
 fun Threeplayers(life: Int) {
-    BackgroundImage()
+    GameBackgroundImage()
     ConstraintLayout(Modifier.fillMaxSize()) {
         val (p1, p2, p3) = createRefs()
         Box(modifier = Modifier

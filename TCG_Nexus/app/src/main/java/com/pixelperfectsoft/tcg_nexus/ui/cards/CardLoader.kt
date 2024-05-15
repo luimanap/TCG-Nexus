@@ -102,13 +102,13 @@ fun PageButtons(viewModel: CardViewModel, context: Context) {
         Spacer(modifier = Modifier.size(8.dp))
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
             Button(onClick = {
-                viewModel.prevPage(context)
+                viewModel.prevPage()
             }) {
                 Text(text = "<")
             }
             Spacer(modifier = Modifier.width(16.dp))
             Button(onClick = {
-                viewModel.nextPage(context)
+                viewModel.nextPage()
             }) {
                 Text(text = ">")
             }

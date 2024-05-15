@@ -488,7 +488,7 @@ fun FilterModalSheet(
                         }
                     } else {
                         when (screen) {
-                            "cards" -> cardviewmodel?.resetSearch(context)
+                            "cards" -> cardviewmodel?.resetSearch()
                             "col" -> colviewmodel?.resetSearch()
                         }
                     }

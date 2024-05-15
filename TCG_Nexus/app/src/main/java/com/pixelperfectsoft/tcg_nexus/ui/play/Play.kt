@@ -1,14 +1,18 @@
 package com.pixelperfectsoft.tcg_nexus.ui.play
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
@@ -30,11 +34,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.pixelperfectsoft.tcg_nexus.R
 import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 
@@ -45,6 +52,7 @@ data class Game(
 )
 
 
+@RequiresApi(Build.VERSION_CODES.Q)
 @Composable
 fun PlayScreen(navController: NavController) {
     val backcolors = listOf(
@@ -56,6 +64,7 @@ fun PlayScreen(navController: NavController) {
         Color.White,
         Color.White,
     )
+    val lobster = FontFamily(Font(R.font.lobster, FontWeight.Normal),)
     val game = Game(rememberSaveable {
         mutableIntStateOf(0)
     }, rememberSaveable {
@@ -68,20 +77,22 @@ fun PlayScreen(navController: NavController) {
             .background(brush = createGradientBrush(backcolors)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Spacer(modifier = Modifier.size(80.dp))
+        Spacer(modifier = Modifier.size(140.dp))
         Text(
-            text = "Let´s Play The Card Games That You Like!",
+            text = "Let´s Make Magic!",
             color = MaterialTheme.colorScheme.primary,
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.Bold,
+            fontFamily = lobster,
             style = TextStyle(
-                fontSize = 60.sp,
-
+                fontSize = 70.sp,
                 )
         )
-        Spacer(modifier = Modifier.size(35.dp))
-        SelectPlayers(game)
-        SelectStartLife(game)
+        Spacer(modifier = Modifier.size(75.dp))
+        Row {
+            SelectPlayers(game)
+            SelectStartLife(game)
+        }
         Spacer(modifier = Modifier.size(30.dp))
         StartButton(navController, game.life.value, game.numplayers.value)
     }
@@ -140,7 +151,7 @@ fun SelectStartLife(game: Game) {
     val elements = listOf("20", "30", "40", "50", "60")
     Column(Modifier.padding(horizontal = 40.dp, vertical = 10.dp)) {
         Text(
-            text = "Life total:", style = TextStyle(
+            text = "Life total", style = TextStyle(
                 color = Color.Black,
                 fontSize = 16.sp
             ),
@@ -156,16 +167,23 @@ fun SelectStartLife(game: Game) {
                     .fillMaxWidth(),
                 colors = OutlinedTextFieldDefaults.colors(
                     disabledBorderColor = Color.Black, disabledTextColor = Color.Black
-                ))
+                ),
+                trailingIcon = {
+                    Icon(
+                        imageVector = Icons.Filled.ArrowDropDown,
+                        contentDescription = "",
+                        tint = Color.Black
+                    )
+                })
             DropdownMenu(
                 expanded = isexpanded,
                 onDismissRequest = { isexpanded = false },
                 modifier = Modifier
-                    .fillMaxWidth()
+                    .fillMaxWidth(0.35f)
             ) {
                 for (i in elements) {
                     DropdownMenuItem(
-                        modifier = Modifier.padding(horizontal = 40.dp),
+                        modifier = Modifier.padding(horizontal = 20.dp),
                         text = { Text(text = i) },
                         onClick = {
                             isexpanded = false; lifevalue = i
@@ -185,9 +203,9 @@ fun SelectPlayers(game: Game) {
     val elements =
         listOf("2 Players", "3 Players", "4 Players")
 
-    Column(Modifier.padding(horizontal = 40.dp, vertical = 10.dp)) {
+    Column(Modifier.padding(vertical = 10.dp).padding(start = 40.dp)) {
         Text(
-            text = "Players:", style = TextStyle(
+            text = "Players", style = TextStyle(
                 color = Color.Black,
                 fontSize = 16.sp
             ),
@@ -200,19 +218,26 @@ fun SelectPlayers(game: Game) {
                 readOnly = true,
                 modifier = Modifier
                     .clickable { isexpanded = true }
-                    .fillMaxWidth(),
+                    .fillMaxWidth(0.4f),
                 colors = OutlinedTextFieldDefaults.colors(
                     disabledBorderColor = Color.Black, disabledTextColor = Color.Black
-                ))
+                ),
+                trailingIcon = {
+                    Icon(
+                        imageVector = Icons.Filled.ArrowDropDown,
+                        contentDescription = "",
+                        tint = Color.Black
+                    )
+                })
             DropdownMenu(
                 expanded = isexpanded,
                 onDismissRequest = { isexpanded = false },
                 modifier = Modifier
-                    .fillMaxWidth()
+                    .fillMaxWidth(0.35f)
             ) {
                 for (i in elements) {
                     DropdownMenuItem(text = { Text(text = i) },
-                        modifier = Modifier.padding(horizontal = 40.dp),
+                        modifier = Modifier.padding(horizontal = 20.dp),
                         onClick = {
                             isexpanded = false
                             playersvalue = i

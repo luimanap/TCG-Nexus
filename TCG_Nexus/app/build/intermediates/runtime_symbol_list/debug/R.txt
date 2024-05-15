@@ -182,6 +182,7 @@ int drawable settings 0x7f060047
 int drawable sword 0x7f060048
 int drawable theme 0x7f060049
 int drawable woodtable 0x7f06004a
+int font lobster 0x7f100000
 int id accessibility_action_clickable_span 0x7f070000
 int id accessibility_custom_action_0 0x7f070001
 int id accessibility_custom_action_1 0x7f070002

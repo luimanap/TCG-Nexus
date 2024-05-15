@@ -138,7 +138,7 @@ fun ProfileSelector(
     navcontroller: NavHostController,
 ) {
     Dialog(onDismissRequest = { show.value = false }) {
-        var bitmapState = remember { mutableStateOf<Bitmap?>(null) }
+        val bitmapState = remember { mutableStateOf<Bitmap?>(null) }
         val context = LocalContext.current
         val bitmapImages = mutableListOf<Bitmap?>()
         val avatarImages = mutableListOf<String>()

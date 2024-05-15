@@ -57,17 +57,15 @@ class LoginViewModel : ViewModel() {
     private fun createUser(displayName: String?, email: String) {
         val userId = auth.currentUser?.uid
         val user = User(
-            avatar_url = "avatars/noavatar.png",
+            avatar_url = "noavatar.png",
             display_name = displayName.toString(),
             email = email,
             user_id = userId.toString()
         ).toMap()
-
         FirebaseFirestore.getInstance().collection("users").add(user).addOnSuccessListener {
             Log.d("users", "createUser: Display name ${it.id} created successfully")
         }.addOnFailureListener {
             Log.d("users", "createUser: Unexpected error creating user $it")
         }
-
     }
 }

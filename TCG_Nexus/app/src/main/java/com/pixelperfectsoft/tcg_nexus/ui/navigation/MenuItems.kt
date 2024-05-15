@@ -1,5 +1,7 @@
 package com.pixelperfectsoft.tcg_nexus.ui.navigation
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -48,7 +50,7 @@ data class MenuItems(
 
 object MyScreenRoutes {
     const val SETTINGS = "settings"
-    const val LOGIN: String = "login"
+    const val LOGIN = "login"
     const val HOME = "home"
     const val SEARCH = "search"
     const val COLLECTION = "collection"
@@ -151,6 +153,7 @@ val GUEST_MENU_ITEMS = listOf(
 )
 
 
+@RequiresApi(Build.VERSION_CODES.Q)
 @Composable
 fun BottomBarNaviContainer(
     navController: NavHostController,

@@ -12,16 +12,16 @@
         "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_heart.xml.flat",
-        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\heart.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-hdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_heart.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\heart.xml"
     },
     {
         "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
@@ -78,6 +78,10 @@
     {
         "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_personcirclesharp.xml.flat",
         "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\personcirclesharp.xml"
+    },
+    {
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/font_lobster.ttf.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/font/lobster.ttf"
     },
     {
         "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_ic_launcher_foreground.xml.flat",
@@ -164,10 +168,6 @@
         "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_news.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/news.xml"
-    },
-    {
         "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_searchicon.xml.flat",
         "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\searchicon.xml"
     },
@@ -178,6 +178,10 @@
     {
         "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_theme.xml.flat",
         "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\theme.xml"
+    },
+    {
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_news.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\news.xml"
     },
     {
         "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_sword.xml.flat",
