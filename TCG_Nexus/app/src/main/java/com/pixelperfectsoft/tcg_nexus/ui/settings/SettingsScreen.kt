@@ -142,14 +142,14 @@ fun AboutDialog(aboutdialog: MutableState<Boolean>) {
                         textAlign = TextAlign.Center
                     )
                     Text(
-                        text = "Developed by Luis Vaquero Gil from PixelPerfectSoftware",
+                        text = "Developed by Luis Vaquero Gil from DiceCraftersStudio",
                         modifier = Modifier.padding(top = 16.dp, bottom = 8.dp),
                         fontWeight = FontWeight.Bold,
                         textAlign = TextAlign.Center
                     )
                     HorizontalDivider(modifier = Modifier.fillMaxWidth(0.5f))
                     Text(
-                        text = "TCG Nexus and PixelPerfectSoftware are not affiliated with Wizards " +
+                        text = "TCG Nexus and DiceCraftersStudio are not affiliated with Wizards " +
                                 "of the Coast LLC.",
                         modifier = Modifier.padding(top = 16.dp),
                         fontWeight = FontWeight.Normal,

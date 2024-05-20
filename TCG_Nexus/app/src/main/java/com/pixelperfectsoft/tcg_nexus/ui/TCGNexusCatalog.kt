@@ -49,12 +49,11 @@ import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 fun BackgroundImage() {
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
-            painter = painterResource(id = R.drawable.dragon_background),
+            painter = painterResource(id = R.drawable.demon_background),
             contentDescription = "Background Image",
             contentScale = ContentScale.Crop,
             modifier = Modifier
                 .matchParentSize()
-                .blur(radius = 6.dp)
         )
     }
 }
