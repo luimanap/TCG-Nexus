@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: url('images/demon_background.jpeg') no-repeat fixed;
+            background: url('images/demon_background.jpeg') no-repeat center top fixed;
             background-size: cover;
             position: relative;
         }
@@ -48,7 +48,7 @@
         }
         .logo{
             margin: 30px;
-            width: 25%;
+            width: 240px;
             height: auto;
         }
         .hero {
@@ -59,29 +59,39 @@
             z-index: 1;
         }
         .features {
-            padding: 50px 0;
-            background: rgba(1, 17, 41, 0.95); /* Cambio de color a azul muy oscuro */
+            padding: 5% 0;
+            background: rgba(1, 17, 41, 0.95);
             position: relative;
             z-index: 1;
-            color: white; /* Cambio de color del texto a blanco */
+            color: white;
         }
         .screenshots {
-            padding: 50px 0;
-            background: rgba(1, 17, 41, 0.95); /* Cambio de color a azul muy oscuro */
+            padding: 5% 0;
+            background: rgba(1, 17, 41, 0.95);
             position: relative;
             z-index: 1;
-            color: white; /* Cambio de color del texto a blanco */
-        }
-        .carousel-item {
-            display: flex;
-            flex-direction: row; /* Cambio para que las imágenes se alineen verticalmente */
-            align-items: center; /* Centra las imágenes verticalmente */
-            justify-content: center;
-            height: 500px; /* Altura del carrusel */
+            color: white;
+        
         }
         .carousel-item img {
-            max-height: 80%; /* Ajusta la altura máxima de las imágenes */
-            width: auto; /* Ajusta automáticamente el ancho en función de la altura */
+            margin: 0 auto;
+            margin-bottom: 50px;
+            height: auto;
+            max-height: 500px;
+            
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            #slogan {
+                font-size: 18px;
+            }
+            .btn-primary {
+                margin: 10px 0;
+                display: block;
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -117,7 +127,16 @@
                 <ol class="carousel-indicators">
                     <li data-target="#screenshotCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#screenshotCarousel" data-slide-to="1"></li>
-                    <!-- Añade más indicadores aquí si tienes más grupos de imágenes -->
+                    <li data-target="#screenshotCarousel" data-slide-to="2"></li>
+                    <li data-target="#screenshotCarousel" data-slide-to="3"></li>
+                    <li data-target="#screenshotCarousel" data-slide-to="4"></li>
+                    <li data-target="#screenshotCarousel" data-slide-to="5"></li>
+                    <li data-target="#screenshotCarousel" data-slide-to="6"></li>
+                    <li data-target="#screenshotCarousel" data-slide-to="7"></li>
+                    <li data-target="#screenshotCarousel" data-slide-to="8"></li>
+                    <li data-target="#screenshotCarousel" data-slide-to="9"></li>
+                    <li data-target="#screenshotCarousel" data-slide-to="10"></li>
+                    <li data-target="#screenshotCarousel" data-slide-to="11"></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -127,17 +146,52 @@
                     </div>
                     <div class="carousel-item">
                         <div class="d-flex justify-content-between">
-                            <img src="images/screenshot2.png" class="d-block" alt="Screenshot 1">
+                            <img src="images/screenshot2.png" class="d-block" alt="Screenshot 2">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="d-flex justify-content-between">
-                            <img src="images/screenshot3.png" class="d-block" alt="Screenshot 1">
+                            <img src="images/screenshot3.png" class="d-block" alt="Screenshot 3">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="d-flex justify-content-between">
-                            <img src="images/screenshot4.png" class="d-block" alt="Screenshot 1">
+                            <img src="images/screenshot4.png" class="d-block" alt="Screenshot 4">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between">
+                            <img src="images/screenshot5.png" class="d-block" alt="Screenshot 5">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between">
+                            <img src="images/screenshot6.png" class="d-block" alt="Screenshot 6">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between">
+                            <img src="images/screenshot7.png" class="d-block" alt="Screenshot 7">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between">
+                            <img src="images/screenshot8.png" class="d-block" alt="Screenshot 8">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between">
+                            <img src="images/screenshot9.png" class="d-block" alt="Screenshot 9">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between">
+                            <img src="images/screenshot10.png" class="d-block" alt="Screenshot 10">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-between">
+                            <img src="images/screenshot11.png" class="d-block" alt="Screenshot 11">
                         </div>
                     </div>
                 </div>
