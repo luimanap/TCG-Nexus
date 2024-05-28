@@ -23,21 +23,25 @@ Magic: The Gathering stands as one of the most iconic and enduring collectible c
 ## App Guide
 
 ### - Search in card database
+You can simply search for any card and view details by tapping on it. You can easily add that card to your collection by tapping in "Add to collection"
 ![image](https://github.com/luimanap/TCG_Nexus_/assets/113647045/a483d875-aa6f-4049-80f5-1cfc98b806de)![image](https://github.com/luimanap/TCG_Nexus_/assets/113647045/74e71262-4cda-484e-8e39-f897f57e3bcb)![image](https://github.com/luimanap/TCG_Nexus_/assets/113647045/9c2bba3f-2106-430c-921c-1daf6c149953)
 
 ### - Log In and Create your account
 ![image](https://github.com/luimanap/TCG_Nexus_/assets/113647045/ea9415ab-a83a-418f-9a2a-983f1d39ae72)![image](https://github.com/luimanap/TCG_Nexus_/assets/113647045/c0422a35-f7d4-4713-94e8-10f002f76eaf)
 
 ### - View your collection
+See details of all cards in your collection by tapping on any card. You can search for any card like in Search tab
 ![image](https://github.com/luimanap/TCG_Nexus_/assets/113647045/3d782d3e-57dd-4325-8856-4055184f6d9f)![image](https://github.com/luimanap/TCG_Nexus_/assets/113647045/f32f5d4b-b14e-478e-8b03-514dc1591b06)
 
 ### - Personalize your profile
+You can tap on your profile image to change for any of the default avatars in list.
 ![image](https://github.com/luimanap/TCG_Nexus_/assets/113647045/62bb748f-9f22-4462-8969-97bb8bf43ee7)![image](https://github.com/luimanap/TCG_Nexus_/assets/113647045/25fe6bb9-2b0b-44c8-b3f8-8dfe78b766e5)
 
 ### - Read the latest news
 ![image](https://github.com/luimanap/TCG_Nexus_/assets/113647045/a8041761-da35-41c6-a28b-d56639d3c184)
 
 ### - Be the shell of the game with the life counter
+Select players, starting life, and play! Life controls are simple, tap in the right to add life, and tap in the left to remove it.
 ![image](https://github.com/luimanap/TCG_Nexus_/assets/113647045/b04c9a13-07c6-47ac-81a2-b4b5c201cb1d)
 
 
