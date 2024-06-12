@@ -219,4 +219,18 @@ class CollectionViewModel : ViewModel() {
         }
         updateCollection(collection.value.cards)
     }
+    suspend fun deleteCollection(){
+        val auth = FirebaseAuth.getInstance()
+        val currentuser = auth.currentUser
+        val db = FirebaseFirestore.getInstance()
+        if (currentuser != null) {
+            val snapshot = db.collection("collections").whereEqualTo("user_id", currentuser.uid).get().await()
+            for (i in snapshot.documents){
+                i.reference.delete().addOnFailureListener {
+                    Log.e("Delete", "User data delete failed by ${it.message}")
+                }
+            }
+
+        }
+    }
 }

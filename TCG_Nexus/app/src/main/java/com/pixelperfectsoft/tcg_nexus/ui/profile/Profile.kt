@@ -103,7 +103,7 @@ fun EditProfile() {
             pass.value = it
         },
         supporting_text = "Incorrect password",
-        iserror = false
+        iserror = false, modifier = Modifier.padding(horizontal = 30.dp)
     )
     MyPasswordField(
         data = pass.value,
@@ -112,7 +112,7 @@ fun EditProfile() {
             newpass.value = it
         },
         supporting_text = "Incorrect password",
-        iserror = false
+        iserror = false, modifier = Modifier.padding(horizontal = 30.dp)
     )
 
     Spacer(Modifier.size(8.dp))

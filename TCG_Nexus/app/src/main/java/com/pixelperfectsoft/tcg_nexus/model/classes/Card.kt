@@ -17,7 +17,6 @@ class Card(
     var produced_mana: Any = "",
     var purchase_uris_cardmarket: Any = "",
     var rarity: Any = "",
-    var set: Any = "",
     var set_id: Any = "",
     var set_name: Any = "",
     var toughness: Any = "",
@@ -29,7 +28,7 @@ class Card(
                 "$image_uris_normal|$mana_cost|$name|$oracle_id|" +
                 "$oracle_text|$power|$prices_eur|$prices_eur_foil|" +
                 "$produced_mana|$purchase_uris_cardmarket|$rarity|" +
-                "$set|$set_id|$set_name|$toughness|$type_line|$loyalty"
+                "$set_id|$set_name|$toughness|$type_line|$loyalty"
     }
 
     companion object{
@@ -52,12 +51,11 @@ class Card(
                 produced_mana = split[13],
                 purchase_uris_cardmarket = split[14],
                 rarity = split[15],
-                set = split[16],
-                set_id = split[17],
-                set_name = split[18],
-                toughness = split[19],
-                type_line = split[20],
-                loyalty = split[21])
+                set_id = split[16],
+                set_name = split[17],
+                toughness = split[18],
+                type_line = split[19],
+                loyalty = split[20])
         }
     }
     /*fun getrarities(): String {

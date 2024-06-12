@@ -9,6 +9,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreException
 import com.pixelperfectsoft.tcg_nexus.model.classes.User
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 
@@ -52,6 +53,21 @@ class UserDataViewModel : ViewModel() {
 
         } catch (e: FirebaseFirestoreException) {
             Log.d("UserInfo", "UserInfo : Error retrieving user data: $e")
+        }
+    }
+
+    suspend fun deleteUser(){
+        val auth = FirebaseAuth.getInstance()
+        val currentuser = auth.currentUser
+        val db = FirebaseFirestore.getInstance()
+        if (currentuser != null) {
+            val snapshot = db.collection("users").whereEqualTo("user_id", currentuser.uid).get().await()
+                for (i in snapshot.documents){
+                    i.reference.delete().addOnFailureListener {
+                        Log.e("Delete", "User data delete failed by ${it.message}")
+                    }
+                }
+
         }
     }
 }

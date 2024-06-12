@@ -48,8 +48,8 @@ fun RegisterScreen(
     navController: NavController,
     viewModel: LoginViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
 ) {
-    var termschecked by rememberSaveable {mutableStateOf(false)}
-    var policychecked by rememberSaveable {mutableStateOf(false)}
+    var termschecked by rememberSaveable { mutableStateOf(false) }
+    var policychecked by rememberSaveable { mutableStateOf(false) }
     val backcolors = listOf(
         Color.Transparent,
         Color.White,
@@ -75,22 +75,39 @@ fun RegisterScreen(
         Spacer(Modifier.size(35.dp))
         MyLogo(height = 100)
         Spacer(Modifier.size(20.dp))
-        Text(text = "CREATE ACCOUNT", style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 25.sp))
+        Text(
+            text = "CREATE ACCOUNT",
+            style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 25.sp)
+        )
 
 
         //Name Input
-        MyTextField(data = userinput, label = "User", onvaluechange = { userinput = it },supportingText = "", iserror = error)
+        MyTextField(
+            data = userinput,
+            label = "User",
+            onvaluechange = { userinput = it },
+            supportingText = "",
+            iserror = error
+        )
 
 
         //Email Input
         MyTextField(
             data = emailinput,
             label = "Email",
-            onvaluechange = { emailinput = it },supportingText = "", iserror = error)
+            onvaluechange = { emailinput = it }, supportingText = "", iserror = error
+        )
 
         //Password Input
 
-        MyPasswordField(data = passinput, label = "Password", onvaluechange = { passinput = it }, supporting_text = "", iserror = error)
+        MyPasswordField(
+            data = passinput,
+            label = "Password",
+            onvaluechange = { passinput = it },
+            supporting_text = "",
+            iserror = error,
+            modifier = Modifier.padding(horizontal = 30.dp)
+        )
         //Spacer(Modifier.size(8.dp))
 
         //Confirm Password Input
@@ -98,10 +115,11 @@ fun RegisterScreen(
             data = confpassinput,
             label = "Confirm Pasword",
             onvaluechange = { confpassinput = it },
-            supporting_text = "", iserror = error)
+            supporting_text = "", iserror = error, modifier = Modifier.padding(horizontal = 30.dp)
+        )
 
         //Checkboxes
-        Box(){
+        Box() {
             Column {
                 termschecked = myTextCheckBox("I accept the terms and conditions")
                 policychecked = myTextCheckBox("I accept the Privacy Policy")

@@ -135,7 +135,6 @@ fun CardDialog(
                         fontWeight = FontWeight.Bold,
                         style = TextStyle(
                             fontSize = 28.sp,
-
                             )
                     )
                     Text(
@@ -181,6 +180,11 @@ fun CardDialog(
                                     0f
                                 }
                             )
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = card.set_name.toString().replace("�", "-"),
+                        fontWeight = FontWeight.SemiBold
                     )
                     HorizontalDivider(
                         thickness = 1.5.dp,
@@ -347,7 +351,7 @@ fun CardDialog(
                         ) {
                             Text(text = "Buy in CardMarket")
                         }
-                        Spacer(modifier = Modifier.height(24.dp))
+                        Spacer(modifier = Modifier.height(50.dp))
                     }
                 }
             })
@@ -496,6 +500,7 @@ fun FilterModalSheet(
                 }) {
                     Text(text = "Search")
                 }
+                Spacer(modifier = Modifier.height(50.dp))
             }
         })
 }

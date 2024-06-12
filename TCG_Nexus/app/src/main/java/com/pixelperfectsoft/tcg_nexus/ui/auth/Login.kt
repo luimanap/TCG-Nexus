@@ -109,7 +109,10 @@ fun LoginForm(navController: NavController, viewModel: LoginViewModel) {
         label = "Password",
         onvaluechange = { passinput = it; error = false }, //Siempre que escribamos algo el boolean error se va a poner en false
         supporting_text = "Incorrect password",
-        iserror = error)
+        iserror = error,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 30.dp))
 
     //Boton de contraseña olvidada
     ForgottenPasswordButton()

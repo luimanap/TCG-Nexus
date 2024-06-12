@@ -198,6 +198,7 @@ fun MyTextField(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyPasswordField(
+    modifier: Modifier,
     supporting_text: String,
     data: String,
     label: String,
@@ -217,9 +218,7 @@ fun MyPasswordField(
         label = {
             Text(text = label)
         },
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(start = 30.dp, end = 30.dp),
+        modifier = modifier,
         shape = RoundedCornerShape(45.dp),
         singleLine = true,
         visualTransformation = if (passwordVisibility) { //Si el boolean passwordVisibility esta en true, los caracteres van a poder ser legibles, pero si no, se va a aplicar una transformacion a los mismos
