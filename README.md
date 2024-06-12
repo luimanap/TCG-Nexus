@@ -1,5 +1,4 @@
 # TCG NEXUS
-<strong>Welcome to the repository for my Degree Final Project!</strong>🌟 <br/>
 This project is dedicated to the development of a mobile application tailored for managing decks, collections, and matches of collectible card games, with a primary focus on the renowned game, Magic: The Gathering. The app is meticulously crafted to address the intricate needs and demands of players within this expansive and dynamic Trading Card Game (TCG) community.
 
 ## Project Overview
