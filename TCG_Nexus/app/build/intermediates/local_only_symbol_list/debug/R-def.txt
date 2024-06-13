@@ -15,6 +15,7 @@ drawable card_back
 drawable card_back_small
 drawable card_back_unavailable
 drawable cards
+drawable demon_background
 drawable dice_icon
 drawable dragon_background
 drawable heart

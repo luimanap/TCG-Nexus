@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="common">#00000000</color>
+    <color name="mythic">#b53f04</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="rare">#e6cd8c</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="uncommon">#b9dceb</color>
+    <string name="app_name">TCG Nexus</string>
+    <string name="collection">Collection</string>
+    <string name="decks">Decks</string>
+    <string name="gcm_defaultSenderId" translatable="false">1028128353809</string>
+    <string name="google_api_key" translatable="false">AIzaSyDJamItnNVD219tDxBVMJ8ApPmlldPScas</string>
+    <string name="google_app_id" translatable="false">1:1028128353809:android:e712058f6f9033dd61cbb0</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDJamItnNVD219tDxBVMJ8ApPmlldPScas</string>
+    <string name="google_storage_bucket" translatable="false">tcg-nexus.appspot.com</string>
+    <string name="home">Home</string>
+    <string name="login">Log In</string>
+    <string name="play">Play</string>
+    <string name="profile">Profile</string>
+    <string name="project_id" translatable="false">tcg-nexus</string>
+    <string name="settings">Settings</string>
+    <style name="Theme.Pruebas_App_TFG" parent="android:Theme.Material.Light.NoActionBar"/>
+</resources>

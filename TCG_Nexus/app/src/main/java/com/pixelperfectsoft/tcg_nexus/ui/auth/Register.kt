@@ -21,8 +21,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -57,7 +59,11 @@ fun RegisterScreen(
         Color.White,
         Color.White,
     )
-    val error by rememberSaveable { mutableStateOf(false) }
+    var passerror by rememberSaveable { mutableStateOf(false) }
+    var confpasserror by rememberSaveable { mutableStateOf(false) }
+    var termserror = rememberSaveable { mutableStateOf(false) }
+    var policyerror = rememberSaveable { mutableStateOf(false) }
+    var emailerror = rememberSaveable { mutableStateOf(false) }
     var userinput by rememberSaveable { mutableStateOf("") }
     var emailinput by rememberSaveable { mutableStateOf("") }
     var passinput by rememberSaveable { mutableStateOf("") }
@@ -87,7 +93,7 @@ fun RegisterScreen(
             label = "User",
             onvaluechange = { userinput = it },
             supportingText = "",
-            iserror = error
+            iserror = passerror
         )
 
 
@@ -95,7 +101,7 @@ fun RegisterScreen(
         MyTextField(
             data = emailinput,
             label = "Email",
-            onvaluechange = { emailinput = it }, supportingText = "", iserror = error
+            onvaluechange = { emailinput = it }, supportingText = "Badly formatted email", iserror = emailerror.value
         )
 
         //Password Input
@@ -103,27 +109,41 @@ fun RegisterScreen(
         MyPasswordField(
             data = passinput,
             label = "Password",
-            onvaluechange = { passinput = it },
-            supporting_text = "",
-            iserror = error,
-            modifier = Modifier.padding(horizontal = 30.dp)
+            onvaluechange = { passinput = it; passerror = false },
+            supporting_text = "Password must be at least 6 characters",
+            iserror = passerror,
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 30.dp)
         )
         //Spacer(Modifier.size(8.dp))
-
+        PasswordStrengthBar(password = passinput)
         //Confirm Password Input
         MyPasswordField(
             data = confpassinput,
             label = "Confirm Pasword",
-            onvaluechange = { confpassinput = it },
-            supporting_text = "", iserror = error, modifier = Modifier.padding(horizontal = 30.dp)
+            onvaluechange = { confpassinput = it ; confpasserror = false },
+            supporting_text = "Passwords mismatch",
+            iserror = confpasserror,
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 30.dp)
         )
 
         //Checkboxes
-        Box() {
+        Box{
             Column {
-                termschecked = myTextCheckBox("I accept the terms and conditions")
-                policychecked = myTextCheckBox("I accept the Privacy Policy")
-                myTextCheckBox("I would like to receive exclusive offers and promotions")
+                termschecked = myTextCheckBox(
+                    text = "I accept the terms and conditions",
+                    error = termserror,
+                    errortext = "Please accept the terms and conditions"
+                )
+                policychecked = myTextCheckBox(
+                    "I accept the Privacy Policy",
+                    error = policyerror,
+                    errortext = "Please accept the Privacy Policy"
+                )
+                myTextCheckBox(
+                    "I would like to receive exclusive offers and promotions",
+                    error = rememberSaveable{mutableStateOf(false)},
+                    errortext = ""
+                )
             }
         }
         Spacer(modifier = Modifier.size(8.dp))
@@ -132,7 +152,23 @@ fun RegisterScreen(
         MyButton(
             text = "Create Account",
             onclick = {
-                if (passinput == confpassinput && termschecked && policychecked) {
+                if(!isValidEmail(emailinput)){
+                    emailerror.value = true
+                }
+                if (passinput.length < 6) {
+                    passerror = true
+                }
+                if (passinput != confpassinput) {
+                    confpasserror = true
+                }
+                if (!termschecked) {
+                    termserror.value = true
+                }
+                if (!policychecked) {
+                    policyerror.value = true
+                }
+
+                if (!emailerror.value && !passerror && !confpasserror && !termserror.value && !policyerror.value) {
                     viewModel.createUserAccount(userinput, emailinput, passinput) {
                         navController.navigate(MyScreenRoutes.PROFILE)
                     }
@@ -172,22 +208,32 @@ fun RegisterScreen(
 }
 
 @Composable
-fun myTextCheckBox(text: String): Boolean {
+fun myTextCheckBox(text: String, error: MutableState<Boolean>, errortext: String): Boolean {
     var state by rememberSaveable { mutableStateOf(false) }
     Row(Modifier.padding(start = 30.dp, end = 30.dp)) {
         Checkbox(
-            checked = state, onCheckedChange = { state = !state }, colors = CheckboxDefaults.colors(
+            checked = state, onCheckedChange = { state = !state; error.value = false }, colors = CheckboxDefaults.colors(
                 uncheckedColor = Color.Black,
                 checkedColor = Color.Blue,
                 checkmarkColor = Color.White
             )
         )
         Spacer(Modifier.width(8.dp))
-        Text(
-            text = text,
-            style = TextStyle(color = Color.Black),
-            modifier = Modifier.align(Alignment.CenterVertically)
-        )
+        Column(modifier = Modifier.align(Alignment.CenterVertically)) {
+            Text(
+                text = text,
+                style = TextStyle(color = Color.Black),
+            )
+            if (error.value) {
+                Text(text = errortext, style = TextStyle(color = Color.Red, fontSize = 12.sp))
+            }
+        }
+
     }
     return state
+}
+
+fun isValidEmail(email: String): Boolean {
+    val emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$".toRegex()
+    return email.matches(emailRegex)
 }

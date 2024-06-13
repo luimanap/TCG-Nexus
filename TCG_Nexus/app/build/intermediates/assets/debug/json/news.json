@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "image": "images/news/bloomburrow.jpg",
+    "title": "Bloomburrow Spoilers",
+    "link": "https://www.mtggoldfish.com/spoilers/Bloomburrow#paper",
+    "provider": "MTGGOLDFISH",
+    "date": "Aug 2, 2024"
+  },
+  {
+    "id": 2,
+    "image": "images/news/assassinscreed.jpg",
+    "title": "Assassin's Creed Spoilers",
+    "link": "https://www.mtggoldfish.com/spoilers/Assassins+Creed#paper",
+    "provider": "MTGGOLDFISH",
+    "date": "Jul 5, 2024"
+  },
+  {
+    "id": 3,
+    "image": "images/news/bebop.jpg",
+    "title": "Cowboy Bebop Collaboration Promo Cards",
+    "link": "https://magic.wizards.com/en/news/announcements/announcing-cowboy-bebop-collaboration-promo-cards",
+    "provider": "WIZARDS OF THE COAST",
+    "date": "Apr 22, 2024"
+  },
+  {
+    "id": 4,
+    "image": "images/news/outlaws.jpg",
+    "title": "Outlaws of Thunder Junction Spoilers",
+    "link": "https://www.mtggoldfish.com/spoilers/Outlaws+of+Thunder+Junction#paper",
+    "provider": "MTGGOLDFISH",
+    "date": "Apr 12, 2024"
+  },
+  {
+    "id": 5,
+    "image": "images/news/secretlairfallout.jpg",
+    "title": "Secret Lair Equinox Superdrop 2024",
+    "link": "https://www.mtggoldfish.com/spoilers/Outlaws+of+Thunder+Junction#paper",
+    "provider": "WIZARDS OF THE COAST",
+    "date": "Apr 5, 2024"
+  },
+  {
+    "id": 6,
+    "image": "images/news/fallout.jpg",
+    "title": "Fallout Spoilers",
+    "link": "https://www.mtggoldfish.com/spoilers/Fallout#paper",
+    "provider": "MTGGOLDFISH",
+    "date": "Mar 8, 2024"
+  },
+  {
+    "id": 7,
+    "image": "images/news/karlovmanor.jpg",
+    "title": "Murders at Karlov Manor Spoilers",
+    "link": "https://www.mtggoldfish.com/spoilers/Ravnica+Murders+at+Karlov+Manor#paper",
+    "provider": "MTGGOLDFISH",
+    "date": "Feb 9, 2024"
+  }
+]

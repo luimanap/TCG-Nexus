@@ -133,6 +133,7 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable demon_background
 drawable dice_icon
 drawable dragon_background
 drawable googleg_disabled_color_18

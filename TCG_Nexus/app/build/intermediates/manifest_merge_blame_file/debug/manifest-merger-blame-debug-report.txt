@@ -9,8 +9,8 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:4:5-67
-11-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:4:22-64
+11-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:4:5-67
+11-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:4:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 12-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\luisv\.gradle\caches\transforms-3\466c6369f241778d29e62dbc72e945b8\transformed\firebase-auth-23.0.0\AndroidManifest.xml:26:5-79
 12-->[com.google.firebase:firebase-auth:23.0.0] C:\Users\luisv\.gradle\caches\transforms-3\466c6369f241778d29e62dbc72e945b8\transformed\firebase-auth-23.0.0\AndroidManifest.xml:26:22-76
@@ -30,47 +30,47 @@
 19-->[androidx.core:core:1.13.1] C:\Users\luisv\.gradle\caches\transforms-3\a311efe1535ceffa4bdc59510e6ac034\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
 20
 21    <application
-21-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:5:5-26:19
+21-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:5:5-26:19
 22        android:allowBackup="true"
-22-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:6:9-35
+22-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:6:9-35
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 23-->[androidx.core:core:1.13.1] C:\Users\luisv\.gradle\caches\transforms-3\a311efe1535ceffa4bdc59510e6ac034\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 24        android:dataExtractionRules="@xml/data_extraction_rules"
-24-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:7:9-65
+24-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:7:9-65
 25        android:debuggable="true"
 26        android:extractNativeLibs="false"
 27        android:fullBackupContent="@xml/backup_rules"
-27-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:8:9-54
+27-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:8:9-54
 28        android:icon="@mipmap/ic_launcher"
-28-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:9:9-43
+28-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:9:9-43
 29        android:label="@string/app_name"
-29-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:10:9-41
+29-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:10:9-41
 30        android:roundIcon="@mipmap/ic_launcher_round"
-30-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:11:9-54
+30-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:11:9-54
 31        android:supportsRtl="true"
-31-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:12:9-35
+31-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:12:9-35
 32        android:testOnly="true"
 33        android:theme="@style/Theme.Pruebas_App_TFG" >
-33-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:13:9-53
+33-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:13:9-53
 34        <activity
-34-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:15:9-25:20
+34-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:15:9-25:20
 35            android:name="com.pixelperfectsoft.tcg_nexus.MainActivity"
-35-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:16:13-41
+35-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:16:13-41
 36            android:exported="true"
-36-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:17:13-36
+36-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:17:13-36
 37            android:label="@string/app_name"
-37-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:18:13-45
+37-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:18:13-45
 38            android:theme="@style/Theme.Pruebas_App_TFG" >
-38-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:19:13-57
+38-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:19:13-57
 39            <intent-filter>
-39-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:20:13-24:29
+39-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:20:13-24:29
 40                <action android:name="android.intent.action.MAIN" />
-40-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:21:17-69
-40-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:21:25-66
+40-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:21:17-69
+40-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:21:25-66
 41
 42                <category android:name="android.intent.category.LAUNCHER" />
-42-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:23:17-77
-42-->C:\Users\luisv\Documents\GitHub\TCG_NEXUS\TCG_Nexus\app\src\main\AndroidManifest.xml:23:27-74
+42-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:23:17-77
+42-->C:\local-git\Android\TCG-Nexus\TCG_Nexus\app\src\main\AndroidManifest.xml:23:27-74
 43            </intent-filter>
 44        </activity>
 45        <activity
