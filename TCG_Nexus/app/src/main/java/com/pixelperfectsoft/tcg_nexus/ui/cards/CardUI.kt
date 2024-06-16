@@ -63,7 +63,7 @@ import com.pixelperfectsoft.tcg_nexus.R
 import com.pixelperfectsoft.tcg_nexus.model.classes.Card
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.CardViewModel
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.CollectionViewModel
-import com.pixelperfectsoft.tcg_nexus.ui.MyButton
+import com.pixelperfectsoft.tcg_nexus.ui.OutlineButton
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -306,7 +306,7 @@ fun CardDialog(
                     Column {
                         if (dialogplace == "collection") {
 
-                            MyButton(
+                            OutlineButton(
                                 text = "Delete",
                                 onclick = {
                                     collectionViewModel.deleteCardFromCollection(card)
@@ -318,7 +318,7 @@ fun CardDialog(
                                 textcolor = Color.White
                             )
                         } else if (dialogplace == "allcards") {
-                            MyButton(
+                            OutlineButton(
                                 text = "Add to collection",
                                 onclick = {
                                     val collection = collectionViewModel.collection.value.cards
@@ -405,14 +405,14 @@ fun CardItem(
                         placeholder = painterResource(id = R.drawable.card_back_small)
                     )
                 }
-            }
+            }/*
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = card.name.toString(),
                 fontWeight = FontWeight.Bold,
                 fontSize = 15.sp,
                 textAlign = TextAlign.Center
-            )
+            )*/
         }
     }
     CardDialog(
@@ -449,6 +449,7 @@ fun FilterModalSheet(
     val searchinput = rememberSaveable { mutableStateOf("") }
 
     ModalBottomSheet(
+        containerColor = MaterialTheme.colorScheme.surface,
         modifier = Modifier.navigationBarsPadding(),
         onDismissRequest = {
             scope.launch { sheetState.hide() }
@@ -466,11 +467,11 @@ fun FilterModalSheet(
                     singleLine = true,
                     colors = TextFieldDefaults.textFieldColors(
                         containerColor = Color.Transparent,
-                        cursorColor = Color.Black,
-                        focusedTextColor = Color.Black,
-                        unfocusedTextColor = Color.Black,
-                        focusedLabelColor = Color.Black,
-                        focusedIndicatorColor = Color.Black,
+                        cursorColor = MaterialTheme.colorScheme.onBackground,
+                        focusedTextColor = MaterialTheme.colorScheme.onBackground,
+                        unfocusedTextColor = MaterialTheme.colorScheme.onBackground,
+                        focusedLabelColor = MaterialTheme.colorScheme.onBackground,
+                        focusedIndicatorColor = MaterialTheme.colorScheme.onBackground,
                         focusedSupportingTextColor = Color.Red,
                         unfocusedSupportingTextColor = Color.Red
                     ),
@@ -478,7 +479,7 @@ fun FilterModalSheet(
                         Icon(
                             imageVector = Icons.Default.Search,
                             contentDescription = null,
-                            tint = Color.DarkGray
+                            tint = MaterialTheme.colorScheme.onSurface
                         )
                     }
                 )

@@ -24,7 +24,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -36,14 +35,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
-import com.pixelperfectsoft.tcg_nexus.ui.MyButton
-import com.pixelperfectsoft.tcg_nexus.ui.MyCanvasSeparator
-import com.pixelperfectsoft.tcg_nexus.ui.MyPasswordField
-import com.pixelperfectsoft.tcg_nexus.ui.MyTextField
+import com.pixelperfectsoft.tcg_nexus.ui.OutlineButton
+import com.pixelperfectsoft.tcg_nexus.ui.CanvasSeparator
+import com.pixelperfectsoft.tcg_nexus.ui.PasswordField
+import com.pixelperfectsoft.tcg_nexus.ui.Textfield
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.LoginViewModel
-import com.pixelperfectsoft.tcg_nexus.ui.MyLogo
+import com.pixelperfectsoft.tcg_nexus.ui.Logo
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
+import com.pixelperfectsoft.tcg_nexus.ui.isValidEmail
 
 @Composable
 fun RegisterScreen(
@@ -54,10 +54,11 @@ fun RegisterScreen(
     var policychecked by rememberSaveable { mutableStateOf(false) }
     val backcolors = listOf(
         Color.Transparent,
-        Color.White,
-        Color.White,
-        Color.White,
-        Color.White,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+
     )
     var passerror by rememberSaveable { mutableStateOf(false) }
     var confpasserror by rememberSaveable { mutableStateOf(false) }
@@ -79,7 +80,7 @@ fun RegisterScreen(
 
 
         Spacer(Modifier.size(35.dp))
-        MyLogo(height = 100)
+        Logo(height = 100)
         Spacer(Modifier.size(20.dp))
         Text(
             text = "CREATE ACCOUNT",
@@ -87,61 +88,73 @@ fun RegisterScreen(
         )
 
 
-        //Name Input
-        MyTextField(
+        //Username Input
+        Textfield(
             data = userinput,
             label = "User",
             onvaluechange = { userinput = it },
             supportingText = "",
-            iserror = passerror
+            iserror = passerror,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 30.dp),
         )
 
 
         //Email Input
-        MyTextField(
+        Textfield(
             data = emailinput,
             label = "Email",
-            onvaluechange = { emailinput = it }, supportingText = "Badly formatted email", iserror = emailerror.value
+            onvaluechange = { emailinput = it },
+            supportingText = "Badly formatted email",
+            iserror = emailerror.value,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 30.dp),
         )
 
         //Password Input
-
-        MyPasswordField(
+        PasswordField(
             data = passinput,
             label = "Password",
             onvaluechange = { passinput = it; passerror = false },
             supporting_text = "Password must be at least 6 characters",
             iserror = passerror,
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 30.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 30.dp)
         )
-        //Spacer(Modifier.size(8.dp))
+        //Password strenght calculation
         PasswordStrengthBar(password = passinput)
+
         //Confirm Password Input
-        MyPasswordField(
+        PasswordField(
             data = confpassinput,
             label = "Confirm Pasword",
-            onvaluechange = { confpassinput = it ; confpasserror = false },
+            onvaluechange = { confpassinput = it; confpasserror = false },
             supporting_text = "Passwords mismatch",
             iserror = confpasserror,
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 30.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 30.dp)
         )
 
-        //Checkboxes
-        Box{
+        //Terms checkboxes
+        Box {
             Column {
-                termschecked = myTextCheckBox(
+                termschecked = TextCheckBox(
                     text = "I accept the terms and conditions",
                     error = termserror,
                     errortext = "Please accept the terms and conditions"
                 )
-                policychecked = myTextCheckBox(
+                policychecked = TextCheckBox(
                     "I accept the Privacy Policy",
                     error = policyerror,
                     errortext = "Please accept the Privacy Policy"
                 )
-                myTextCheckBox(
+                TextCheckBox(
                     "I would like to receive exclusive offers and promotions",
-                    error = rememberSaveable{mutableStateOf(false)},
+                    error = rememberSaveable { mutableStateOf(false) },
                     errortext = ""
                 )
             }
@@ -149,10 +162,10 @@ fun RegisterScreen(
         Spacer(modifier = Modifier.size(8.dp))
 
         //Register button
-        MyButton(
+        OutlineButton(
             text = "Create Account",
             onclick = {
-                if(!isValidEmail(emailinput)){
+                if (!isValidEmail(emailinput)) {
                     emailerror.value = true
                 }
                 if (passinput.length < 6) {
@@ -181,7 +194,7 @@ fun RegisterScreen(
 
         //Separator
         Spacer(Modifier.size(8.dp))
-        MyCanvasSeparator()
+        CanvasSeparator()
         Spacer(Modifier.size(8.dp))
 
         //Login Button
@@ -190,11 +203,7 @@ fun RegisterScreen(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = 30.dp, end = 30.dp)
-                .border(
-                    5.dp,
-                    MaterialTheme.colorScheme.primary,
-                    shape = CircleShape
-                ),
+                .border(5.dp, MaterialTheme.colorScheme.primary, shape = CircleShape),
             colors = ButtonColors(
                 containerColor = Color.Transparent,
                 contentColor = MaterialTheme.colorScheme.primary,
@@ -208,13 +217,15 @@ fun RegisterScreen(
 }
 
 @Composable
-fun myTextCheckBox(text: String, error: MutableState<Boolean>, errortext: String): Boolean {
+fun TextCheckBox(text: String, error: MutableState<Boolean>, errortext: String): Boolean {
     var state by rememberSaveable { mutableStateOf(false) }
     Row(Modifier.padding(start = 30.dp, end = 30.dp)) {
         Checkbox(
-            checked = state, onCheckedChange = { state = !state; error.value = false }, colors = CheckboxDefaults.colors(
-                uncheckedColor = Color.Black,
-                checkedColor = Color.Blue,
+            checked = state,
+            onCheckedChange = { state = !state; error.value = false },
+            colors = CheckboxDefaults.colors(
+                uncheckedColor = MaterialTheme.colorScheme.onBackground,
+                checkedColor = MaterialTheme.colorScheme.primary,
                 checkmarkColor = Color.White
             )
         )
@@ -222,10 +233,9 @@ fun myTextCheckBox(text: String, error: MutableState<Boolean>, errortext: String
         Column(modifier = Modifier.align(Alignment.CenterVertically)) {
             Text(
                 text = text,
-                style = TextStyle(color = Color.Black),
             )
             if (error.value) {
-                Text(text = errortext, style = TextStyle(color = Color.Red, fontSize = 12.sp))
+                Text(text = errortext, style = TextStyle(color = MaterialTheme.colorScheme.error, fontSize = 12.sp))
             }
         }
 
@@ -233,7 +243,3 @@ fun myTextCheckBox(text: String, error: MutableState<Boolean>, errortext: String
     return state
 }
 
-fun isValidEmail(email: String): Boolean {
-    val emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$".toRegex()
-    return email.matches(emailRegex)
-}

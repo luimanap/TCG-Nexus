@@ -1,202 +1,206 @@
 [
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_rarity_rare.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/rarity_rare.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_logotcgnexus.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\logotcgnexus.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_passwordeyeopen.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/passwordeyeopen.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_logout.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\logout.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_passwordeye.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/passwordeye.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/mipmap-mdpi_ic_launcher_foreground.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/mipmap-mdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_card_back.jpeg.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/card_back.jpeg"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_heart.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\heart.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_loyalty.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/loyalty.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_dice_icon.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/dice_icon.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/mipmap-xhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_rarity_uncommon.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\rarity_uncommon.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_rarity_common.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/rarity_common.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_rarity_mythic.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\rarity_mythic.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/mipmap-xxxhdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/mipmap-xhdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_loyalty.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\loyalty.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_card_back_small.jpeg.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/card_back_small.jpeg"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/xml_data_extraction_rules.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_cards.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\cards.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/mipmap-xxhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_logotcgnexus_new.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\logotcgnexus_new.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_theme.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/theme.xml"
+        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_trash.xml.flat",
+        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/trash.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/mipmap-mdpi/ic_launcher.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_card_back_small.jpeg.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\card_back_small.jpeg"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_albums.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/albums.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_card_back_unavailable.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\card_back_unavailable.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_searchicon.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/searchicon.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_albums.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\albums.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/font_lobster.ttf.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/font/lobster.ttf"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/mipmap-hdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_demon_background.jpeg.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\demon_background.jpeg"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_sword.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/sword.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_woodtable.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\woodtable.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_card_back_unavailable.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/card_back_unavailable.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_personcirclesharp.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\personcirclesharp.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_dice_icon.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\dice_icon.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/mipmap-hdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_demon_background.jpeg.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/demon_background.jpeg"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_card_back.jpeg.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\card_back.jpeg"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_cards.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/cards.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_dragon_background.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\dragon_background.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_passwordeyeopen.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\passwordeyeopen.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_materialsymbolsfilteralt.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/materialsymbolsfilteralt.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_settings.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/settings.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_rarity_rare.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\rarity_rare.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/mipmap-xhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_heart.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/heart.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_passwordeye.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\passwordeye.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/mipmap-xxhdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_logotcgnexus_new.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/logotcgnexus_new.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_info.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\info.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_language.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/language.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_rarity_common.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\rarity_common.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_rarity_uncommon.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/rarity_uncommon.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_materialsymbolsfilteralt.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\materialsymbolsfilteralt.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_logotcgnexus.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/logotcgnexus.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_woodtable.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/woodtable.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/xml_backup_rules.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_home.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\home.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_logout.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/logout.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_news.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/news.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\font_lobster.ttf.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\font\\lobster.ttf"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/mipmap-hdpi/ic_launcher.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_language.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\language.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_rarity_mythic.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/rarity_mythic.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_settings.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\settings.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/mipmap-mdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_searchicon.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\searchicon.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_dragon_background.png.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/dragon_background.png"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_theme.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\theme.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_personcirclesharp.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/personcirclesharp.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_sword.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\sword.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_home.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/home.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_news.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\news.xml"
     },
     {
-        "merged": "com.pixelperfectsoft.tcg_nexus.app-merged_res-64:/drawable_info.xml.flat",
-        "source": "com.pixelperfectsoft.tcg_nexus.app-main-66:/drawable/info.xml"
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-merged_res-64:\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\luisv\\.gradle\\daemon\\8.4\\com.pixelperfectsoft.tcg_nexus.app-main-66:\\mipmap-hdpi\\ic_launcher_foreground.png"
     }
 ]

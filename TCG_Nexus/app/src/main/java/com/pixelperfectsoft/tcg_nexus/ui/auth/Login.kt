@@ -8,23 +8,32 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.SheetState
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.SpanStyle
@@ -39,15 +48,19 @@ import androidx.compose.ui.zIndex
 import androidx.navigation.NavController
 import com.google.firebase.auth.FirebaseAuth
 import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
-import com.pixelperfectsoft.tcg_nexus.ui.MyButton
-import com.pixelperfectsoft.tcg_nexus.ui.MyCanvasSeparator
-import com.pixelperfectsoft.tcg_nexus.ui.MyPasswordField
-import com.pixelperfectsoft.tcg_nexus.ui.MyTextField
+import com.pixelperfectsoft.tcg_nexus.ui.OutlineButton
+import com.pixelperfectsoft.tcg_nexus.ui.CanvasSeparator
+import com.pixelperfectsoft.tcg_nexus.ui.PasswordField
+import com.pixelperfectsoft.tcg_nexus.ui.Textfield
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.LoginViewModel
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.pixelperfectsoft.tcg_nexus.ui.MyLogo
+import com.google.firebase.firestore.FirebaseFirestore
+import com.pixelperfectsoft.tcg_nexus.ui.Logo
+import com.pixelperfectsoft.tcg_nexus.ui.isValidEmail
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 
 @Composable
 fun LoginScreen(
@@ -56,10 +69,10 @@ fun LoginScreen(
 ) {
     val backcolors = listOf(
         Color.Transparent,
-        Color.White,
-        Color.White,
-        Color.White,
-        Color.White,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
     )
     BackgroundImage()
     Column(
@@ -80,53 +93,66 @@ fun LoginScreen(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LoginForm(navController: NavController, viewModel: LoginViewModel) {
+    val sheetState = rememberModalBottomSheetState()
+    val scope = rememberCoroutineScope()
     var error by rememberSaveable { mutableStateOf(false) }
     var userinput by rememberSaveable { mutableStateOf("") }
     var passinput by rememberSaveable { mutableStateOf("") }
 
     //Login header
     Spacer(Modifier.fillMaxHeight(0.05f))
-    MyLogo(height = 225)
+    Logo(height = 225)
     Spacer(Modifier.fillMaxHeight(0.05f))
     Text(text = "LOG IN", style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 25.sp))
     Spacer(Modifier.size(25.dp))
 
-    //Input de correo electronico
-    MyTextField(
+    //email input
+    Textfield(
         data = userinput,
         label = "Email",
-        onvaluechange = { userinput = it; error = false }, //Siempre que escribamos algo el boolean error se va a poner en false
+        onvaluechange = {
+            userinput = it
+            error = false
+        },
         supportingText = "Incorrect or bad formatted email",
-        iserror = error
+        iserror = error,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 30.dp),
     )
     Spacer(Modifier.size(16.dp))
 
-    //Input de contraseña
-    MyPasswordField(
+    //password input
+    PasswordField(
         data = passinput,
         label = "Password",
-        onvaluechange = { passinput = it; error = false }, //Siempre que escribamos algo el boolean error se va a poner en false
+        onvaluechange = {
+            passinput = it; error = false
+        }, //Siempre que escribamos algo el boolean error se va a poner en false
         supporting_text = "Incorrect password",
         iserror = error,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 30.dp))
+            .padding(horizontal = 30.dp)
+    )
 
-    //Boton de contraseña olvidada
-    ForgottenPasswordButton()
+    //Forgotten password button
+    ForgottenPasswordButton(sheetState, scope)
     Spacer(modifier = Modifier.fillMaxHeight(0.2f))
 
-    //Boton de login
-    MyButton(
+    //Login button
+    OutlineButton(
         text = "Log In",
         onclick = {
             if (userinput != "" && passinput != "") { //Si correo y contraseña no estan vacios
                 viewModel.signIn(email = userinput.trim(), password = passinput, profile = {
                     navController.navigate(MyScreenRoutes.PROFILE) //Si el inicio de sesion es correcto navegamos a la ventana del perfil
                 }, onError = {
-                    error = true //Si el inicio de sesion es incorrecto ponemos el boolean error en true
+                    error =
+                        true //Si el inicio de sesion es incorrecto ponemos el boolean error en true
                 })
             } else {
                 error = true //Si correo y contraseña estan vacios ponemos el boolean error en true
@@ -141,11 +167,11 @@ fun LoginForm(navController: NavController, viewModel: LoginViewModel) {
 
     Spacer(Modifier.size(8.dp))
 
-    //Separador "-----o-----"
-    MyCanvasSeparator()
+    //Separator
+    CanvasSeparator()
 
     Spacer(Modifier.size(8.dp))
-    //Boton de crear cuenta
+    //Register button
     OutlinedButton(
         onClick = { navController.navigate("register") },
         modifier = Modifier
@@ -165,10 +191,60 @@ fun LoginForm(navController: NavController, viewModel: LoginViewModel) {
     ) {
         Text(text = "Create Account")
     }
+    if (sheetState.isVisible) {
+        ForgottenPasswordSheet(sheetState, scope)
+    }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ForgottenPasswordButton() {
+fun ForgottenPasswordSheet(sheetState: SheetState, scope: CoroutineScope) {
+    val loginViewModel = LoginViewModel()
+    val context = LocalContext.current
+    val passwordinput = remember { mutableStateOf(false) }
+    val error = remember { mutableStateOf(false) }
+    val email = remember { mutableStateOf("") }
+    ModalBottomSheet(
+        modifier = Modifier.navigationBarsPadding(),
+        onDismissRequest = {
+            scope.launch { sheetState.hide() }
+        },
+        sheetState = sheetState,
+        content = {
+            Textfield(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 30.dp),
+                iserror = error.value,
+                supportingText = "Enter a valid email",
+                data = email.value,
+                label = "Email",
+                onvaluechange = { email.value = it; error.value = false })
+            Spacer(modifier = Modifier.height(12.dp))
+            OutlineButton(
+                text = "Reset Password",
+                onclick = {
+                    if (email.value.isNullOrBlank() || !isValidEmail(email.value)) {
+                        error.value = true
+                    }else{
+                        loginViewModel.resetpassword(email.value)
+                    }
+                },
+                containercolor = MaterialTheme.colorScheme.primary,
+                bordercolor = MaterialTheme.colorScheme.primary,
+                textcolor = Color.White
+            )
+            Spacer(modifier = Modifier.height(50.dp))
+
+        })
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun ForgottenPasswordButton(
+    sheetState: SheetState,
+    scope: CoroutineScope,
+) {
     val context = LocalContext.current
     ClickableText(
         modifier = Modifier
@@ -190,7 +266,11 @@ fun ForgottenPasswordButton() {
                 )
             }
         },
-        onClick = { Toast.makeText(context, "Coming Soon", Toast.LENGTH_SHORT).show() },
+        onClick = {
+            scope.launch {
+                sheetState.show()
+            }
+        },
         style = TextStyle(
             fontSize = 15.sp
         )

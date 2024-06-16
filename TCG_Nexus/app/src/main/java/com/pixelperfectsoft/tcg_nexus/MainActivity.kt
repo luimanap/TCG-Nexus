@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -30,6 +31,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
+            val isDarkTheme = remember {mutableStateOf(false)}
             val activity = LocalContext.current as Activity
             activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
 
@@ -37,12 +39,13 @@ class MainActivity : ComponentActivity() {
             val navigateAction = remember(navController) { NaviActions(navController) }
             val navBackStackEntry by navController.currentBackStackEntryAsState()
             val selectedDestination = navBackStackEntry?.destination?.route ?: MyScreenRoutes.LOGIN
-            TCGNexus_Theme(darkTheme = false) {
+            TCGNexus_Theme(darkTheme = isDarkTheme.value) {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
                     BottomBarNaviContainer(
+                        darktheme = isDarkTheme,
                         navController = navController,
                         selectedDestination = selectedDestination,
                         navigateTo = navigateAction::navigateTo

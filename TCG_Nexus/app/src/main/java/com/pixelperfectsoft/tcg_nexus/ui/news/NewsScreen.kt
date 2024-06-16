@@ -20,6 +20,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -56,13 +57,22 @@ fun NewsScreen() {
     val json = Gson().fromJson(jsonStr, Array<News>::class.java)
     val colors = listOf(
         Color.Transparent,
+        Color.Transparent,
+        Color(255, 255, 255, 100),
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        /*
         Color(255, 255, 255, 100),
         Color(255, 255, 255, 150),
         Color(255, 255, 255, 200),
         Color(255, 255, 255, 200),
         Color(255, 255, 255, 250),
-        Color(255, 255, 255, 250),
-        Color.White
+        Color(255, 255, 255, 250),*/
+        MaterialTheme.colorScheme.background,
     )
     BackgroundImage()
     Column(
@@ -94,7 +104,7 @@ fun NewsPanel(news: News, state: LazyListState) {
     val bitmapState = remember { mutableStateOf<Bitmap?>(null) }
     ElevatedCard(
         colors = CardDefaults.cardColors(
-            containerColor = Color(250, 250, 250),
+            containerColor = MaterialTheme.colorScheme.surface,
         ),
         elevation = CardDefaults.cardElevation(
             defaultElevation = 12.dp

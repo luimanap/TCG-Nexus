@@ -58,13 +58,4 @@ class Card(
                 loyalty = split[20])
         }
     }
-    /*fun getrarities(): String {
-        when (this.rarity.toString().lowercase()){
-            "common" -> return "Común"
-            "uncommon" -> return "Infrecuente"
-            "rare" -> return "Rara"
-            "mythic" -> return "Mítica"
-            else -> return ""
-        }
-    }*/
 }

@@ -182,6 +182,7 @@ int drawable searchicon 0x7f060048
 int drawable settings 0x7f060049
 int drawable sword 0x7f06004a
 int drawable theme 0x7f06004b
+int drawable trash 0x7f06004d
 int drawable woodtable 0x7f06004c
 int font lobster 0x7f070000
 int id accessibility_action_clickable_span 0x7f080000

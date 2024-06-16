@@ -1,6 +1,7 @@
 package com.pixelperfectsoft.tcg_nexus.model.viewmodel
 
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -10,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.pixelperfectsoft.tcg_nexus.model.classes.User
+import com.pixelperfectsoft.tcg_nexus.ui.isValidEmail
 import kotlinx.coroutines.launch
 
 class LoginViewModel : ViewModel() {
@@ -66,6 +68,17 @@ class LoginViewModel : ViewModel() {
             Log.d("users", "createUser: Display name ${it.id} created successfully")
         }.addOnFailureListener {
             Log.d("users", "createUser: Unexpected error creating user $it")
+        }
+    }
+
+    fun resetpassword(email: String){
+        if (isValidEmail(email)){
+            auth.sendPasswordResetEmail(email)
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Log.d("reset_password", "Email sent.")
+                    }
+                }
         }
     }
 }
