@@ -54,7 +54,7 @@ fun PasswordStrengthBar(password: String) {
         }
         Text(
             text = "Strength: $strengthText",
-            style = TextStyle(color = Color.Black, fontWeight = FontWeight.Bold, fontSize = 12.sp),
+            style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 12.sp),
             modifier = Modifier.padding(top = 4.dp)
         )
     }

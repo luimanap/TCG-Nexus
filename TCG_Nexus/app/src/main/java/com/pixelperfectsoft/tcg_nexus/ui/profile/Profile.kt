@@ -52,8 +52,8 @@ import com.pixelperfectsoft.tcg_nexus.model.classes.User
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.UserDataViewModel
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.UserState
 import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
-import com.pixelperfectsoft.tcg_nexus.ui.MyButton
-import com.pixelperfectsoft.tcg_nexus.ui.MyPasswordField
+import com.pixelperfectsoft.tcg_nexus.ui.OutlineButton
+import com.pixelperfectsoft.tcg_nexus.ui.PasswordField
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 
@@ -66,9 +66,9 @@ fun Profile(
     val currentuser = dataViewModel.user.value
     val backcolors = listOf(
         Color.Transparent,
-        Color.White,
-        Color.White,
-        Color.White,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
     )
     BackgroundImage()
     Column(
@@ -96,29 +96,29 @@ fun EditProfile() {
     val pass = rememberSaveable { mutableStateOf("") }
     val newpass = rememberSaveable { mutableStateOf("") }
     Spacer(modifier = Modifier.fillMaxHeight(0.3f))
-    MyPasswordField(
+    PasswordField(
         data = pass.value,
         label = "Current password",
         onvaluechange = {
             pass.value = it
         },
         supporting_text = "Incorrect password",
-        iserror = false, modifier = Modifier.padding(horizontal = 30.dp)
+        iserror = false, modifier = Modifier.fillMaxWidth().padding(horizontal = 30.dp)
     )
-    MyPasswordField(
+    PasswordField(
         data = pass.value,
         label = "New password",
         onvaluechange = {
             newpass.value = it
         },
         supporting_text = "Incorrect password",
-        iserror = false, modifier = Modifier.padding(horizontal = 30.dp)
+        iserror = false, modifier = Modifier.fillMaxWidth().padding(horizontal = 30.dp)
     )
 
     Spacer(Modifier.size(8.dp))
 
     Spacer(modifier = Modifier.fillMaxHeight(0.1f))
-    MyButton(
+    OutlineButton(
         text = "Change Password",
         onclick = {
             Toast.makeText(context, "Comming soon", Toast.LENGTH_SHORT).show()
@@ -127,8 +127,6 @@ fun EditProfile() {
         bordercolor = MaterialTheme.colorScheme.primary,
         textcolor = Color.White
     )
-
-
 }
 
 @Composable
@@ -142,7 +140,6 @@ fun ProfileSelector(
         val context = LocalContext.current
         val bitmapImages = mutableListOf<Bitmap?>()
         val avatarImages = mutableListOf<String>()
-
         for (i in LocalContext.current.assets.list("avatars")!!) {
             Log.d("avatars", "Loading avatar -> avatars/$i")
             if (i != null) {
@@ -204,7 +201,6 @@ fun AvatarImage(
     currentuser: User,
     navController: NavHostController,
 ) {
-
     val show = rememberSaveable { mutableStateOf(false) }
     val context = LocalContext.current
     val bitmapState = remember { mutableStateOf<Bitmap?>(null) }
@@ -213,40 +209,45 @@ fun AvatarImage(
         is UserState.Loading -> {
             CircularProgressIndicator()
         }
-
         is UserState.Success -> {
             LaunchedEffect(Unit) {
                 val avatar = context.assets.open(currentuser.avatar_url)
                 bitmapState.value = BitmapFactory.decodeStream(avatar)
             }
-            Box(
-                modifier = Modifier
-                    .clip(CircleShape)
-                    .background(Color.Transparent)
-                    .size(200.dp)
-                    //.padding(top = 16.dp)
-                    .clickable {
-                        show.value = true
-                    },
-                contentAlignment = Alignment.Center
-            ) {
+        }
+        is UserState.Empty -> {
+            LaunchedEffect(Unit) {
+                val avatar = context.assets.open("noavatar.png")
+                bitmapState.value = BitmapFactory.decodeStream(avatar)
+            }
 
-                if (bitmapState.value != null) {
-                    val bitmap = bitmapState.value!!.asImageBitmap()
-                    Image(
-                        bitmap = bitmap, contentDescription = "Avatar",
-                        modifier = Modifier.fillMaxSize(),
-                        contentScale = ContentScale.Crop
-                    )
-                }
+        }
+        is UserState.Failure -> {
+            LaunchedEffect(Unit) {
+                val avatar = context.assets.open("noavatar.png")
+                bitmapState.value = BitmapFactory.decodeStream(avatar)
             }
         }
-
-        is UserState.Empty -> {}
-        is UserState.Failure -> {}
     }
-
-
+    Box(
+        modifier = Modifier
+            .clip(CircleShape)
+            .background(Color.Transparent)
+            .size(200.dp)
+            .clickable {
+                show.value = true
+            },
+        contentAlignment = Alignment.Center
+    ) {
+        if (bitmapState.value != null) {
+            val bitmap = bitmapState.value!!.asImageBitmap()
+            Image(
+                bitmap = bitmap, contentDescription = "Avatar",
+                modifier = Modifier.fillMaxSize(),
+                contentScale = ContentScale.Crop
+            )
+        }
+    }
     if (show.value) {
         ProfileSelector(//avatarImages = avatarImages,
             show = show, currentuser = currentuser, navcontroller = navController

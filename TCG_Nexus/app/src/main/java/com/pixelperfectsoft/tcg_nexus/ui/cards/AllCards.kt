@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -22,12 +23,12 @@ fun AllCards(
 ) {
     val backcolors = listOf(
         Color.Transparent,
-        Color.White,
-        Color.White,
-        Color.White,
-        Color.White,
-        Color.White,
-        Color.White,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
     )
     BackgroundImage()
     Column(

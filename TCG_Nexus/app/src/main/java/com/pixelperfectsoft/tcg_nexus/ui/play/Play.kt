@@ -57,14 +57,22 @@ data class Game(
 fun PlayScreen(navController: NavController) {
     val backcolors = listOf(
         Color.Transparent,
-        Color.White,
-        Color.White,
-        Color.White,
-        Color.White,
-        Color.White,
-        Color.White,
-    )
-    val lobster = FontFamily(Font(R.font.lobster, FontWeight.Normal),)
+        Color.Transparent,
+        Color.Transparent,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+
+        )
+    val lobster = FontFamily(Font(R.font.lobster, FontWeight.Normal))
     val game = Game(rememberSaveable {
         mutableIntStateOf(0)
     }, rememberSaveable {
@@ -86,7 +94,7 @@ fun PlayScreen(navController: NavController) {
             fontFamily = lobster,
             style = TextStyle(
                 fontSize = 70.sp,
-                )
+            )
         )
         Spacer(modifier = Modifier.size(75.dp))
         Row {
@@ -152,7 +160,6 @@ fun SelectStartLife(game: Game) {
     Column(Modifier.padding(horizontal = 40.dp, vertical = 10.dp)) {
         Text(
             text = "Life total", style = TextStyle(
-                color = Color.Black,
                 fontSize = 16.sp
             ),
             modifier = Modifier.padding(4.dp)
@@ -166,13 +173,14 @@ fun SelectStartLife(game: Game) {
                     .clickable { isexpanded = true }
                     .fillMaxWidth(),
                 colors = OutlinedTextFieldDefaults.colors(
-                    disabledBorderColor = Color.Black, disabledTextColor = Color.Black
+                    disabledBorderColor = MaterialTheme.colorScheme.onBackground,
+                    disabledTextColor = MaterialTheme.colorScheme.onBackground,
                 ),
                 trailingIcon = {
                     Icon(
                         imageVector = Icons.Filled.ArrowDropDown,
                         contentDescription = "",
-                        tint = Color.Black
+                        tint = MaterialTheme.colorScheme.onBackground,
                     )
                 })
             DropdownMenu(
@@ -184,7 +192,7 @@ fun SelectStartLife(game: Game) {
                 for (i in elements) {
                     DropdownMenuItem(
                         modifier = Modifier.padding(horizontal = 20.dp),
-                        text = { Text(text = i) },
+                        text = { Text(text = i, fontSize = 22.sp) },
                         onClick = {
                             isexpanded = false; lifevalue = i
                             game.life.value = lifevalue.trim().toInt()
@@ -203,10 +211,13 @@ fun SelectPlayers(game: Game) {
     val elements =
         listOf("2 Players", "3 Players", "4 Players")
 
-    Column(Modifier.padding(vertical = 10.dp).padding(start = 40.dp)) {
+    Column(
+        Modifier
+            .padding(vertical = 10.dp)
+            .padding(start = 40.dp)
+    ) {
         Text(
             text = "Players", style = TextStyle(
-                color = Color.Black,
                 fontSize = 16.sp
             ),
             modifier = Modifier.padding(4.dp)
@@ -220,13 +231,14 @@ fun SelectPlayers(game: Game) {
                     .clickable { isexpanded = true }
                     .fillMaxWidth(0.4f),
                 colors = OutlinedTextFieldDefaults.colors(
-                    disabledBorderColor = Color.Black, disabledTextColor = Color.Black
+                    disabledBorderColor = MaterialTheme.colorScheme.onBackground,
+                    disabledTextColor = MaterialTheme.colorScheme.onBackground,
                 ),
                 trailingIcon = {
                     Icon(
                         imageVector = Icons.Filled.ArrowDropDown,
                         contentDescription = "",
-                        tint = Color.Black
+                        tint = MaterialTheme.colorScheme.onBackground
                     )
                 })
             DropdownMenu(

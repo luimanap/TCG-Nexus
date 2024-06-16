@@ -3,9 +3,9 @@ package com.pixelperfectsoft.tcg_nexus.ui.settings
 import android.util.Log
 import android.widget.Toast
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -24,10 +24,10 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Button
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -38,8 +38,6 @@ import androidx.compose.material3.SheetState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
@@ -52,7 +50,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
@@ -62,42 +59,60 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.navigation.NavHostController
+import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
 import com.pixelperfectsoft.tcg_nexus.R
-import com.pixelperfectsoft.tcg_nexus.model.viewmodel.CardViewModel
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.CollectionViewModel
 import com.pixelperfectsoft.tcg_nexus.model.viewmodel.UserDataViewModel
 import com.pixelperfectsoft.tcg_nexus.ui.BackgroundImage
-import com.pixelperfectsoft.tcg_nexus.ui.MyLogo
-import com.pixelperfectsoft.tcg_nexus.ui.MyPasswordField
-import com.pixelperfectsoft.tcg_nexus.ui.cards.FilterModalSheet
+import com.pixelperfectsoft.tcg_nexus.ui.Logo
+import com.pixelperfectsoft.tcg_nexus.ui.PasswordField
 import com.pixelperfectsoft.tcg_nexus.ui.navigation.MyScreenRoutes
-import com.pixelperfectsoft.tcg_nexus.ui.theme.TCGNexus_Theme
+import com.pixelperfectsoft.tcg_nexus.ui.theme.PrimaryBlue
+import com.pixelperfectsoft.tcg_nexus.ui.theme.PrimaryGreen
+import com.pixelperfectsoft.tcg_nexus.ui.theme.PrimaryRed
+import com.pixelperfectsoft.tcg_nexus.ui.theme.PrimaryYellow
 import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.tasks.await
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SettingsScreen(navController: NavHostController) {
+fun SettingsScreen(
+    navController: NavHostController,
+    darktheme: MutableState<Boolean>,
+    primaryColor: MutableState<Color>
+) {
     val context = LocalContext.current
     val aboutdialog = remember { mutableStateOf(false) }
     val themedialog = remember { mutableStateOf(false) }
-    val sheetState = rememberModalBottomSheetState()
+    val accountsheetState = rememberModalBottomSheetState()
+    val language = rememberSaveable { mutableStateOf("English") }
+    val expanded = remember { mutableStateOf(false) }
+    val languagelist =
+        listOf("English", "Español", "Français", "Deutsch", "Italiano", "Português", "Русский")
     val scope = rememberCoroutineScope()
 
     val colors = listOf(
         Color.Transparent,
         Color(255, 255, 255, 100),
+        Color(255, 255, 255, 100),
+
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+/*
         Color(255, 255, 255, 150),
         Color(255, 255, 255, 200),
         Color(255, 255, 255, 200),
         Color(255, 255, 255, 250),
         Color(255, 255, 255, 250),
-        Color.White
+        Color.White*/
     )
     BackgroundImage()
     Column(
@@ -107,76 +122,94 @@ fun SettingsScreen(navController: NavHostController) {
             .padding(16.dp)
     ) {
         Spacer(modifier = Modifier.fillMaxHeight(0.07f))
-        Column(
-            modifier = Modifier.fillMaxSize()
-
-        ) {
-            SettingsOption(
-                option = "Language",
-                icon = R.drawable.language,
-                onClick = { Toast.makeText(context, "Coming soon", Toast.LENGTH_SHORT).show() })
-
-            if (!FirebaseAuth.getInstance().currentUser?.email.isNullOrBlank()) {
+        Box{
+            Column(modifier = Modifier.fillMaxSize()) {
                 SettingsOption(
-                    option = "My Account",
-                    icon = R.drawable.personcirclesharp,
-                    onClick = { scope.launch { sheetState.show() } })
-            }
-            SettingsOption(
-                option = "Theme",
-                icon = R.drawable.theme,
-                onClick = {
-                    themedialog.value = true
+                    option = "Language: ${language.value}",
+                    icon = R.drawable.language,
+                    onClick = { expanded.value = true })
+
+                if (!FirebaseAuth.getInstance().currentUser?.email.isNullOrBlank()) {
+                    SettingsOption(
+                        option = "My Account",
+                        icon = R.drawable.personcirclesharp,
+                        onClick = { scope.launch { accountsheetState.show() } })
+                }
+                SettingsOption(
+                    option = "Theme",
+                    icon = R.drawable.theme,
+                    onClick = {
+                        themedialog.value = true
+                    })
+                SettingsOption(option = "About", icon = R.drawable.info, onClick = {
+                    aboutdialog.value = true
                 })
-            SettingsOption(option = "About", icon = R.drawable.info, onClick = {
-                aboutdialog.value = true
-            })
-            if (!FirebaseAuth.getInstance().currentUser?.email.isNullOrBlank()) {
-                SettingsOption(option = "Log Out", icon = R.drawable.logout, onClick = {
-                    navController.navigate(MyScreenRoutes.LOGIN)
-                    FirebaseAuth.getInstance().signOut()
-                })
+                if (!FirebaseAuth.getInstance().currentUser?.email.isNullOrBlank()) {
+                    SettingsOption(option = "Log Out", icon = R.drawable.logout, onClick = {
+                        navController.navigate(MyScreenRoutes.LOGIN)
+                        FirebaseAuth.getInstance().signOut()
+                    })
+                }
+                Log.d("aboutdialog", aboutdialog.value.toString())
             }
-            Log.d("aboutdialog", aboutdialog.value.toString())
+            DropdownMenu(modifier = Modifier
+                .fillMaxWidth(0.7f),
+                expanded = expanded.value,
+                onDismissRequest = { expanded.value = false }) {
+                languagelist.forEach {
+                    DropdownMenuItem(
+                        modifier = Modifier
+                            .padding(horizontal = 20.dp)
+                            .height(35.dp),
+                        text = { Text(text = it) },
+                        onClick = {
+                            language.value = it
+                            expanded.value = false
+                        })
+                }
+            }
         }
+
         if (aboutdialog.value) {
             AboutDialog(aboutdialog)
         }
         if (themedialog.value) {
-            ThemeDialog(themedialog)
+            ThemeDialog(themedialog, darktheme, primaryColor)
         }
-        if (sheetState.isVisible) {
+        if (accountsheetState.isVisible) {
             MyAccountDialog(
-                sheetState = sheetState,
+                sheetState = accountsheetState,
                 scope = scope,
                 navController = navController,
                 userviewModel = UserDataViewModel(),
-                collectionViewModel =  CollectionViewModel()
+                collectionViewModel = CollectionViewModel()
             )
         }
     }
 }
 
+
 @Composable
-fun ThemeDialog(themedialog: MutableState<Boolean>) {
+fun ThemeDialog(
+    themedialog: MutableState<Boolean>,
+    darktheme: MutableState<Boolean>,
+    primaryColor: MutableState<Color>
+) {
     val colors = listOf(
-        Color(92, 115, 255),
-        Color(255, 92, 92),
-        Color(92, 255, 92),
-        Color(254, 255, 92)
+        PrimaryBlue,
+        PrimaryRed,
+        PrimaryGreen,
+        PrimaryYellow
     )
     val context = LocalContext.current
     var selectedColor by remember { mutableStateOf(colors[0]) }
-    val darkmodeckecked = rememberSaveable { mutableStateOf(false) }
-
 
     Dialog(onDismissRequest = { themedialog.value = false }) {
         Surface(
             modifier = Modifier
-                //.fillMaxHeight(0.5f)
                 .requiredWidth(LocalConfiguration.current.screenWidthDp.dp * 0.8f),
             shape = RoundedCornerShape(16.dp),
-            color = Color.White
+            color = MaterialTheme.colorScheme.surface
         ) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -188,15 +221,15 @@ fun ThemeDialog(themedialog: MutableState<Boolean>) {
                 )
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier.fillMaxWidth(0.8f)
                 ) {
                     Text(
                         text = "Dark Mode",
                         fontWeight = FontWeight.Bold,
                     )
                     Spacer(modifier = Modifier.fillMaxWidth(0.7f))
-                    Switch(checked = darkmodeckecked.value, onCheckedChange = {
-                        darkmodeckecked.value = !darkmodeckecked.value
+                    Switch(checked = darktheme.value, onCheckedChange = {
+                        darktheme.value = !darktheme.value
                     })
                 }
                 Spacer(modifier = Modifier.height(16.dp))
@@ -208,17 +241,16 @@ fun ThemeDialog(themedialog: MutableState<Boolean>) {
                 Spacer(modifier = Modifier.height(8.dp))
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier.horizontalScroll(rememberScrollState())
+                    modifier = Modifier.horizontalScroll(rememberScrollState()).fillMaxWidth()
                 ) {
                     colors.forEach { color ->
                         Box(
                             modifier = Modifier
                                 .padding(8.dp)
-                                .size(70.dp)
+                                .size(50.dp)
                                 .background(color, shape = CircleShape)
                                 .clickable {
-                                    selectedColor = color
-                                    themedialog.value = false
+                                    primaryColor.value = color
                                 }
                         )
                     }
@@ -228,6 +260,7 @@ fun ThemeDialog(themedialog: MutableState<Boolean>) {
         }
     }
 }
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -251,48 +284,101 @@ fun MyAccountDialog(
         sheetState = sheetState,
         content = {
             Column(modifier = Modifier.padding(16.dp)) {
-                Button(modifier = Modifier.fillMaxWidth(), onClick = {
+
+                HorizontalDivider()
+                if (passwordinput.value) {
+                    Spacer(modifier = Modifier.height(10.dp))
+                    PasswordField(
+                        data = pass.value,
+                        label = "Password",
+                        onvaluechange = {
+                            pass.value = it; error.value = false
+                        }, //Siempre que escribamos algo el boolean error se va a poner en false
+                        supporting_text = "Incorrect password",
+                        iserror = error.value,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 12.dp)
+                    )
+                }
+                ElevatedCard(colors = CardDefaults.cardColors(
+                    containerColor = Color(250, 250, 250),
+                ), elevation = CardDefaults.cardElevation(
+                    defaultElevation = 12.dp
+                ), modifier = Modifier
+                    .fillMaxWidth()
+                    .height(75.dp)
+                    .padding(8.dp), onClick = {
                     if (!passwordinput.value) {
                         passwordinput.value = true
                     } else {
                         val email = currentuser?.email
-                        val credential = email?.let { EmailAuthProvider.getCredential(it, pass.value) }
+                        val credential: AuthCredential?
+                        if (pass.value.isNotEmpty()) {
+                            credential =
+                                email?.let { EmailAuthProvider.getCredential(it, pass.value) }
+                        } else {
+                            credential = email?.let { EmailAuthProvider.getCredential(it, "") }
+                        }
+
                         if (credential != null) {
                             scope.launch {
                                 userviewModel.deleteUser()
                                 collectionViewModel.deleteCollection()
                             }
-                            currentuser.reauthenticate(credential).addOnSuccessListener {
+                            currentuser?.reauthenticate(credential)?.addOnSuccessListener {
                                 currentuser.delete().addOnCompleteListener {
                                     if (it.isSuccessful) {
                                         navController.navigate(MyScreenRoutes.LOGIN)
                                         FirebaseAuth.getInstance().signOut()
-                                        Toast.makeText(context,"Account Deleted Successfully",Toast.LENGTH_SHORT).show()
+                                        Toast.makeText(
+                                            context,
+                                            "Account Deleted Successfully",
+                                            Toast.LENGTH_SHORT
+                                        ).show()
                                     } else {
-                                        Toast.makeText(context,it.exception?.message,Toast.LENGTH_SHORT).show()
+                                        Toast.makeText(
+                                            context,
+                                            it.exception?.message,
+                                            Toast.LENGTH_SHORT
+                                        ).show()
                                     }
                                 }
-                            }.addOnFailureListener{
-                                Toast.makeText(context,"Incorrect Password",Toast.LENGTH_SHORT).show()
+                            }?.addOnFailureListener {
+                                Toast.makeText(
+                                    context,
+                                    "Incorrect Password",
+                                    Toast.LENGTH_SHORT
+                                ).show()
                             }
                         }
                     }
                 }) {
-                    Text(text = "Delete my account")
-                }
-                if (passwordinput.value) {
-                    Spacer(modifier = Modifier.height(10.dp))
-                    MyPasswordField(
-                        data = pass.value,
-                        label = "Password",
-                        onvaluechange = { pass.value = it; error.value = false }, //Siempre que escribamos algo el boolean error se va a poner en false
-                        supporting_text = "Incorrect password",
-                        iserror = error.value,
+                    Row(
                         modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 12.dp))
+                            .fillMaxSize()
+                            .padding(horizontal = 12.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.Start
+                    ) {
+                        Icon(
+                            painter = painterResource(id = R.drawable.trash),
+                            contentDescription = "Delete",
+                            tint = Color.Red,
+                            modifier = Modifier
+                                .padding(8.dp)
+                                .size(28.dp)
+                        )
+                        Spacer(modifier = Modifier.fillMaxWidth(0.2f))
+                        Text(
+                            text = "DELETE MY ACCOUNT",
+                            color = Color.Red,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+
                 }
-                Spacer(modifier = Modifier.height(50.dp))
+
             }
         })
 }
@@ -308,7 +394,7 @@ fun AboutDialog(aboutdialog: MutableState<Boolean>) {
                 .fillMaxHeight(0.7f)
                 .requiredWidth(LocalConfiguration.current.screenWidthDp.dp * 0.96f),
             shape = RoundedCornerShape(16.dp),
-            color = Color.White
+            color = MaterialTheme.colorScheme.surface
         ) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -320,10 +406,10 @@ fun AboutDialog(aboutdialog: MutableState<Boolean>) {
                         .fillMaxHeight(0.86f)
                         .verticalScroll(rememberScrollState())
                 ) {
-                    MyLogo(height = 165)
+                    Logo(height = 165)
 
                     Text(
-                        text = "TCG Nexus beta2024.5.15",
+                        text = "TCG Nexus beta2024.6.13",
                         modifier = Modifier
                             .padding(top = 16.dp),
                         fontWeight = FontWeight.ExtraBold,
@@ -374,7 +460,7 @@ fun AboutDialog(aboutdialog: MutableState<Boolean>) {
 fun SettingsOption(option: String, icon: Int, onClick: () -> Unit) {
     ElevatedCard(
         colors = CardDefaults.cardColors(
-            containerColor = Color(250, 250, 250),
+            containerColor = MaterialTheme.colorScheme.surface,
         ), elevation = CardDefaults.cardElevation(
             defaultElevation = 12.dp
         ), modifier = Modifier

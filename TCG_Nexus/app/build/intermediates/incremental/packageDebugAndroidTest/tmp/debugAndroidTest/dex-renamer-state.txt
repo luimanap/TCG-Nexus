@@ -1,0 +1,10 @@
+#Thu Jun 13 11:41:08 CEST 2024
+base.0=C\:\\local-git\\Android\\TCG-Nexus\\TCG_Nexus\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
+base.1=C\:\\local-git\\Android\\TCG-Nexus\\TCG_Nexus\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+base.2=C\:\\local-git\\Android\\TCG-Nexus\\TCG_Nexus\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\14\\classes.dex
+path.0=classes.dex
+path.1=0/classes.dex
+path.2=14/classes.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex
+renamed.2=classes3.dex

@@ -40,10 +40,10 @@ import com.pixelperfectsoft.tcg_nexus.ui.theme.createGradientBrush
 fun Collection(navController: NavHostController, viewModel: CollectionViewModel = viewModel()) {
     val backcolors = listOf(
         Color.Transparent,
-        Color.White,
-        Color.White,
-        Color.White,
-        Color.White,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background,
+        MaterialTheme.colorScheme.background
     )
     val totalcards = rememberSaveable { mutableIntStateOf(0) }
     BackgroundImage()

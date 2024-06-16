@@ -183,6 +183,7 @@ drawable searchicon
 drawable settings
 drawable sword
 drawable theme
+drawable trash
 drawable woodtable
 font lobster
 id accessibility_action_clickable_span

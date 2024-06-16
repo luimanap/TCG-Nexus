@@ -250,7 +250,7 @@ fun LifePanel(
                                 .fillMaxWidth(0.4f)
                                 .background(Color.Transparent)
                                 .clickable {
-                                    lives.p3life.value += 1
+                                    lives.p3life.value -= 1
                                 })
                         Column(
                             horizontalAlignment = Alignment.CenterHorizontally,
@@ -281,7 +281,7 @@ fun LifePanel(
                                 .fillMaxWidth()
                                 .background(Color.Transparent)
                                 .clickable {
-                                    lives.p3life.value -= 1
+                                    lives.p3life.value += 1
                                 })
                     }
                 }

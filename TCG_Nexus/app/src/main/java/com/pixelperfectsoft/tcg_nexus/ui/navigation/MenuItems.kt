@@ -15,6 +15,7 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
@@ -156,9 +157,11 @@ val GUEST_MENU_ITEMS = listOf(
 @RequiresApi(Build.VERSION_CODES.Q)
 @Composable
 fun BottomBarNaviContainer(
+    darktheme: MutableState<Boolean>,
     navController: NavHostController,
     selectedDestination: String,
     navigateTo: (MenuItems) -> Unit,
+    primaryColor: MutableState<Color>,
 ) {
     Row(
         modifier = Modifier.fillMaxSize()
@@ -170,7 +173,7 @@ fun BottomBarNaviContainer(
                 startDestination = MyScreenRoutes.LOGIN
             ) {
                 composable(MyScreenRoutes.SETTINGS) {
-                    SettingsScreen(navController)
+                    SettingsScreen(navController, darktheme, primaryColor)
                 }
                 composable(MyScreenRoutes.UPDATE) {
                     UpdateScreen(navController)
@@ -255,7 +258,7 @@ fun BottomBarNavigation(selectedDestination: String, navigateTo: (MenuItems) -> 
         modifier = Modifier
             .fillMaxWidth()
             .height(65.dp),
-        containerColor = Color(255, 255, 255)
+        containerColor = MaterialTheme.colorScheme.background
     ) {
         if (user != null) {
             AUTH_MENU_ITEMS.forEach { destinations ->
@@ -271,7 +274,7 @@ fun BottomBarNavigation(selectedDestination: String, navigateTo: (MenuItems) -> 
                         )
                     }, colors = NavigationBarItemDefaults.colors(
                         selectedIconColor = MaterialTheme.colorScheme.primary,
-                        indicatorColor = Color.White
+                        indicatorColor = Color.Transparent
                     )
                 )
             }
@@ -288,8 +291,8 @@ fun BottomBarNavigation(selectedDestination: String, navigateTo: (MenuItems) -> 
                             modifier = Modifier.size(25.dp)
                         )
                     }, colors = NavigationBarItemDefaults.colors(
-                        selectedIconColor = Color(92, 115, 255),
-                        indicatorColor = Color.White
+                        selectedIconColor = MaterialTheme.colorScheme.primary,
+                        indicatorColor = Color.Transparent
                     )
                 )
             }

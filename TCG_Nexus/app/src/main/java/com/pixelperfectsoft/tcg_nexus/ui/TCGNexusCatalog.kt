@@ -19,6 +19,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
@@ -30,7 +31,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.blur
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
@@ -77,7 +77,7 @@ fun UpdateScreen(navController: NavHostController) {
 }
 
 @Composable
-fun MyLogo(height: Int) {
+fun Logo(height: Int) {
     Image(
         painterResource(id = R.drawable.logotcgnexus_new),
         "Logo",
@@ -88,7 +88,7 @@ fun MyLogo(height: Int) {
 }
 
 @Composable
-fun MyButton(
+fun OutlineButton(
     text: String,
     onclick: () -> Unit,
     containercolor: Color,
@@ -112,7 +112,8 @@ fun MyButton(
 }
 
 @Composable
-fun MyCanvasSeparator() {
+fun CanvasSeparator() {
+    val linecolor = MaterialTheme.colorScheme.onBackground
     Canvas(
         modifier = Modifier
             .fillMaxWidth()
@@ -122,7 +123,7 @@ fun MyCanvasSeparator() {
         val startY = size.height / 2   //Obtenemos la mitad del eje Y en relacion a la pantalla
         val centerX = size.width / 2    //Obtenemos la mitad del eje X en relacion a la pantalla
         val halfLineWidth = size.width / 3 //Dividimos el eje X en 3 partes
-        val lineColor = Color.Black   //Color de la linea
+        val lineColor = linecolor   //Color de la linea
 
         //Dibujamos la linea de la izquierda
         drawLine(
@@ -158,7 +159,8 @@ fun MyCanvasSeparator() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyTextField(
+fun Textfield(
+    modifier: Modifier,
     iserror: Boolean,
     supportingText: String,
     data: String,
@@ -171,33 +173,30 @@ fun MyTextField(
         label = {
             Text(text = label)
         },
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(start = 30.dp, end = 30.dp),
+        modifier = modifier,
         shape = RoundedCornerShape(45.dp),
         singleLine = true,
         colors = TextFieldDefaults.textFieldColors(
             containerColor = Color.Transparent,
-            cursorColor = Color.Black,
-            focusedTextColor = Color.Black,
-            unfocusedTextColor = Color.Black,
-            focusedLabelColor = Color.Black,
-            focusedIndicatorColor = Color.Black,
-            focusedSupportingTextColor = Color.Red,
-            unfocusedSupportingTextColor = Color.Red
+            cursorColor = MaterialTheme.colorScheme.onBackground,
+            focusedTextColor = MaterialTheme.colorScheme.onBackground,
+            unfocusedTextColor = MaterialTheme.colorScheme.onBackground,
+            focusedLabelColor = MaterialTheme.colorScheme.onBackground,
+            focusedIndicatorColor = MaterialTheme.colorScheme.onBackground,
+            focusedSupportingTextColor = MaterialTheme.colorScheme.error,
+            unfocusedSupportingTextColor = MaterialTheme.colorScheme.error
         ),
         supportingText = {
             if (iserror) {
                 Text(text = supportingText)
             }
-
         }
     )
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MyPasswordField(
+fun PasswordField(
     modifier: Modifier,
     supporting_text: String,
     data: String,
@@ -229,13 +228,13 @@ fun MyPasswordField(
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password), //Ponemos el teclado en modo contraseña, sin ajustes como el autocompletado
         colors = TextFieldDefaults.textFieldColors(
             containerColor = Color.Transparent,
-            cursorColor = Color.Black,
-            focusedTextColor = Color.Black,
-            unfocusedTextColor = Color.Black,
-            focusedLabelColor = Color.Black,
-            focusedIndicatorColor = Color.Black,
-            focusedSupportingTextColor = Color.Red,
-            unfocusedSupportingTextColor = Color.Red
+            cursorColor = MaterialTheme.colorScheme.onBackground,
+            focusedTextColor = MaterialTheme.colorScheme.onBackground,
+            unfocusedTextColor = MaterialTheme.colorScheme.onBackground,
+            focusedLabelColor = MaterialTheme.colorScheme.onBackground,
+            focusedIndicatorColor = MaterialTheme.colorScheme.onBackground,
+            focusedSupportingTextColor = MaterialTheme.colorScheme.error,
+            unfocusedSupportingTextColor = MaterialTheme.colorScheme.error
         ),
         trailingIcon = { //Boton para mostrar u ocultar los caracteres de la contraseña
             IconButton(onClick = { passwordVisibility = !passwordVisibility }) {
@@ -299,4 +298,9 @@ fun InfoCard(
             }
         }
     }
+}
+
+fun isValidEmail(email: String): Boolean {
+    val emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$".toRegex()
+    return email.matches(emailRegex)
 }
