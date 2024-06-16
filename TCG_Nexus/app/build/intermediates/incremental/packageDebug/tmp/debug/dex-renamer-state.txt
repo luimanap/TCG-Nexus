@@ -1,4 +1,4 @@
-#Sun Jun 16 18:41:38 CEST 2024
+#Sun Jun 16 19:03:41 CEST 2024
 base.0=C\:\\local-git\\Android\\TCG-Nexus\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\local-git\\Android\\TCG-Nexus\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=C\:\\local-git\\Android\\TCG-Nexus\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
