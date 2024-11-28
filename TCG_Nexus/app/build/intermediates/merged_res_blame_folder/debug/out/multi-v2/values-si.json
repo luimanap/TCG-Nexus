@@ -1,23 +1,23 @@
 {
     "logs": [
         {
-            "outputFile": "com.pixelperfectsoft.tcg_nexus.app-mergeDebugResources-62:/values-si/values-si.xml",
+            "outputFile": "com.pixelperfectsoft.tcg_nexus.app-mergeDebugResources-65:/values-si/values-si.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\c0e68687906a813181112334bdb2a39c\\transformed\\ui-release\\res\\values-si\\values-si.xml",
+                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\dca6d687ea90aa432dcd5cfaf2993f95\\transformed\\foundation-release\\res\\values-si\\values-si.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,194,277,376,475,557,642,733,819,899,976,1051,1130,1212,1285,1366,1433",
-                        "endColumns": "88,82,98,98,81,84,90,85,79,76,74,78,81,72,80,66,117",
-                        "endOffsets": "189,272,371,470,552,637,728,814,894,971,1046,1125,1207,1280,1361,1428,1546"
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,145",
+                        "endColumns": "89,92",
+                        "endOffsets": "140,233"
                     },
                     "to": {
-                        "startLines": "11,12,32,33,34,38,39,96,97,98,99,100,101,102,104,105,106",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1061,1150,3531,3630,3729,4139,4224,10371,10457,10537,10614,10689,10768,10850,11024,11105,11172",
-                        "endColumns": "88,82,98,98,81,84,90,85,79,76,74,78,81,72,80,66,117",
-                        "endOffsets": "1145,1228,3625,3724,3806,4219,4310,10452,10532,10609,10684,10763,10845,10918,11100,11167,11285"
+                        "startLines": "107,108",
+                        "startColumns": "4,4",
+                        "startOffsets": "11290,11380",
+                        "endColumns": "89,92",
+                        "endOffsets": "11375,11468"
                     }
                 },
                 {
@@ -35,6 +35,23 @@
                         "startOffsets": "329,431,534,639,744,843,947,10923",
                         "endColumns": "101,102,104,104,98,103,113,100",
                         "endOffsets": "426,529,634,739,838,942,1056,11019"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\9530caed3e05d51ccd7870bb891c3a01\\transformed\\ui-release\\res\\values-si\\values-si.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,194,277,376,475,557,642,733,819,899,976,1051,1130,1212,1285,1366,1433",
+                        "endColumns": "88,82,98,98,81,84,90,85,79,76,74,78,81,72,80,66,117",
+                        "endOffsets": "189,272,371,470,552,637,728,814,894,971,1046,1125,1207,1280,1361,1428,1546"
+                    },
+                    "to": {
+                        "startLines": "11,12,32,33,34,38,39,96,97,98,99,100,101,102,104,105,106",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1061,1150,3531,3630,3729,4139,4224,10371,10457,10537,10614,10689,10768,10850,11024,11105,11172",
+                        "endColumns": "88,82,98,98,81,84,90,85,79,76,74,78,81,72,80,66,117",
+                        "endOffsets": "1145,1228,3625,3724,3806,4219,4310,10452,10532,10609,10684,10763,10845,10918,11100,11167,11285"
                     }
                 },
                 {
@@ -69,23 +86,6 @@
                         "startOffsets": "1233,1341,1495,1619,1732,1874,1998,2114,2351,2502,2617,2773,2904,3048,3209,3282,3343",
                         "endColumns": "107,153,123,112,141,123,115,97,150,114,155,130,143,160,72,60,79",
                         "endOffsets": "1336,1490,1614,1727,1869,1993,2109,2207,2497,2612,2768,2899,3043,3204,3277,3338,3418"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\efc225cafd6416fdfa303f842bc0d9fd\\transformed\\foundation-release\\res\\values-si\\values-si.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,145",
-                        "endColumns": "89,92",
-                        "endOffsets": "140,233"
-                    },
-                    "to": {
-                        "startLines": "107,108",
-                        "startColumns": "4,4",
-                        "startOffsets": "11290,11380",
-                        "endColumns": "89,92",
-                        "endOffsets": "11375,11468"
                     }
                 },
                 {

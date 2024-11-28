@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "com.pixelperfectsoft.tcg_nexus.app-mergeDebugResources-62:/values-tl/values-tl.xml",
+            "outputFile": "com.pixelperfectsoft.tcg_nexus.app-mergeDebugResources-65:/values-tl/values-tl.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\efc225cafd6416fdfa303f842bc0d9fd\\transformed\\foundation-release\\res\\values-tl\\values-tl.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,141",
-                        "endColumns": "85,91",
-                        "endOffsets": "136,228"
-                    },
-                    "to": {
-                        "startLines": "107,108",
-                        "startColumns": "4,4",
-                        "startOffsets": "11761,11847",
-                        "endColumns": "85,91",
-                        "endOffsets": "11842,11934"
-                    }
-                },
                 {
                     "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\a738fe81b04b5135f71b6054a11a9b3e\\transformed\\browser-1.4.0\\res\\values-tl\\values-tl.xml",
                     "from": {
@@ -35,6 +18,23 @@
                         "startOffsets": "3612,4004,4109,4220",
                         "endColumns": "102,104,110,104",
                         "endOffsets": "3710,4104,4215,4320"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\9530caed3e05d51ccd7870bb891c3a01\\transformed\\ui-release\\res\\values-tl\\values-tl.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,204,290,387,489,579,661,753,845,929,999,1068,1155,1241,1312,1390,1456",
+                        "endColumns": "98,85,96,101,89,81,91,91,83,69,68,86,85,70,77,65,126",
+                        "endOffsets": "199,285,382,484,574,656,748,840,924,994,1063,1150,1236,1307,1385,1451,1578"
+                    },
+                    "to": {
+                        "startLines": "11,12,32,33,34,38,39,96,97,98,99,100,101,102,104,105,106",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1065,1164,3715,3812,3914,4325,4407,10830,10922,11006,11076,11145,11232,11318,11490,11568,11634",
+                        "endColumns": "98,85,96,101,89,81,91,91,83,69,68,86,85,70,77,65,126",
+                        "endOffsets": "1159,1245,3807,3909,3999,4402,4494,10917,11001,11071,11140,11227,11313,11384,11563,11629,11756"
                     }
                 },
                 {
@@ -106,20 +106,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\c0e68687906a813181112334bdb2a39c\\transformed\\ui-release\\res\\values-tl\\values-tl.xml",
+                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\dca6d687ea90aa432dcd5cfaf2993f95\\transformed\\foundation-release\\res\\values-tl\\values-tl.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,204,290,387,489,579,661,753,845,929,999,1068,1155,1241,1312,1390,1456",
-                        "endColumns": "98,85,96,101,89,81,91,91,83,69,68,86,85,70,77,65,126",
-                        "endOffsets": "199,285,382,484,574,656,748,840,924,994,1063,1150,1236,1307,1385,1451,1578"
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,141",
+                        "endColumns": "85,91",
+                        "endOffsets": "136,228"
                     },
                     "to": {
-                        "startLines": "11,12,32,33,34,38,39,96,97,98,99,100,101,102,104,105,106",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1065,1164,3715,3812,3914,4325,4407,10830,10922,11006,11076,11145,11232,11318,11490,11568,11634",
-                        "endColumns": "98,85,96,101,89,81,91,91,83,69,68,86,85,70,77,65,126",
-                        "endOffsets": "1159,1245,3807,3909,3999,4402,4494,10917,11001,11071,11140,11227,11313,11384,11563,11629,11756"
+                        "startLines": "107,108",
+                        "startColumns": "4,4",
+                        "startOffsets": "11761,11847",
+                        "endColumns": "85,91",
+                        "endOffsets": "11842,11934"
                     }
                 },
                 {

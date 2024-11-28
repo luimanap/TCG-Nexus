@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.pixelperfectsoft.tcg_nexus.app-mergeDebugResources-62:/values-bn/values-bn.xml",
+            "outputFile": "com.pixelperfectsoft.tcg_nexus.app-mergeDebugResources-65:/values-bn/values-bn.xml",
             "map": [
                 {
                     "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\a311efe1535ceffa4bdc59510e6ac034\\transformed\\core-1.13.1\\res\\values-bn\\values-bn.xml",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\c0e68687906a813181112334bdb2a39c\\transformed\\ui-release\\res\\values-bn\\values-bn.xml",
+                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\9530caed3e05d51ccd7870bb891c3a01\\transformed\\ui-release\\res\\values-bn\\values-bn.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -35,23 +35,6 @@
                         "startOffsets": "1060,1154,3511,3601,3699,4102,4181,10541,10628,10717,10787,10857,10935,11016,11200,11275,11343",
                         "endColumns": "93,83,89,97,85,78,105,86,88,69,69,77,80,82,74,67,117",
                         "endOffsets": "1149,1233,3596,3694,3780,4176,4282,10623,10712,10782,10852,10930,11011,11094,11270,11338,11456"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\efc225cafd6416fdfa303f842bc0d9fd\\transformed\\foundation-release\\res\\values-bn\\values-bn.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,140",
-                        "endColumns": "84,84",
-                        "endOffsets": "135,220"
-                    },
-                    "to": {
-                        "startLines": "107,108",
-                        "startColumns": "4,4",
-                        "startOffsets": "11461,11546",
-                        "endColumns": "84,84",
-                        "endOffsets": "11541,11626"
                     }
                 },
                 {
@@ -86,6 +69,23 @@
                         "startOffsets": "4287,4425,4562,4681,4815,4932,5031,5147,5289,5410,5552,5637,5743,5837,5938,6067,6196,6307,6436,6563,6693,6873,6995,7115,7237,7368,7463,7558,7691,7838,7935,8040,8150,8277,8409,8516,8617,8694,8797,8897,8988,9078,9181,9261,9346,9447,9551,9644,9749,9836,9942,10041,10149,10267,10347,10447",
                         "endColumns": "137,136,118,133,116,98,115,141,120,141,84,105,93,100,128,128,110,128,126,129,179,121,119,121,130,94,94,132,146,96,104,109,126,131,106,100,76,102,99,90,89,102,79,84,100,103,92,104,86,105,98,107,117,79,99,93",
                         "endOffsets": "4420,4557,4676,4810,4927,5026,5142,5284,5405,5547,5632,5738,5832,5933,6062,6191,6302,6431,6558,6688,6868,6990,7110,7232,7363,7458,7553,7686,7833,7930,8035,8145,8272,8404,8511,8612,8689,8792,8892,8983,9073,9176,9256,9341,9442,9546,9639,9744,9831,9937,10036,10144,10262,10342,10442,10536"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\dca6d687ea90aa432dcd5cfaf2993f95\\transformed\\foundation-release\\res\\values-bn\\values-bn.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,140",
+                        "endColumns": "84,84",
+                        "endOffsets": "135,220"
+                    },
+                    "to": {
+                        "startLines": "107,108",
+                        "startColumns": "4,4",
+                        "startOffsets": "11461,11546",
+                        "endColumns": "84,84",
+                        "endOffsets": "11541,11626"
                     }
                 },
                 {

@@ -61,6 +61,6 @@ string play
 string profile
 string project_id
 string settings
-style Theme.Pruebas_App_TFG
+style Theme.TCG_Nexus
 xml backup_rules
 xml data_extraction_rules

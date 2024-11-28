@@ -10,13 +10,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Pruebas_App_TFG"
+        android:theme="@style/Theme.TCG_Nexus"
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Pruebas_App_TFG">
+            android:theme="@style/Theme.TCG_Nexus">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

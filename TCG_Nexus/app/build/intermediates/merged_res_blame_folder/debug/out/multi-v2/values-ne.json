@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.pixelperfectsoft.tcg_nexus.app-mergeDebugResources-62:/values-ne/values-ne.xml",
+            "outputFile": "com.pixelperfectsoft.tcg_nexus.app-mergeDebugResources-65:/values-ne/values-ne.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\efc225cafd6416fdfa303f842bc0d9fd\\transformed\\foundation-release\\res\\values-ne\\values-ne.xml",
+                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\e3b0e6be5ce3bc8098e43457eb3819fc\\transformed\\credentials-1.2.0-rc01\\res\\values-ne\\values-ne.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,166",
+                        "endColumns": "110,111",
+                        "endOffsets": "161,273"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "105,216",
+                        "endColumns": "110,111",
+                        "endOffsets": "211,323"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\dca6d687ea90aa432dcd5cfaf2993f95\\transformed\\foundation-release\\res\\values-ne\\values-ne.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -21,20 +38,20 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\e3b0e6be5ce3bc8098e43457eb3819fc\\transformed\\credentials-1.2.0-rc01\\res\\values-ne\\values-ne.xml",
+                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\9530caed3e05d51ccd7870bb891c3a01\\transformed\\ui-release\\res\\values-ne\\values-ne.xml",
                     "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,166",
-                        "endColumns": "110,111",
-                        "endOffsets": "161,273"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,204,294,388,485,571,653,749,836,922,988,1054,1144,1237,1314,1395,1463",
+                        "endColumns": "98,89,93,96,85,81,95,86,85,65,65,89,92,76,80,67,119",
+                        "endOffsets": "199,289,383,480,566,648,744,831,917,983,1049,1139,1232,1309,1390,1458,1578"
                     },
                     "to": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "105,216",
-                        "endColumns": "110,111",
-                        "endOffsets": "211,323"
+                        "startLines": "11,12,32,33,34,38,39,96,97,98,99,100,101,102,104,105,106",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1048,1147,3671,3765,3862,4282,4364,10835,10922,11008,11074,11140,11230,11323,11501,11582,11650",
+                        "endColumns": "98,89,93,96,85,81,95,86,85,65,65,89,92,76,80,67,119",
+                        "endOffsets": "1142,1232,3760,3857,3943,4359,4455,10917,11003,11069,11135,11225,11318,11395,11577,11645,11765"
                     }
                 },
                 {
@@ -69,23 +86,6 @@
                         "startOffsets": "4460,4589,4708,4824,4952,5051,5146,5258,5410,5531,5684,5768,5876,5974,6073,6185,6309,6422,6568,6711,6845,7010,7140,7292,7449,7578,7677,7772,7888,8012,8116,8235,8345,8491,8639,8749,8857,8932,9037,9142,9233,9328,9435,9522,9607,9708,9817,9912,10015,10102,10213,10312,10417,10552,10637,10741",
                         "endColumns": "128,118,115,127,98,94,111,151,120,152,83,107,97,98,111,123,112,145,142,133,164,129,151,156,128,98,94,115,123,103,118,109,145,147,109,107,74,104,104,90,94,106,86,84,100,108,94,102,86,110,98,104,134,84,103,93",
                         "endOffsets": "4584,4703,4819,4947,5046,5141,5253,5405,5526,5679,5763,5871,5969,6068,6180,6304,6417,6563,6706,6840,7005,7135,7287,7444,7573,7672,7767,7883,8007,8111,8230,8340,8486,8634,8744,8852,8927,9032,9137,9228,9323,9430,9517,9602,9703,9812,9907,10010,10097,10208,10307,10412,10547,10632,10736,10830"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\luisv\\.gradle\\caches\\transforms-3\\c0e68687906a813181112334bdb2a39c\\transformed\\ui-release\\res\\values-ne\\values-ne.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,204,294,388,485,571,653,749,836,922,988,1054,1144,1237,1314,1395,1463",
-                        "endColumns": "98,89,93,96,85,81,95,86,85,65,65,89,92,76,80,67,119",
-                        "endOffsets": "199,289,383,480,566,648,744,831,917,983,1049,1139,1232,1309,1390,1458,1578"
-                    },
-                    "to": {
-                        "startLines": "11,12,32,33,34,38,39,96,97,98,99,100,101,102,104,105,106",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1048,1147,3671,3765,3862,4282,4364,10835,10922,11008,11074,11140,11230,11323,11501,11582,11650",
-                        "endColumns": "98,89,93,96,85,81,95,86,85,65,65,89,92,76,80,67,119",
-                        "endOffsets": "1142,1232,3760,3857,3943,4359,4455,10917,11003,11069,11135,11225,11318,11395,11577,11645,11765"
                     }
                 },
                 {

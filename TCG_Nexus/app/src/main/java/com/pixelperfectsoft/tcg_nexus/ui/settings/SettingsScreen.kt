@@ -1,8 +1,10 @@
 package com.pixelperfectsoft.tcg_nexus.ui.settings
 
+import android.content.SharedPreferences
 import android.util.Log
 import android.widget.Toast
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
@@ -82,7 +84,8 @@ import kotlinx.coroutines.launch
 fun SettingsScreen(
     navController: NavHostController,
     darktheme: MutableState<Boolean>,
-    primaryColor: MutableState<Color>
+    primaryColor: MutableState<Color>,
+    sharedPrefs: SharedPreferences
 ) {
     val context = LocalContext.current
     val aboutdialog = remember { mutableStateOf(false) }
@@ -174,7 +177,7 @@ fun SettingsScreen(
             AboutDialog(aboutdialog)
         }
         if (themedialog.value) {
-            ThemeDialog(themedialog, darktheme, primaryColor)
+            ThemeDialog(themedialog, darktheme, primaryColor, sharedPrefs)
         }
         if (accountsheetState.isVisible) {
             MyAccountDialog(
@@ -193,7 +196,8 @@ fun SettingsScreen(
 fun ThemeDialog(
     themedialog: MutableState<Boolean>,
     darktheme: MutableState<Boolean>,
-    primaryColor: MutableState<Color>
+    primaryColor: MutableState<Color>,
+    sharedPrefs: SharedPreferences
 ) {
     val colors = listOf(
         PrimaryBlue,
@@ -202,8 +206,8 @@ fun ThemeDialog(
         PrimaryYellow
     )
     val context = LocalContext.current
-    var selectedColor by remember { mutableStateOf(colors[0]) }
-
+    val selectedColor = remember { mutableStateOf(primaryColor.value) }
+    val editor = sharedPrefs.edit()
     Dialog(onDismissRequest = { themedialog.value = false }) {
         Surface(
             modifier = Modifier
@@ -230,6 +234,8 @@ fun ThemeDialog(
                     Spacer(modifier = Modifier.fillMaxWidth(0.7f))
                     Switch(checked = darktheme.value, onCheckedChange = {
                         darktheme.value = !darktheme.value
+                        editor.putBoolean("darkTheme", darktheme.value)
+                        editor.apply()
                     })
                 }
                 Spacer(modifier = Modifier.height(16.dp))
@@ -244,18 +250,27 @@ fun ThemeDialog(
                     modifier = Modifier.horizontalScroll(rememberScrollState()).fillMaxWidth()
                 ) {
                     colors.forEach { color ->
+                        val selected = selectedColor.value == color
                         Box(
                             modifier = Modifier
                                 .padding(8.dp)
                                 .size(50.dp)
                                 .background(color, shape = CircleShape)
+                                .border(
+                                    width = if(selected) 4.dp else 0.dp,
+                                    color = if(selected) MaterialTheme.colorScheme.onBackground else Color.Transparent,
+                                    shape = CircleShape
+                                )
                                 .clickable {
+                                    editor.putString("theme", color.value.toString())
+                                    selectedColor.value = color
                                     primaryColor.value = color
+                                    editor.apply()
+                                    Log.d("theme", color.toString())
                                 }
                         )
                     }
                 }
-
             }
         }
     }

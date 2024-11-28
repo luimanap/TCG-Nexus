@@ -1,7 +1,8 @@
-#Sun Jun 16 19:03:41 CEST 2024
+#Thu Jul 18 11:17:54 CEST 2024
 base.0=C\:\\local-git\\Android\\TCG-Nexus\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\local-git\\Android\\TCG-Nexus\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.10=C\:\\local-git\\Android\\TCG-Nexus\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+base.11=C\:\\local-git\\Android\\TCG-Nexus\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes4.dex
 base.2=C\:\\local-git\\Android\\TCG-Nexus\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
 base.3=C\:\\local-git\\Android\\TCG-Nexus\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\13\\classes.dex
 base.4=C\:\\local-git\\Android\\TCG-Nexus\\TCG_Nexus\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
@@ -13,6 +14,7 @@ base.9=C\:\\local-git\\Android\\TCG-Nexus\\TCG_Nexus\\app\\build\\intermediates\
 path.0=classes.dex
 path.1=0/classes.dex
 path.10=classes3.dex
+path.11=classes4.dex
 path.2=10/classes.dex
 path.3=13/classes.dex
 path.4=14/classes.dex
@@ -24,6 +26,7 @@ path.9=classes2.dex
 renamed.0=classes.dex
 renamed.1=classes2.dex
 renamed.10=classes11.dex
+renamed.11=classes12.dex
 renamed.2=classes3.dex
 renamed.3=classes4.dex
 renamed.4=classes5.dex

@@ -1,5 +1,6 @@
 package com.pixelperfectsoft.tcg_nexus.ui.navigation
 
+import android.content.SharedPreferences
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.Column
@@ -162,6 +163,7 @@ fun BottomBarNaviContainer(
     selectedDestination: String,
     navigateTo: (MenuItems) -> Unit,
     primaryColor: MutableState<Color>,
+    sharedPrefs: SharedPreferences,
 ) {
     Row(
         modifier = Modifier.fillMaxSize()
@@ -173,7 +175,7 @@ fun BottomBarNaviContainer(
                 startDestination = MyScreenRoutes.LOGIN
             ) {
                 composable(MyScreenRoutes.SETTINGS) {
-                    SettingsScreen(navController, darktheme, primaryColor)
+                    SettingsScreen(navController, darktheme, primaryColor, sharedPrefs)
                 }
                 composable(MyScreenRoutes.UPDATE) {
                     UpdateScreen(navController)

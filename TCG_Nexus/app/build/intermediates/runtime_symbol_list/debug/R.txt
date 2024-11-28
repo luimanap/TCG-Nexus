@@ -182,8 +182,8 @@ int drawable searchicon 0x7f060048
 int drawable settings 0x7f060049
 int drawable sword 0x7f06004a
 int drawable theme 0x7f06004b
-int drawable trash 0x7f06004d
-int drawable woodtable 0x7f06004c
+int drawable trash 0x7f06004c
+int drawable woodtable 0x7f06004d
 int font lobster 0x7f070000
 int id accessibility_action_clickable_span 0x7f080000
 int id accessibility_custom_action_0 0x7f080001
@@ -440,7 +440,7 @@ int style TextAppearance_Compat_Notification_Line2 0x7f0e0005
 int style TextAppearance_Compat_Notification_Time 0x7f0e0006
 int style TextAppearance_Compat_Notification_Title 0x7f0e0007
 int style Theme_Hidden 0x7f0e0008
-int style Theme_Pruebas_App_TFG 0x7f0e0009
+int style Theme_TCG_Nexus 0x7f0e0009
 int style Widget_Compat_NotificationActionContainer 0x7f0e000a
 int style Widget_Compat_NotificationActionText 0x7f0e000b
 int[] styleable ActivityNavigator { 0x01010003, 0x7f030000, 0x7f030006, 0x7f030007, 0x7f03002a }
